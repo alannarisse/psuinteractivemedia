@@ -1,0 +1,74 @@
+/*@import url('https://fonts.googleapis.com/css?family=Lora:700|Monoton|Solway&display=swap');
+*/
+/*font-family: 'Solway', serif;
+font-family: 'Lora', serif;
+font-family: 'Monoton', cursive;*/
+
+/* dark blue: #332880; 
+	mauvish #B3889F
+	pinkish #D9C1C7
+*/
+h1 {
+	font-family: 'Monoton', cursive;
+	font-size: 48px;
+}
+
+h2 {
+	font-family: 'Solway', serif;
+	font-size: 32px;	
+}
+h3 {
+	font-family: 'Solway', serif;
+	font-size: 24px;
+}
+blockquote {
+	font-family: 'Lora', serif;
+}
+
+a {
+	color: #B38325;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #8525B3;
+}
+
+.dark a {
+	color: #fff;
+}
+
+.dark a:hover {
+	color: #D0A3E6;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+}
+
+.grid div {border: 1px solid #000;}
+.grid div.words {
+	padding: 20px 40px;
+	border: 1px solid #000;
+}
+.span-col-3{grid-column: span 3 / auto;}
+
+.span-col-2{grid-column: span 2 / auto;}
+
+.span-row-2{grid-row: span 2 / auto;}
+
+.span-row-3{grid-row: span 3 / auto;}
+
+.arrow {color: #ff9900;}
+
+.dark {
+	color: #fff;
+	background-color: #040001;
+}
+
+.space1 {
+	background-image: url(../images/raphael-nogueira-cok-OxpkrKQ-unsplash.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
