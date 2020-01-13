@@ -59,7 +59,7 @@ body {
 }
 
 h1 {
-  font-family: "Monoton", cursive;
+  font-family: "Monoton", sans-serif;
   font-size: 3em;
   line-height: 1.6em;
 }
@@ -82,12 +82,17 @@ blockquote {
 
 main {
   min-height: 100vh;
+  margin-bottom: 60px;
   padding: 10px;
   background-color: #ccc;
   background-image: url("../images/backgrounds/wall4-blu.png");
 }
 main div div {
   background-color: #fff;
+}
+
+li {
+  margin-top: 10px;
 }
 
 a {
@@ -101,7 +106,7 @@ a :hover {
 .dark a {
   color: #fff;
 }
-.dark a :hover {
+.dark a:hover {
   color: #D0A3E6;
 }
 
@@ -153,9 +158,6 @@ a :hover {
   list-style-type: disc;
   margin-left: 24px;
 }
-.bullet-list li {
-  margin-top: 10px;
-}
 
 footer {
   position: fixed;
@@ -187,6 +189,16 @@ footer .grid {
   color: #fff;
 }
 
+/* START styles for the class homepages */
+.classpage main, .classpage header, .classpage nav {
+  width: 80%;
+  margin: auto;
+}
+.classpage main {
+  background-image: none;
+}
+
+/* END styles for the class homepages */
 @media only screen and (min-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
