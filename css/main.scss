@@ -84,6 +84,18 @@ img { width: 100%;}
 	}
 }
 
+
+.sub-page {
+	main {
+		
+	}
+	article {
+		width: 60%;
+		margin: auto;
+		padding: 80px;
+				background-color: #fff;
+	}
+}
 .span-col-3 {grid-column: span 1 / auto;}
 
 .span-col-2 {grid-column: span 1 / auto;}

@@ -127,6 +127,13 @@ img {
   border: 1px solid #000;
 }
 
+.sub-page article {
+  width: 60%;
+  margin: auto;
+  padding: 80px;
+  background-color: #fff;
+}
+
 .span-col-3 {
   grid-column: span 1/auto;
 }
