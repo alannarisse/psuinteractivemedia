@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Timeliner</title>
+	<link rel="stylesheet" href="timeliner.min.css" type="text/css" media="screen">
+
+
+</head>
+<body>
+
+	<div id="timeline" class="timeline-container">
+        <div class="timeline-wrapper">
+                <h2 class="timeline-time">1976</h2>
+
+                <dl class="timeline-series">
+
+                        <dt class="timeline-event" id="event01"><a>Event</a></dt>
+                        <dd class="timeline-event-content" id="event01EX">
+                                <p>Content about the event goes here.</p>
+                        </dd>
+
+                        <dt class="timeline-event" id="event02"><a>Another Event</a></dt>
+                        <dd class="timeline-event-content" id="event02EX">
+                                <p>Content about the other event.</p>
+                        </dd>
+
+                </dl>
+        </div>
+        <div class="timeline-wrapper">
+                <h2 class="timeline-time">1984</h2>
+
+                <dl class="timeline-series">
+
+                        <dt class="timeline-event" id="event03"><a>Yet Another Event</a></dt>
+                        <dd class="timeline-event-content" id="event03EX">
+                                <p>Content about the event goes here.</p>
+                        </dd>
+
+                </dl>
+        </div>
+    <br class="clear">
+</div>
+
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="timeliner.min.js"></script>
+<script>
+        $(document).ready(function() {
+                $.timeliner({});
+        });
+</script>
+</body>
+</html>
