@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+
+	<style type="text/css">
+	.parallaxParent {
+		height: 100vh;
+		overflow: hidden;
+	}
+	.parallaxParent > * {
+		height: 200%;
+		position: relative;
+		top: -100%;
+	}
+</style>
+</head>
+<body>
+
+
+<div class="spacer s0"></div>
+<div id="parallax1" class="parallaxParent">
+	<div style="background-image: url(http://placekitten.com/1200/450);"></div>
+</div>
+<div class="spacer s1">
+	<div class="box2 blue">
+		<p>Content 1</p>
+		<a href="#" class="viewsource">view source</a>
+	</div>
+</div>
+<div class="spacer s0"></div>
+<div id="parallax2" class="parallaxParent">
+	<div style="background-image: url(http://placekitten.com/1200/400);"></div>
+</div>
+<div class="spacer s1">
+	<div class="box2 blue">
+		<p>Content 2</p>
+		<a href="#" class="viewsource">view source</a>
+	</div>
+</div>
+<div class="spacer s0"></div>
+<div id="parallax3" class="parallaxParent">
+	<div style="background-image: url(http://placekitten.com/1200/460);"></div>
+</div>
+<div class="spacer s2"></div>
+<script>
+	// init controller
+	var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+
+	// build scenes
+	new ScrollMagic.Scene({triggerElement: "#parallax1"})
+					.setTween("#parallax1 > div", {y: "80%", ease: Linear.easeNone})
+					.addIndicators()
+					.addTo(controller);
+
+	new ScrollMagic.Scene({triggerElement: "#parallax2"})
+					.setTween("#parallax2 > div", {y: "80%", ease: Linear.easeNone})
+					.addIndicators()
+					.addTo(controller);
+
+	new ScrollMagic.Scene({triggerElement: "#parallax3"})
+					.setTween("#parallax3 > div", {y: "80%", ease: Linear.easeNone})
+					.addIndicators()
+					.addTo(controller);
+</script>
+	
+</body>
+</html>

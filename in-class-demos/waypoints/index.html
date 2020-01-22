@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.panel { min-height: 400px; }
+		.one, .three, .five {
+			background-color: #333;
+		}
+	</style>
+</head>
+<body>
+<section class="one panel">
+</section>
+
+<section class="two panel">
+</section>
+
+<section class="three panel" id="overflow-scroll-offset">
+</section>
+
+<section class="four panel">
+</section>
+
+<section class="five panel">
+</section>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="waypoints-lib/lib/jquery.waypoints.min.js"></script>
+  <script>
+  	var waypoints = $('#context-example-offset').waypoint({
+  handler: function() {
+    notify('Hit midpoint of my context')
+  },
+  context: '#overflow-scroll-offset',
+  offset: '50%'
+})
+  </script>
+</body>
+</html>

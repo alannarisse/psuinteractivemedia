@@ -80,6 +80,21 @@ blockquote {
   font-family: "Lora", serif;
 }
 
+nav {
+  padding: 20px;
+  background-color: #666;
+}
+nav a {
+  color: #fff;
+}
+nav a:hover {
+  color: #B38325;
+}
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
 main {
   min-height: 100vh;
   margin-bottom: 60px;
@@ -114,6 +129,20 @@ img {
   color: #D0A3E6;
 }
 
+.tiny-button {
+  background-color: #332880;
+  padding: 4px 6px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  margin: 10px 2px;
+  display: inline-block;
+}
+.tiny-button a {
+  color: #fff;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -126,27 +155,42 @@ img {
   padding: 20px 40px;
   border: 1px solid #000;
 }
+.grid div.words p {
+  margin-bottom: 16px;
+}
 
-.sub-page article {
-  width: 80%;
+.subpage h2, .subpage h3 {
+  margin-top: 16px;
+}
+.subpage p {
+  margin-bottom: 16px;
+}
+.subpage article {
+  width: 100%;
   margin: auto;
   border: 2px solid #B38325;
   padding: 80px;
   background-color: #fff;
 }
-.sub-page .cards {
+.subpage .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 10px;
+  margin-bottom: 60px;
 }
-.sub-page .cards li {
+.subpage .cards li {
   border: 2px solid #B38325;
   position: relative;
 }
-.sub-page .cards span {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+.subpage .cards .card-content {
+  font-size: 14px;
+  margin: 0 6px 6px 6px;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
 }
 
 .span-col-3 {

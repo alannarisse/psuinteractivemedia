@@ -47,7 +47,16 @@ h3 {
 blockquote {
 	font-family: 'Lora', serif;
 }
-
+nav { 
+	padding:20px; 
+	background-color: #666;
+	a { color: #fff;}
+	a:hover { color: #B38325; }
+	ul {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	}
+}
 main {
 	min-height: 100vh;
 	margin-bottom: 60px;
@@ -72,7 +81,17 @@ img { width: 100%;}
 		color: #D0A3E6;
 	}
 }
-
+.tiny-button {
+	background-color: #332880;
+	padding:4px 6px;
+	border-radius: 8px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	margin: 10px 2px;
+	display: inline-block;
+	a {color: #fff}
+}
 .grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -82,15 +101,15 @@ img { width: 100%;}
 		padding: 20px 40px;
 		border: 1px solid #000;
 	}
+		div.words p {margin-bottom: 16px;}
 }
 
 
-.sub-page {
-	main {
-		
-	}
+.subpage {
+	h2, h3 { margin-top: 16px;}
+	p {margin-bottom: 16px;}
 	article {
-		width: 80%;
+		width: 100%;
 		margin: auto;
 		border: 2px solid #B38325;
 		padding: 80px;
@@ -98,18 +117,26 @@ img { width: 100%;}
 	}
 	.cards {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+		grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
 		grid-gap: 10px;
+		margin-bottom: 60px;
 	}
 	.cards li {
 		border: 2px solid #B38325;
 		position: relative;
 	}
-	.cards span {
-		position: absolute;
-		top:20px;
-		left: 20px;
+	.cards .card-content {
+		// position: absolute;
+		// top:20px;
+		// left: 20px;
+		font-size: 14px;
+		margin: 0 6px 6px 6px;
 	}
+}
+.two-col { 
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 40px;
 }
 .span-col-3 {grid-column: span 1 / auto;}
 
