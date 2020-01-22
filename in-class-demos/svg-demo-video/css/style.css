@@ -1,0 +1,25 @@
+.flower-box {
+	width: 400px;
+	margin: 100px;
+}
+
+#flower-petals path {
+	fill: rgba(255, 0, 0, 1);
+}
+
+.flower-box {
+	animation: flower-rotate 4s infinite linear;
+}
+
+@keyframes flower-rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		fill: rgba(255, 0, 0, 0.5);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+
+}

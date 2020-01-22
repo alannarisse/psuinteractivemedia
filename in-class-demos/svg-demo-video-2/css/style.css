@@ -1,0 +1,22 @@
+.flower-box {
+	width: 400px;
+	margin: 100px;
+}
+
+.flower-box path {fill:#ccc;}
+.flower-box {
+	animation-name: flower-demo;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+
+@keyframes flower-demo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+   	transform: rotate(360deg);
+  }
+}

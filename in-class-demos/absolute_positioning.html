@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Absolute Positioning</title>
+	<style>
+
+
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.banana-page .grid {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+/*
+BANANA PAGE STYLES
+ */
+	.banana-page {background-color: yellow;}
+	.banana-page p { font-family: cursive; }
+
+/*
+APPLE PAGE STYLES
+ */
+	.apple-page {background-color: red;}
+	.apple-page p { font-family: serif; }
+
+
+
+	h1 {	
+}
+
+		.parent {
+			position: relative;
+			border: 1px solid red;
+			margin: 100px;
+			min-height: 400px;
+		}
+		.child1 {
+			position: absolute;
+			top: 20px;
+			left: 450px;
+			display: inline-block;
+			width: 100px; 
+			height: 100px;
+			background-color: rgba(127,172,105,0.5); 
+			border-radius: 50%;
+		}
+		.child2 {
+			position: absolute;
+			top: 36px;
+			left: 440px;
+			display: inline-block;
+			width: 100px; 
+			height: 100px; 
+			background-color: rgba(142,204,54,0.3);
+			border-radius: 50%; 
+		}
+		.child3 { 
+			position: absolute;
+			top: 40px;
+			left: 430px;
+			display: inline-block;
+			width: 100px; 
+			height: 100px;
+			background-color: rgba(96,89,34,0.6); 
+			border-radius: 50%;
+
+		}
+		
+
+	</style>
+</head>
+<body class="banana-page">
+
+	<div class="parent">
+		
+		<div class="child2"></div>
+		<div class="child3"></div>
+		<h1>Now with Extra Crunch!
+			<div class="child1">Sale!</div>
+		</h1>
+	</div>
+	
+</body>
+</html>

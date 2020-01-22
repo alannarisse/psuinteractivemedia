@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		
+		.box {
+			position: relative;
+			height: 100vh;
+			background-color: orange;
+			animation-name: sunset;
+			animation-duration: 5s;
+			animation-timing-function: linear;
+			animation-fill-mode: forwards;
+		}
+		@keyframes sunset {
+			0% {
+				background-color: yellow;
+			}
+				50% {
+				background-color: pink;
+			}
+			100% {
+				background-color: navy;
+			}
+
+	}
+
+		svg {
+			height: 100vh; width: 100vw;
+		}
+
+	.cls-6 {
+		position:absolute;
+		top:0;
+		left: 40vw;
+		animation-name: sun;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-fill-mode: forwards;
+	}
+
+
+@keyframes sun {
+	0% {
+		transform: translate(40vw,0px);
+	}
+100% {
+		transform: translate(40vw,100vh);
+	}
+
+}
+	</style>
+
+</head>
+<body>
+	
+<div class="box">
+	<svg>
+		<circle class="cls-6" cx="150" cy="150" r="150" fill="#000"></circle>
+
+
+	</svg>
+</div>
+</body>
+</html>

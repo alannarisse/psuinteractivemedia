@@ -1,0 +1,22 @@
+.button {
+	background-color: #ff0000;
+	padding: 8px 12px;
+	border-radius: 12px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.button:hover {
+	animation-name: button-hover;
+  	animation-duration: 1s;
+}
+
+@keyframes button-hover {
+  from {background-color: #ff0000;}
+  to {background-color: #ff9900;}
+}
+
+main {
+	width: 80%;
+	margin: 80px auto;
+}

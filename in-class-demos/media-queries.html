@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Media Queries</title>
+	<style>
+		body
+		body {background-color: #ccc;}
+		h1 { font-size: 24px; }
+		h2 { font-size: 18px; }
+		p { font-size: 16px; }
+		main { 
+			width: 80%; 
+			margin: auto;
+			display: grid;
+			grid-template-columns: 1fr;
+			}
+		.flex-fun {
+			display: flex;
+			width: 100%;
+			justify-content: flex-end; 
+
+		}
+
+		.flex-fun h1 {
+			margin: 0;
+		}
+
+		.flex-fun nav {
+			flex: 2;
+		}
+
+		@media only screen and (min-width: 768px){
+			h1 { 
+				font-size: 48px;
+				grid-column: 1 / -1;
+				 }
+			h2 { 
+				font-size: 32px;
+				grid-column: 1 / -1;
+				 }
+			main { 
+				width: 60%;
+				grid-template-columns: 1fr 1fr;
+				 }
+		}
+
+		@media only screen and (min-width: 1024px){
+			main { 
+				width: 40%;
+				border: 12px solid #ddd;
+				 }
+			img {
+				grid-column: 1 / 2;
+				grid-row: 3 / 4;
+
+			}
+			p {
+				grid-column: 2 / 3;
+				grid-row: 3 / 4;
+
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<div class="flex-fun">
+		<h1>My logo</h1>
+		<nav><p>links!</p></nav>
+
+	</div>
+
+<main>
+	<h1>
+	I AM THE PERSON WHO WRITES CONFLICT INTO HUSBAND-WIFE HOME RENOVATION SHOWS</h1>
+	<h2>by MIA MERCADO</h2>
+ 
+	<p>Like any form of cinema, lots of work goes into creating the home improvement shows you see on HGTV, the television at your parents’ house or on mute in the auto-mechanic’s lobby. We’ve got many hands on deck — literally. Each episode requires a crew of construction experts, interior designers, people carrying around tape measures saying, “crown molding.” And then, there’s me, the person who scripts the conflict between the husband and wife stars of the show. It’s not a hard job, and no one has to do it, but nevertheless, I persist.</p>
+	<img class="feature" src="http://place-puppy.com/300x450">
+</main>
+  
+</v-layout>
+</body>
+</html>

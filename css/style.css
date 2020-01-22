@@ -128,10 +128,25 @@ img {
 }
 
 .sub-page article {
-  width: 60%;
+  width: 80%;
   margin: auto;
+  border: 2px solid #B38325;
   padding: 80px;
   background-color: #fff;
+}
+.sub-page .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 10px;
+}
+.sub-page .cards li {
+  border: 2px solid #B38325;
+  position: relative;
+}
+.sub-page .cards span {
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 .span-col-3 {
