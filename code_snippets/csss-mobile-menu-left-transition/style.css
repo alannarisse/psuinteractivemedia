@@ -1,0 +1,118 @@
+/*  CSS Document  */
+
+/*  This file was provided as part of a weekly web design tutorial series.
+	Sign-up for our newsletter, at http://codifydesign.com, to be notified
+	about new episodes.
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:900" rel="stylesheet');
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family:'Roboto Slab', serif;
+	font-size: 16px;
+	color: #2f2f2a;
+}
+
+p {
+	margin: 0 0 1em 0;
+}
+
+header {
+	margin: 0;
+	padding: 1px 0;
+	background: #000 url(http://placekitten.com/900/145) no-repeat center 0;
+	background-size: cover;
+	height: 145px;
+	position: relative;
+	overflow: hidden;
+}
+
+header h1 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 6em;
+	line-height: 53px;
+	letter-spacing: 3px; 
+	color: #fff;
+	font-weight: 900;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: 70px;
+	bottom: 6px;
+	text-transform: uppercase;
+}
+
+article {
+	margin: 20px 78px;
+	line-height: 1.5em;
+}
+
+input#mobile_menu {display:none;}
+input#mobile_menu:checked + nav {left: 0;}
+input#mobile_menu:checked + nav label {background-image: url(images/menu_close.svg);}
+
+nav {
+	width: 180px;
+	background-color: #666;
+	padding: 10px 20px 10px 25px;
+	color: #fff;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0px;
+	left: -180px;
+    transition: left .6s ease-in-out;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	margin: 0;
+	padding: 14px 0;
+	border-top: 1px solid rgba(255,255,255,.1);
+}
+
+nav a:first-of-type {
+	border-top: none;
+}
+
+nav label {
+	cursor: pointer;
+	display: block;
+	width: 42px;
+	height: 42px;
+	background: #666 url(images/menu_open.svg) no-repeat center center;
+	background-size: 22px auto;
+	position: absolute;
+	top: 78px;
+	right: -42px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,92 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* Better box model */
+* { box-sizing: border-box; }
+
+
+/*----------------------------------------------------------------------*
+
+	General Styles
+
+*----------------------------------------------------------------------*/
+
+body {
+
+}
+
+h1 {
+
+}
+
+p {
+
+}
+
+a {
+
+}
+
+a:hover {
+	
+}
+
+main {
+	width: 100%;
+	margin: 50px auto;
+}
+
+.yellow-bg {background-color: yellow;}
+#mysvg {
+    width: 400px;
+    animation-name: halloweeny;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    transform-origin: 50% 50%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+.pink {background-color: pink;}
+
+/*
+@keyframes halloweeny {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+*/
+
+nav {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+.logo { width: 40px; }
+
+.grid-2col {
+	display: grid;
+	grid-template-columns: 30% 70%;
+	grid-gap: 1em;
+}
+
+.img-full {width: 100%;}
+/*----------------------------------------------------------------------*
+
+	Miscellaneous
+
+*----------------------------------------------------------------------*/
+
+/* Forces a box filled with floated elements to wrap around child elements */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Media Queries
+/* On screens that are 768px or less, use these styles */
+@media screen and (max-width: 768px) {
+  .example-class {
+    background-color: blue;
+  }
+}

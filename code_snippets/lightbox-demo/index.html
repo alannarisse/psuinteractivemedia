@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lightbox demo</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		
+		.video-div { 
+			width: 600px; 
+			margin: auto; }
+		.video-div img { width: 100%; }
+	</style>
+</head>
+<body>
+
+	<h1>CSS/Javascript popup with Lightbox effect</h1>
+
+<div id="light">
+  <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
+  <video id="DeeDeeDolphins" width="600" controls>
+      <source src="DeeDeeDolphins.mp4" type="video/mp4">
+      <!--Browser does not support <video> tag -->
+    </video>
+</div>
+
+<div id="fade" onClick="lightbox_close();"></div>
+
+<div>
+  <a href="#" onclick="lightbox_open();">Watch video</a>
+</div>
+
+
+<div class="video-div">
+	
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+	<script src="script.js"></script>
+</body>
+</html>

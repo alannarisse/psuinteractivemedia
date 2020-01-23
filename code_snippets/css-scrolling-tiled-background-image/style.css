@@ -1,0 +1,53 @@
+/*  This file was provided as part of a weekly web design tutorial series.
+	Sign-up for our newsletter, at http://codifydesign.com, to be notified
+	about each new episode of CSS Shorts  
+*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Satisfy');
+
+body {
+	font-size:16px;
+	font-family: 'Roboto Slab', serif;
+	color: #0a5471;
+	margin: 0;
+	padding: 0;
+	background-color: #90cde3;
+}
+
+article {
+	width: 70%;
+	margin: 40px auto 0 auto;
+	padding: 20px;
+	position: relative;
+}
+
+h1 {
+	font-size: 3.85em;
+	margin: 0 0 .5em 0;
+	font-family: 'Satisfy', cursive;
+}
+
+figure {
+	width: 100%;
+	margin: 0;
+	padding: 350px 0 0 0;
+	position: absolute;
+	left: 0;
+	bottom: 0px;
+	overflow: hidden;
+    background-image: url('images/clouds_tile.jpg');
+    animation: clouds_anim 75s linear infinite;
+}
+
+@keyframes clouds_anim {
+    0%   { background-position: 0 0;}
+    100% { background-position: -2122px 0;} /* full width of the cloud jpg */
+}
+
+
+
+
+
+
+

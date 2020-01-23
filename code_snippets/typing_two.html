@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Typewriter</title>
+<style>
+		
+/* Landing Page Typing */
+#text {
+  padding: 0.5em;
+  width: 100%;
+  word-wrap: break-word;
+  text-align: center;
+  user-select: none;
+}
+
+#text::after {
+  content: "_";
+  opacity: 0;
+  animation: cursor 0.5s infinite alternate;
+}
+
+@keyframes cursor {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.8;
+  }
+}
+
+/* if you want to have a different cursor color from the text, include this and change the color to what you want */
+.cursor::after { color: black; }
+</style>
+</head>
+<body>
+  <p id="text">
+    <span>
+      <noscript
+        >We're off to see the wizard, the wonderful wizard of Oz.</noscript
+      >
+    </span>
+  </p>
+
+
+<script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+<script>
+function randomIntFromInterval(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+
+function typing(p) {
+  $("#" + p).addClass("cursor");
+  let text = $("#" + p).text(),
+    randInt = 0;
+  for (let i = 0; i < text.length; i++) {
+    randInt += parseInt(randomIntFromInterval(10, 140));
+    let typing = setTimeout(
+      function(y) {
+        $("#" + p).append(text.charAt(y));
+      },
+      randInt,
+      i
+    );
+  }
+}
+
+typing("text");
+
+</script>
+</body>
+</html>

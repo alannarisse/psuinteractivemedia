@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Landing</title>
+	<style>
+	* {margin:0;padding:0;}
+	body {
+		background: #12475f;
+		font-family: Arial, helvetica;
+		color: white;
+		line-height: 1.6;
+		text-align:center;
+	}
+.container {
+	max-width: 960px;
+	margin: auto;
+	padding: 0 30px;
+}
+
+#showcase {height: 300px;}
+
+#showcase h1 {
+	font-size: 50px;
+	line-height: 1.3;
+	position: relative;
+	animation: heading;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes heading {
+	0% { top: -50px; }
+	100% { top: 200px; }
+}
+
+#content {
+	position: relative;
+	animation: content;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes content {
+	0% { left: -1000px; }
+	100% { left: 0; }
+}
+
+.btn {
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	padding: 1rem 2rem;
+	border: #fff 1px solid;
+	margin-top: 40px;
+	opacity: 0;
+	animation-name: btn;
+	animation-duration: 3s;
+	animation-delay: 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes btn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+	</style>
+</head>
+<body>
+	<header id="showcase">
+		<h1>Welcome</h1>
+	</header>
+	  <div id="content" class="container">
+	  	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos cupiditate perferendis voluptatum doloribus quas magni. Magnam architecto, adipisci quidem! Deserunt, necessitatibus! Numquam dolore sunt at velit error maxime sed ullam.
+	  </div>
+	<a href="#" class="btn">Read more</a>
+	
+</body>
+</html>

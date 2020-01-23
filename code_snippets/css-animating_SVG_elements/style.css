@@ -1,0 +1,42 @@
+/*  This file was provided as part of a weekly web design tutorial series.
+	Sign-up for our newsletter, at http://codifydesign.com/newsletter,
+	to be notified about new episodes.
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+html{
+	font-size: 18px;
+	line-height: 1.6;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans Condensed', sans-serif;
+	background-color: #70aa25;
+}
+
+h1 {
+	text-align: center;
+	margin: 100px 0 30px 0;
+}
+
+
+header {
+	background: url(images/sun_rays.svg) no-repeat center bottom;
+	background-size: cover;
+	padding: 1px 0;
+	text-align: center;
+}
+
+header img {
+	width: 240px;
+	margin: 65px 0 5px 0;
+}
+
+article {
+	margin: 0;
+	padding: 40px 50px;
+	background-color: #fff;
+}

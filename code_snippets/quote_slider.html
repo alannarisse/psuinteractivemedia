@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Quotes Slider</title>
+	<link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+<style>
+
+
+.quote-slider {
+	width: 100%;
+	height: 400px;
+	background-color: #0094de;
+	list-style: none;
+	display: block;
+	position: relative;
+}
+.quote-slider li {
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: -60%;
+		width: 60%;
+		font-family: 'Crimson Text', serif;
+		font-weight: 700;
+		font-size: 48px;
+		color: #fff;
+		text-shadow: 2px 2px 0px #0083cd;
+		font-style: italic;
+		text-align: center;
+		z-index: 5;
+		}
+.quote-slider li .site{
+			font-family: 'Oswald', sans-serif;
+			font-style: normal;
+			margin-top: 40px;
+			font-size: 36px;
+			}
+	.quote-slider .arrow{
+		position: absolute;
+		top: 0;
+		width: 70px;
+		color: #fff;
+		font-family: 'Oswald', sans-serif;
+		font-weight: 700;
+		font-size: 100px;
+		height: 100%;
+		line-height: 400px;
+		padding-left: 40px;
+		}
+	.quote-slider .arrow.right {
+		right: 0;
+	}
+	.quote-slider .arrow.left{
+		left: 0;
+	}
+		
+</style>
+</head>
+<body>
+	
+
+<ul class="quote-slider">
+	<li id='quote0' style='right: 20%'>
+		"Working with them was literally terrible"
+		<div class="site">Elon Musk</div>
+	</li>
+	<li id='quote1'>
+		"They sucked and I hate them."
+		<div class="site">Everyone Ever</div>
+	</li>
+	<li id='quote2'>
+		"Frankly I don't understand why anyone would ever work with them"
+		<div class="site">Arnold Schwarzenegger</div>
+	</li>
+	<li id='quote3'>
+		"You have no friends. Go away."
+		<div class="site">Bill "Le Master Troll" Gates</div>
+	</li>
+	<li id='quote4'>
+		"No, Half Life 3 is never coming out."
+		<div class="site">Our Lord and Savior, Gabe Newell</div>
+	</li>
+</ul>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script>
+	$(function() {
+	var i = 0;
+	slideCount = 5;
+	function timeout() {
+		setTimeout(function() {
+			// Move $("#quote" + i) off to the left
+			$("#quote" + i).animate({
+				right: "120%"
+			}, 2000);
+			// Change selected quote
+			i++;
+			if(i > (slideCount - 1)) {
+				i = 0;
+			}
+			// Move $("#quote" + i) to right side then back to middle
+			$("#quote" + i).css("right", "-60%");
+			$("#quote" + i).animate({
+				right: "20%"
+			}, 2000);
+			timeout();
+		}, 7000);
+	};
+	timeout();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Parallax.js | Two Example</title>
+
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="two-style.css"/>
+	<style>
+
+	</style>
+
+</head>
+<body>
+
+	<main id="container" class="container">
+		<section id="scene" class="scene">
+			<div class="box-2" data-depth="0.00">
+				<div class="tea-box">
+					<img src="tea.png">
+				</div>
+			</div>
+			<div class="box-1" data-depth-x="0.10" data-depth-y="0.10">
+				<div class="top-box">
+					<h2>Sencha</h2>
+					  <p>Vestibulum sit amet erat lacus. Praesent in eros et libero aliquam volutpat. Nunc non enim arcu. Sed pharetra dictum odio in pellentesque.
+					  </p>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- Scripts -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+	<script>
+
+	// Pretty simple huh?
+	var scene = document.getElementById('scene');
+	var parallax = new Parallax(scene);
+
+	</script>
+
+</body>
+</html>

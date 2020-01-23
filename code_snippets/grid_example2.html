@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid 2</title>
+    
+    <style>
+    
+        header { 
+            border: 1px solid #333;
+        }
+        header h1, header nav { }
+        nav ul { 
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+        }
+        
+        nav a { 
+            text-decoration: none; color: red;
+            background-color: #ccc;
+            padding: 8px 12px;
+        }
+        nav a:hover { 
+            text-decoration: none;   color: orange;
+            background-image: url('http://placekitten.com/60/60')
+        }
+        nav a:hover.whiskers  { 
+            text-decoration: none;   color: orange;
+            background-image: url('http://placekitten.com/84/64')
+        }
+        
+        main {border: 1px solid #333;}
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 40% 60%;
+        }
+        .grid-image-nav {
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+        }
+        .left-arrow { font-weight: bold; }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1><img src="http://placekitten.com/200/100" alt="kitten website"></h1>
+        <nav>
+            <ul>
+                <li><a class="whiskers" href="whiskers.html">Whiskers</a></li>
+                <li><a href="fur.html">Fur</a></li>
+                <li><a href="ears.html">Ears</a></li>
+                <li><a href="tails.html">Tails</a></li>
+            </ul>
+        </nav>
+    </header>
+        <main class="grid-2col">
+            <div class="left">
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+                </p>
+            </div>
+            <div class="right">
+               <section class="grid-image-nav">
+                    <div class="left-arrow"> left </div>
+                    <div class="center-img">
+                        <img src="http://127.0.0.1:59077/assets/all_pickles_illustration.png">
+                    </div>
+                    <div class="right-arrow"> right </div>
+                </section>
+            </div>
+            
+        </main>
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body {background-color: #999; color: white;}
+
+	.grid1, .grid2 div {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1em;
+		border: 1px solid white;
+		margin-top: 60px;
+
+/*		 min-height: 400px;
+*/	}
+
+section {border: 1px solid limegreen;}
+section .orange-bk {
+			background-image: url('http://placekitten.com/1200/900');
+		background-size: cover;
+		background-position: center center;
+}
+section .dark-bk {
+		background-image: url('http://placekitten.com/1203/900');
+		background-size: cover;
+		background-position: center center;
+	}
+	.grid1 div, .grid2 div {
+		padding: 20px;
+		margin-bottom: 60px;
+	}
+
+	.feature { width: 100%; }
+
+	h2 {
+		background-color: black;
+		display: inline-block;
+		width: 40%;
+		min-width: 600px;
+		padding: 10px;
+	}
+
+	h2.orange { background-image: url('http://placekitten.com/900/60');
+	background: cover;
+	background-position: center center;
+
+	 }
+</style>
+</head>
+<body>
+
+	<section>
+		<h1>Header</h1>
+		<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente officiis totam necessitatibus modi porro velit ipsum iure, deleniti quas, laborum consectetur minus mollitia eos qui aperiam, incidunt, rem esse quae.
+		</div>
+	</section>
+
+	<section class="orange-bk">
+		<h2 class="orange">Header2</h2>
+		<div class="grid1">
+			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga eveniet, recusandae dicta! Amet rem sequi fugit mollitia consequatur architecto dolores vitae dolor. Quia doloremque maiores, voluptatibus quae ullam enim mollitia!</div>
+			<div><img class="feature" src="http://placekitten.com/600/600"></div>
+		</div>
+	</section>
+	<section class="dark-bk">
+		<h2>Header3</h2>
+		<div class="grid1">
+			<div><img class="feature" src="http://placekitten.com/600/600"></div>
+			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga eveniet, recusandae dicta! Amet rem sequi fugit mollitia consequatur architecto dolores vitae dolor. Quia doloremque maiores, voluptatibus quae ullam enim mollitia!</div>
+		</div>
+	</section>
+
+
+	<section>
+		<h2>Header</h2>
+	</section>
+
+
+	
+</body>
+</html>

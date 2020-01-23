@@ -1,0 +1,10 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+	<title>menu_close</title>
+	<defs>
+		<style type="text/css"><![CDATA[
+			rect { fill: #fff; }
+		]]></style>
+	</defs>
+	<rect x="11.375" y="43.8" width="78.75" height="12.4" rx="6.2" ry="6.2" transform="translate(50.22 -21.241) rotate(45)" />
+	<rect x="11.375" y="43.8" width="78.75" height="12.4" rx="6.2" ry="6.2" transform="translate(-20.491 50.53) rotate(-45)" />
+</svg>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+	<!-- You'l need to have a parent div with a 
+    class of animaterParent -->
+<div class="animatedParent" data-sequence="500">
+  <h2 class="animated bounceInDown" data-id="1">It Works!</h2>
+  <h2 class="animated bounceInDown" data-id="2">This animation will start 500ms after</h2>
+  <h2 class="animated bounceInDown" data-id="3">This animation will start 500ms after</h2>
+</div>
+
+<!-- make sure you are linking to JQuery -->
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+<!-- you'll need to move this file to your scripts folder. -->
+<script type="text/javascript" src="scripts/css3-animate-it.js"></script>
+</body>
+</html>

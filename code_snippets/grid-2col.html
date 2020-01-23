@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Site Name</title>
+	<meta charset="utf-8" />
+	<meta name="description" content="This wesbite about kittens shows you all the magical ways kittens are adrable.">
+	<meta name="keywords" content="kittens, yarn, cats, ">
+
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
+    <style>
+        main {
+            display: grid;
+            grid-template-columns: 30% 70%;
+            grid-gap: 20px;
+        }
+        main div {
+            background-color: #ccc;
+        }
+        .right {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 60px;
+        }
+    </style>
+</head>
+
+<body class="home">
+
+	<header role="banner">
+		<h1>Site Name</h1>
+		<nav>
+			<a href="index.html">Home</a>
+			<a href="about.html">About</a>
+			<a href="contact.html">Contact</a>
+		</nav>
+	</header>
+    <main role="main">
+	
+        <div class="left">Left Column</div>
+        <div class="right">
+           <img src="http://placekitten.com/200/300">
+           <img src="http://placekitten.com/200/200">
+           <img src="http://placekitten.com/200/300">
+           <img src="http://placekitten.com/200/200">
+        </div>
+
+    </main> <!-- //end main -->
+    
+    <footer>
+        <p>...</p>
+    </footer>
+</body>
+</html>

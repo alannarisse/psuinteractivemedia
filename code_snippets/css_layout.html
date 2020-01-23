@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Layout</title>
+    <style>
+        div { 
+            height: 100px;
+            width: 200px;
+            background-color: rgba(55, 82, 87, 0.6);
+            margin: 10px;
+            display: inline-block;
+            float: right;
+        }
+        .abs { 
+            position: absolute;
+            top: 120px;
+            left: 200px;
+         }
+         .bordered { 
+             position: relative;
+             margin-top: 60px;
+             border: 1px solid black;
+             width: 100%;
+             height: 300px;
+            }
+
+        .inlined {}
+        p { 
+            display: inline-block;
+            margin-right: 10px;
+         }
+    </style>
+</head>
+<body>
+    <section class="bordered">
+        <div class="abs"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <section class="inlined">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem sit amet.</p>
+        <p>Lorem ipsum dolor amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Amet</p>
+    </section>
+</body>
+</html>

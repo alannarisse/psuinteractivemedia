@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Slider</title>
+
+	<style>
+		.soup-slide, .beer-slide {display:none;}
+	</style>
+</head>
+<body>
+	
+<button class="accordion soup-btn">Soups & Roughage</button>
+	<div class="panel soup-slide">
+		<aside>Add-on Options: 
+		Smoked or Grilled Chicken $3 | Seared Beef $6 | Grilled Blackened Fish $5 | Avocado $2 | Pulled Pork $3 | Marinated Tofu $3</aside><br>
+		bla bla bla
+	</div>
+<button class="accordion">Beer Snacks</button>
+	<div class="panel beer-slide">
+		<h3>Herbery Fries</h3>
+		<h4>$7.25</h4>
+		<p>House seasoned fries tossed with fresh rosemary, parsley, Asiago cheese, and truffle salt. Served with bleu cheese fondue.</p><br>
+		bla bla bla
+	</div>
+
+
+
+	<script
+  		src="https://code.jquery.com/jquery-3.4.1.min.js"
+  		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  		crossorigin="anonymous"></script>
+  		
+  	<!-- Add the below js to your script file -->	
+	<script type="text/javascript">
+		$( ".soup-btn" ).click(function () {
+	      if ( $( ".soup-slide" ).is( ":hidden" ) ) {
+	        $( ".soup-slide" ).slideDown( 500 );
+	      } else {
+	        $( ".soup-slide" ).slideUp( 500 );
+	      }
+	    });
+
+	    $( ".beer-btn" ).click(function () {
+	      if ( $( ".beer-slide" ).is( ":hidden" ) ) {
+	        $( ".beer-slide" ).slideDown( 500 );
+	      } else {
+	        $( ".beer-slide" ).slideUp( 500 );
+	      }
+	    });
+
+	</script>
+</body>
+</html>

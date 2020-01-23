@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+	</title>
+</head>
+<body>
+	
+
+<img class="swapme" src="http://placekitten.com/400/600">
+
+
+
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script>
+  	$('.swapme').mouseover(function(){
+  		$('.swapme').attr('src', 'http://placekitten.com/400/300')
+  	})
+  	$('.swapme').mouseout(function(){
+  		$('.swapme').attr('src', 'http://placekitten.com/400/600')
+  	})
+  </script>
+
+  
+</body>
+</html>

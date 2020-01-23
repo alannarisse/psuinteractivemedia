@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 900 250">
+	<!--
+		This file was provided as part of a weekly web design tutorial series.
+		Sign-up for our newsletter at http://codifydesign.com to be notified about new episodes.
+	-->
+	<defs>
+		<style type="text/css"><![CDATA[
+
+			rect { fill: #e94114; }
+
+			#rays {
+				transform-origin: 50% 50%;
+                animation: rotate_rays 55s infinite linear;
+			}
+
+			#rays path { fill: #fa7f08; }
+            @keyframes rotate_rays {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+			
+
+		]]></style>
+	</defs>
+
+	<rect x="-21.4" y="-15.4" class="st0" width="933" height="279"/>
+
+	<g transform="translate(0,165)">
+		<g id="rays">
+			<path d="M965,338.2c28.5-65.5,44.9-137.5,46.2-213.2H450.3L965,338.2z"/>
+			<path d="M-64.3,338.2C-35,405.5,7.1,465.9,58.9,516.4L450.3,125L-64.3,338.2z"/>
+			<path d="M239.3,634.5c65.1,26.5,136.4,41.1,211,41.1V125L239.3,634.5z"/>
+			<path d="M450.3,125L450.3,125l522-216.2c-27.5-69.8-68.7-132.8-120.2-185.6L450.3,125L450.3,125z"/>
+			<path d="M450.3,125l211,509.5c67.7-27.5,128.9-67.9,180.4-118.1L450.3,125L450.3,125z"/>
+			<path d="M450.3,125l218.4-527.3c-67.1-28.4-140.9-44.1-218.4-44.1V125L450.3,125z"/>
+			<path d="M231.9-402.3C162.5-373,100.3-330,48.5-276.8L450.3,125L231.9-402.3z"/>
+			<path d="M450.3,125L450.3,125L-71.7-91.2c-25.1,63.7-38.9,133.1-38.9,205.8c0,3.5,0.1,7,0.1,10.4H450.3L450.3,125z"/>
+		</g>
+	</g>
+</svg>
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+	<title>menu</title>
+	 <defs>
+		<style type="text/css"><![CDATA[
+			rect { fill: #fff; }
+		]]></style>
+	</defs>
+	<rect x="11.375" y="15" width="78.75" height="14.2" />
+	<rect x="11.375" y="43.8" width="78.75" height="12.4" />
+	<rect x="11.375" y="70.8" width="78.75" height="14.2" />
+</svg>

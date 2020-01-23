@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+<style type="text/css">
+	header { width:100%; }
+	.flexy li {
+		list-style-type:none;
+		flex: 1;
+
+	}
+	.logo {width: 80px;
+	}
+	.flexy {
+		width: 60%;
+		margin: auto;
+		display: flex;
+		align-items: center;
+	}
+	.logo-spot {flex-basis: 25%;}
+	.flexy .dot {
+		width:16px;
+		height: 16px;
+		border-radius: 50%;
+		background-color: black;
+	}
+</style>
+</head>
+<body>
+	
+<header>
+	<ul class="flexy">
+		<li>link</li>
+		<li><div class="dot"></div></li>
+		<li>link</li>
+		<li class="logo-spot"><img src="http://placekitten.com/60/120"></li>
+		<li>link</li>
+		<li><div class="dot"></div></li>
+		<li>link</li>
+	</ul>
+</header>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Break Tag Trick</title>
+	<style>
+
+		.hide-mobile {display:none;}
+
+		body { 
+				background-color: pink;
+		}
+		header { 
+			width:80%;
+			margin: auto;
+			border-bottom: 4px solid teal;
+		}
+		h1 {
+		 	font-family: verdana, sansserif;
+		 	font-size: 60px;
+			 }
+		@media only screen and (min-width: 768px) {
+			.hide-mobile {display:block;}
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		
+		<h1>This is the best tagline ever written about any <br class="hide-mobile">website ever.</h1>
+
+
+		<img src="http://placekitten.com/400/360/" class="hide-mobile">
+	</header>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

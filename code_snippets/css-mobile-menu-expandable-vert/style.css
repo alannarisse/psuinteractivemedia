@@ -1,0 +1,90 @@
+/*  CSS Document  */
+
+/*  This file was provided as part of a weekly web design tutorial series.
+	Sign-up for our newsletter, at http://codifydesign.com, to be notified
+	about each new episode of Creating Web Media
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:900" rel="stylesheet');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    color: #2f2f2a;
+}
+
+p {
+    margin: 0 0 1em 0;
+}
+
+header {
+    margin: 0;
+    padding: 1px 0;
+    background: #000 url(http://placekitten.com/900/130) no-repeat center center;
+    background-size: cover;
+    height: 130px;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 5em;
+    line-height: 53px;
+    letter-spacing: 8px;
+    color: rgba(200, 220, 234, 0.75);
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 40px;
+    bottom: 6px;
+    text-transform: uppercase;
+}
+
+article {
+    margin: 20px 40px;
+    line-height: 1.5em;
+}
+
+nav {
+    background-color: #666;
+    padding: 15px 15px 5px 40px;
+    color: #fff;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin: 0 35px 0 0;
+    padding: 14px 0;
+    border-top: 1px dashed rgba(255, 255, 255, .2);
+}
+
+nav a:first-of-type {
+    border-top: none;
+}
+
+nav label {
+    display: block;
+    background: url('images/menu.svg') no-repeat 0 1px;
+    background-size: 20px auto;
+    padding: 0 0 10px 30px;
+}
+
+nav label div {
+    margin: 10px 0 0 0;
+    display: none;
+}
+
+nav label input {
+    display: none;
+}
+
+nav label input:checked ~ div {
+    /* ~ is the adjacened sibling selector */
+    display: block;
+}

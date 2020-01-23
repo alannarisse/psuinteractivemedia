@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+	body {margin: 0;}
+	.sticky {
+		margin: 0;
+		background-color: rgba(55, 82, 87, 0.6);
+		height: 80px;
+		position: sticky;
+  		top: 0;
+  		width: 100%;
+	}
+	h1 {
+		margin: 0;
+		padding: 20px;
+	}
+
+</style>
+</head>
+<script>
+	// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+<body>
+	
+	<header class="sticky">
+		<h1>Some stuff</h1>
+	</header>
+	<main>
+		<img src="http://placekitten.com/1200/300">
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, consectetur, adipisci tempore quis consequatur ipsum ratione, quia nam dignissimos animi dolor eum hic, itaque dolore blanditiis. Iusto vero nostrum saepe animi accusamus, recusandae eaque aliquam cupiditate, labore voluptatem odio voluptatum, incidunt, consequuntur rerum suscipit a atque dolor dignissimos debitis. Accusamus.</p>
+		<section class="grey-bk">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consectetur doloribus aperiam voluptatem perferendis dignissimos aliquam hic numquam eius velit, voluptas excepturi quae quod quidem ipsam nihil voluptate. Quia ducimus vitae facere quidem inventore, rerum consectetur enim distinctio ratione laboriosam illo, recusandae, magnam provident blanditiis nihil voluptatum. Eum eius nobis sequi nemo delectus modi, ipsa mollitia, voluptatibus, totam laborum vel!</p>
+		</section>
+<section class="grey-bk">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste consectetur doloribus aperiam voluptatem perferendis dignissimos aliquam hic numquam eius velit, voluptas excepturi quae quod quidem ipsam nihil voluptate. Quia ducimus vitae facere quidem inventore, rerum consectetur enim distinctio ratione laboriosam illo, recusandae, magnam provident blanditiis nihil voluptatum. Eum eius nobis sequi nemo delectus modi, ipsa mollitia, voluptatibus, totam laborum vel!</p>
+		</section>
+	</main>
+</body>
+</html>

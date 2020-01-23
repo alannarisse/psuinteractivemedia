@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Time</title>
+</head>
+<body>
+	
+<script>
+	function date_time() {
+    var date = new Date();
+    var am_pm = "AM";
+    var hour = date.getHours();
+    if(hour>=12){
+        am_pm = "PM";
+    }
+    if(hour>12){
+        hour = hour - 12;
+    }
+    if(hour<10){
+        hour = "0"+hour;
+    }
+
+    var minute = date.getMinutes();
+    if (minute<10){
+        minute = "0"+minute;
+    }
+    var sec = date.getSeconds();
+    if(sec<10){
+        sec = "0"+sec;
+    }
+
+    document.getElementById("time").innerHTML =  hour+":"+minute+":"+sec+" "+am_pm;
+}
+setInterval(date_time,500);
+</script>
+<div class="date" id="time"></div>
+</body>
+</html>

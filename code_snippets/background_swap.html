@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Background Image Swap</title>
+	<style>
+	.home {
+		/* set a default background image if you want */
+		background-image: url('http://placekitten.com/1200/900');
+		background-size: cover;
+		background-position: top center;
+		background-repeat: none;
+	}
+
+
+	/* you'll need four classes for each background image: */
+	.bkgrnd_one { background-image: url('http://placekitten.com/1201/900'); }
+	.bkgrnd_two { background-image: url('http://placekitten.com/1200/901'); }
+	.bkgrnd_three { background-image: url('http://placekitten.com/1201/901'); }
+	.bkgrnd_four { background-image: url('http://placekitten.com/1202/900'); }
+
+
+	</style>
+</head>
+<body class="home">
+
+	<header>
+		<h1>Background image swap</h1>
+		<nav>
+			<a class="one" href="#one">one</a> <a class="two" href="#two">two</a> <a class="three" href="#three">three</a> <a class="four" href="#four">four</a>
+		</nav>
+		<main>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit mauris sit amet orci varius mattis. Suspendisse potenti. Nullam pretium ac tortor in sollicitudin. Proin ac imperdiet libero. Morbi eget placerat quam. Vivamus varius libero sed mauris aliquet, bibendum malesuada lacus tincidunt. Praesent quis dictum neque.</p>
+
+			<p>Suspendisse pellentesque quis nisl eu posuere. Maecenas consectetur lectus odio, eget interdum justo euismod vitae. Aenean auctor convallis enim, et rutrum urna tristique non. Aenean sit amet libero in tortor laoreet ornare. In ac feugiat odio, sed pharetra mauris. Phasellus suscipit massa elit, eu dignissim sem vulputate quis. Fusce pretium ullamcorper libero sit amet luctus. Suspendisse potenti. Donec vel lectus felis.</p>
+
+			<p>Phasellus auctor fringilla dui, id congue ante. Vestibulum tempus, nisi in vehicula accumsan, justo arcu lacinia turpis, eu pulvinar ipsum odio eu diam. Donec consequat odio eu eros consectetur tempus. Aenean vitae aliquet augue, at condimentum felis. Phasellus blandit accumsan magna ut placerat. Quisque non mollis purus, sit amet blandit urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam ac pellentesque lectus, ullamcorper dignissim ipsum. Sed at purus lacinia, fringilla purus at, laoreet arcu. Donec vitae lorem augue. Donec faucibus euismod nulla ut lacinia. Proin purus elit, iaculis nec eleifend ut, consectetur quis massa. Nullam hendrerit consequat enim, sed pulvinar purus viverra vitae. Donec lobortis sit amet nisl eu venenatis. Morbi neque augue, egestas id sem eget, pulvinar tincidunt nunc. Curabitur vitae felis lacinia, accumsan diam eu, placerat neque.</p>
+
+			<p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed non pellentesque lectus. Integer malesuada imperdiet tellus id ornare. Nunc vitae metus felis. Curabitur massa mauris, varius eu cursus at, molestie nec felis. Duis risus risus, pharetra in urna vitae, dictum aliquam enim. Integer id lectus purus. Phasellus convallis magna nulla, a condimentum nisl sollicitudin et. Aliquam erat volutpat. Morbi ut luctus tellus, et accumsan nisl. Suspendisse sed tincidunt tellus. Ut nec facilisis libero. Ut faucibus metus sit amet est fringilla, sed consectetur purus maximus. Aenean metus lacus, varius ut purus sed, fermentum lobortis libero. Mauris imperdiet neque erat, ac viverra dui aliquet id. Cras semper lorem eget libero vestibulum cursus.</p>
+
+			<p>Ut eleifend pulvinar luctus. Proin lectus eros, euismod ut justo sit amet, ullamcorper volutpat velit. Sed augue lacus, ornare ut auctor sed, laoreet sit amet metus. Sed ut sagittis augue. Fusce eros odio, commodo et vehicula vel, ullamcorper non nulla. Mauris sodales sit amet ipsum quis placerat. Proin at eros est.</p>
+		</main>
+	</header>
+	<!-- this script imports jquery so we can use it to swap backgrounds -->
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+
+	  <!-- this is the script that changes the background -->
+	  <script>
+	  	$('.one').on('click', function(){
+	  		$('body').addClass('bkgrnd_one')
+	  		$('body').removeClass('bkgrnd_two')
+	  		$('body').removeClass('bkgrnd_three')
+	  		$('body').removeClass('bkgrnd_four')
+	  	})
+	  	$('.two').on('click', function(){
+	  		$('body').addClass('bkgrnd_two')
+	  		$('body').removeClass('bkgrnd_one')
+	  		$('body').removeClass('bkgrnd_three')
+	  		$('body').removeClass('bkgrnd_four')
+	  	})
+	  	$('.three').on('click', function(){
+	  		$('body').addClass('bkgrnd_three')
+	  		$('body').removeClass('bkgrnd_one')
+	  		$('body').removeClass('bkgrnd_two')
+	  		$('body').removeClass('bkgrnd_four')
+	  	})
+	  	$('.four').on('click', function(){
+	  		$('body').addClass('bkgrnd_four')
+	  		$('body').removeClass('bkgrnd_one')
+	  		$('body').removeClass('bkgrnd_three')
+	  		$('body').removeClass('bkgrnd_two')
+	  	})
+	  </script>
+
+</body>
+</html>

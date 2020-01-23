@@ -1,0 +1,57 @@
+body { 
+    margin: 0;
+    padding: 0;
+
+}
+
+@font-face {
+    font-family: AdobeArabic;
+    src: url("assets/AdobeArabic-Bold.otf") format("opentype");
+}
+
+.background-big {
+    background-image: url('http://placekitten.com/1200/400');
+    background-size: cover;
+    height: 400px;
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    font-size: 48px;
+    font-family: 'AdobeArabic', times;
+}
+
+.global-nav ul { 
+    list-style: none;
+    text-align: right;
+}
+.global-nav li { 
+    display: inline;
+    
+}
+
+.global-nav a {
+    font-family: Georgia;
+    text-decoration: none;
+    color: brown;
+    font-weight: bold;
+    background-color: pink;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin: 20px;
+    border-radius: 20px;
+
+}
+
+.global-nav a:hover { 
+    color: black;
+    font-size: 24px;
+    background-color: aqua;
+}

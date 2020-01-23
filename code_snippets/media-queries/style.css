@@ -1,0 +1,116 @@
+body {
+	font-family: 'Ubuntu', sans-serif;
+	color: #333;
+	font-size: 16px;
+}
+
+a { color: #333; text-decoration: none; }
+a:hover {
+	color: #000;
+}
+header {
+	background-image: url(http://placekitten.com/1202/400);
+	background-position: 40% 50%;
+	background-size: cover;
+	height: 400px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+h1, h2, h3, h4, h5 {
+	font-family: 'Fascinate Inline', cursive;
+}
+
+
+h1 {
+	font-size: 72px;
+	color: white;
+	padding: 40px 0 0 40px;
+	white-space: nowrap;
+}
+h2 {
+	font-size: 48px;
+}
+
+p {
+	line-height: 1.2em;
+	margin-top: 20px;
+}
+nav ul {
+	list-style-type: none;
+	text-align: right;
+	margin-top: 340px;
+	margin-right: 40px;
+}
+nav li { 
+	display: inline-block;
+	font-size: 24px;
+}
+
+nav a { 
+	color: white;
+	text-decoration: none;
+	margin: 10px;
+}
+nav a:hover {
+	border-bottom: 4px solid #568028;
+	color: #568028;
+}
+
+.button {
+	display: inline-block;
+	padding: 12px;
+	border-radius: 12px;
+	background-color: #ACFF50;
+	margin: 20px 0;
+}
+
+.button:hover {
+	background-color: #FFA570;
+}
+main {
+	width: 80%;
+	margin: 60px auto;
+}
+
+article {
+	margin-top: 60px;
+	width: 100%;
+}
+
+.grid-4 {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 40px;
+}
+.grid-4 img { width: 100%; }
+
+footer {
+	background-color: #999;
+	color: white;
+	height: 60px;
+	padding: 20px 0 0 40px;
+}
+
+
+@media only screen and (max-width: 768px) {
+	.grid-4 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.welcome h2 {
+		font-size: 32px;
+	}
+	header {
+		grid-template-columns: 1fr;
+	}
+	nav ul {
+		margin-top: 200px;
+	}
+
+}
+
+@media only screen and (max-width: 520px) {
+	.grid-4 {
+		grid-template-columns: 1fr;
+	}
+
+}

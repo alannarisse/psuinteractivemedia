@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.moveMe {
+    position: relative;
+    animation-name :moveMe;
+    animation-duration: 5s;
+    animation-iteration-count: 3;
+    animation-play-state: paused;
+    font-size: 10vh;
+    text-decoration: none;
+}
+
+.moveMe:hover {
+  
+
+  color: red;
+  -webkit-text-fill-color: rgba(0,0,0,0); /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: red;
+}
+
+@-webkit-keyframes moveMe {
+    0%   {left:200px; top:0px;}
+    100%   {left:-200px; top:0px;}
+}
+
+
+</style>
+</head>
+<body>
+
+
+
+
+
+
+    <h1 class="moveMe"><a href="#">Move Me!</a></h1>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script>
+      $('.moveMe').hover(function(){
+        $('.moveMe').css('animation-play-state', 'running');
+
+      })
+
+  </script>
+</body>
+
+
+</html>

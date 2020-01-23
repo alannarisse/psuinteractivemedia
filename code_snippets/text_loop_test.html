@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Text Loop Test</title>
+	<style>
+		.wrapper {
+  position: relative;
+}
+
+.clouds {
+  position: absolute;
+}
+
+.clouds.cloud1 {
+  left: 50px;
+  animation: cloud1 10s linear 1;
+  white-space: nowrap;
+}
+
+.clouds.cloud2 {
+  left: -400px;
+  animation: cloud1 10s 5s linear 1;
+  white-space: nowrap;
+}
+
+@keyframes cloud1 {
+  0% {
+    left: 20px;
+  }
+  100% {
+    left: 3000px;
+  }
+}
+
+@keyframes cloud2 {
+  0% {
+    left: -400px;
+  }
+  100% {
+    left: 100px;
+  }
+}
+	</style>
+</head>
+<body>
+
+	<div class="wrapper">
+	<div class="clouds cloud1"><h1>about about about</h1></div>
+	<div class="clouds cloud2"><h1>about about about</h1></div>
+</div>
+	
+</body>
+</html>
