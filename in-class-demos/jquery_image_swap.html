@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Image Swap</title>
+	<style>
+		.potatoes {
+			position:relative;
+		}
+		.potato-box {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 500px;
+			height: 300px;
+			
+		}
+		#one {background-image:url('potato/potato1.jpeg');background-size: cover;}
+		#two {background-image:url('potato/potato2.jpeg');background-size: cover;}
+		#three {background-image:url('potato/potato3.jpeg');background-size: cover;}
+		.hide {display: none;}
+	</style>
+</head>
+<body>
+	
+<div class="potatoes">
+	<div class="potato-box" id="one"></div>
+	<div class="potato-box hide" id="two"></div>
+	<div class="potato-box hide" id="three"></div>
+</div>
+
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script>
+		$('.potato-box').click(function(){
+			$('potato-box').remove('#one')
+			$('#two').toggleClass('hide')
+		})
+		$('#two').click(function(){
+			$('#two').remove('#two')
+			$('#three').toggleClass('hide')
+		})
+
+  </script>
+
+
+ 
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JQuery Triggered Animation</title>
+
+<style> 
+div.a {
+  width: 150px;
+  height: 80px;
+  background-color: yellow;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Safari 3-8 */
+  transform: rotate(0deg);
+
+}
+
+.animateMe{  
+	animation-name: rotateMe;
+  animation-duration: .5s;
+}
+
+@keyframes rotateMe {
+ 0% {
+ transform: rotate(4deg)
+ }
+ 25% {
+ transform: rotate(-4deg)
+ }
+  50% {
+ transform: rotate(4deg)
+ }
+  100% {
+ transform: rotate(-4deg)
+ }
+}
+
+div.b {
+  width: 150px;
+  height: 80px;
+  background-color: yellow;
+  -ms-transform: skewY(20deg); /* IE 9 */
+  -webkit-transform: skewY(20deg); /* Safari 3-8 */
+  transform: skewY(20deg);
+}
+
+div.c {
+  width: 150px;
+  height: 80px;
+  background-color: yellow;
+  -ms-transform: scaleY(1.5); /* IE 9 */
+  -webkit-transform: scaleY(1.5); /* Safari 3-8 */
+  transform: scaleY(1.5);
+}
+</style>
+</head>
+<body>
+
+<h1>The transform Property</h1>
+
+<h2>transform: rotate(20deg):</h2>
+<div class="a">Hello World!</div>
+<br>
+
+<h2>transform: skewY(20deg):</h2>
+<div class="b">Hello World!</div>
+<br>
+
+<h2>transform: scaleY(1.5):</h2>
+<div class="c">Hello World!</div>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script>
+  	$('.a').click(function(){
+  			$('.a').toggleClass('animateMe');
+  	})
+  </script>
+</body>
+</html>
