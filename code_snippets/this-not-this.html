@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>This not this</title>
+	<style>
+		main {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			margin: auto;
+			grid-gap: 60px;
+			width: 500px;
+		}
+		div { 
+			width: 200px; 
+			height: 200px;
+			transition: all .2s ease-in-out;
+			 }
+			.animate {
+				transform: scale(4);
+				 opacity: .5;
+
+			}
+			
+			.move-down   
+			{
+				animation: moveDown 3s ease-out forwards;
+  			animation-iteration-count: 3;
+			}
+
+@keyframes moveDown
+{ 
+  from {transform: translateY(0); opacity: 1;}
+  to { transform: translateY(200px); opacity: .5;}
+}
+
+		.one { 
+			background-color: red;
+			 }
+		.two { background-color: blue; }
+		.three { background-color: green; }
+		.four { background-color: yellow; }
+
+	</style>
+</head>
+<body>
+
+	<ul>
+		<li>one</li>
+		<li>two</li>
+		<li>three</li>
+		<li>four</li>
+		<li>five</li>
+	</ul>	
+
+	<main>
+		<div class="one">One</div>
+		<div class="two">Two</div>
+		<div class="three">three</div>
+		<div class="four">four</div>
+	</main>
+
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script>
+  	$('div').click(function(){
+  		$(this).addClass('animate')
+  		$('div').not(this).addClass('move-down')
+  	})
+
+  	$('li').click(function(){
+  		$(this).css('text-decoration', 'line-through')
+  		$('li').not(this).css('color', 'green')
+
+  	})
+
+  </script>
+</body>
+</html>
