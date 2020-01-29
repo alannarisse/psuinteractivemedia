@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Switch demo</title>
+  <style>
+    body, p, h1, li, button {font-family: verdana;}
+
+  </style>
+</head>
+<body>
+
+<div style="width:800px;margin:40px auto;">
+
+
+<p>Click the button to display what day it is today.</p>
+  <select id="daydropdown">
+    <option>Monday</option>
+    <option>Tuesday</option>
+    <option>Wednesday</option>
+    <option>Thursday</option>
+    <option>Friday</option>
+    <option>Saturday</option>
+    <option>Sunday</option>
+  </select>
+  <button onclick="dayPicker(this.value)">What's your favorite day?</button>
+
+
+<p id="message"></p>
+
+
+<img src="switch_img/skunk.png" id="myImg"/>
+
+
+<script>
+function dayPicker() {
+
+  let pickDay = document.getElementById("daydropdown").value;
+    switch (pickDay) {
+      case 'Sunday':
+        x = "Today it's Sunday";
+        document.getElementById("myImg").src = "switch_img/serval.jpg";
+      break;
+      case 'Monday':
+        x = "Today it's Monday";
+        document.getElementById("myImg").src = "switch_img/meerkat.jpeg";
+        break;
+      case "Tuesday":
+        x = "Today it's Tuesday";
+        document.getElementById("myImg").src = "switch_img/tarsier.jpg";
+        break;
+      case "Wednesday":
+        x = "Today it's Wednesday";
+        document.getElementById("myImg").src = "switch_img/walrus.jpeg";
+        break;
+      case "Thursday":
+        x = "Today it's Thursday";
+        document.getElementById("myImg").src = "switch_img/thomsonsgazelle.jpg";
+        break;
+      case "Friday":
+        x = "Today it's Friday";
+        document.getElementById("myImg").src = "switch_img/ferret.jpg";
+        break;
+      case "Saturday":
+        x = "Today it's Saturday";
+        document.getElementById("myImg").src = "switch_img/sloth.jpg";
+        break;
+      default:
+        x = "Every day is like Sunday";
+        document.getElementById("myImg").src = "switch_img/skunk.jpg";
+        break;
+  }
+    document.getElementById("message").innerHTML = x;
+}
+</script>
+</div>
+
+</body>
+</html>
