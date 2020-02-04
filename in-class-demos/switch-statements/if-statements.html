@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>If Statements</title>
+</head>
+<body>
+	
+<select id="dropdown">
+	<option value="" selected>-- select a number --</option>
+	<option value="one">one</option>
+	<option value="two">two</option>
+	<option value="three">three</option>
+</select>
+
+
+<p id="speak">foo</p>
+
+<img id="imgSrc"
+ src="http://placekitten.com/200/200">
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+	<script>
+		$(init());
+			$('select').change(function(){
+
+    switch ($('select').val('one')) {
+      case 'one':
+        $('#speak').html('one is the loneliest number');
+        $('#imgSrc').attr('src', 'http://placekitten.com/300/400');
+      break;
+      case 'two':
+        $('#speak').html('two is as bad as one');
+        $('#imgSrc').attr('src', 'http://placekitten.com/302/400');
+      break;
+      case 'three':
+        $('#speak').html('it\'s the lonliest number since the number one');
+        $('#imgSrc').attr('src', 'http://placekitten.com/304/400');
+      break;
+      default:
+        $('#speak').html('its the lonliest bird since the number one');
+        $('#imgSrc').attr('src', 'http://placekitten.com/304/405');
+  	}
+  	})
+
+function init(){
+}
+</script>
+</body>
+</html>
