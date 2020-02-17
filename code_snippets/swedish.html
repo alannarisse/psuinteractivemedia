@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		
+		.translateToEng, .dontTranslate {
+			display:none;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="translateToEng">
+	You wanna translate to english?</div>
+	<div class="dontTranslate">
+	Cool, you speak Swedish?</div>
+	<p>
+		Artikel 26.
+Envar har rätt till undervisning. Undervisningen skall vara kostnadsfri, åtminstone på de elementära och grundläggande stadierna. Den elementära undervisningen skall vara obligatorisk. Yrkesundervisning och teknisk undervisning skall vara allmänt tillgänglig. Den högre undervisningen skall stå öppen i lika mån för alla på grundval av deras duglighet.
+Undervisningen skall syfta till personlighetens fulla utveckling och till att stärka respekten för människans grundläggande fri- och rättigheter. Undervisningen skall främja förståelse, tolerans och vänskap mellan alla nationer, rasgrupper och religiösa grupper samt befordra Förenta Nationernas verksamhet för fredens bevarande.
+Rätten att välja den undervisning, som skall ges åt barnen, tillkommer i främsta rummet deras föräldrar.
+</p>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+            var userLang = navigator.language || navigator.userLanguage;
+            if (!userLang.startsWith("sv")) {
+            			// alert('meatballs!')
+                    // window.location.href = '../fr/index.html';
+                    $('.translateToEng').css('display','block');
+                }
+            else {
+                    // window.location.href = '../en/index.html';
+                    // alert('ya, god')
+                    $('.translateToEng').css('display','block');
+                }
+            });
+</script>
+</body>
+</html>
