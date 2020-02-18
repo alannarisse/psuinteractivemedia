@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+		}
+		h1 {
+			transform: rotate(90deg);
+			height: 100vh;
+		}
+		.one-content {
+			display: none;
+		}
+		#one {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+		.slide2 {display: none;}
+	</style>
+</head>
+<body>
+	<main>
+		<ul>
+		 <li class="expand">Photography</li>
+	                <ul class="slide2">
+	                	<li>More photo stuff</li>
+	                	<li>More photo stuff</li>
+	                	<li>More photo stuff</li>
+	                	<li>More photo stuff</li>
+	                </ul>
+	</ul>
+</main>
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script>
+  	$(function() {
+    $( ".expand" ).click(function () {
+      if ( $( ".slide2" ).is( ":hidden" ) ) {
+        $( ".slide2" ).slideDown( 1000 );
+      } else {
+        $( ".slide2" ).slideUp( 1000 );
+      }
+    });
+
+	});
+
+  </script>
+
+</body>
+</html>

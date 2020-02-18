@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+		}
+		h1 {
+			transform: rotate(90deg);
+			height: 100vh;
+		}
+		.one-content {
+			display: none;
+		}
+		#one {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+	</style>
+</head>
+<body>
+	<main class="grid">
+	<section>
+		<h1 class="one">page one</h1>
+		<article class="one-content">one Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat pariatur eius deleniti eum quae natus quam inventore exercitationem facilis, officiis soluta unde a ipsa modi nihil voluptates, ratione temporibus aut.
+		</article>
+	</section>
+<section>
+		<h1 id="two">page two</h1>
+		<article>two Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat pariatur eius deleniti eum quae natus quam inventore exercitationem facilis, officiis soluta unde a ipsa modi nihil voluptates, ratione temporibus aut.
+		</article>
+	</section>
+	<section>
+		<h1 id="three">page three</h1>
+		<article>three Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat pariatur eius deleniti eum quae natus quam inventore exercitationem facilis, officiis soluta unde a ipsa modi nihil voluptates, ratione temporibus aut.
+		</article>
+	</section>
+	<section>
+		<h1 id="four">page four</h1>
+		<article>four Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat pariatur eius deleniti eum quae natus quam inventore exercitationem facilis, officiis soluta unde a ipsa modi nihil voluptates, ratione temporibus aut.
+		</article>
+	</section>
+</main>
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script>
+  	$("h1").click(function(){
+  		$('.one-content').css('display','block');
+  	});
+
+  </script>
+
+</body>
+</html>
