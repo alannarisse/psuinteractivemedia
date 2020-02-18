@@ -1,0 +1,683 @@
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* General Styles */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #fceea9;
+    line-height: 1.5em;
+    background: black;
+    font-weight: lighter;
+    color: #ffebb3;
+    padding: 0px 100px;
+    width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+#intropage {
+    background: url('../img/bokeh.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 1000px;
+    height: 600px;
+    padding: 0px 100px;
+    margin: 0 auto;
+}
+
+#content {
+    width: 1000px;
+    height: 1400px;
+    position: relative;
+
+    }
+.marunight {
+    background-image: url('../img/marunight.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    position: fixed;
+    top: -120%;
+    width: 1000px;
+    height: 600px;
+    z-index: -1;
+}
+.linetext{
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 85%;
+    width: 1000px;
+    height: 65px;
+    z-index: -2;
+    text-align: center;
+    font-size: 16px;
+    padding-top: 40px;
+}
+.okinawa {
+    background-image: url('../img/okinawa2.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    position: fixed;
+    top: 0;
+    width: 1000px;
+    height: 600px;
+    z-index: -3;
+}
+.about{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    bottom: 0px;
+}
+.scrollmark{
+    width: 50px;
+    height: 50px;
+    background: url(../img/scrollmark.png);
+    background-size: contain;
+    position: absolute;
+    top: -880px;
+    left: 450px;
+    animation: flash 2s infinite;
+    
+}
+.stringlights{
+    background: url(../img/aboutlights.svg) no-repeat center;
+    background-size: contain;
+    top: 20px;
+}
+
+.about_shape{
+    background: url(../img/aboutbg.svg) no-repeat center;
+    background-size: cover;
+    background-position: top center;
+    height: 520px;
+    opacity: .75;
+    z-index: 1;
+}
+.confirm .about_shape{
+    margin: 0 auto;
+    background-size: cover;
+    background-position: top center;
+    width: 1000px;
+    height: 500px;
+    opacity: .75;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+}
+.about_text{
+    padding-left: 150px;
+    padding-right: 150px;
+    position: absolute;
+    bottom: 150px;
+    z-index: 2;
+    opacity: 1;
+    font-size: 14px;
+    font-weight: lighter;
+}
+.confirm .about_text{
+    padding-left: 200px;
+    padding-right: 200px;
+    position: absolute;
+    bottom: 160px;
+    left: 25px;
+    z-index: 2;
+    opacity: 1;
+}
+.about_text h1 {
+    color: red;
+    font-size: 22px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.entermark{
+    background: url(../img/maru.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 100px;
+    position: absolute;
+    bottom: 20px;
+    left: 450px;
+}
+.about a{
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    background-color: transparent;
+    padding-left: 3px;
+    color: #fceea9;
+    width: 90px;
+    height: 60px;
+    position: absolute;
+    bottom: 20px;
+    left: 450px;
+}
+.about a:hover{
+    color: #fcee9a;
+    animation: pulsate 6s infinite;
+}
+.confirm .about a{
+    width: 150px;
+    height: 50px;
+    left: 425px;
+    bottom: 70px;
+}
+/*************************************************/
+
+.container{
+    background: url(../img/bokeh.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+.lunch{
+    background: url(../img/bokeh.jpg);
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+}
+.dinner{
+    background: url(../img/bokeh.jpg);
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+}
+.happyhr{
+    background: url(../img/bokeh.jpg);
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+}
+.parallax{
+    width: 100%;
+    margin: 0 auto;
+    background: transparent;
+}
+.parallax-window {
+    min-height: 550px;
+    background: transparent;
+}
+
+.betweenparallax{
+    width: 1000px;
+    height: 140px;
+}
+.neoninfo,.neonlunch,.neondinner,.neonhappyhr{
+    height: 140px;
+    text-align: center;
+    margin-top: 35px;
+    z-index: 10;
+}
+.neoninfo path, .neonlunch path, .neondinner path, .neonhappyhr path{ 
+    animation: glowyellow 5s infinite;
+}
+.neoninfo polyline{
+    animation: strokeyellow 6s infinite;
+}
+.neonlunch polyline{
+    animation: stroketeal 6s infinite;
+}
+.neondinner polyline{    
+    animation: strokeblue 6s infinite;
+}
+.neonhappyhr polyline{
+    animation: strokepurple 6s infinite;
+}
+.maincontent{
+    width: 100%;
+    height: 400px;
+    margin-top: -15%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+.stringlights, .infolights, .lunchlights, .dinnerlights, .happyhrlights{
+    height: 200px;
+    width: 1000px;
+    z-index: 10;
+    position: absolute;
+   filter: url("#lightglow");
+    animation: flicker 5s infinite;
+}
+.infolights{
+    background: url(../img/aboutlights.svg) no-repeat center;
+    background-size: contain;
+    top: 10px;
+}
+.lunchlights{
+    background: url(../img/lunchlights.svg) no-repeat center;
+    background-size: contain;
+    top: 15px;
+}
+.dinnerlights{
+    background: url(../img/dinnerlights.svg) no-repeat center;
+    background-size: contain;
+    top: 15px;
+}
+.happyhrlights{
+    background: url(../img/happyhrlights.svg) no-repeat center;
+    background-size: contain;
+    top: 33px;
+}
+.stringf, .stringl, .stringd, .stringh{
+    position: absolute;
+    left: 42px;
+    width: 1px;
+    background-color: #ffde80;
+    z-index: 2;
+}
+.stringf{
+    top: -60px;
+    height: 110px;
+}
+.stringl{
+    top: -50px;
+    height: 95px;
+}
+.stringd, .stringh{
+    top: -70px;
+    height: 115px;
+}
+.confirmlogo{
+    background: url(../img/logo.png) no-repeat center;
+    background-size: contain;
+    width: 1000px;
+    height: 90px;
+    position: absolute;
+    top: 110px;
+    z-index: 10;
+    
+}
+.infologo, .logo{
+    background: url(../img/logo.png) no-repeat center;
+    background-size: contain;
+    width: 1000px;
+    height: 70px;
+    position: absolute;
+    z-index: 100;
+}
+.infologo{
+    top: 110px;
+    width: 200px;
+    left: 400px;
+    
+}
+.logo{
+    top: 145px;
+    z-index: 20;
+}
+.infoshape, .lunchshape, .dinnershape, .happyhrshape{
+    width: 1000px;
+    height: 550px;
+    z-index: 3;
+    position: absolute;
+}
+.infoshape{
+    background: url(../img/infobg.png) no-repeat center;
+    background-size: cover;
+    background-position: top;
+    top: -10px;
+    height: 950px;
+    opacity: .74;
+    z-index: 2;
+    
+}
+.lunchshape{
+    background: url(../img/lunchtopnew.png) no-repeat center;
+    background-size: contain;
+    background-position: top center;
+    top: 60px;
+}
+.dinnershape{
+    background: url(../img/dinnertopnew.png) no-repeat center;
+    background-size: contain;
+    background-position: top center;
+    top: 60px;
+}
+.happyhrshape{
+    background: url(../img/happyhrtopnew.png) no-repeat center;
+    background-size: contain;
+    background-position: top center;
+    top: 60px;
+}
+.lunchtime, .dinnertime, .happyhrtime{
+    width: 1000px;
+    height: 30px;
+    background-color: #660000;
+    z-index: 5;
+    position: absolute;
+    top: 300px;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 16px;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+.happyhrtime{
+    width: 850px;
+    text-align: left;
+    padding-left: 150px;
+}
+.tab{
+    padding-left: 95px;
+}
+.infotext{
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-top: 210px;
+    z-index: 4;
+    display: flex;
+    
+}
+.infoleft{
+    flex: 1;
+    padding-right: 20px;
+}
+.inforight{
+    flex: 1;
+}
+.lunchbg, .dinnerbg, .happyhrbg{
+    opacity: .9;
+    position: absolute;
+    top: 310px;
+    width: 900px;
+    margin-left: 50px;
+    z-index: 3;
+}
+.lunchbg{
+    background-color: #002126;
+    height: 2000px;
+}
+.dinnerbg{
+    background-color: #000e26;
+    height: 1350px;
+}
+.happyhrbg{
+    background-color: #1f0026;
+    height: 2450px;
+}
+.lunchtext, .dinnertext, .happyhrtext{
+    width: 900px;
+    margin: 0 auto;
+    padding-top: 20px;
+    margin-top: 340px;
+    text-align: left;
+    z-index: 7;  
+}
+.toptext, .bottomtext{
+    display: flex;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.bottomtext{
+}
+.dinnertext .bottomtext, .happyhrtext .bottomtext{
+    width: 500px;
+}
+.topleft, .topright {
+  width: 280px;
+  border-collapse: collapse;
+}
+.topleft{
+    margin-right: 30px;
+}
+.topright{
+    margin-left: 30px;
+}
+.divTableCellp{
+    text-align: right;
+}
+.divTable{ display: table;}
+.divTableRow { display: table-row; }
+.divTableCell { display: table-cell;
+                padding-bottom: 10px;}
+.divTableBody { display: table-row-group;}
+
+h1{
+    color: #cc0000;
+    font-size: 1.5em;
+    padding: 20px 0px;
+    text-align: left;
+    font-weight: bolder;
+}
+.italic{
+    font-style:italic;
+    font-size: 15px;
+    color: #ffde80;
+}
+.contactform{
+    width: 850px;
+    height: 320px;
+    margin-top: -29px;
+    padding-left: 150px;
+    padding-top: 30px;
+}
+
+#menulight{
+	position: absolute;
+    top: 220px;
+    left: 805px;
+    z-index: 100;
+    opacity: .9;
+}
+#menulight #Light{
+    opacity: 1;
+}
+#menulight:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+#menu{
+    background: url(../img/menubg1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+	position: absolute;
+	right: 50px;
+	top: 430px;
+	width: 200px;
+	height: 300px;
+	opacity: 0;
+    z-index: 100;
+    padding-top: 45px;
+	transition: opacity 0.5s linear 0s, right 0s linear 0s;
+    
+}
+#menu a{
+    display:block;
+    text-decoration: none;
+    font-size: 14px;
+    padding-bottom: 5px;
+    color: #fceea9;
+    width: 40px;
+    margin-left: 79px;
+    text-align: center; 
+    opacity: .7;
+}
+#menu a:last-child{
+    width: 80px;
+    margin-left: 60px;
+}
+#menu a:hover{
+    color: #7f6e41;
+}
+.infocontent #menu a:nth-child(2){
+    color: #ffc933;
+    font-weight: bolder;
+}
+.lunchcontent #menu a:nth-child(3){
+    color: #ffc933;
+    font-weight: bolder;
+}
+.dinnercontent #menu a:nth-child(4){
+    color: #ffc933;
+    font-weight: bolder;
+}
+.happyhrcontent #menu a:nth-child(5){
+    color: #ffc933;
+    font-weight: bolder;
+}
+.form{
+    padding-left: 15px;
+    padding-top: 20px;
+    width: 350px;
+    background: transparent;
+    color: #fceea9;
+    margin: -16px -16px 16px -16px;
+}
+.form input[type="text"],
+.form input[type="date"],
+.form input[type="datetime"],
+.form input[type="email"],
+.form input[type="number"],
+.form input[type="search"],
+.form input[type="time"],
+.form input[type="url"],
+.form textarea,
+.form select 
+{
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    background: rgba(0, 0, 0, .1);
+    margin-bottom: 4%;
+    border: 1px solid #fceea9;
+    padding: 3%;
+    color: #fceea9;
+}
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form textarea:focus {
+    box-shadow: 0 0 5px #fceea9;
+    padding: 3%;
+    border: 1px solid #fceea9;
+}
+
+.form input[type="submit"],
+.form input[type="button"]{
+    width: 70px;
+    height: 30px;
+    background: #fceea9;   
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 2px;
+}
+::placeholder{
+    color: #fceea9;
+    opacity: .5;
+}
+.form input[type="submit"]:hover,
+.form input[type="button"]:hover{
+    opacity: .5;
+
+}
+/*Animation*/
+@keyframes flicker {
+    0% {opacity: 1;}
+     52% {opacity: 1;}
+     55% {opacity: 0;}
+     56% {opacity: 0;}
+    57% {opacity: 1}
+     100% {opacity: 1;}
+}
+@keyframes pulsate {
+    0% {
+        text-shadow: 0px 0px 0px;
+        opacity: 1;
+    }
+    50% {
+        text-shadow: 0px 0px 10px #ffebb3,
+                    0px 0px 20px #ffebb3,
+                    0px 0px 30px #ffebb3,
+                    0px 0px 40px #ffebb3,
+                    0px 0px 50px #ffebb3,
+                    0px 0px 60px #ffebb3;
+        opacity: 1;
+    }
+    100% {
+        text-shadow: 0px 0px 0px;
+        opacity: 1;
+    }
+}
+@keyframes flash {
+	0% { opacity: 1; } 
+	50% { opacity: .1; } 
+	100% { opacity: 1; }
+}  
+@keyframes turnon {
+    0% {fill: black;}
+    50% {fill: #ffde80}
+    100% {fill: black;}
+}
+@keyframes glowyellow {
+    30% {fill: #ffebb3;}
+    50% {fill: #ffde80;
+        filter: url("#yellowg");
+    }
+    100%{fill: #ffebb3;}
+}
+@keyframes strokeyellow {
+    0% {stroke: #ffde80;}
+    50% {stroke: #330000;}
+    100% {stroke: #ffde80;}
+}
+@keyframes stroketeal {
+    0% {stroke: #ffde80;}
+    50% {stroke: #002126;}
+    100% {stroke: #ffde80;}
+}
+@keyframes strokeblue {
+    0% {stroke: #ffde80;}
+    50% {stroke: #000e26;}
+    100% {stroke: #ffde80;}
+}
+@keyframes strokepurple {
+    0% {stroke: #ffde80;}
+    50% {stroke: #1f0026;}
+    100% {stroke: #ffde80;}
+}
+@keyframes changefill {
+    0% {fill: #ffde80;
+    }
+    50% {fill: #ffebb3;
+    }
+    100% {fill: #ffde80;
+    }
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+/* Forces a box filled with floated elements to wrap around child elements */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
