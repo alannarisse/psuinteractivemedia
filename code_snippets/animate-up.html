@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		.anim1 {
+			animation-duration: 3s;
+			animation-name: one;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.anim2 
+		{
+			animation-delay: 3s;
+			animation-duration: 3s;
+			animation-name: two;
+			top: -200px;
+			left: 0;
+
+		}
+
+		@keyframes one{
+			0% { 
+				top: -400px;
+				left: 0; 
+		}
+		50% {
+				top: 0;
+				left: 0; 
+		}
+			100% { top: -400px;
+				left: 0; 
+			}
+		}
+
+		@keyframes two{
+			0% { 
+				top: -400px;
+				left: 0; 
+		}
+		50% {
+				top: 0;
+				left: 0; 
+		}
+			100% { top: -400px;
+				left: 0; 
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div>
+	<img class="anim1" src="http://placekitten.com/400/300" alt="">
+<img class="anim2" src="http://placekitten.com/401/300" alt="">
+	</div>
+</body>
+</html>
