@@ -4,20 +4,31 @@
 	<meta charset="UTF-8">
 	<title>Parallax</title>
 	<style>
-		.parallax-window {
-    min-height: 400px;
+		.plax {
+    min-height: 100vh;
     background: transparent;
 }
+
+p {color: #fff; width:60%; margin: auto; padding-top: 80px;}
 
 	</style>
 </head>
 <body>
 	
 
-	<div class="parallax-window" data-parallax="scroll">
+	<div class="plax parallax-window1" data-parallax="scroll">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem asperiores accusantium necessitatibus possimus facilis totam, velit, esse provident aliquid consequatur.</p>
+		
+	</div>
+
+		<div class="plax parallax-window2" data-parallax="scroll">
 		
 		
 	</div>
+
+	<div class="plax parallax-window3" data-parallax="scroll">
+		
+		
 	</div>
 
 	<div style="height:800px;">
@@ -26,7 +37,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/parallax.js"></script>
 <script>
-	$('.parallax-window').parallax({imageSrc: 'images/patrik.jpg'});
+	$('.parallax-window1').parallax({imageSrc: 'images/patrik.jpg'});
+	$('.parallax-window2').parallax({imageSrc: 'http://placekitten.com/1200/600'});
+	$('.parallax-window3').parallax({imageSrc: 'http://placekitten.com/1201/600'});
 
 </script>
 </body>
