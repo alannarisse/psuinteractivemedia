@@ -5,42 +5,48 @@
 	<title>Parallax</title>
 	<style>
 		.plax {
-    min-height: 100vh;
-    background: transparent;
-}
+    	min-height: 400px;
+    	background: transparent;
+		}
 
-p {color: #fff; width:60%; margin: auto; padding-top: 80px;}
+		p {color: #fff; width:60%; margin: auto; padding-top: 80px;}
 
 	</style>
 </head>
 <body>
 	
 
-	<div class="plax parallax-window1" data-parallax="scroll">
+	<section class="plax parallax-window1" data-parallax="scroll">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem asperiores accusantium necessitatibus possimus facilis totam, velit, esse provident aliquid consequatur.</p>
 		
-	</div>
+	</section>
 
-		<div class="plax parallax-window2" data-parallax="scroll">
-		
-		
-	</div>
+	<section class="plax parallax-window2" data-parallax="scroll">
+			<div class="grid">
+				<!-- some grid stuff, all your page stuff, all the stuff! -->
+			</div>
+	</section>
 
-	<div class="plax parallax-window3" data-parallax="scroll">
+	<section class="plax parallax-window3" data-parallax="scroll">
 		
-		
-	</div>
+		<!-- some grid stuff, all your page stuff, all the stuff! -->
+	</section>
 
-	<div style="height:800px;">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nesciunt, quasi esse qui nemo cumque sequi! Accusantium debitis tempora perspiciatis nobis, nulla illo ut adipisci quod inventore maiores laborum expedita sed rerum, consequuntur molestias neque! Pariatur mollitia perferendis eligendi, velit architecto excepturi corporis nihil tenetur blanditiis, quia porro doloremque iusto.</p>
-	</div>
+	<section class="plax parallax-window4" data-parallax="scroll">
+		<!-- some grid stuff, all your page stuff, all the stuff! -->
+		
+	</section>
+
+	<section style="height:800px;">
+		<p style="color: pink;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nesciunt, quasi esse qui nemo cumque sequi! Accusantium debitis tempora perspiciatis nobis, nulla illo ut adipisci quod inventore maiores laborum expedita sed rerum, consequuntur molestias neque! Pariatur mollitia perferendis eligendi, velit architecto excepturi corporis nihil tenetur blanditiis, quia porro doloremque iusto.</p>
+	</section>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="js/parallax.js"></script>
-<script>
-	$('.parallax-window1').parallax({imageSrc: 'images/patrik.jpg'});
-	$('.parallax-window2').parallax({imageSrc: 'http://placekitten.com/1200/600'});
-	$('.parallax-window3').parallax({imageSrc: 'http://placekitten.com/1201/600'});
-
-</script>
+	<script src="js/parallax.js"></script>
+	<script>
+		$('.parallax-window1').parallax({imageSrc: 'images/patrik.jpg'});
+		$('.parallax-window2').parallax({imageSrc: 'http://placekitten.com/1200/600'});
+		$('.parallax-window3').parallax({imageSrc: 'http://placekitten.com/1201/600'});
+		$('.parallax-window4').parallax({imageSrc: 'http://placekitten.com/1201/601'});
+	</script>
 </body>
 </html>
