@@ -1,0 +1,69 @@
+main{ 
+      width: 100%;
+      border: 1px solid black;
+       }
+
+    section.nav {
+      width: 40px;
+      height: 100vh;
+      padding: 20px;
+      border-right: 1px solid black;
+      display: inline-block;
+      animation-play-state: paused;
+
+    }
+.play {
+  animation-play-state: running !important;
+        animation-duration: 3s;
+      animation-name: accord;
+      animation-fill-mode: forwards;
+}
+.shrink {
+  animation-play-state: running !important;
+        animation-duration: 3s;
+      animation-name: shrink;
+      animation-fill-mode: forwards;
+      animation-direction: alternate;
+}
+.active {
+  animation-duration: 3s;
+  animation-name: unrotate;
+  animation-fill-mode: forwards;
+  
+}
+@keyframes unrotate {
+  0% {
+    transform: rotate(90deg);
+    margin-left: -50px;
+  }
+  100% {
+    transform: rotate(0deg);
+    margin-left: 0;}
+}
+.inactive {
+  transform: rotate(90deg);
+}
+
+@keyframes accord {
+  0% {width: 40px;}
+  100% {width: 75vw; height: 100vh;}
+}
+
+@keyframes shrink {
+  0% {width: 75vw; height: 100vh;}
+  100% {width: 40px;}
+}
+
+
+
+    section.nav a {
+      display: inline-block;
+      margin-top: 60px;
+      margin-left: -50px;
+    }
+.photo-nav, .ill-nav, .painting-nav, .sculp-nav{
+  
+}
+.hide {
+  display: none;
+}
