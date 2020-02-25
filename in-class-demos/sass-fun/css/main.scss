@@ -1,0 +1,51 @@
+/* main.scss */
+
+@import 'partials/variables';
+
+body {
+	font-size: $font-size-copy;
+}
+h1 {
+	font-size: $font-size-lg;
+}
+
+h2 {font-size: $font-size-md;}
+h3 {font-size: $font-size-sm;}
+
+h1, h2, h3, h4 {
+	font-family: $header-font;
+	color: $primary-text;
+	&:hover { 
+		color: invert($primary-text);
+	}
+}
+
+h5, h6 {
+	font-family: $body-font;
+}
+
+
+.sandwich {
+	border: 1px solid black;
+	.lettuce { color: green; }
+	.deli-meat {
+		border: 1px dashed $primary-text;
+		.turkey {
+			border: 1px dotted brown;
+			a {}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
