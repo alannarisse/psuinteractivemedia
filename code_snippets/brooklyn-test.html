@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+
+		.grid2 {
+			display: grid;
+			grid-template-columns: 50% 50%;
+			grid-column-gap: 60px;
+			background-color: antique-white;
+			height: 100vh;
+		}
+
+		.right {
+			background-image: url(http://placekitten.com/760/1200);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		.centered {
+			text-align: center;
+			position: relative;
+			height: 50vh;
+		}
+
+		.centered img {
+			
+		}
+
+		.bottom{ height: 50vh; }
+
+		img {height: 100%;}
+
+		h1 {
+			position: absolute;
+		top: 0;
+	}
+
+
+	</style>
+</head>
+<body>
+	<section class="grid2">
+
+		<div class="left">
+			<div class="centered"><img src="http://placekitten.com/300/450">
+				<h1>Some Studio Stuff</h1>
+			</div>
+			<div class="bottom">
+				<img src="http://placekitten.com/400/350">
+			</div>
+		</div>
+
+		<div class="right">
+			<nav>stuff</nav>
+		</div>
+
+	</section>
+</body>
+</html>
