@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Parallax</title>
+	<style>
+		body {margin: 0;}
+		.plax {
+    	min-height: 100vh;
+    	background: transparent;
+    	position: relative;
+		}
+		.scrollAnim{
+  height: 100%;
+  opacity: 0;
+  transition: 0.8s;
+}
+
+
+.scrollAnim.anim{
+  opacity: 1;
+}
+.anim h1, .anim h2{
+  transition-delay: 0.1s;
+}
+
+		p {color: #fff; width:60%; margin: auto; padding-top: 80px;}
+	.red {
+		background-color:rgba(255,0,0,.7);
+		height: 100vh;
+		width: 400px;
+		position: absolute;
+		top: 0;
+		right: 100px;
+		overflow:hidden;
+	}
+
+	</style>
+</head>
+<body>
+	
+
+	<section class="plax parallax-window1" data-parallax="scroll">
+		<div class="scrollAnim red box anim">
+	  	<h2 class="title-main" data-id="1">PUBLIC R24</h2>
+	  	<h3>The City Road Bike</h3>
+		</div>
+		
+	</section>
+
+	<section class="plax parallax-window2" data-parallax="scroll">
+			<div class="scrollAnim box red ">
+  	<p class="anim-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <h2 class="title-right anim-left">THE RIDE</h2>
+	</section>
+
+	<section class="plax parallax-window3" data-parallax="scroll">
+		
+		<div class="scrollAnim box red ">
+	  	<p class="anim-top">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	  <h2 class="title-right anim-left">CITY</h2>
+  </div>
+		
+	</section>
+
+	<section class="plax parallax-window4" data-parallax="scroll">
+		<!-- some grid stuff, all your page stuff, all the stuff! -->
+		
+	</section>
+
+	<section style="height:800px;">
+		<p style="color: pink;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nesciunt, quasi esse qui nemo cumque sequi! Accusantium debitis tempora perspiciatis nobis, nulla illo ut adipisci quod inventore maiores laborum expedita sed rerum, consequuntur molestias neque! Pariatur mollitia perferendis eligendi, velit architecto excepturi corporis nihil tenetur blanditiis, quia porro doloremque iusto.</p>
+	</section>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/parallax.js"></script>
+	<script>
+		$('.parallax-window1').parallax({imageSrc: 'images/patrik.jpg'});
+		$('.parallax-window2').parallax({imageSrc: 'http://placekitten.com/1200/600'});
+		$('.parallax-window3').parallax({imageSrc: 'http://placekitten.com/1201/600'});
+		$('.parallax-window4').parallax({imageSrc: 'http://placekitten.com/1201/601'});
+	</script>
+	<script>
+		
+		window.addEventListener('scroll', () => {
+  let page = this;
+  let pageTop = this.scrollY;
+  let pageHeight = this.outerHeight;
+  
+  let frames = document.querySelectorAll('.scrollAnim');
+  frames.forEach( frame => {
+    let frameTop = frame.offsetTop;
+    let frameHeight = frame.offsetHeight;
+
+    // √
+    if ( $('.parallax-window2') &&pageTop  >= frameTop - pageHeight &&
+        pageTop  < frameTop + frameHeight ){
+      console.log('doing nothing!');
+    }else{
+      frame.classList.add('anim');
+    }
+  });
+});
+
+
+	</script>
+</body>
+</html>
