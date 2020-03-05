@@ -1,0 +1,26 @@
+.slider {
+	width: 65%;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: antiqueWhite;
+}
+
+img { width: 100%; }
+
+.slide-content {
+	display: grid;
+	grid-template-columns;
+}
+
+.slide-content .text-content {
+	margin-left: 20px;
+	margin-right: 20px;}
+
+	.slide-content img {width: 100%;}
+
+	.slick-initialized .slick-slide {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}

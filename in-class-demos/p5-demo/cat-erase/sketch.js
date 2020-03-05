@@ -2,10 +2,7 @@ function setup() {
   // put setup code here
   createCanvas(640,480);
   bg = loadImage('http://placekitten.com/1200/800');
-      ellipse(mouseX,mouseY,100,100);
-
   erase();
-
 }
 
 function draw() {
@@ -18,6 +15,7 @@ function draw() {
   noStroke();
   
   //fill(187,255,179,80);
+  ellipse(mouseX,mouseY,100,100);
   // put drawing code here
 }
 
