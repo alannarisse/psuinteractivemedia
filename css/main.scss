@@ -73,6 +73,9 @@ a {
 	}
 }
 
+.acknowledge {
+	margin: 40px 40px;
+}
 .test {
 	color: $testcolor;
 }
@@ -234,5 +237,8 @@ footer {
 	}
 	main {
 		padding: 40px 80px;
+	}
+	.acknowledge {
+		margin: 40px 200px;
 	}
 }

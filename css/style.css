@@ -118,6 +118,10 @@ a :hover {
   color: #ff0000;
 }
 
+.acknowledge {
+  margin: 40px 40px;
+}
+
 .test {
   color: #ff9900;
 }
@@ -310,6 +314,10 @@ footer .grid {
 
   main {
     padding: 40px 80px;
+  }
+
+  .acknowledge {
+    margin: 40px 200px;
   }
 }
 
