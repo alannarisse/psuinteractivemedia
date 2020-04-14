@@ -2,12 +2,65 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Waypoints</title>
 	<style>
+    body {
+      margin: 0;
+    }
 		.panel { min-height: 400px; }
 		.one, .three, .five {
 			background-color: #333;
+      height:100vh;
 		}
+
+    .case-study {
+      opacity: 0;
+      transition: all 500ms ease-in;
+      background-image: url('http://placekitten.com/1200/900');
+      background-repeat: no-repeat;
+      background-size: cover
+    }
+    .kitty-one {
+      opacity: 0;
+      transition: all 500ms ease-in;
+    }
+    .fade-in {
+      opacity: 1;
+    }
+
+    .two {
+      position: relative;
+      height:100vh;
+    }
+    p {
+      padding: 100px;
+    }
+    .downarrow {
+        width: 100px;
+        position: absolute;
+        bottom: 0;
+        margin: 0 45%;
+    }
+
+    .wiggle {
+      animation: wiggle 300ms linear;
+    }
+
+    @keyframes wiggle {
+      0%{
+        transform: rotate(0);
+      }
+      25%{
+        transform: rotate(20deg);
+      }
+      50%{
+        transform: rotate(-20deg);
+      }
+      100%{
+        transform: rotate(0);
+      }
+    }
+
 	</style>
 </head>
 <body>
@@ -15,12 +68,16 @@
 </section>
 
 <section class="two panel">
+    <img class="downarrow" src="images/downarrow.png">
+
 </section>
 
-<section class="three panel" id="overflow-scroll-offset">
+<section class="three panel case-study" id="overflow-scroll-offset">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam ad, molestiae quae et dicta nemo non veniam, ea libero necessitatibus, rerum praesentium nihil aperiam qui quisquam commodi quos dolore. Error.</p>
 </section>
 
 <section class="four panel">
+    <img src="http://placekitten.com/600/450" class="kitty-one" alt="">
 </section>
 
 <section class="five panel">
@@ -30,8 +87,8 @@
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-  <script src="waypoints-lib/lib/jquery.waypoints.min.js"></script>
-  <script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <!-- <script>
   	var waypoints = $('#context-example-offset').waypoint({
   handler: function() {
     notify('Hit midpoint of my context')
@@ -39,6 +96,46 @@
   context: '#overflow-scroll-offset',
   offset: '50%'
 })
+  </script> -->
+  <script>
+    var $kittyOne = $('.kitty-one');
+
+    $kittyOne.waypoint(function(direction) {
+      if(direction == 'down'){
+        $kittyOne.addClass('fade-in');
+      } else {
+        $kittyOne.removeClass('fade-in');
+      }
+    }, { offset: '60%'});
+
+
+
+
+
+    var $downarrow = $('.downarrow');
+
+    $downarrow.waypoint(function(direction) {
+      if (direction == 'down'){
+        $downarrow.addClass('wiggle');
+      } else {
+        $downarrow.removeClass('wiggle');{}
+      }
+    }, { offset: '80%'});
+
+
+
+
+
+
+    var $caseStudy = $('.case-study');
+
+    $caseStudy.waypoint(function(direction) {
+      if(direction == 'down'){
+        $caseStudy.addClass('fade-in');
+      } else {
+        $caseStudy.removeClass('fade-in');
+      }
+    }, { offset: '60%'});
   </script>
 </body>
 </html>

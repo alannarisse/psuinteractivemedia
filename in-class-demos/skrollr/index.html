@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>Skrollr Halfsies</title>
+	<style>
+
+		.grid-2 {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+		section {
+			height: 100vh;
+		}
+		.sticky-kitty {
+			width: 100%;
+		}
+		.left1 { background-color: #FAFAE0; }
+		.right1 { background-color: #D0A3FF; }
+		.left2 { background-color: #B3B360; }
+		.right2 { background-color: #865BB3; }
+		#right-one {
+			position:fixed;
+			top:0;
+			right:0px;
+			width: 50vw;
+		}
+	</style>
+</head>
+<body>
+	
+
+	<main class="grid-2">
+		<section class="left1"  id="left-one"></section>
+		<section class="right1" id="right-one"  data-smooth-scrolling="off">
+			<div data-anchor-target="#trigger-right"
+			data-0="background-position:!0 bottom;"
+			data-bottom-top="margin-right[vibrate]:0px;background-position:!0 0;"
+			data-top-bottom="margin-right[vibrate]:20px;background-position:!0 bottom;"
+			>
+				<img class="sticky-kitty" src="http://placekitten.com/800/1200">
+			</div>
+		</section>
+		<section class="left2" id="left-two"></section>
+		<section class="right2" id="right-two"></section>
+		<section class="left1"></section>
+		<section class="right1"></section>
+		<section class="left2" id="trigger-right"></section>
+		<section class="right2"></section>
+	</main>
+
+	<script type="text/javascript" src="js/skrollr.min.js"></script>
+
+	<script type="text/javascript">
+	skrollr.init({
+		forceHeight: false,
+		easing: {
+			vibrate: function(p) {
+				return Math.sin(p * 10 * Math.PI);
+			}
+		}
+	});
+	</script>
+</body>
+</html>

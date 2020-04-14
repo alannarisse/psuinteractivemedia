@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		
+		.hide {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+	<section class="welcome">
+		<p>welcome stuff</p>
+		<button class="go-page1">read</button>
+	</section>
+	<section class="page1 hide">
+		<p>page one stuff</p>
+		<button class="go-page2">read page 2</button>
+	</section>
+	<section class="page2 hide"> page 2
+		<button class="go-page3">read page 3</button></section>
+	<section class="page3 hide"> page 3
+		<button class="go-page4">read page 4</button></section>
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  <script>
+  	$('.go-page1').click(function(){
+  		$('.welcome').toggleClass('hide')
+  		$('.page1').toggleClass('hide')
+  	})
+  	$('.go-page2').click(function(){
+  	  		$('.page1').toggleClass('hide')
+  				$('.page2').toggleClass('hide')
+  	})
+  	$('.go-page3').click(function(){
+  	  		$('.page2').toggleClass('hide')
+  				$('.page3').toggleClass('hide')
+  	})
+
+  </script>
+</body>
+</html>
