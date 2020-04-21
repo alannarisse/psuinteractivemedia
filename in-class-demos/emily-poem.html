@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+			border: 1px solid black;
+			padding:40px;
+		}
+		.line2, .line3, .line4, .line5 { display: none; }
+		.bird {
+			width: 20px;
+			height: 20px;
+			background-color: #333;
+			opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="drawing">
+		<div class="bird"></div>
+	</div>
+	<div class="line1">
+		<p>Line 1</p>
+		<button>Go to Line 2</button>
+	</div>
+
+	<div class="line2">
+		<p>Line 2</p>
+		<button>Go to Line 3</button>
+	</div>
+
+	<div class="line3">
+		<p>Line 3</p>
+		<button>Go to Line 4</button>
+	</div>
+
+	<div class="line4">
+		<p>Line 4</p>
+		<button>Go to Line 5</button>
+	</div>
+
+	<div class="line5">
+		<button>Go to Line 1</button>
+	</div>
+
+
+	<script
+  src="https://code.jquery.com/jquery-3.5.0.min.js"
+  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+  crossorigin="anonymous"></script>
+
+  <script>
+  	$('.line1 button').click(function(){
+  		$('.line1').css('display','none')
+  		$('.line2').css('display','block')
+  		$('.bird').css('opacity', '1')	
+  	})
+
+  	$('.line2 button').click(function(){
+  		$('.line2').css('display','none')
+  		$('.line3').css('display','block')
+  	})
+  </script>
+</body>
+</html>
