@@ -6,6 +6,11 @@ main {
 	width: 80%;
 	margin: auto;
 }
+#resizable {
+	background-color: #ccc;
+	width:200px;
+	height:200px;
+}
 .dragndrop { position: relative; height: 400px; }
 #draggable {
 	width: 100px;
@@ -34,9 +39,20 @@ main {
 #navmenu li {
 	padding-right:30px;
 }
+
+
 #navmenu .ui-selecting {
   background: #ccc;
 }
 #navmenu .ui-selected {
   background: #999;
 }
+
+
+
+
+
+
+
+
+

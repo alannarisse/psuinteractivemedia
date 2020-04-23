@@ -2,6 +2,10 @@ $( document ).ready(function() {
 	$( ".readtoggle" ).toggle( "blind" );
 });
 
+$( "#resizable" ).resizable({
+  resize: function( event, ui ) {}
+});
+
 $( "#draggable" ).draggable();
 $( "#droppable" ).droppable({
   drop: function() {
@@ -20,3 +24,6 @@ $("#sortable").sortable();
 $('.bounceit').click(function() {
   $( "#toggle" ).toggle( "bounce", { times: 3 }, "slow" );
 });
+
+
+ 
