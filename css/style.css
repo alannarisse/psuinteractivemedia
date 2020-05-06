@@ -190,6 +190,9 @@ img {
   border: 2px solid #B38325;
   position: relative;
 }
+.subpage .portfolio-cards li {
+  padding: 16px;
+}
 .subpage .cards .card-content {
   font-size: 14px;
   margin: 0 6px 6px 6px;
