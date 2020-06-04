@@ -1,0 +1,18 @@
+.one {
+    animation-name: flicker;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+}
+
+
+.two {
+    animation-name: flicker;
+    animation-duration: 600ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes flicker {
+
+    0% {opacity: 1; }
+    100% { opacity: 0; }
+}
