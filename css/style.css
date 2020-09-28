@@ -54,7 +54,7 @@ p {
 pre {
   font-family: "Courier New", Courier, monospace;
 }
-
+.inspire { width: 300px; }
 nav {
   border-bottom: 4px solid #b38325;
   padding: 20px;
