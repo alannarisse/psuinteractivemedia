@@ -48,7 +48,9 @@ strong {
 blockquote {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-
+p {
+  margin-bottom: 20px;
+}
 pre {
   font-family: "Courier New", Courier, monospace;
 }
@@ -152,6 +154,10 @@ aside {
     display: grid;
     grid-template-columns: 75% 25%;
     grid-gap: 20px;
+  }
+  .ack {
+    width: 60%;
+    margin: 60px auto;
   }
 }
 @media only screen and (min-width: 1200px) {
