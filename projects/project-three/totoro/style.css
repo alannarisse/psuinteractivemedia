@@ -1,0 +1,311 @@
+
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+
+
+
+/* General Styles */
+body{
+    background-color: black;
+
+}
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.background{
+    background-color: #edffc4;
+    width: 100%;
+    max-width: 1280px;
+    min-width: 1280px;
+    height: 700px;
+    position: fixed;
+    top: 0px;
+    z-index: -100;
+}
+.sun{
+    background: url(../img/sun.png) no-repeat top;
+    width: 100%;
+    max-width: 1280px;
+    min-width: 1280px;
+    height: 500px;
+    position: fixed;
+    top: 100px;
+    z-index: -4;
+}
+
+.mountainclouds{
+    background: url(../img/mountainclouds.png) no-repeat top;
+    background-size: 100%;
+    width: 100%;
+    min-width: 1280px;
+    max-width: 1280px;
+    height: 950px;
+    position: fixed;
+    top: 300px;
+    z-index: -3;
+}
+.middletrees{
+    background: url(../img/mtrees.png) no-repeat top;
+    background-size: 100%;
+    width: 100%;
+    max-width: 1280px;
+    min-width: 1280px;
+    height: 1200px;
+    position: fixed;
+    top: 600px;
+    z-index: -2;
+}
+.darktrees{
+    background: url(../img/dtrees.png) no-repeat top;
+    background-size: 100%;
+    width: 100%;
+    max-width: 1280px;
+    min-width: 1280px;
+    height: 1300px;
+    position: fixed;
+    top: 800px;
+    z-index: -1;
+}
+.birds{
+    background: url('../img/birds.png') no-repeat center;
+    width: 0px;
+    height: 400px;
+    position: absolute;
+    top: 800px;
+    left: -50px;
+    z-index: 0;
+    opacity: 0;
+}
+.birds.flying {
+    animation: fly 15s ease;
+}
+.bluetotoro{
+    background: url(../img/bluetotoro.svg) no-repeat center;
+    background-size: contain;
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    z-index: -2;
+    top: -200px;
+    left: 45%;
+    animation: dropdown 12s linear;
+}
+.totorotop{
+    background: url(../img/totoroonly.png) no-repeat top;
+    background-size: 100%;
+    width: 100%;
+    min-width: 1280px;
+    max-width: 1280px;
+    height: 1500px;
+    position: absolute;
+    top: 1400px;
+    z-index: 1; 
+}
+.silhouette{
+    background: url('../img/silhouette.svg') no-repeat center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 350px;
+    left: 550px;
+    animation: jump .5s infinite;
+    animation-direction: alternate;
+    animation-fill-mode: backwards;
+    animation-play-state: running; 
+}
+.totorobottom{
+    background-color: #050525;
+    width: 100%;
+    min-width: 1280px;
+    max-width: 1280px;
+    height: 1100px;
+    z-index: 1;
+    position: absolute;
+    top: 2150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.eyes{
+    background: url(../img/eyefills.svg) no-repeat center;
+    background-size: 100%;
+    width: 900px;
+    height: 210px;
+    margin: 0 auto;
+    margin-top: -50px;
+    animation: blinklid 5s infinite;
+}
+.iris{
+    background: url(../img/totoroiris.svg) no-repeat center;
+    background-size: 100%;
+    width: 750px;
+    height: 210px;
+    margin: 0 auto;
+    animation: blinkiris 5s infinite;
+}
+.nose{
+    background: url(../img/nose2.svg) no-repeat center;
+    background-size: 100%;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: -50px;
+    position: relative;
+    z-index: 20;
+}
+.mouth{
+    background: url(../img/mouth.svg) no-repeat center;
+    background-size: 100%;
+    width: 20px;
+    height: 210px;
+    margin: 0 auto;
+    margin-top: 55px;
+    transition: all 1s ease;
+}
+.smile{
+    width: 900px;
+    height: 210px;
+}
+.whitetotoro{
+    background: url(../img/whitetotoro2.png);
+    width: 325px;
+    height: 325px;
+    position: absolute;
+    top: 700px;
+    left: -400px;
+    animation: walk 0.5s steps(4) infinite;
+    
+}
+.title{
+    background: url('../img/title.svg') no-repeat center;
+    width: 800px;
+    height: 250px;
+    position: absolute;
+    top: 670px;
+    left: 240px;
+/*    animation: float 3s linear infinite;*/  
+}
+.miyazaki{
+    background: url('../img/miyazaki.svg') no-repeat center;
+    background-size: contain;
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    top: 600px;
+    left: 490px;
+}
+
+/*Animation*/
+   @keyframes float{
+    0% { transform: translate(0,  0px); }
+    30% { transform: translate(0, 60px); }
+    100% { transform: translate(0, 0px); } 
+    }
+
+@keyframes dropdown{
+    0% { top: -200px; }
+    20% { top: 200px;
+            width: 80px;}
+    25% { top: 100px;
+           
+    }
+    40% { top: 400px;
+            width: 60px;
+            opacity: .9;
+    } 
+    45% {top: 300px;}
+    
+    60% { top: 600px; 
+            width: 30px;
+            opacity: .7;
+    } 
+    65% { top: 500px;}
+    80% { top: 800px; 
+            width: 10px;
+            opacity: .5;
+    } 
+    100% {top: 1000px;
+            width: 0px;
+            }
+    }
+
+@keyframes jump{
+    from {
+    top: 350;
+  }
+
+  to {
+    top: 325px;
+  }
+}
+
+@keyframes fly{
+    0%{
+        
+        opacity: 0.5;
+    }
+    10%{
+        width: 400px;
+
+    }
+        100%{
+        width: 800px;
+        left: 2400px;
+        top: -800px;
+        transform: scale(2);
+        opacity: 1;
+    }
+}
+
+@keyframes walk{
+    from {background-position: 0px;}
+    to{background-position: -1300px;}
+   
+}
+
+@keyframes blinklid {
+    0%{
+        transform: none;
+    }
+  92.5% {
+    transform: none;
+    animation-timing-function: ease-in;
+  }
+  93% {
+    transform: translateY(20px) scaleY(0);
+  }
+  93.5% {
+    animation-timing-function: ease-out;
+  }
+      100%{
+            transform: none;
+        }  
+}
+
+@keyframes blinkiris {
+    0%{
+        transform: none;
+  92.5% {
+        transform: none;
+        animation-timing-function: ease-in;
+  }
+  93% {
+        transform: translateY(5px) scaleY(0.8);
+  }
+  93.5% {
+        animation-timing-function: ease-out;
+  }
+        100%{
+        transform: none;
+        }    
+}
+
+/* Forces a box filled with floated elements to wrap around child elements */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+

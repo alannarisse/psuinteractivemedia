@@ -1,0 +1,121 @@
+
+<!doctype html>
+<html lang="en-us">
+<head>
+	<title>Totoro Interactive</title>
+    <!-- Iris Huynh -->
+	<meta charset="utf-8" />
+	<meta name="Project 3" content="">
+	<meta name="totoro" content="">
+
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="http://web.pdx.edu/~iris4/Totoro/fav/apple-touch-icon.png"?v=1.1.1>
+    <link rel="icon" type="image/png" sizes="32x32" href="http://web.pdx.edu/~iris4/Totoro/fav/favicon-32x32.png"?v=1.1.1>
+    <link rel="icon" type="image/png" sizes="16x16" href="http://web.pdx.edu/~iris4/Totoro/fav/favicon-16x16.png"?v=1.1.1>
+    <link rel="manifest" href="http://web.pdx.edu/~iris4/Totoro/fav/site.webmanifest"?v=1.1.1>
+    <link rel="mask-icon" href="http://web.pdx.edu/~iris4/Totoro/fav/safari-pinned-tab.svg" color="#ff0000"?v=1.1.1>
+    <link rel="shortcut icon" href="http://web.pdx.edu/~iris4/Totoro/fav/favicon.ico"?v=1.1.1>
+    <meta name="msapplication-TileColor" content="#ff0000"?v=1.1.1>
+    <meta name="msapplication-config" content="http://web.pdx.edu/~iris4/Totoro/fav/browserconfig.xml"?v=1.1.1>
+    <meta name="theme-color" content="#ffffff"?v=1.1.1>
+</head>
+
+<body>
+<div class="container">
+    <div class="background"></div>
+    <div class="sun"></div>
+    <div class="mountainclouds"></div>
+    <div class="middletrees"></div>
+    <div class="bluetotoro"></div>
+    <div class="darktrees"></div>
+    <div class="maincontent">
+        
+        <div class="birds"></div>
+        <div class="totorotop">
+            <div class="silhouette"></div>    
+        </div>
+        <div class="totorobottom">
+            <div class="face">
+                <div class="eyes">
+                    <div class="iris"></div>
+                </div>
+                <div class="nose"></div>
+                <div class="mouth"></div>
+            </div>
+            <div class="miyazaki"></div>
+            <div class="title"></div>
+            <div class="whitetotoro"></div>
+        </div>  
+    </div>
+</div>  
+  
+ <script> 
+    var sun= document.querySelector(".sun");
+    var mountainclouds = document.querySelector(".mountainclouds");
+    var middletrees = document.querySelector(".middletrees");
+    var darktrees = document.querySelector(".darktrees");
+    var maincontent = document.querySelector(".maincontent");
+     
+    function setTranslate(xPos, yPos, el) {
+        el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
+    }
+ 
+    window.addEventListener("DOMContentLoaded", scrollLoop, false);
+ 
+    var xScrollPosition;
+    var yScrollPosition;
+ 
+    function scrollLoop() {
+        xScrollPosition = window.scrollX;
+        yScrollPosition = window.scrollY;
+ 
+        setTranslate(0, yScrollPosition * -0.5, sun);
+        setTranslate(0, yScrollPosition * -0.9, mountainclouds);
+        setTranslate(0, yScrollPosition * -1.3, middletrees);
+        setTranslate(0, yScrollPosition * -1.7, darktrees);
+        setTranslate(0, yScrollPosition * -1.7, maincontent);
+ 
+        requestAnimationFrame(scrollLoop);
+    }
+ 
+</script>  
+    
+<script>    
+    $(function() {
+        
+    $('.nose').click(function() {
+		$('.mouth').toggleClass('smile');
+	});	
+        
+    $(window).scroll(function() {
+        scrolltop = $(window).scrollTop();
+        console.log(scrolltop);
+        if(scrolltop > 160) {
+            $('.birds').addClass('flying');
+        }
+    });
+
+    });
+</script>
+    
+<script>
+    $(function() {
+        function loop() {
+            $('.whitetotoro').css({left: -1000});
+            $('.whitetotoro').animate({
+                left: '+=2500',
+            }, 10000, 'linear', function() {
+                loop();
+            
+            });
+        }
+        loop();
+        
+    });
+</script>
+
+</body>
+</html>
