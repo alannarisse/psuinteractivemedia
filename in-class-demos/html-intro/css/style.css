@@ -1,0 +1,25 @@
+body {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: rgb(42, 214, 136);
+  rgb()
+  
+}
+
+h1 {
+  font-family: "Courier New", Courier, monospace;
+  border: 1px solid red;
+}
+
+p {
+  border: 1px solid black;
+}
+
+main {
+  border: 1px solid blue;
+}
+
+p.special-paragraph {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+  font-size: 36px;
+}
