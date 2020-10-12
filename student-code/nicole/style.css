@@ -1,0 +1,23 @@
+.grid-2 {
+  display: flex;
+}
+
+.grid-2 div {
+  padding: 20px;
+}
+.grid-2 section {
+  flex: 80%;
+}
+.inner-grid {
+  width: 60%;
+  margin: auto;
+}
+.grid-2 nav {
+  flex: 20%;
+  background-color: #ccc;
+  height: 100vh;
+}
+
+.title-text {
+  font-size: 220px;
+}
