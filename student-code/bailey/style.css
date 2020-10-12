@@ -1,0 +1,7 @@
+.home-grid {
+  display: flex;
+  width: 100vw;
+}
+.home-grid img {
+  width: 100%;
+}
