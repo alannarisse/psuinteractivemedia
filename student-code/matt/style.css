@@ -1,0 +1,27 @@
+.main-grid {
+  display: flex;
+}
+
+.main-grid nav {
+  flex: 20%;
+  background-color: #ccc;
+}
+.main-grid .content {
+  flex: 80%;
+}
+
+header {
+  background-image: url("http://placekitten.com/1200/500");
+  background-size: cover;
+  height: 450px;
+  width: 100%;
+}
+.grid-2 {
+  display: flex;
+}
+.grid-2 div img {
+  width: 100%;
+}
+.grid-2 div {
+  flex: 1;
+}
