@@ -1,0 +1,20 @@
+nav {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+}
+
+.grid-3 {
+  display: flex;
+}
+
+img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.grid-2 {
+  display: flex;
+  width: 70%;
+  margin: auto;
+}
