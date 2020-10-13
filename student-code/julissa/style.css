@@ -1,0 +1,11 @@
+.grid-2 {
+  display: flex;
+}
+
+.overlap {
+  margin-right: -200px;
+}
+
+nav ul {
+  display: flex;
+}
