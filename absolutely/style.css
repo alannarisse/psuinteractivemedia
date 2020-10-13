@@ -23,8 +23,9 @@ img {
 
 .content h2 {
   position: absolute;
-  top: 0;
-  left: -50px;
+  top: -60px;
+  left: -80px;
+  font-size: 40px;
 }
 
 main {
