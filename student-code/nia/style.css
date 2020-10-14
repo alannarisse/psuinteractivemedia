@@ -1,0 +1,27 @@
+img {
+  width: 100%;
+}
+
+.nav-img:hover {
+  filter: invert(169%);
+}
+
+.home-grid {
+  display: flex;
+}
+
+.home-grid section {
+  padding: 40px;
+}
+
+main {
+  width: 80%;
+  margin: auto;
+}
+
+.home-grid .small-col {
+  flex: 25%;
+}
+.home-grid .lrg-col {
+  flex: 50%;
+}
