@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+}
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-direction: column; */
+}
+
+main.luncheon {
+  background-image: url("http://placekitten.com/800/800");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+main.luncheon h1 {
+  text-transform: uppercase;
+  font-size: 120px;
+  margin-top: -600px;
+}
+
+main.luncheon p {
+  width: 400px;
+  margin-top: -600px;
+}
+
+nav.luncheon {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+}
+nav.luncheon ul {
+  list-style-type: none;
+}
+
+.home-icon {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  bottom: 40px;
+  left: -150px;
+}

@@ -1,0 +1,18 @@
+img {
+  width: 100%;
+}
+.grid-2 {
+  display: flex;
+}
+
+.grid-2 section {
+  padding: 40px;
+}
+
+.page1-a {
+  flex: 60%;
+}
+
+.page1-b {
+  flex: 40%;
+}

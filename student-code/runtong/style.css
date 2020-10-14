@@ -1,0 +1,19 @@
+img {
+  width: 100%;
+}
+
+.grid {
+  display: flex;
+}
+
+.grid section {
+  flex: 15%;
+}
+
+.header {
+  padding: 80px;
+  flex: 20%;
+}
+.header h1 {
+  font-size: 60px;
+}

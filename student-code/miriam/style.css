@@ -1,0 +1,28 @@
+header {
+  height: 300px;
+  background-color: #ccc;
+}
+
+main {
+  width: 80%;
+  margin: auto;
+}
+.grid-3 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-3 article {
+  flex: 33%;
+}
+
+.card {
+  display: flex;
+}
+.card h2 {
+  margin: 0;
+}
+.card img {
+  border-radius: 50%;
+  margin-top: 20px;
+}

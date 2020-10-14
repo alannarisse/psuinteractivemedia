@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+}
+img {
+  width: 100%;
+}
+section {
+  width: 100vw;
+  height: 100vh;
+}
+
+.home {
+  background-color: #ccc;
+}
+
+.home .col-left {
+  flex: 55%;
+  padding: 60px;
+}
+
+.home .col-left img {
+  margin-right: 180px;
+}
+
+.home .col-right {
+  flex: 45%;
+  padding: 60px;
+}
+
+.sailor .col-left {
+  flex: 45%;
+}
+.sailor .col-right {
+  flex: 55%;
+}
+.sailor {
+  background-color: antiquewhite;
+}
+
+.grid-2 {
+  display: flex;
+}
