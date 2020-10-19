@@ -1,0 +1,38 @@
+img {
+  border-radius: 20px;
+  width: 100%;
+}
+
+.box {
+  display: inline-block;
+  border-radius: 20px;
+  background-color: rgba(208, 45, 241, 0.6);
+  min-width: 300px;
+  min-height: 180px;
+}
+
+.grid-2 {
+  display: flex;
+}
+
+.grid-2 article {
+  flex: 1;
+}
+.flowertime {
+  margin-top: -100px;
+}
+.flowertime .left {
+  position: relative;
+}
+.flowertime .left .thumb {
+  position: absolute;
+  right: 0px;
+  top: 0;
+  width: 200px;
+}
+
+.flowertime .right h3 {
+  background-color: rgba(208, 45, 241, 0.6);
+  border-radius: 20px;
+  text-align: right;
+}
