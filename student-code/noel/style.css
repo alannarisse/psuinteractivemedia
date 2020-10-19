@@ -1,0 +1,44 @@
+.grid-2 {
+  width: 60vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.grid-2 div {
+  flex: 50%;
+}
+
+.one,
+.two,
+.three,
+.four {
+  position: relative;
+}
+
+.photo img {
+  opacity: 40%;
+  width: 100%;
+}
+
+.drawing {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.one .drawing {
+  top: 0;
+  left: -230px;
+}
+.two .drawing,
+.four .drawing {
+  top: 0;
+  left: 170px;
+}
+
+.three .drawing {
+  top: 0;
+  left: -200px;
+}

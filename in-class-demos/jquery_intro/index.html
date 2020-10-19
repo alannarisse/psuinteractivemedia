@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>JQuery</title>
-	<style>
-		
-		.active { color: red; }
-	</style>
-</head>
-<body>
-	<p class="first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facilis odio doloribus, vitae quaerat nisi! Hic perferendis consectetur earum ratione, animi similique dolor sint! Quidem odit quibusdam unde voluptates rerum.</p>
-	<p>Hic perferendis consectetur earum ratione, animi similique dolor sint! Quidem odit quibusdam unde voluptates rerum.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <title>JQuery</title>
+    <style>
+      .active {
+        color: red;
+      }
+      .hide {
+        display: none;
+      }
+      .accordian {
+        background-color: #ccc;
+        border-radius: 20px;
+        padding: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facilis odio doloribus, vitae quaerat nisi! Hic perferendis consectetur earum ratione, animi similique dolor sint! Quidem odit quibusdam unde voluptates rerum.</p>
+    <p>Hic perferendis consectetur earum ratione, animi similique dolor sint! Quidem odit quibusdam unde voluptates rerum.</p>
 
-	<button>Change text</button>
-<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-	<script>
-		
-			$('button').click(function(){
-				$('p.first').text('JQuery is easy!');
-				$('button').toggleClass('active')
+    <button>Change text</button>
 
-			});
+    <hr />
 
-			
+    <div class="accordian">
+      <p class="expand-me">Here's some interesting thoughts...</p>
+      <p class="expanded-text hide"><img src="http://placekitten.com/300/300" /></p>
+    </div>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+      $("button").click(function () {
+        $("p.first").text("JQuery is easy!")
+        $("button").toggleClass("active")
+      })
 
-		//function changeText() {
-		//document.getElementsByTagName("P")[0].innerHTML = "Javscript is easy!";
-		//}
-	</script>
-</body>
+      //function changeText() {
+      //document.getElementsByTagName("P")[0].innerHTML = "Javscript is easy!";
+      //}
+    </script>
+    <script src="script.js"></script>
+  </body>
 </html>
