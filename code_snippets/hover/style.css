@@ -1,37 +1,44 @@
 /* Regular Image Hover */
 
 .food-hover {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	width: 80%;
-	margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 80%;
+  margin: auto;
 }
 
-.food-hover img {width: 100%;}
+.food-hover img {
+  width: 100%;
+}
 
 .overlay {
 }
 
- .cherry, .salad, .coffee, .cheese {
-        position: relative;
-        display: inline-block;
-    }
+.cherry,
+.salad,
+.coffee,
+.cheese {
+  position: relative;
+  display: inline-block;
 }
-.cherry .img-top, .salad .img-top, .coffee .img-top, .cheese .img-top{
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 99;
-    }
-    .cherry:hover .img-top, .salad:hover .img-top, .coffee:hover .img-top, .cheese:hover .img-top {
-        display: inline;
-    }
-
+.cherry .img-top,
+.salad .img-top,
+.coffee .img-top,
+.cheese .img-top {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.cherry:hover .img-top,
+.salad:hover .img-top,
+.coffee:hover .img-top,
+.cheese:hover .img-top {
+  display: inline;
+}
 
 /* END OF Regular Image Hover */
-
-
 
 /* Text over an images */
 
@@ -40,11 +47,8 @@
   width: 300px;
   margin: auto;
 }
-.image-text .image { width: 300px; }
-.image-text .text-hover {
-  display: block;
+.image-text .image {
   width: 300px;
-  height: auto;
 }
 
 .image-text .overlay {
@@ -55,15 +59,20 @@
   right: 0;
   width: 300px;
   opacity: 0;
-  transition: .5s ease;
-  background-color: #008CBA;
-
+  transition: 0.5s ease;
+  background-color: #008cba;
 }
 
 .image-text:hover .overlay {
   opacity: 1;
 }
 
+a {
+  color: red;
+}
+a:hover {
+  color: purple;
+}
 .image-text .text {
   color: white;
   font-family: arial;
@@ -77,9 +86,7 @@
   text-align: center;
 }
 
-
 /* END OF Text over an images */
-
 
 .hover-underline {
   text-decoration: none;
@@ -88,10 +95,10 @@
   padding-bottom: 20px;
 }
 
-.hover-underline.active { color: red; }
+.hover-underline.active {
+  color: red;
+}
 
 .hover-underline:hover {
   border-bottom: 26px solid blue;
 }
-
-

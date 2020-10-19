@@ -1,0 +1,48 @@
+.grid-2 {
+  display: flex;
+  padding: 60px;
+}
+
+.grid-2 img {
+  width: 100%;
+}
+
+/* Text over an images */
+
+.hover-text {
+  position: relative;
+  width: 300px;
+  margin: auto;
+}
+.hover-text img {
+  width: 300px;
+}
+
+.hover-text .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 300px;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #008cba;
+}
+
+.hover-text:hover .overlay {
+  opacity: 1;
+}
+
+.hover-text .text {
+  color: white;
+  font-family: arial;
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
