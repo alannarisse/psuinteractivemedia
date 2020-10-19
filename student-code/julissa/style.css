@@ -9,3 +9,56 @@
 nav ul {
   display: flex;
 }
+
+
+/* Text over an images */
+
+.proj-hover {
+  position: relative;
+  width: 300px;
+  margin: auto;
+}
+
+.proj-hover img {
+  width: 100%;
+}
+.proj-hover .text-hover {
+  display: block;
+  width: 300px;
+  height: auto;
+}
+
+.proj-hover .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 300px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #FF3464;
+  z-index: 1;
+
+}
+
+.proj-hover:hover .overlay {
+  opacity: 1;
+}
+
+.proj-hover .text {
+  color: white;
+  font-family: arial;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+}
+.proj-hover .text a {
+  color: #fff;
+}

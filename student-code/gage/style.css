@@ -24,6 +24,11 @@ main article {
   text-align: right;
   text-orientation: sideways;
   margin: 1rem;
+  color: #000;
+}
+
+.shutter-page .left h1 {
+  color: purple;
 }
 .middle {
   flex: 60%;
