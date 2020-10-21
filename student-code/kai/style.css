@@ -1,0 +1,39 @@
+* box-model{ border-box; }
+
+body {
+  margin: 0;
+  background-color: #ccc;
+}
+h1 {
+  margin: 0;
+  padding: 40px;
+}
+header {
+  height: 360px;
+  background-color: #333;
+  color: #fff;
+  width: 100vw;
+}
+
+nav {
+  position: absolute;
+  top: 390px;
+  left: -80px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 0 42px 0;
+  transform: rotate(-45deg);
+}
+nav a {
+  color: #000;
+  border: 2px solid #000;
+  padding: 6px 16px 6px 80px;
+  text-decoration: none;
+}

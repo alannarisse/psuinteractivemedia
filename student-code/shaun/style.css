@@ -1,0 +1,47 @@
+main {
+  width: 70%;
+  margin: auto;
+}
+img {
+  width: 100%;
+}
+.row-1,
+.row-2 {
+  display: flex;
+}
+.row-2 div {
+  flex: 1;
+}
+.row-1 div,
+.row-2 div {
+  margin: 10px;
+}
+.row-1 .thumb {
+  flex: 30%;
+}
+
+.row-1 .content {
+  flex: 70%;
+}
+
+.thumb {
+  position: relative;
+}
+
+.bottom-label {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  max-width: 280px;
+}
+.top-label {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  max-width: 280px;
+}
+
+.yellow-box {
+  background-color: yellow;
+  border: 1px solid #000;
+}

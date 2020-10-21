@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* The Magic */
+      #expand {
+        border-bottom: dotted 1px;
+        margin-bottom: 20px;
+        padding: 10px;
+        overflow: hidden;
+        max-height: 150px;
+        /*   box-shadow:inset 0 -8px 8px -8px #696868;  */
+      }
+
+      #button {
+        background: url(http://placehold.it/32x32);
+        background-size: cover;
+        border: none;
+        width: 25px;
+        height: 25px;
+        margin-top: 26px;
+        margin-right: 10px;
+        float: left;
+        transform: rotate(0deg);
+        transition: 1s -webkit-transform;
+      }
+
+      #button.opened {
+        transform: rotate(-180deg);
+        transition: 1s -webkit-transform;
+      }
+
+      /* Extra Style */
+      body {
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 800px;
+      }
+
+      img {
+        padding: 0px 0px 0px 30px;
+        float: right;
+      }
+
+      p {
+        text-align: justify;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="expand">
+      <button id="button"></button>
+      <h1>Expandable Div Drawer</h1>
+      <img src="http://placehold.it/400x500" />
+      <p>Umami veniam artisan labore roof party qui Austin Neutra. Gentrify Etsy laboris vero, farm-to-table small batch cornhole sunt actually magna fixie. Four loko High Life yr literally bicycle rights, veniam dolore keytar vegan. Pour-over literally Bushwick farm-to-table PBR, master cleanse deserunt. Salvia fixie Carles literally id flannel, 8-bit Godard nulla readymade proident authentic deep v selfies Schlitz. Magna ullamco Portland sed sapiente church-key. Pop-up sunt accusamus, kale chips small batch scenester consequat seitan.Umami veniam artisan labore roof party qui Austin Neutra.</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script>
+      $("#button").click(function () {
+        if ($("#expand").height() === 150) {
+          $("#expand").animate({ maxHeight: 600 }, 1000)
+        } else {
+          $("#expand").animate({ maxHeight: 150 }, 1000)
+        }
+        $("#button").toggleClass("opened")
+      })
+    </script>
+  </body>
+</html>
