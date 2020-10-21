@@ -1,3 +1,17 @@
+/* font-family: belda-normal, sans-serif;
+font-weight: 200;
+font-style: normal; */
+
+@font-face {
+  font-family: "Digory Doodles";
+  src: url("fonts/Digory_Doodles_PS.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+h1 {
+  font-family: "Digory Doodles";
+}
+body {
+  font-family: "Digory Doodles", cursive;
+}
 main {
   width: 70%;
   margin: auto;
