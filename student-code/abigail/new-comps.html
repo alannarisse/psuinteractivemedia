@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sticky pages</title>
+    <style>
+    	html {
+  			scroll-behavior: smooth;
+			}
+    	header {
+    		background-color: white;
+    		border-bottom: 2px solid black;
+    		height: 130px;
+    		width: 100vw;
+    	}
+        body {margin:0;}
+        section {
+            height: 150vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: sticky;
+            top: -1px;
+        }
+        section.last {height: 100vh;}
+        section:nth-child(1) {
+            background-color:aliceblue;
+        }
+        section:nth-child(2) {
+            background-color:antiquewhite;
+        }
+        section:nth-child(3) {
+            background-color:cadetblue;
+        }
+        .floaty-nav {
+        	position: fixed;
+        	right: 20px;
+        	top:50%;
+        	bottom:0;
+        }
+        .floaty-nav a { 
+        	background-color: pink; border: 4px solid #333;
+        	width: 50px;
+        	height: 50px;
+        	border-radius: 50%;
+        	margin-bottom: 16px;
+        	display: inline-block;
+        	text-decoration: none;
+        }
+        .floaty-nav a:nth-child(1){
+        	background-color: aqua;
+        }
+        .floaty-nav a:nth-child(2){
+        	background-color: #ff9900;
+        }
+        .floaty-nav a:nth-child(3){
+        	background-color: purple;
+        }
+        .floaty-nav a:hover {
+        	background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+   <section id="one">
+   	<header>habits 
+   		<nav>
+   			<a href="#one">one</a><a href="#two">two</a> <a href="#three">three</a></nav>
+   	</header>
+       
+       <p>Content of the first page</p>
+       
+   </section>
+   <section id="two">
+   	<header>habits</header>
+       
+       <p>Content of the second page</p>
+       
+   </section>
+   <section class="vote" id="three">
+   	<header>habits</header>
+       
+       <p>Content of the third page</p>
+       
+   </section>
+   <nav class="floaty-nav">
+   			<a class="one" href="#one"></a><br>
+   			<a href="#two"></a><br>
+   			<a href="#three"></a></nav>
+    
+</body>
+</html>
