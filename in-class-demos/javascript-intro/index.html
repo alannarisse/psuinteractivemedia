@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<p>This is my started text</p>
+	<button onclick={clickMe()}>Click</button>
+
+<p class="jquery-me">This is my started text</p>
+	<button class="jquery-btn">Click</button>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+
+	<script>
+		function clickMe(){
+			document.getElementsByTagName('P')[0].innerHTML = 'I am the ruler!'
+		}
+
+		$('.jquery-btn').click(function(){
+			$('p').css('color', 'red')
+		})
+		$('.jquery-btn').mouseover(function(){
+			$('.jquery-me').html('I\'m some hover text')
+		})
+		$('.jquery-btn').mouseout(function(){
+			$('.jquery-me').html('I\'m not some hover text')
+		})
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="photo1"><img src="kitties" /></div>
+    <div class="photo2"><img src="kitties" /></div>
+    <div class="photo3"><img src="kitties" /></div>
+
+    <div class="photo1-content hide">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A fugit corporis atque, accusamus modi assumenda rem quo molestias. Esse, tempora.</p>
+    </div>
+    <div class="photo2-content hide">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A fugit corporis atque, accusamus modi assumenda rem quo molestias. Esse, tempora.</p>
+    </div>
+    <div class="photo3-content hide">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A fugit corporis atque, accusamus modi assumenda rem quo molestias. Esse, tempora.</p>
+    </div>
+    <!-- jquery is here -->
+    <script>
+      $(".photo1").click(function () {
+        $(".photo1-content").toggleClass("hide")
+        $(".photo1").toggleClass("bigger")
+      })
+      $(".photo2").click(function () {
+        $(".photo2-content").toggleClass("hide")
+        $(".photo2").toggleClass("bigger")
+      })
+    </script>
+    <!-- <script src="script.js"></script> -->
+  </body>
+</html>
