@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      img {
+        width: 100%;
+      }
+      .grid-2 {
+        display: flex;
+        flex-direction: column;
+      }
+      .about,
+      .reserve {
+        background-color: mistyrose;
+      }
+
+      section,
+      nav,
+      header,
+      footer {
+        padding: 20px;
+      }
+
+      @media only screen and (min-width: 768px) {
+        section,
+        nav,
+        header,
+        footer {
+          padding: 60px;
+        }
+      }
+
+      @media only screen and (min-width: 1024px) {
+        header {
+          height: 100vh;
+        }
+        .grid-2 {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        .grid-2 section {
+          flex: 50%;
+        }
+        .about {
+          order: -1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>red star hamburger</nav>
+    <header>
+      background video and
+      <h1>logo</h1>
+    </header>
+    <main class="grid-2">
+      <section class="about">
+        <h2>About</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis inventore officiis sapiente eligendi et provident voluptas placeat exercitationem mollitia dolorum odio, quis culpa, quas recusandae maiores praesentium? Voluptatum doloribus ex nesciunt soluta inventore libero distinctio quae magnam dolores sequi. Eaque nobis molestias harum porro consequatur rem autem beatae nulla exercitationem?</p>
+      </section>
+      <section class="menu">
+        <h2>Menus</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus suscipit quae dicta cumque sed repellat molestias labore dolores maiores magni?</p>
+      </section>
+      <section class="drinks">
+        <h2>Drinks</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus suscipit quae dicta cumque sed repellat molestias labore dolores maiores magni?</p>
+      </section>
+      <section>
+        <h2>Reserve</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus suscipit quae dicta cumque sed repellat molestias labore dolores maiores magni?</p>
+      </section>
+      <section class="map">
+        <img src="http://placekitten.com/1200/600" alt="" />
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
