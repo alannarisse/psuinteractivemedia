@@ -6,7 +6,9 @@ body {
 }
 
 header {
+  flex: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -24,7 +26,7 @@ nav li {
 }
 
 main {
-  height: 90vh;
+  height: 100vh;
 }
 
 .album-name {
