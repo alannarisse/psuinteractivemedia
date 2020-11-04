@@ -1,0 +1,66 @@
+.cls-1 {
+  fill: #117bd8;
+}
+
+.cls-1:hover {
+  animation-name: colorshift;
+  animation-duration: 1s;
+}
+
+@keyframes colorshift {
+  0% {
+    fill: #117bd8;
+  }
+  100% {
+    fill: #d88211;
+  }
+}
+.eye:hover {
+  transform: translateY(10px);
+}
+#fish-front,
+#fish-tail {
+  animation-name: no-swish;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes swish {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+svg {
+  width: 100%;
+  padding: 50px;
+}
+
+.fish {
+  width: 60%;
+  margin: auto;
+  opacity: 1;
+}
+.fish:hover {
+  animation-name: swim;
+  animation-duration: 3s;
+}
+@keyframes swim {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: translateX(-200px);
+  }
+}

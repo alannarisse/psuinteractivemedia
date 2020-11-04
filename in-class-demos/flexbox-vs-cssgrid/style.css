@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+.col1,
+.col2 {
+  background-color: #ccc;
+  margin: 40px;
+  flex: 1;
+}
+
+.whatever {
+  display: flex;
+  border: 1px solid #000;
+  margin-bottom: 100px;
+}
+
+.grid .feature {
+  grid-column: 3/5;
+  grid-row: 1/3;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-flow: dense;
+}
+img {
+  width: 100%;
+}
+.grid div,
+.grid p,
+.grid img {
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+.relative {
+  position: relative;
+  border: 1px solid red;
+  height: 400px;
+  width: 600px;
+  margin: 40px;
+}
+.absolute {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  background-color: pink;
+  width: 100px;
+  height: 100px;
+}
