@@ -10,6 +10,28 @@
   flex: 50%;
 }
 
+.doodle-flex {
+  display: flex;
+}
+.grid-3 {
+  display: flex;
+}
+
+.grid-3 .left {
+  text-align: right;
+  margin-top: 200px;
+  margin-right: -100px;
+  z-index: 2;
+}
+.grid-3 .middle {
+  z-index: 1;
+}
+
+.grid-3 .right {
+  margin-top: 200px;
+  margin-left: -100px;
+  z-index: 2;
+}
 .one,
 .two,
 .three,
