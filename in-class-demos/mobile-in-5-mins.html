@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      img {
+        width: 100%;
+      }
+
+      div {
+        padding: 40px;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @media (min-width: 768px) {
+        main {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        .img-1,
+        .img-2 {
+          flex: 50%;
+        }
+      }
+      @media (min-width: 1024px) {
+        .img-1,
+        .img-2,
+        .img-3 {
+          flex: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>I Heart Bill Murray</h1>
+    </header>
+    <main>
+      <div class="img-1"><img src="https://www.fillmurray.com/500/499" /></div>
+      <div class="img-2"><img src="https://www.fillmurray.com/501/500" /></div>
+      <div class="img-3"><img src="https://www.fillmurray.com/501/500" /></div>
+    </main>
+  </body>
+</html>

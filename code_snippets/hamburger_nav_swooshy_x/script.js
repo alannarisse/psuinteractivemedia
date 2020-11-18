@@ -13,6 +13,7 @@ function closeMobileMenu() {
   })
 }
 
+
 function desktopMenu() {
   $(window).scroll(function () {
     if ($(this).scrollTop() > 50 && $(window).width() > 768) {

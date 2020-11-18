@@ -49,11 +49,16 @@ article {
 	line-height: 1.5em;
 }
 
-input#mobile_menu {display:none;}
-input#mobile_menu:checked + nav {left: 0;}
-input#mobile_menu:checked + nav label {background-image: url(images/menu_close.svg);}
 
-nav {
+/* code for nav starts here */
+input#mobile_menu {display:none;}
+input#mobile_menu:checked + nav.mobile-nav {left: 0;}
+input#mobile_menu:checked + nav.mobile-nav label {background-image: url(images/menu_close.svg);}
+
+nav.desktop-nav {
+	display: none;
+}
+nav.mobile-nav {
 	width: 180px;
 	background-color: #666;
 	padding: 10px 20px 10px 25px;
@@ -65,7 +70,7 @@ nav {
     transition: left .6s ease-in-out;
 }
 
-nav a {
+nav.mobile-nav a {
 	color: #fff;
 	text-decoration: none;
 	display: block;
@@ -74,11 +79,11 @@ nav a {
 	border-top: 1px solid rgba(255,255,255,.1);
 }
 
-nav a:first-of-type {
+nav.mobile-nav a:first-of-type {
 	border-top: none;
 }
 
-nav label {
+nav.mobile-nav label {
 	cursor: pointer;
 	display: block;
 	width: 42px;
@@ -90,13 +95,15 @@ nav label {
 	right: -42px;
 }
 
+/* code for nav ends here */
 
 
 
 
-
-
-
+@media only screen and (min-width: 768px) {
+	nav.mobile-nav {display: none;}
+	nav.desktop-nav {display: block;}
+}
 
 
 
