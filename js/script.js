@@ -1,7 +1,7 @@
 function topNavList() {
   $("#topnavlist").html(
     `<li><a href="/index.html">Home</a></li>
-        <li><a href="/homework/index.html">Homework</a></li>
+        <li><a href="/videos/index.html">Videos</a></li>
         <li><a href="/projects.html">Projects</a></li>
         <li><a href="/resources.html">Resources</a></li>
         <li><a href="/glossary.html">Glossary</a></li>
