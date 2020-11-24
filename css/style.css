@@ -40,8 +40,11 @@ h2 {
 h3 {
   font-size: 1.8rem;
   line-height: 1em;
+  margin-bottom: 18px;
 }
-
+h4 {
+  margin-top: 18px;
+}
 strong {
   font-weight: bold;
 }

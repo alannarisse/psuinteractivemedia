@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    main {
+      width: 60%;
+      margin: 100px auto;
+    }
+  .button {
+    background-color: lavender;
+    color: #333;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+  .hover-button:hover {
+    background-color: purple;
+    color: #fff;
+  }
+
+  .error { color: red;}
+  .click-button:hover {
+    background-color: red;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ccc;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="modal">are you ok with audio?
+    <a href="" id="play-audio">yes</a>
+    <a href="" id="dont-play-audio">no</a>
+  </div>
+  <main>
+  <a href="#" class="button hover-button" id="service-button">Ring for Service</a>
+  <a href="#" class="button click-button" id="shins-button">Play a tune</a>
+
+  <audio id="service-bell" class="audio" controls >
+    <source src="service-bell_daniel_simion.mp3"></source>
+  </audio>
+
+  <audio id="shins-song" class="audio" autoplay>
+    <source src="shinssong.mp3"></source>
+  </audio>
+</main>
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+  <script>
+    var bell = $("#service-bell")[0];
+    $("#service-button").mouseenter(function() {
+      bell.currentTime = 0;
+      bell.play();
+    });
+
+    var shins = $("#shins-song")[0];
+    
+    $("#shins-button").click(function() {
+      if ($('audio#shins-song')[0].paused == false ){
+        shins.pause();
+      } else {
+        shins.play();
+      }
+    });
+  </script>
+</body>
+</html>
+
