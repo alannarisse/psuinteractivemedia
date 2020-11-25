@@ -16,6 +16,7 @@ $('.autoplay').slick({
   autoplaySpeed: 3500,
 });
 
+// code for single slider carousel
 $('.single-slide').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -25,6 +26,7 @@ $('.single-slide').slick({
   dots: true,
   draggable: false
 });
+
 
 $('.my-slick').slick({
   dots: false,
