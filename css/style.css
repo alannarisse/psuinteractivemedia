@@ -1,10 +1,26 @@
 /*----------------------------------------------------------------------*
-	General Styles
+Colors
+ CSS HEX 
+--maximum-yellow-red: #f6bd60ff;
+--linen: #f7ede2ff;
+--baby-pink: #f5cac3ff;
+--morning-blue: #84a59dff;
+--light-coral: #f28482ff;
+
+ CSS HSL 
+--maximum-yellow-red: hsla(37, 89%, 67%, 1);
+--linen: hsla(31, 57%, 93%, 1);
+--baby-pink: hsla(8, 71%, 86%, 1);
+--morning-blue: hsla(165, 15%, 58%, 1);
+--light-coral: hsla(1, 81%, 73%, 1);  
+
+General Styles
 *----------------------------------------------------------------------*/
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 20px;
   line-height: 1.4em;
+  color: #042a2b;
 }
 section {
   margin-bottom: 60px;
@@ -26,14 +42,14 @@ h1 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 3rem;
   line-height: 3.6rem;
-  color: #333;
+  color: #5eb1bf;
 }
 
 h2 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 2.4rem;
   line-height: 2.4rem;
-  color: #b38325;
+  color: #5eb1bf;
   margin-bottom: 18px;
 }
 
@@ -61,15 +77,14 @@ pre {
   width: 300px;
 }
 nav {
-  border-bottom: 4px solid #b38325;
-  padding: 20px;
-  margin-bottom: 20px;
+  border-bottom: 12px solid #5eb1bf;
+  padding: 30px;
 }
 nav a {
-  color: #b38325;
+  color: #d84727;
 }
 nav a:hover {
-  color: #2ea8b3;
+  color: #5eb1bf;
 }
 nav ul {
   display: grid;
@@ -77,11 +92,11 @@ nav ul {
 }
 
 a {
-  color: #b38325;
+  color: #d84727;
   text-decoration: none;
 }
 a:hover {
-  color: #2ea8b3;
+  color: #5eb1bf;
 }
 
 img {
@@ -97,8 +112,9 @@ td {
 }
 footer {
   margin-top: 50px;
-  padding: 20px;
-  border-top: 4px solid #b38325;
+  padding: 60px;
+  border-top: 4px solid #ef7b45;
+  background: #ef7b45;
 }
 
 footer ul {
@@ -106,8 +122,11 @@ footer ul {
 }
 footer li {
   padding-right: 20px;
+  color: #fff;
 }
-
+footer a {
+  color: #fff;
+}
 .grid-2 {
   display: grid;
 }
@@ -116,25 +135,27 @@ footer li {
 }
 
 aside {
-  background-color: rgb(241, 237, 229);
+  background-color: #cdedf6; /* rgb(205, 237, 246) */
   padding: 10px;
 }
+
+/* Global button styles */
 .button {
   border-radius: 8px;
   padding: 6px 10px;
-  border: 2px solid #b38325;
+  border: 2px solid #ef7b45;
 }
 .button:hover {
-  border: 2px solid #2ea8b3;
+  border: 2px solid #5eb1bf;
 }
 
 .tiny-button {
   border-radius: 8px;
   padding: 2px 6px;
-  border: 2px solid #b38325;
+  border: 2px solid #ef7b45;
 }
 .tiny-button:hover {
-  border: 2px solid #2ea8b3;
+  border: 2px solid #5eb1bf;
 }
 
 .cards {
@@ -146,21 +167,22 @@ aside {
 /* END styles for the class homepages */
 @media only screen and (min-width: 768px) {
   .container-grid,
-  .container,
-  header {
+  .container {
     width: 80%;
   }
   header {
-    padding: 60px 0;
+    width: 100%;
+    padding: 60px;
+    background-image: url("https://media.giphy.com/media/g5NHjsrf3mhuo/giphy-downsized-large.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 35%;
+    height: 400px;
   }
 }
 
+/* Tablet to small desktop */
 @media only screen and (min-width: 1024px) {
-  .container-grid,
-  .container,
-  header {
-    width: 80%;
-  }
   .grid-2 {
     grid-template-columns: 1fr 1fr;
   }
@@ -178,11 +200,6 @@ aside {
   }
 }
 @media only screen and (min-width: 1200px) {
-  .container-grid,
-  .container,
-  header {
-    width: 80%;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

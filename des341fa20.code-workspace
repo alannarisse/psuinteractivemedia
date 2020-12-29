@@ -1,28 +1,10 @@
 {
   "folders": [
-	{
-		"path": "."
-	},
-	{
-		"path": "../students/fa20/gage/gmurrey.github.io"
-	},
-	{
-		"path": "../students/fa20/emiri/shelyEM.github.io"
-	},
-	{
-		"path": "../students/fa20/matt/mattdavidsondesign.github.io"
-	},
-	{
-		"path": "../students/fa20/anitra/anitramr.github.io"
-	},
-	{
-		"path": "../students/fa20/jordan/JordanPaplow.github.io"
-	},
-	{
-		"path": "../students/fa20/michael/michaelfulgaro.github.io"
-	}
-],
+    {
+      "path": "."
+    }
+  ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "gmurrey.github.io"
+    "liveServer.settings.multiRootWorkspaceName": "psuinteractivemedia"
   }
 }
