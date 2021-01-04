@@ -147,6 +147,10 @@ aside {
   padding: 10px;
 }
 
+.home article ul {
+  list-style-type: square;
+  margin-left: 20px;
+}
 /* Global button styles */
 .button {
   border-radius: 8px;
