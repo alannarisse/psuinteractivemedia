@@ -2,7 +2,7 @@ function topNavList() {
   $("#topnavlist").html(
     `<li><a href="/index.html">Home</a></li>
         <li><a href="/videos/index.html">Videos</a></li>
-        <li><a href="/projects.html">Projects</a></li>
+        <li>Basecamps: <a href="https://3.basecamp.com/3840950/projects/20215530">341</a> <a href="https://3.basecamp.com/3840950/projects/20215531">342</a></li>
         <li><a href="/resources.html">Resources</a></li>
         <li><a href="/terms/wi21des34x/index.html">Student Links</a></li>
         <li><a href="mailto:arisse@pdx.edu" class="button">email alanna</a></li>`
