@@ -60,6 +60,11 @@ h3 {
 }
 h4 {
   margin-top: 18px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+h5 {
+  font-weight: bold;
 }
 strong {
   font-weight: bold;
@@ -99,6 +104,9 @@ a:hover {
   color: #5eb1bf;
 }
 
+hr {
+  margin-bottom: 60px;
+}
 img {
   width: 100%;
 }
@@ -167,6 +175,7 @@ aside {
 /* END styles for the class homepages */
 @media only screen and (min-width: 768px) {
   .container-grid,
+  .container-div,
   .container {
     width: 80%;
   }
