@@ -1,0 +1,31 @@
+/* Cascading stylesheet */
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+h1 {
+  font-size: 68px;
+  margin-left: 40px;
+  color: pink;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+p {
+  color: navy;
+}
+
+.icecream {
+  color: yellowgreen;
+}
+
+a {
+  color: red;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 120px;
+  }
+  a {
+    color: purple;
+  }
+}

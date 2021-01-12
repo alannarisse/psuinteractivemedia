@@ -27,7 +27,8 @@ section {
 }
 .container-grid,
 .container,
-header {
+header,
+.header {
   width: 90%;
   margin: auto;
 }
@@ -187,7 +188,7 @@ aside {
   header {
     width: 100%;
     padding: 60px;
-    background-image: url("https://media.giphy.com/media/g5NHjsrf3mhuo/giphy-downsized-large.gif");
+    background-image: url("../images/home/Theres-No-Place-Like.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 35%;
