@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+.grid {
+  border: 2px solid red;
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+article {
+  padding: 20px;
+  border: 2px solid blue;
+}
+
+.one {
+  flex: 20%;
+}
+
+.one p {
+  writing-mode: vertical-rl;
+}
+.two {
+  flex: 80%;
+}

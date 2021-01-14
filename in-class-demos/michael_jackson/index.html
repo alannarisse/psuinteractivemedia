@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Michael Jackson Had a farm</title>
+</head>
+<body>
+	
+<p>Michael Jackson has a zoom, and onb that zoo, he has a 
+	<span class="animal">chimpanze</span>.</p>
+	<p class="noiseParagraph"></p>
+
+<button class="changeAnimal">What else?</button>
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+
+  <script>
+
+  // data types in javascript
+  // string uses quotes,  "3" "pig" "0239347u3458hwf"
+  // numbers 3, 48735, 5.2
+  // arrays ['frog', 'snake', 'elephant', 'chimpanzee']
+  // arrays [1, 2, 3, 4, 5]
+  // mySandwichArray ['liverwourst sandwich', 4, "$9.99", ['pickles', 'mayo', 'liverwurst' ]]
+  // mySandwichArray[0]
+  // boolean true false
+  // objects { dough: 'cornmeal', toppings: ['pepperoni', 'mushroom'], time-est: "30 minutes"}
+
+ let animal = ['elephant', 'snake', 'sloth', 'sugar glider', 'peacock']
+ let sound = ['trumpet', 'ssssss', 'wuuuf', 'bing', 'screeeee']
+let clickNum = 0
+
+$('.changeAnimal').click(
+		function(){
+			if(clickNum < animal.length){
+					$('.animal').html(animal[clickNum])
+					$('.noiseParagraph').html(
+							`With a ${sound[clickNum]}, ${sound[clickNum]} here, and a ${sound[clickNum]}, ${sound[clickNum]} there. Here a ${sound[clickNum]}, there a ${sound[clickNum]}, everywhere a ${sound[clickNum]}, ${sound[clickNum]}.`
+						)
+					clickNum++
+					
+				}
+			else if(clickNum >= 5){
+				alert("Youre all out of love")
+				}
+		}
+	)
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
