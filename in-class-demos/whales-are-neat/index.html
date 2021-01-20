@@ -3,47 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="waypoints/style.css">
     <link rel="stylesheet" href="style.css" />
     <title>Whales</title>
   </head>
-  <body>
-
-    <main>
-      
-      <div class="outer-wrapper">
-      <div class="wrapper">
-        <section class="slide one">
-          <article class="vh-center">
-            <p class="center">There once was an old, white whale.</p>
-          </article>
-        </section>
-        <section class="slide two">
-          <article class="vh-center">
-            <p class="center">Who terrorized whaler's ships and protected whale pods across the Atlantic and Pacific Oceans.</p>
-          </article>
-        </section>
-        <section class="slide three">
-          <article class="vh-center">
-            <p class="center">Men obsessed over him.</p>
-          </article>
-        </section>
-        <section class="slide four">
-          <article class="vh-center">
-            <p class="center">Some thought he was an aparition.</p>
-          </article>
-        </section>
-        <section class="slide four">
-          <article class="vh-center">
-            <p class="center">After destroying their ships, he would hide out.</p>
-          </article>
-        </section>
-      </div>
-    </div>
-    <!-- whale start -->
+  <body id="pane">
+    <button id="clicky">click me</button>
+    <section class="start">
+      <!-- whale start -->
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 733.76 478.26" id="whale-whole">
         <g id="Layer_2" data-name="Layer 2">
-            <g id="spout">
+          <g id="spout">
             <path class="cls-1 drop1" d="M194.23,145.54c1.23.28,2.18-.72,2.57-1.92.89-2.7,2.88-4.59,4.73-6.59,5.74-6.17,11.74-12.12,17.25-18.49A43.24,43.24,0,0,0,229.46,91.7c.12-3.63-3.22-6.21-7.67-4.85a16.8,16.8,0,0,0-6.45,3.5c-6.73,6.11-12.1,13.14-15.23,21.77-3.61,10-4.92,20.4-6.45,30.8C193.52,143.83,192.75,145.22,194.23,145.54Z" />
             <path class="cls-1 drop2" d="M210.39,144.87c-11.77,8.68-20.82,19.77-28.1,32.37-.6,1-1.3,2-.32,3.16,1.15,1.37,2.19.19,3.05-.34,6.71-4.18,13.9-7.46,20.83-11.24,6-3.29,12.13-6.45,17.11-11.29,3-2.89,6-5.76,7.38-9.83a6.7,6.7,0,0,0-6.33-8.48C219.42,140.42,214.52,141.83,210.39,144.87Z" />
             <path class="cls-1 drop3" d="M169.88,110.23c-4.91-2-9.74.3-11.58,5.25a15,15,0,0,0,.87,12.76c1,1.84,2.2,3.54,3.07,5.42,4.79,10.35,13.32,19.09,13.5,31.43,0,.76.14,1.74,1,1.86,1.11.15,1.63-.85,1.8-1.7,1.63-8.1,5.22-15.86,4.14-24.34.69-8.9-1.8-17-6-24.6A13.22,13.22,0,0,0,169.88,110.23Z" />
@@ -145,36 +114,78 @@
             <path class="cls-1" d="M657.36,67.25c-.65.91-1.2,1.78-.17,2.72s1.94.19,2.66-.54A19.92,19.92,0,0,1,663,66.59c11.84-7.73,24.67-12.55,38.88-13.3,4.28-.22,8.54.72,13.42.13a53.93,53.93,0,0,0,7.57-.22c7.6-1.17,11.17-7.83,7.8-14.38a10.73,10.73,0,0,0-8-5.67c-8.81-1.7-17.43-.49-25.73,2.36-11.69,4-20.62,12.37-29.85,20.14C663.24,58.93,660.26,63.07,657.36,67.25Z" />
             <path class="cls-1" d="M620.76,60.35a18.67,18.67,0,0,0-2.85,6.8c-.23.87-.42,1.94.68,2.35.93.36,1.26-.63,1.71-1.22a31,31,0,0,1,9.17-7.68A113.65,113.65,0,0,1,655,50.28c4.34-1.25,8.83-2.37,12.42-5.33,2.93-2.4,5.76-5,5.42-9.3-.68-7.92-3-10.61-12.46-9.21a16.24,16.24,0,0,0-6.59,2.26C640.72,37.13,630.12,48.11,620.76,60.35Z" />
           </g>
-          
         </g>
       </svg>
       <!-- whale end -->
+    </section>
+    <main>
+      <div class="wrapper">
+        <section class="slide one">
+          <article class="vh-center">
+            <p class="center">There once was an old, white whale.</p>
+          </article>
+        </section>
+        <section class="slide two">
+          <article class="vh-center">
+            <p class="center">Who terrorized whaler's ships and protected whale pods across the Atlantic and Pacific Oceans.</p>
+          </article>
+        </section>
+        <section class="slide three" id="go-here">
+          <article class="vh-center">
+            <p class="center">Men obsessed over him.</p>
+          </article>
+        </section>
+        <section class="slide four">
+          <article class="vh-center">
+            <p class="center">Some thought he was an aparition.</p>
+          </article>
+        </section>
+        <section class="slide five">
+          <article class="vh-center">
+            <p class="center">After destroying their ships, he would hide out.</p>
+          </article>
+        </section>
+      </div>
     </main>
 
-<script
-  src="https://code.jquery.com/jquery-3.5.1.min.js"
-  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-  crossorigin="anonymous"></script>
-    <script src="waypoints/jquery.waypoints.min.js"> 
-    </script>
-    <script>
-        let $tailsplash = $('#tailsplash');
-        $tailsplash.waypoint(function(){
-            console.log('tailsplash')
-        })
-        let $four = $('.four');
-        $four.waypoint(function(){
-            console.log('four')
-        })
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+   <script src="jquery.scrollTo.min.js"></script>
+   <script>
+    
+       $('#clicky').click(function() {
+                scrollTo(document.getElementById('go-here'), 200);
+            });
+   </script>
+    <!-- <script src="waypoints/jquery.waypoints.min.js"></script> -->
+    <!-- <script>
+      var waypoint = new Waypoint({
+        element: document.getElementById("waypoint"),
+        handler: function (direction) {
+          console.log("Scrolled to waypoint!")
+        }
+      })
+    </script> -->
+    <!-- <script>
+      let $two = $("#two")
+      $two.waypoint(function () {
+        $("#tailsplash").css("transform", "scale(1.5)")
+      })
 
-        var waypoint = new Waypoint({
-  element: $('.four'),
-  handler: function(direction) {
-    alert('horizontal scroll waypoint triggered')
-  },
-  context: $('.wrapper'),
-  horizontal: true
-})
-    </script>
+      let $one = $(".one")
+      $one.waypoint(
+        function () {
+          $("#whale-whole").addClass("whale-dive")
+        },
+        { offset: "50%" }
+      )
+
+      let $four = $(".four")
+      $four.waypoint(
+        function () {
+          $("#whale").addClass("whale-animate")
+        },
+        { offset: "50%" }
+      )
+    </script> -->
   </body>
 </html>

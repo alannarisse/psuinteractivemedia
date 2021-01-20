@@ -188,10 +188,10 @@ aside {
   header {
     width: 100%;
     padding: 60px;
-    background-image: url("../images/home/Theres-No-Place-Like.jpg");
+    background-image: url("https://media.giphy.com/media/kolvlRnXh8Jj2/source.gif");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% 35%;
+    background-position: 50% 45%;
     height: 400px;
   }
 }

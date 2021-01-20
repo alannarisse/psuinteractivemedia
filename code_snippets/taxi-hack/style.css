@@ -1,0 +1,1313 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* General Styles */
+
+body {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    margin: 0;
+    background: black;
+    width: 1280px;
+    height: 800px;
+}
+.container{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+}
+.scroll_indicator {
+	position: fixed;
+    z-index: 10000;
+	top: 20px;
+	left: auto;
+	right: 20px;
+	width: 250px;
+	height: auto;
+	background: #ccc;
+	color: #333;
+}
+#titlepage{
+    width: 1280px;
+    height: 800px;
+    position: relative;
+    background: url(../img/titlepage.jpg) no-repeat center center;
+    margin-top: -50px;
+    overflow: hidden;
+    transition: all 4s;
+}
+.fade{
+    opacity: 0;
+}
+.scrolldown{
+    position: absolute;
+    z-index: 1000;
+    bottom: 10%;
+    left: 50%;
+    transform: translateY(-50%);
+}
+
+.arrow {
+  position: relative;
+  width: 42px;
+  height: 16px;
+  opacity: 0;
+}
+  .arrow::before,
+  .arrow::after {
+    content: "";
+    width:21px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 2px;
+    display: inline-block;
+  }
+  
+  .arrow::before {
+    transform: rotate(45deg) translateX(25%)
+  }
+  
+  .arrow::after {
+    transform: rotate(-45deg) translateX(-25%)
+  }
+  
+  .arrow:nth-child(1) {
+    top: -50px;
+    opacity: 1;
+    animation: arrow2 1s ease 0s infinite;
+  }
+  
+  .arrow:nth-child(2) {
+    top: -25px;
+    animation: arrow1 1s ease 0.25s infinite;
+  }
+
+@keyframes arrow1 {
+  from {
+    opacity: 0;
+    top: -25px;
+  }
+  
+  to {
+    opacity: 0;
+    top: 0px;
+  }
+  
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes arrow2 {
+  from {
+    opacity: 0;
+    top: -35px;
+  }
+  
+  to {
+    opacity: 0;
+    top: -10px;
+  }
+  
+  50% {
+    opacity: 1;
+  }
+}
+
+#scene0{
+    width: 100vw;
+    height: 1000px;
+    position: relative;
+/*    overflow: hidden;*/
+}
+
+.longbubble{
+    background: url(../img/long%20bubble.svg) no-repeat center;
+    width: 700px;
+    height: 300px;
+    position: absolute;
+    top: 40%;
+    left: 60%;
+/*
+    margin-left: 40%;
+    margin-top: 25%;
+*/
+}
+
+.longbubble p{
+    width: 650px;
+    padding-top: 50px;
+    padding-left: 10px;
+    
+}
+.roundbubble{
+    background: url(../img/round%20bubble.svg) no-repeat center;
+    width: 250px;
+    height: 160px;
+    position: absolute;
+    bottom: 0%;
+    left: 5%;
+}
+.roundbubble p{
+    padding-top: 50px;
+    padding-left: 50px;
+}
+.dialog_box{
+
+}
+.mission, .turn_around, .found_customer, .fact{
+    font-family: 'Roboto', sans-serif;
+    text-transform: none;
+    background: #666;
+    border-radius: 5px;
+   
+}
+.mission{
+    
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 35%;
+    height: 18%;
+    bottom: 15%;
+     z-index: 5000;
+}
+.turn_around{
+    width: 380px;
+    height: 180px;
+    position: fixed;
+    top: 20%; 
+    left: 50%;
+    transform: translateX(-50%); 
+    z-index: 5000;
+ 
+}
+.found_customer{
+    width: 380px;
+    height: 180px;
+    position: fixed;
+    top: 20%; 
+    left: 50%;
+    transform: translateX(-50%);
+     z-index: 5000;
+ 
+}
+h1{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-weight: bolder;
+    line-height: 3em;
+    background-color: #999;
+}
+.mission1 p, .question1 p, .question2 p{
+    font-size: 16px;
+    padding-top: 15px;
+    color: black;
+}
+
+.question1 button, .question2 button{
+    width: 80px;
+}
+button{
+    width: 60px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    text-transform: none;
+    padding: 5px;
+    margin-top: 20px;
+    background-color: #999;
+    border: none;
+    border-radius: 2px; 
+}
+.quit_mission {
+    margin-left: 10px;
+}
+.forget_this{
+    margin-left: 10px;
+}
+.light_box{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4000;
+    opacity: .5;
+}
+.scrolldown{
+    margin-top: 5%;
+}
+
+/************Main Scene********/
+
+.rain{
+    height: 120%;
+    width: 100%;
+    background: url(../img/rain.png);
+    background-size: 20%;
+    animation: rain .3s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5000;
+}
+.lightning{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5000;
+    width: 100%;
+    height: 100%;
+    background:#fff;
+    animation: lightning 5s linear infinite;
+    opacity: 0;
+
+}
+
+@keyframes rain
+{
+    0%{background-position: 0% 0%;}
+    100%{background-position: 20% 100%;}
+    
+}
+@keyframes lightning
+{
+    0%{opacity: 0;}
+    10%{opacity: 0;}
+    11%{opacity: 0.5;}
+    12%{opacity: 0;}
+    20%{opacity: 0;}
+    21%{opacity: 0.5;}
+    22%{opacity: 0;}
+    104%{opacity: 0;}
+
+
+
+}
+.fog{
+    background: url(../img/580b585b2edbce24c47b263a.png) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 0%;
+    opacity: .75;
+    z-index: 5000;
+    
+}
+.dark_layer{
+    background-color: black;
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 0%;
+    opacity: .5;
+    z-index: 500;
+}
+.dashboard{
+    background: url(../img/dashboard2.png) no-repeat left;
+    background-size: 95%;
+    width: 1992px;
+    height: 800px;
+    position: absolute;
+    top: -100px;
+    left: 0%;
+    z-index: 5000;
+    overflow: hidden;
+}
+.headlight{
+    background: url(../img/headlight.png) no-repeat center;
+    background-size: 100%;
+    width: 120%;
+    height: 100%;
+    position: absolute;
+    top: -10%;
+    left: 5%;
+    z-index: 2000;
+    opacity: 0.5;
+}
+.ground{
+    background: url(../img/scribble-light.png);
+    background-size: 8%;
+    width: 2000px;
+    height: 500px;
+    position: absolute;
+    top: 0%;
+    margin-top: 266px;
+    z-index: -100;
+    overflow: hidden;
+    opacity: .5;
+/*    opacity: 0;*/
+}
+
+.sky{
+     background: linear-gradient(#888, #111);
+    background-size: cover;
+    background-position: 0% 50%;
+    width: 2000px;
+    height: 265px;
+    position: absolute;
+    top: 0%;
+    z-index: -100;
+    overflow: hidden;
+/*    opacity: 0;*/
+}
+.mountain{
+    background:url(../img/mountain.svg) repeat-x;
+    opacity: 0.5;
+    width: 2000px;
+    height: 150px;
+    background-position: 75%;
+    position: absolute;
+    top: 155px;
+    z-index: -100;
+    overflow: hidden;
+/*    opacity: 0;*/
+}
+
+#scene1{
+    width: 1280px;
+    height: 800px;
+    position: fixed;
+/*    position: relative;*/
+    overflow: hidden;
+    top: 0;
+    left: 80%;
+    z-index: 1000;
+
+    
+}
+
+.driving{
+/*    margin-top: 30%;*/
+    transform: translateX(-40px);
+}
+.driving .perspective {
+  -webkit-perspective: 1.7em;
+  perspective: 1.7em;
+    perspective-origin: 58% 50%;
+  background: transparent;
+  position: relative;
+  z-index: 0;
+/*    perspective-origin: 60% 50%;*/
+/*  margin-top: -17em;*/
+
+
+}
+.driving .perspective .road {
+  width: 50%;
+  margin: 0 auto;
+  -webkit-transform: rotateX(20deg);
+  transform: rotateX(20deg);
+  height: 675px;
+  border-right: 3vw solid;
+  border-left: 3vw solid;
+  border-color: black;
+  background: linear-gradient(to right, #0d0d0d 95%, transparent 95%), linear-gradient(#0d0d0d 30%, #666666 30%, #666666 60%, #0d0d0d 60%);
+  background-size: 55% 5%;
+/*  -webkit-animation: drive 3s linear infinite;*/
+/*  animation: drive 2s linear infinite;*/
+    
+    opacity: 1;
+}
+
+@keyframes drive {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 0 0, 0 21%;
+  }
+}
+/* Roadside Stuff */
+
+.bush1{
+     background: url(../img/bush.png) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 8%;
+    height: 8%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(-350px, -220px, -30px);
+/*    animation: bush1 10s infinite;*/
+}
+@keyframes bush1 {
+
+
+	0% { transform: translate3d(-350px, -230px, -30px); }
+	100% { transform: translate3d(-220px, 90px, 100px); }
+
+}
+.deadbush1{
+     background: url(../img/deadbush.svg) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 10%;
+    height: 10%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(-270px, -260px, -30px);
+/*    animation: deadbush 10s infinite;*/
+}
+@keyframes deadbush {
+
+
+	0% { transform: translate3d(-270px, -260px, -30px); }
+	100% { transform: translate3d(-220px, 70px, 100px); }
+
+}
+
+.darktree1{
+     background: url(../img/deadtree5.svg) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 15%;
+    height: 15%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(-300px, -290px, -30px);
+/*    animation: darktree1 10s infinite;*/
+}
+@keyframes darktree1 {
+
+
+	0% { transform: translate3d(-300px, -290px, -30px); }
+	100% { transform: translate3d(-220px, 20px, 100px); }
+
+}
+.darktree6{
+     background: url(../img/deadtree2.svg) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 10%;
+    height: 10%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(-210px, -270px, -30px);
+/*    animation: darktree6 10s infinite;*/
+}
+@keyframes darktree6 {
+
+
+	0% { transform: translate3d(-210px, -270px, -30px); }
+	100% { transform: translate3d(-220px, 50px, 100px); }
+
+}
+.bush2{
+     background: url(../img/bush2.png) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 7%;
+    height: 7%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(-270px, -240px, -30px);
+/*    animation: bush2 10s infinite;*/
+}
+@keyframes bush2 {
+
+
+	0% { transform: translate3d(-270px, -240px, -30px); }
+	100% { transform: translate3d(50px, 60px, 100px); }
+
+}
+.darktree2{
+     background: url(../img/deadtree6.svg) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 20%;
+    height: 20%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(-400px, -320px, -30px);
+/*    animation: darktree2 10s infinite;*/
+}
+@keyframes darktree2 {
+
+
+	0% { transform: translate3d(-400px, -320px, -30px); }
+	100% { transform: translate3d(-250px, -30px, 100px); }
+
+}
+.pinebush1{
+     background: url(../img/bush1.png) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 15%;
+    height: 15%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(220px, -290px, -30px);
+/*    animation: pinebush1 10s infinite;*/
+
+}
+@keyframes pinebush1 {
+
+
+	0% { transform: translate3d(220px, -290px, -30px); }
+	100% { transform: translate3d(100px, -10px, 100px); }
+
+}
+.darktree7{
+     background: url(../img/deadtree7.svg) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 10%;
+    height: 10%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(160px, -270px, -30px);
+/*    animation: darktree7 10s infinite;*/
+
+}
+@keyframes darktree7 {
+
+
+	0% { transform: translate3d(160px, -270px, -30px); }
+	100% { transform: translate3d(80px, 40px, 100px); }
+
+}
+.deadbush2{
+     background: url(../img/deadbush.svg) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 10%;
+    height: 10%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(320px, -240px, -30px);
+/*    animation: deadbush2 10s infinite;*/
+
+}
+@keyframes deadbush2 {
+
+
+	0% { transform: translate3d(320px, -240px, -30px); }
+	100% { transform: translate3d(100px, 20px, 100px); }
+
+}
+.pinebush2{
+     background: url(../img/bush3.png) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 10%;
+    height: 15%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(250px, -260px, -30px);
+/*    animation: pinebush2 10s infinite;*/
+
+}
+@keyframes pinebush2 {
+
+
+	0% { transform: translate3d(250px, -260px, -30px); }
+	100% { transform: translate3d(120px, 0px, 100px); }
+
+}
+.darktree4{
+     background: url(../img/deadtree3.svg) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 10%;
+    height: 15%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(250px, -270px, -30px);
+/*    animation: darktree4 10s infinite;*/
+
+}
+@keyframes darktree4 {
+
+
+	0% { transform: translate3d(250px, -270px, -30px); }
+	100% { transform: translate3d(120px, 20px, 100px); }
+
+}
+.darktree3{
+     background: url(../img/deadtree5.svg) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 15%;
+    height: 15%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(220px, -290px, -30px);
+/*    animation: pinebush1 10s infinite;*/
+
+}
+@keyframes pinebush1 {
+
+
+	0% { transform: translate3d(220px, -290px, -30px); }
+	100% { transform: translate3d(100px, -10px, 100px); }
+
+}
+.darktree8{
+     background: url(../img/deadtree6.svg) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 15%;
+    height: 15%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(220px, -280px, -30px);
+/*    animation: pinebush2 10s infinite;*/
+
+}
+@keyframes pinebush2 {
+
+
+	0% { transform: translate3d(220px, -280px, -30px); }
+	100% { transform: translate3d(120px, 20px, 100px); }
+
+}
+.darktree9{
+     background: url(../img/deadtree4.svg) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 15%;
+    height: 15%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(220px, -280px, -30px);
+/*    animation: pinebush2 10s infinite;*/
+
+}
+@keyframes pinebush2 {
+
+
+	0% { transform: translate3d(220px, -280px, -30px); }
+	100% { transform: translate3d(120px, 20px, 100px); }
+
+}
+.darktree10{
+     background: url(../img/deadtree2.svg) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 15%;
+    height: 15%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(220px, -280px, -30px);
+/*    animation: pinebush2 10s infinite;*/
+
+}
+@keyframes pinebush2 {
+
+
+	0% { transform: translate3d(220px, -280px, -30px); }
+	100% { transform: translate3d(120px, 20px, 100px); }
+
+}
+.tree1{
+     background: url(../img/tree.png) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 20%;
+    height: 20%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(-820px, -320px, -30px);
+/*        animation: tree1 10s infinite;*/
+
+}
+@keyframes tree1 {
+
+
+	0% { transform: translate3d(-820px, -320px, -30px); }
+	100% { transform: translate3d(-700px, -150px, 50px); }
+
+}
+.darktree5{
+     background: url(../img/deadtree1.svg) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 20%;
+    height: 20%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(320px, -330px, -30px);
+/*        animation: darktree5 10s infinite;*/
+
+}
+@keyframes darktree5 {
+
+
+	0% { transform: translate3d(320px, -330px, -30px); }
+	100% { transform: translate3d(200px, -50px, 100px); }
+
+}
+.tree2{
+     background: url(../img/tree5.png) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 20%;
+    height: 20%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(500px, -310px, -30px);
+/*        animation: tree2 10s infinite;*/
+
+}
+@keyframes tree2 {
+
+
+	0% { transform: translate3d(500px, -310px, -30px); }
+	100% { transform: translate3d(500px, -150px, 50px); }
+
+}
+.roadsign{
+ background: url(../img/roadsign3.png) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 10%;
+    height: 10%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(240px, -250px, -30px);
+/*            animation: roadsign 10s infinite;*/
+
+}
+@keyframes roadsign {
+
+
+	0% { transform: translate3d(240px, -250px, -30px); }
+	100% { transform: translate3d(100px, 50px, 100px); }
+
+}
+.bus_stop{
+ background: url(../img/bus_wait.png) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 8%;
+    height: 8%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(360px, -230px, -30px);
+/*            animation: buswait 10s infinite;*/
+
+}
+@keyframes buswait {
+
+
+	0% { transform: translate3d(360px, -230px, -30px); }
+	100% { transform: translate3d(200px, 50px, 100px); }
+
+}
+.girl2{
+ background: url(../img/girl_walking.png) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 15%;
+    height: 15%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(530px, -250px, -30px);
+/*            animation: girl2 10s infinite;*/
+
+}
+@keyframes girl2 {
+
+
+	0% { transform: translate3d(420px, -250px, -30px); }
+	100% { transform: translate3d(20px, 50px, 100px); }
+
+}
+.bus_sign{
+ background: url(../img/bus_sign.png) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 8%;
+    height: 8%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(260px, -270px, -30px);
+/*            animation: bussign 10s infinite;*/
+
+}
+@keyframes bussign {
+
+
+	0% { transform: translate3d(260px, -270px, -30px); }
+	100% { transform: translate3d(100px, 10px, 100px); }
+
+}
+.comingcar{
+      background: url(../img/comingcar3.png) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 10%;
+    height: 10%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(-100px, -260px, -30px);
+/*        animation: comingcar 10s infinite;*/
+
+}
+@keyframes comingcar {
+
+
+	0% { transform: translate3d(-100px, -260px, -30px); }
+	100% { transform: translate3d(-100px, 110px, 100px); }
+
+}
+.houseL1{
+    background: url(../img/houseL5.png) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 95%;
+    height: 95%;
+  left: 50%;
+    top: 60%;
+    z-index: 1;
+    overflow: hidden;
+    transform: translate3d(-1700px, -700px, -30px);
+/*        transform: translate3d(-800px, -400px, 100px);*/
+/*    animation: house1 10s infinite;*/
+}
+@keyframes house1 {
+
+
+	0% { transform: translate3d(-1700px, -700px, -30px); }
+	100% { transform: translate3d(-1500px, -580px, 100px); }
+
+}
+.houseL2{
+    background: url(../img/houseL6.png) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 50%;
+    height: 50%;
+  left: 50%;
+    top: 60%;
+    z-index: 0;
+    overflow: hidden;
+    transform: translate3d(-900px, -470px, -30px);
+/*    animation: house2 10s infinite;*/
+}
+@keyframes house2 {
+
+
+	0% { transform: translate3d(-900px, -470px, -30px); }
+	100% { transform: translate3d(-700px, -230px, 100px); }
+
+}
+.houseR{
+     background: url(../img/houseR9.png) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1001;
+    width: 120%;
+    height: 120%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(0px, -820px, -30px);
+/*        transform: translate3d(800px, -400px, 100px);*/
+
+/*    animation: houseR 10s infinite;*/
+}
+@keyframes houseR {
+
+
+	0% { transform: translate3d(0px, -820px, -30px); }
+	100% { transform: translate3d(0px, -500px, 100px); }
+
+}
+
+.girl3{
+ background: url(../img/girl_back.png) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(420px, -450px, -50px);
+/*            animation: girl3 10s infinite;*/
+
+}
+@keyframes girl3 {
+
+
+	0% { transform: translate3d(60px, -270px, -30px); }
+	100% { transform: translate3d(30px, -100px, 30px); }
+
+}
+.girl4{
+ background: url(../img/girl_wave.png) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 0;
+    width: 20%;
+    height: 20%;
+  left: 67%;
+    top: 31%;
+
+}
+
+.hospital{
+    background: black url(../img/hospital4.png) no-repeat top; 
+    background-size: 50%;
+    position: absolute;
+    z-index: 0;
+    width: 1280px;
+    height: 310px;
+/*
+    height: 37%;
+    background-size: 50%;
+    transform: scale(1.5);
+*/
+    top: 0;
+    left: 0;
+}
+
+.hospital_ground{
+    background: url(../img/dark_ground.png) no-repeat top; 
+    background-size: 50%;
+    position: absolute;
+    z-index: 0;
+    width: 1751px;
+    height: 321px;
+/*
+    height: 37%;
+    background-size: 50%;
+    transform: scale(1.5);
+*/
+    bottom: 50px;
+    left: -100px;
+}
+.crash{
+         background: url(../img/crash.png) no-repeat center; 
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 10%;
+    height: 10%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: scale(10) translate3D(10px, 5px, 0px);
+/*        transform: translate3d(200px, -220px, -30px);*/
+
+}
+.aftercrash{
+    width: 1%;
+    height: 1%;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+.signalL{
+    background: url(../img/signalL.png) no-repeat center;
+    background-size: contain;
+    position: absolute;
+    z-index: 1000;
+    width: 15%;
+    height: 30%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+        transform: translate3d(-210px, -380px, -30px);
+/*    animation: signalL 10s infinite;*/
+/*    transform: translate3d(-160px, -180px, 100px);*/
+}
+@keyframes signalL {
+
+
+	0% { transform: translate3d(-210px, -380px, -30px); }
+	100% { transform: translate3d(0px, -80px, 100px); }
+}
+.signalR{
+    background: url(../img/signalR.png) no-repeat center;
+    background-size: contain;
+    position: absolute;
+    z-index: 2000;
+    width: 20%;
+    height: 30%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+        transform: translate3d(80px, -390px, -30px);
+/*    animation: signalR 10s infinite;*/
+
+}
+@keyframes signalR {
+
+
+	0% { transform: translate3d(80px, -390px, -30px); }
+	100% { transform: translate3d(0px, -80px, 100px); }
+}
+.lightL {
+    background: url(../img/lightR.png) no-repeat center;
+    background-size: contain;
+    position: absolute;
+    z-index: 2000;
+    width: 10%;
+    height: 15%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+/*    transform: scale(1) translate(0px, 0px);*/
+/*    transform: scale(15) translate(-50%, 0%);*/
+/*	animation: lightL 7s infinite;*/
+/*
+perspective: 1px;
+    perspective-origin: bottom center;
+*/
+    transform: translate3d(-280px, -290px, -30px);
+/*    transform: scale(6) translate(-100px, 10px);*/
+}
+.girl1 {
+    background: url(../img/girl_stand.png) no-repeat center;
+    background-size: contain;
+    position: absolute;
+    z-index: 2000;
+    width: 10%;
+    height: 12%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+
+    transform: translate3d(-340px, -250px, -30px);
+/*    animation: girl1 10s infinite;*/
+}
+@keyframes girl1 {
+
+
+	0% { transform: translate3d(-340px, -250px, -30px); }
+	100% { transform: translate3d(-260px, 100px, 100px); }
+}
+.lightR{
+    background: url(../img/lightL.png) no-repeat center;
+    background-size: contain;
+    position: absolute;
+    z-index: 2000;
+    width: 10%;
+    height: 15%;
+  left: 50%;
+    top: 60%;
+    overflow: hidden;
+    transform: translate3d(220px, -290px, -30px);
+/*    animation: lightR 7s infinite;*/
+
+}
+
+@keyframes lightL {
+/*    0% { transform: scale(1) translate(-50px, 10px);}*/
+/*
+    30%{
+        transform: scale(5) translate(-250%, 10%);
+    }
+*/
+/*    100%{transform: scale(10) translate(-350px, 40px);}*/
+
+	0% { transform: translate3d(-280px, -290px, -30px); }
+	100% { transform: translate3d(-250px, 60px, 100px); }
+
+}
+
+
+@keyframes lightR {
+/*
+    0% { transform: scale(1) translate(50px, 10px);}
+    100%{transform: scale(10) translate(350px, 40px);}
+*/
+    	0% { transform: translate3d(220px, -290px, -30px); }
+	100% { transform: translate3d(190px, 60px, 100px); }
+}
+
+
+#scene2{
+    background: black;
+    width: 100%;
+    height: 1500px;
+    position: relative;
+    z-index: 5000;
+    margin-top: 3500px;
+}
+.getin_pic{
+    background: url(../img/get_in.jpg) no-repeat left bottom;
+    background-size: contain;
+    width: 600px;
+    height: 450px;
+    position: absolute;
+    z-index: 1;
+    top: 150px;
+    left: 0px;
+    border: rgba(255,255,255,.5) 1px solid;
+}
+.bubble2{
+    background: url(../img/bubble2.svg) no-repeat top;
+    background-size: 70%;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+    left: 40px;
+}
+.bubble2 p{
+    width: 100px;
+    padding-top: 65px;
+    padding-left: 55px;
+}
+
+.incar_pic{
+    background: url(../img/girl_in_cab.jpg) no-repeat left bottom;
+    background-size: contain;
+    width: 700px;
+    height: 350px;
+    position: absolute;
+    z-index: 1;
+    top: 650px;
+    right: 12%;
+    border: rgba(255,255,255,.5) 1px solid;
+}
+.bubble3{
+    background: url(../img/bubble3.svg) no-repeat top;
+    background-size: 70%;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    z-index: 2;
+    top: 700px;
+    right: 60px;
+}
+.bubble3 p{
+    width: 100px;
+    padding-top: 80px;
+    padding-left: 95px;
+}
+
+.mirror_pic{
+    background: url(../img/where_to.jpg) no-repeat right bottom;
+    background-size: contain;
+    width: 450px;
+    height: 350px;
+    position: absolute;
+    z-index: 1;
+    top: 1050px;
+    left: 250px;
+    border: rgba(255,255,255,.5) 1px solid;
+}
+.bubble4{
+    background: url(../img/bubble4.svg) no-repeat top;
+    background-size: 70%;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    z-index: 2;
+    top: 1100px;
+    left: 50px;
+}
+.bubble4 p{
+    width: 100px;
+    padding-top: 30px;
+    padding-left: 60px;
+}
+
+.to_be_continued{
+    position: fixed;
+    top: 50%;
+    left: 45%;
+}
+#end{
+    width: 100vw;
+    height: 1000px;
+    position: relative;
+    margin-top: 3900px;
+}
+.last_scene{
+    background: url(../img/last_scene.jpg) no-repeat center;
+    width: 950px;
+    height: 518px;
+    background-size: cover;
+    border: rgba(255,255,255,.5) 1px solid;
+    margin-left: 12%;
+}
+.fact{
+    background: black;
+    border: none;
+    width: 950px;
+    padding: 50px;
+    margin-left: -50px;
+    line-height: 1.5em;
+    position: absolute;
+    bottom: 0;
+    left: 12%;
+    z-index: 10000;
+}
+.title{
+    padding-bottom: 20px;
+    letter-spacing: 2px;
+}
+.facts{
+    height: 250px;
+    letter-spacing: 1px;
+/*    text-align: left;*/
+    font-weight: lighter;
+    font-size: 16px
+}

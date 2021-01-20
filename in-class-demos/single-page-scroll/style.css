@@ -1,0 +1,54 @@
+    /*** Custom Styles ***/
+
+.remove-all-margins-padding {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/*** Colors ***/
+
+.ltGreyBG {
+    background-color: #CDCDCD;
+}
+.dkGreyBG {
+    background-color: #666666;
+}
+.blackBG {
+    background-color: black;
+}
+.white {
+    color: white;
+}
+
+/*** Typography ***/
+.alignCenter {
+    text-align: center;
+}
+
+/*** Navigation ***/
+.navbar-nav .nav-link {
+    text-align: center;
+}
+
+/*** Sections ***/
+section {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+        /*** Add in any background image you like to the intro page ***/
+.intro {
+    background-image: url(background_image_here.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 45vh 0 0 0;
+    height: 100vh;
+}
+
+
+.page {
+    max-width: 700px;
+}
+ 

@@ -4,10 +4,10 @@
 
 body {
   margin: 0;
-  background-color: #0D065C;
+  background-color: #0d065c;
+  position: relative;
 }
 main {
-  position: relative;
 }
 
 p {
@@ -16,35 +16,41 @@ p {
 #whale-whole {
   width: 80%;
   padding: 90px;
-  position: absolute;
-  top: 0;
-  left:0;
-transform: scaleX(-1);
+  z-index: 1;
 }
-#words { 
-  fill: #ccc; 
+.whale-dive {
+  transform: rotate(-15deg);
+  transition: transform 2s;
+}
+main {
+  z-index: -1;
+}
+#words {
+  fill: #ccc;
   opacity: 0;
   animation-name: words;
 }
 #whale {
   fill: #ccc;
   opacity: 1;
-  animation-name: whale-color;
-  animation-duration: 15s;
-  animation-fill-mode: forwards;
-  animation-delay: 2s;
   z-index: 1;
+}
+
+.whale-animate {
+  animation-name: whale-color;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes whale-color {
   0% {
-    fill: #999;
+    fill: red;
   }
   100% {
-    fill: #fff;
+    fill: yellow;
   }
 }
-
+/* horizontal flip: transform: scaleX(-1); */
 #words {
 }
 
@@ -89,7 +95,6 @@ transform: scaleX(-1);
   }
 }
 
-
 .slide {
   width: 100vw;
   height: 100vh;
@@ -98,44 +103,34 @@ transform: scaleX(-1);
 }
 .wrapper {
   display: flex;
-  flex-direction: row;
-  width: 500vw;
-  transform: rotate(90deg) translateY(-100vh);
-  transform-origin: top left;
+  flex-direction: column;
+  height: 500vh;
+  width: 100vw;
 }
 .vh-center {
   margin: 120px auto;
   width: 80%;
   height: 80%;
 }
-
-.outer-wrapper {
-  width: 100vh;
-  height: 100vw;
-  transform: rotate(-90deg) translateX(-100vh);
-  transform-origin: top left;
-  overflow-y: hidden;
-  overflow-x: scroll;
-  position: absolute;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+.start {
+  height: 100vh;
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
 }
-
-::-webkit-scrollbar {
-  display: none;
-}
-
 .one {
-  background: #514CE6;
+  background: #514ce6;
 }
 .two {
-  background: #3A37A6;
+  background: #3a37a6;
 }
 .three {
-  background: #2A2878;
+  background: #2a2878;
 }
 .four {
-  background: #1F1D57;
+  background: #1f1d57;
 }
 .five {
   background: #111030;

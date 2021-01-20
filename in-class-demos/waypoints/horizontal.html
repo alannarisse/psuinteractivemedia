@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		#overflow-scroll-offset { 
+			width: 300vw;
+			display: flex;
+			 }
+		#one {
+			width: 100vw;
+			background-color: red;
+			height: 400vh;
+		}
+		#two {
+			width: 100vw;
+			background-color: red;
+			height: 400vh;
+		}
+		#horizontal-waypoint-offset {
+			background-color: purple;
+			width: 100vw;
+			margin-left: 150px;
+		}
+	</style>
+</head>
+<body>
+	
+<div id="overflow-scroll-offset">
+  <div id="one">boop</div>
+  <div id="two">boop</div>
+  <div id="horizontal-waypoint-offset">right-in-view offset</div>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/inview.min.js"></script>
+	<script>
+		var inview = new Waypoint.Inview({
+		
+  element: document.getElementById('horizontal-waypoint-offset'),
+  handler: function(direction) {
+    notify('right-in-view inview triggered')
+  },
+  context: document.getElementById('overflow-scroll-offset'),
+  horizontal: true,
+  offset: 'right-in-view'
+})
+	</script>
+</body>
+</html>
