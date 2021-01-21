@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #0d065c;
+  position: relative;
+}
+
+p {
+  color: #fff;
+}
+#whale-whole {
+  width: 800px;
+  padding: 90px;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  left: 200px;
+}
+.whale-dive {
+  transform: rotate(-15deg);
+  transition: transform 2s;
+}
+main {
+  z-index: -1;
+}
+#words {
+  fill: #ccc;
+  opacity: 0;
+  animation-name: words;
+}
+#whale {
+  fill: #ccc;
+  opacity: 1;
+  z-index: 1;
+}
+
+.whale-animate {
+  animation-name: whale-color;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+.me > li {
+  color: red;
+}
+
+@keyframes whale-color {
+  0% {
+    fill: red;
+  }
+  100% {
+    fill: yellow;
+  }
+}
+/* horizontal flip: transform: scaleX(-1); */
+#words {
+}
+
+#bottomsplash {
+  fill: #fff;
+}
+#tailsplash {
+  fill: #fff;
+}
+#spout {
+  fill: rgba(255, 158, 44, 0);
+}
+#spout.rainbow-spout {
+  animation-name: rainbow;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  z-index: -1;
+  animation-timing-function: linear;
+}
+
+@keyframes rainbow {
+  0% {
+    fill: rgba(73, 194, 54, 0.1);
+    transform: translateY(100px);
+  }
+  25% {
+    fill: rgba(235, 49, 210, 0.2);
+    transform: translateY(80px);
+  }
+  50% {
+    fill: rgba(220, 111, 117, 0.3);
+    transform: translateY(60px);
+  }
+  75% {
+    fill: rgba(151, 27, 240, 0.5);
+    transform: translateY(40px);
+  }
+  100% {
+    fill: rgba(29, 153, 175, 0.8);
+    transform: translateY(0px);
+  }
+}
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 500vw;
+}
+.wrapper section {
+  width: 100vw;
+}
+.vh-center {
+  margin: 120px auto;
+  width: 80%;
+  height: 80%;
+}
+.start {
+  height: 100vh;
+  width: 500vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.one {
+  background: #514ce6;
+}
+.two {
+  background: #3a37a6;
+}
+.three {
+  background: #2a2878;
+}
+.four {
+  background: #1f1d57;
+}
+.five {
+  background: #111030;
+}
+.center {
+  text-align: center;
+}
