@@ -192,10 +192,10 @@ aside {
   header {
     width: 100%;
     padding: 60px;
-    background-image: url("/images/backgrounds/disney.gif");
+    background-image: url("https://media.giphy.com/media/UbYIcaMTC2YaQ/source.gif");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% 45%;
+    background-position: 50% 90%;
     height: 400px;
   }
 }
