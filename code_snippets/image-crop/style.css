@@ -1,0 +1,18 @@
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.vert {
+  width: 100%;
+}
+
+.horiz {
+  height: 100%;
+}
+
+.square {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+}

@@ -96,7 +96,9 @@ nav ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
 }
-
+nav li {
+  padding-right: 20px;
+}
 a {
   color: #d84727;
   text-decoration: none;
@@ -188,7 +190,7 @@ aside {
   header {
     width: 100%;
     padding: 60px;
-    background-image: url("https://media.giphy.com/media/kolvlRnXh8Jj2/source.gif");
+    background-image: url("/images/backgrounds/disney.gif");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 45%;
