@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      div {
+        border: 1px solid black;
+      }
+
+      .grid-2 {
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-column-gap: 40px;
+        grid-row-gap: 80px;
+      }
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .img-padding {
+      }
+      img {
+        width: 100%;
+      }
+      .square {
+        max-width: 300px;
+        max-height: 300px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-2">
+      <div class="left-item">I'm left! <a href="">I'm a link</a> and I'm more text.</div>
+      <div class="center-item">I'm center!</div>
+      <div class="right-item">I'm right!</div>
+      <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, sapiente? Quo quam exercitationem voluptatibus rerum tenetur sint delectus fugit recusandae?</p></div>
+      <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, sapiente? Quo quam exercitationem voluptatibus rerum tenetur sint delectus fugit recusandae?</p></div>
+      <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, sapiente? Quo quam exercitationem voluptatibus rerum tenetur sint delectus fugit recusandae?</p></div>
+      <div>
+        <div class="card">
+          this is a card!
+          <div class="square"><img class="img-padding" src="http://placekitten.com/200/400" /></div>
+        </div>
+      </div>
+      <div>another one!</div>
+      <div>another one!</div>
+    </div>
+    <div class="grid-3">
+      <div>another one!</div>
+      <div>another one!</div>
+      <div>another one!</div>
+      <div>another one!</div>
+      <div>another one!</div>
+      <div>another one!</div>
+      <div>another one!</div>
+      <div>another one!</div>
+      <div>another one!</div>
+    </div>
+  </body>
+</html>
