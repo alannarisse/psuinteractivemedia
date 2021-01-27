@@ -13,7 +13,7 @@ function topNavList() {
 function footerNavList() {
   $("#footernavlist").html(
     `<li><a href="mailto:arisse@pdx.edu">email alanna</a></li>
-    <li><a href="/terms/fa20des341/index.html">student links</a></li>
+    <li><a href="/terms/wi21des34x/index.html">student links</a></li>
       <li><a href="/portfolios.html">Portfolio Inspiration</a></li>
       <li><a href="/keep-sane.html">Keep Sane</a></li>
       <li><a href="https://psu.gd" target="_blank">PSU.gd</a></li>

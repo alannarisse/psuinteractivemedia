@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "../scroll-triggering"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "psuinteractivemedia"
+  }
+}

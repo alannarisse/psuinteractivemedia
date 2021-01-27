@@ -192,6 +192,7 @@ aside {
   header {
     width: 100%;
     padding: 60px;
+    /* background-image: url("https://media.giphy.com/media/kolvlRnXh8Jj2/source.gif"); */
     background-image: url("https://media.giphy.com/media/UbYIcaMTC2YaQ/source.gif");
     background-size: cover;
     background-repeat: no-repeat;
