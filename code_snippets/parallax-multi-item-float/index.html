@@ -1,63 +1,61 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
-	<title>Paralax Test Site</title>
-	<meta charset="utf-8" />
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-</head>
+  <head>
+    <title>Paralax Test Site</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+  </head>
 
-<body>
+  <body>
+    <nav>
+      <a class="page1_link" href="#page1">Page 1</a>
+      <a class="page2_link" href="#page2">Page 2</a>
+      <a class="page3_link" href="#page3">Page 3</a>
+      <a class="page4_link" href="#page4">Page 4</a>
+    </nav>
 
-	<nav>
-		<a class="page1_link" href="#page1">Page 1</a>
-		<a class="page2_link" href="#page2">Page 2</a>
-		<a class="page3_link" href="#page3">Page 3</a>
-		<a class="page4_link" href="#page4">Page 4</a>
-	</nav>
+    <div id="page1" class="page page1">
+      <h2>Page 1</h2>
+      <div class="item item1" data-enllax-ratio="-0.6">ITEM</div>
+      <div class="item item2" data-enllax-ratio="-0.3">ITEM</div>
+      <div class="item item3" data-enllax-ratio="-0.1">ITEM</div>
+      <div class="item item4" data-enllax-ratio=".2">ITEM</div>
+      <div class="item item5" data-enllax-ratio=".6">ITEM</div>
+    </div>
 
-	<div id="page1" class="page page1">
-		<h2>Page 1</h2>
-		<div class="item item1" data-enllax-ratio="-0.6">ITEM</div>
-		<div class="item item2" data-enllax-ratio="-0.3">ITEM</div>
-		<div class="item item3" data-enllax-ratio="-0.1">ITEM</div>
-		<div class="item item4" data-enllax-ratio=".2">ITEM</div>
-		<div class="item item5" data-enllax-ratio=".6">ITEM</div>
-	</div>
-	
-	<div id="page2" class="page page2">
-		<h2>Page 2</h2>
-		<p class="slowshow">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div id="page2" class="page page2">
+      <h2>Page 2</h2>
+      <p class="slowshow">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-		<div class="item item1" data-enllax-ratio="-0.6">ITEM</div>
-		<div class="item item2" data-enllax-ratio="-0.3">ITEM</div>
-		<div class="item item3" data-enllax-ratio="-0.1">ITEM</div>
-		<div class="item item4" data-enllax-ratio=".2">ITEM</div>
-		<div class="item item5" data-enllax-ratio=".6">ITEM</div>
-	</div>
-	
-	<div id="page3" class="page page3" data-enllax-ratio="0.6" data-enllax-type="background">
-		<h2>Page 3</h2>
-		<div class="item item1" data-enllax-ratio="-0.6">ITEM</div>
-		<div class="item item2" data-enllax-ratio="-0.3">ITEM</div>
-		<div class="item item3" data-enllax-ratio="-0.1">ITEM</div>
-		<div class="item item4" data-enllax-ratio=".2">ITEM</div>
-		<div class="item item5" data-enllax-ratio=".6">ITEM</div>
-	</div>
-	
-	<div id="page4" class="page page4">
-		<h2>Page 4</h2>
-		<div class="item item1" data-enllax-ratio="-0.6">ITEM</div>
-		<div class="item item2" data-enllax-ratio="-0.3">ITEM</div>
-		<div class="item item3" data-enllax-ratio="-0.1">ITEM</div>
-		<div class="item item4" data-enllax-ratio=".2">ITEM</div>
-		<div class="item item5" data-enllax-ratio=".6">ITEM</div>
-	</div>
-	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="js/jquery.smoothscroll.min.js"></script>
-	<script src="js/jquery.enllax.min.js"></script>
-	<script src="js/jquery.waypoints.min.js"></script>
-	<script src="js/scripts.js"></script>
-	
-</body>
+      <div class="item item1" data-enllax-ratio="-0.6">ITEM</div>
+      <div class="item item2" data-enllax-ratio="-0.3">ITEM</div>
+      <div class="item item3" data-enllax-ratio="-0.1">ITEM</div>
+      <div class="item item4" data-enllax-ratio=".2">ITEM</div>
+      <div class="item item5" data-enllax-ratio=".6">ITEM</div>
+    </div>
+
+    <div id="page3" class="page page3" data-enllax-ratio="0.6" data-enllax-type="background">
+      <h2>Page 3</h2>
+      <div class="item item1" data-enllax-ratio="-0.6">ITEM</div>
+      <div class="item item2" data-enllax-ratio="-0.3">ITEM</div>
+      <div class="item item3" data-enllax-ratio="-0.1">ITEM</div>
+      <div class="item item4" data-enllax-ratio=".2">ITEM</div>
+      <div class="item item5" data-enllax-ratio=".6">ITEM</div>
+    </div>
+
+    <div id="page4" class="page page4">
+      <h2>Page 4</h2>
+      <div class="item item1" data-enllax-ratio="-0.6">ITEM</div>
+      <div class="item item2" data-enllax-ratio="-0.3">ITEM</div>
+      <div class="item item3" data-enllax-ratio="-0.1">ITEM</div>
+      <div class="item item4" data-enllax-ratio=".2">ITEM</div>
+      <div class="item item5" data-enllax-ratio=".6">ITEM</div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.smoothscroll.min.js"></script>
+    <script src="js/jquery.enllax.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
