@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css fun</title>
+    <style>
+      .sunset-bg {
+        background-color: lavender;
+        animation-name: sunset;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+      }
+
+      @keyframes sunset {
+        0% {
+          background-color: lavender;
+        }
+        25% {
+          background-color: plum;
+        }
+        50% {
+          background-color: pink;
+        }
+        100% {
+          background-color: orange;
+        }
+      }
+
+      .button {
+        display: inline-block;
+        padding: 16px 20px;
+        background-color: navy;
+        color: white;
+        transition: background-color 2s;
+      }
+
+      .button:hover {
+        background-color: fuchsia;
+      }
+    </style>
+  </head>
+  <body class="sunset-bg">
+    <a href="" class="button">Time for bed</a>
+  </body>
+</html>
