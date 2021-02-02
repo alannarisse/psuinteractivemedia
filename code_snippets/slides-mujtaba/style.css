@@ -1,15 +1,16 @@
 * {
   box-sizing: border-box;
 }
+img {
+  width: 100%;
+}
+
+
 .slider {
   width: 100vw;
   margin: 0 auto;
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-img {
-  width: 100%;
 }
 
 .slide-content {

@@ -7,7 +7,7 @@ $(function () {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    infinite: true,
+    infinite: false,
     pauseOnDotsHover: true,
     arrows: false,
     dots: true
