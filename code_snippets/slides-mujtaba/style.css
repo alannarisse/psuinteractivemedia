@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+.slider {
+  width: 100vw;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+img {
+  width: 100%;
+}
+
+.slide-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.slide-content .text-content {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.slide-content img {
+  width: 90%;
+  padding: 0 80px;
+}
+
+.slick-initialized .slick-slide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.pause,
+.play {
+  display: inline-block;
+  padding: 8px;
+  border: 1px solid black;
+}
