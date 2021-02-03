@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="maindiv">
+      <!-- Need to have two divs with same content.
+One div will translate completely out of parent and other div will fill the void till the transition for first div starts again. -->
+      <div id="div1">&nbsp;The only way this works is if the text is exactly the same in both divs. can we make it bigger?&nbsp;</div>
+      <div id="div2">&nbsp;The only way this works is if the text is exactly the same in both divs. can we make it bigger?&nbsp;</div>
+    </div>
+
+    <style>
+      body {
+        margin: 0;
+      }
+      #maindiv {
+        border: 2px solid black;
+        /* These are absolutely necessary */
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100vw;
+        margin-left: -2px;
+      }
+
+      #div1 {
+        display: inline-block;
+        animation: marquee 10s linear infinite;
+      }
+
+      #div2 {
+        display: inline-block;
+        animation: marquee2 10s linear infinite;
+        /* Must be half the animation duration of both divs so it stats in sync to fill void left by completed transtition of first div */
+        animation-delay: 5s;
+      }
+
+      @keyframes marquee {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+
+      @keyframes marquee2 {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+          transform: translateX(-200%);
+        }
+      }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script>
+      // It is absolute necessity that div should be smaller than individual text content.
+      $("#maindiv").width($("#div1").width())
+    </script>
+  </body>
+</html>

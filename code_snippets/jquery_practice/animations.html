@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<title>
+		
+	</title>
+
+<style>
+#box {
+	background: #333;
+	color: #fff;
+	width: 500px;
+	height: 90px;
+	padding: 40px;
+	text-align: center;
+}
+#box2 {
+	background: red;
+	width: 100px;
+	height: 100px;
+	position: relative;
+}
+</style>
+</head>
+<body>
+
+	<main>
+		<button id="btnFadeOut">Fade Out</button>
+		<button id="btnFadeIn">Fade In</button>
+		<button id="btnFadeTog">Fade Tog</button>
+		<button id="btnSlideUp">Slide Up</button>
+		<button id="btnSlideDown">Slide Down</button>
+		<button id="btnSlideTog">Slide Tog</button>
+		<button id="btnStop">Stop</button>
+
+		<hr>
+
+		<div id="box">
+			<h1>Hello world</h1>
+		</div>
+
+		<hr>
+		<button id="moveLeft">moveLeft</button>
+		<button id="moveRight">moveRight</button>
+		<button id="moveAround">moveAround</button>
+		<div id="box2"><h1>I'm box 2</h1></div>
+
+	</main>
+<script>
+	$(document).ready(function(){
+		$('#btnFadeOut').click(function(){
+			$('#box').fadeOut('slow', function(){
+				$('#btnFadeOut').text('Its gone');
+			});
+		});
+		$('#btnFadeIn').click(function(){
+			$('#box').fadeIn(3000);
+		});
+		$('#btnFadeTog').click(function(){
+			$('#box').fadeToggle(3000);
+		});
+		$('#btnSlideDown').click(function(){
+			$('#box').slideDown(3000);
+		});
+		$('#btnSlideUp').click(function(){
+			$('#box').slideUp(3000);
+		});
+		$('#btnSlideTog').click(function(){
+			$('#box').slideToggle(3000);
+		});
+		$('#btnStop').click(function(){
+			$('#box').stop();
+		});
+		$('#moveRight').click(function(){ // make sure your object is position relative.
+			$('#box2').animate({
+				left: 500, // 500 from the left
+				height: '500px',
+				width: '300px',
+				opacity: '0.5'
+			})
+		});
+		$('#moveLeft').click(function(){ // make sure your object is position relative.
+			$('#box2').animate({
+				left: 0, // 500 from the left
+				height: '100px',
+				width: '100px',
+				opacity: '1'
+			});
+		});
+		$('#moveAround').click(function(){
+			let box = $('#box2');
+			box.animate({
+				left: 300,
+			})
+			box.animate({
+				top: 300,
+			})
+			box.animate({
+				top: 300,
+				left: 0
+			})
+			box.animate({
+				left: 0,
+				top: 0
+			})
+
+		})
+
+	});
+
+</script>
+</body>
+</html>

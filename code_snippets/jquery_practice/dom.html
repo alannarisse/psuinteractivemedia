@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom fun</title>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+header {
+	background: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	border-bottom: 4px #000 solid;
+	margin-bottom: 10px;
+}
+	main {
+		width: 90%;
+		margin: auto;
+		padding: 10px;
+	}
+
+	.my-class {
+		color: blue;
+		background: #ddd;
+	}
+</style>
+</head>
+<body>
+
+	<main>
+		<header>
+			<h1>Hello there</h1>
+		</header>
+		<p class="para1">This is my paragraph</p>
+		<p class="para2">This is another paragraph</p>
+		<br>
+		<button id="btn1">Button 1</button>
+		<div id="my-div">
+		</div>
+		<ul id="list">
+			<li>List item 1</li>
+			<li>List item 2</li>
+			<li>List item 3</li>
+			<li>List item 1</li>
+			<li>List item 2</li>
+			<li>List item 3</li>
+		</ul>
+	      <label>Name</label><br>
+	      <input type="text" id="newItem" name="name">
+	      <br>
+	      <label>Email</label><br>
+	      <input type="email" id="email" name="email">
+	      <br>
+	      <label>Gender</label>
+	      <select id="gender" name="gender">
+	        <option value="male">Maile</option>
+	        <option value="female">Female</option>
+	      </select><br>
+
+	    <a href="http://google.com">Google</a>
+
+	    <p></p>
+	    <ul id="users">
+	    </ul>
+	</main>
+	<script>
+		$('.para1').css({color: 'red', background: '#ccc'});
+		//$('.para2').addClass('my-class');
+		//$('.para2').removeClass('my-class');
+		$('#btn1').click(function(){
+			$('.para2').toggleClass('my-class');
+		});
+		//$('#my-div').text('hello world');
+		$('#my-div').html('<strong>hello world</strong>').css('padding-top', '20px');
+		//alert($('#my-div').text());
+		// $('ul').append('<li>appended</li>');
+		// $('ul').prepend('<li>prepended</li>');
+		// $('.para1').appendTo('.para2');
+		// $('ul').before('<h4>Hello to the list</h4>');
+		// $('ul').after('<h4>Goodbye to the list</h4>');
+		// $('ul').empty(); // empties the contents
+		// $('ul').detach(); // detached the whole thing from the dom.
+		// $('a').attr('target', '_blank');
+		// alert($('a').attr('href'));
+		// $('a').removeAttr('target')// remove attribures
+		// $('p').wrap('<h1>'); // it'll put the ending tag. wrapped everything separate
+		// $('p').wrapAll('<h1>'); // wraps everything in one
+		$('#newItem').keyup(function(e){
+			e.preventDefault();
+			let code = e.which;
+			if(code === 13){
+				$('ul').append('<li>' + e.target.value + '</li>')
+			}
+		})
+
+		// const myArray = ['brad', 'kelly', 'nate', 'jose'];
+		// $.each(myArray, function(i, val){
+		// 	console.log(val);
+		// 	$('#users').append("<li>" + val + '</li>')
+		// });
+		const newArr = $('ul#list li').toArray();
+		console.log(newArr);
+		$.each(newArr, function(i, val){
+			console.log(val.innerHTML);
+		});
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .tech-slideshow {
+        height: 200px;
+        max-width: 100vw;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        transform: translate3d(0, 0, 0);
+      }
+
+      .tech-slideshow > div {
+        height: 200px;
+        width: 2526px;
+        background: url(home-skilde-short.png);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transform: translate3d(0, 0, 0);
+      }
+      .tech-slideshow .mover-1 {
+        animation: moveSlideshow 12s linear infinite;
+      }
+      .tech-slideshow .mover-2 {
+        opacity: 0;
+        transition: opacity 0.5s ease-out;
+        background-position: 0 -200px;
+        animation: moveSlideshow 15s linear infinite;
+      }
+      .tech-slideshow:hover .mover-2 {
+        opacity: 1;
+      }
+
+      @keyframes moveSlideshow {
+        100% {
+          transform: translateX(-66.6666%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tech-slideshow">
+      <div class="mover-1"></div>
+      <div class="mover-2"></div>
+    </div>
+  </body>
+</html>

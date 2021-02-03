@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "UniversLTPro-Ex";
+        font-size: 30px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      .marquee {
+        height: 35px;
+        width: 100%;
+
+        overflow: hidden;
+        position: relative;
+        background-color: #e9e5fb;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        padding: 8px 0 4px 0;
+      }
+
+      /* would need to be adjusted depending on time */
+      .marquee .marqueeone {
+        animation: marquee 15s linear infinite;
+      }
+
+      .marquee .marqueetwo {
+        animation: marquee 15s linear 1s infinite;
+      }
+
+      .marquee .marqueethree {
+        animation: marquee 15s linear 2.5s infinite;
+      }
+
+      .marquee .marqueefour {
+        animation: marquee 15s linear 6.5s infinite;
+      }
+
+      /* even out the elements */
+      .marquee div {
+        position: absolute;
+        width: 100%;
+        left: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .marquee:hover div {
+        animation-play-state: paused;
+      }
+
+      /* add delay at the end of animation so you dont start while another div is going */
+      @keyframes marquee {
+        0% {
+          left: 100%;
+        }
+        50% {
+          left: -100%;
+        }
+        100% {
+          left: -100%;
+        }
+      }
+
+      /* @import must be at top of file, otherwise CSS will not work */
+      @import url("http://hello.myfonts.net/count/3909a7");
+
+      @font-face {
+        font-family: "UniversLTPro-Ex";
+        src: url("webfonts/3909A7_0_0.eot");
+        src: url("webfonts/3909A7_0_0.eot?#iefix") format("embedded-opentype"), url("webfonts/3909A7_0_0.woff2") format("woff2"), url("webfonts/3909A7_0_0.woff") format("woff"), url("webfonts/3909A7_0_0.ttf") format("truetype");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="marquee">
+      <div class="marqueeone">this is the first one</div>
+      <div class="marqueetwo">here's the second one</div>
+      <div class="marqueethree">the third one lives here. you can have different engths on all but the last one.</div>
+      <div class="marqueefour">and finally the fourth. why does it take so long.Maybe it's because it can be longer because of the delay</div>
+    </div>
+  </body>
+</html>

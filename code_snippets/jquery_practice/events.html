@@ -1,0 +1,130 @@
+<html>
+  <head>
+    <style>
+      #container{
+        font-family:monospace;
+        font-weight:bold;
+        color: #fff;
+        background: #161719;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--     <script>
+        $(document).ready(function(){
+          $('#btn1').click(function(){
+            alert('button clicked');
+          });
+
+        });
+    </script> -->
+  </head>
+  
+  <body>
+    
+    <div id="container">
+    	<h1>Hi there</h1>
+    	<h1 id="head1">Hi there 2 </h1>
+    	<h1 class="heading2">Hi there 3 </h1>
+		
+		<p>lorem ipsum <span>bla bla</span>.</p>
+
+<!-- 		<ul id="list">
+			<li>List item 1</li>
+			<li>List item 2</li>
+			<li>List item 3</li>
+			<li>List item 1</li>
+			<li>List item 2</li>
+			<li>List item 3</li>
+		</ul>
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <button id="btn3">Button 3</button>
+    <button id="btn4">Button 4</button>
+    <p class="hideme">Some text</p>
+    <p class="hideme2">Some other text</p>
+    <p class="hideme3">Some other text</p>
+		
+    <br><input type="button" value="buttoninput">
+	  <br><input type="submit" value="submitbutton1">
+		<input type="text">
+
+		<p><a href="http://google.com">Google</a></p>
+		<p><a href="http://yahoo.com">Yahoo</a></p>
+ -->
+<!--     <h1 id="coords">Coords</h1>
+ -->
+    <hr>
+    <form id="form">
+      <label>Name</label><br>
+      <input type="text" id="name" name="name">
+      <br>
+      <label>Email</label><br>
+      <input type="email" id="email" name="email">
+      <br>
+      <label>Gender</label>
+      <select id="gender" name="gender">
+        <option value="male">Maile</option>
+        <option value="female">Female</option>
+      </select><br>
+      <input type="submit" value="Submit">
+    </form>
+
+    </div>
+    
+    <script>
+      $('input').focus(function(){
+        //alert('focus');
+        // $('input#name').css('background', 'pink')
+        $(this).css('background', 'pink'); // turns form element to pink when clicked in or focued on
+      });
+      $('input').blur(function(){
+        //alert('focus');
+        // $('input#name').css('background', 'pink')
+        $(this).css('background', 'white'); // turns color back to white
+      });
+
+      $('input').keyup(function(e){
+        console.log(e.target.value);
+      });
+      $('select#gender').change(function(e){
+        alert(e.target.value);
+      });
+
+      $('#form').submit(function(e){
+        e.preventDefault();
+        let name = $('input#name').val();
+        console.log(name);
+      });
+      //$('#btn1').click(function(){
+      //  alert('button clicked');
+      //});
+      // $('#btn1').on('click', function(){
+        //alert('button clicked');
+        //$('.hideme').hide();
+        //$('.hideme').toggle();
+      // });
+      // $('#btn1').dblclick(function(){
+      //   $('.hideme').toggle();
+      // });
+
+      // $('#btn2').hover(function(){
+      //   $('.hideme2').toggle();
+      // })
+//mouseenter, mouseleave, mouseup, mousedown
+      // $('btn3').on('mousemove', function(){
+
+      //   $('.hideme3').toggle();
+      // })
+
+      // $('#btn4').click(function(e){
+      //   console.log(e.currentTarget.id);
+      // });
+
+      // $('#btn1').on('mousemove', function(e){
+      //   //console.log('Coords: Y: ' + e.clientY);
+      //   $('#coords').html('Coords: Y: ' + e.clientY);
+      // })
+    </script>
+    
+  </body>
+</html>

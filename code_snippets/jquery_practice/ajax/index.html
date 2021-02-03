@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<!-- https://jsonplaceholder.typicode.com/ -->
+<head>
+	<title>Ajax</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+
+
+</style>
+</head>
+<body>
+<header><h1>Jquery test page</h1></header>
+<main>
+	<div id="result"></div>
+
+	<ul id="users">
+	</ul>
+</main>
+
+
+
+<script>
+
+$(document).ready(function(){
+
+	// $('#result').load('test.html', function(
+	// 	responseTxt, statusTxt, xhr){
+	// 	if(statusTxt == "success"){
+	// 		alert('it went fine');
+	// 	} else if (statusTxt == "error") {
+	// 		alert('error ' + xhr.statusText)
+	// 	}
+	// });
+
+	$.get('test.html', function(data){
+		$('#result').html(data);
+	});
+	$.getJSON('users.json', function(data){
+		$.each(data, function(i, user){
+			$('ul#users').append('<li>' + user.firstName + ' ' + user.lastName + '</li>')
+		})
+	});
+//$.ajax({stuff to get json}).done(function(data){$.map(data, function(post, i){$('#result').append(bla bla)})})
+	$.ajax({
+		method: 'GET',
+		url: 'https://jsonplaceholder.typicode.com/posts',
+		dataType: 'json'
+	}).done(function(data){
+		console.log(data);
+		$.map(data, function(post, i){
+			$('#result').append('<h3>' + post.title + '</h3>')
+		})
+	});
+})
+
+</script>
+</body>
+</html>
+
+<!-- to get this running, use live-server. i've installed it via nom
+live-server --port=8000
+	-->

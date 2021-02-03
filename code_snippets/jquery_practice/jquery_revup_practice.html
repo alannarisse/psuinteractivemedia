@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <style>
+      #container{
+        font-family:monospace;
+        font-weight:bold;
+        color: #fff;
+        background: #161719;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    
+    <div id="container">
+    	<h1>Hi there</h1>
+    	<h1 id="head1">Hi there</h1>
+    	<h1 class="heading2">Hi there</h1>
+		
+		<p>lorem ipsum <span>bla bla</span>.</p>
+
+		<ul id="list">
+			<li>List item 1</li>
+			<li>List item 2</li>
+			<li>List item 3</li>
+			<li>List item 1</li>
+			<li>List item 2</li>
+			<li>List item 3</li>
+		</ul>
+
+		<input type="button" value="button1">
+		<input type="submit" value="submitbutton1">
+		<input type="text">
+
+		<p><a href="http://google.com">Google</a></p>
+		<p><a href="http://yahoo.com">Yahoo</a></p>
+    </div>
+    
+    <script>
+      //$("#container").text("Hello World");
+      $("h1").hide();
+      $("h1#head1").hide(); // ids outside elements
+      $('.h1.heading2').hide(); // classes inside elements
+      $('p span').css('color', 'red'); // makes spans inside p red
+      $('ul#list li:first').css('color', 'red');
+      $('ul#list li:last').css('color', 'green');
+      $('ul#list li:even').css('background-color', 'yellow');
+      $('ul#list li:odd').css('background-color', '#ccc');
+      $('ul#list li:nth-child(3n)').css('list-style', 'none'); // every third
+      $(':button').hide(); // all the button types.
+	  $(':submit').hide(); // all the submit types. works with all form elements
+	  $('[href]').css('color', 'red');
+	  $('a[href=http://google.com]').css('color', 'blue'); // this doesn't work
+	  //$(*).hide(); // hides everything!
+      
+
+
+    </script>
+    
+  </body>
+</html>
