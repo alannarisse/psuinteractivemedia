@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      main {
+        width: 100vw;
+        height: 100vh;
+        border: 1px solid red;
+      }
+      .kitten {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        width: 300px;
+        height: 300px;
+      }
+      #myDiv {
+        height: 100vh;
+        width: 100vw;
+        background-color: lightskyblue;
+      }
+      .aligator {
+        position: absolute;
+        top: 400px;
+        left: 400px;
+        width: 400px;
+        height: 400px;
+      }
+      img {
+        width: 100%;
+      }
+      .moon {
+        opacity: 0;
+        transition: opacity 2s;
+      }
+      .moonimate {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="kitten"><img src="http://placekitten.com/300/300" /></div>
+      <div class="aligator"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1cd1f6e1-607b-4cf4-b0a5-14e5fe3ca4cc/dzcqzc-4758cdda-384b-49d7-ad96-34b11637727e.jpg/v1/fill/w_800,h_567,q_75,strp/scary_dragon_by_veve_350z_dzcqzc-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01NjciLCJwYXRoIjoiXC9mXC8xY2QxZjZlMS02MDdiLTRjZjQtYjBhNS0xNGU1ZmUzY2E0Y2NcL2R6Y3F6Yy00NzU4Y2RkYS0zODRiLTQ5ZDctYWQ5Ni0zNGIxMTYzNzcyN2UuanBnIiwid2lkdGgiOiI8PTgwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.3udJ7NE41OoCRNoTp64sLWsOqmSAYm6oonwOccLLjeI" /></div>
+
+      <p class="moon hide">The moon is britgh on a lovely winter's night</p>
+    </main>
+    <section id="myDiv">I made it!</section>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <!-- JQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script>
+      $(".kitten").draggable()
+      $(".aligator").droppable({
+        drop: function () {
+          $(".moon").addClass("moonimate")
+          $("html, body").animate(
+            {
+              scrollTop: $("#myDiv").offset().top
+            },
+            1000
+          )
+        }
+      })
+    </script>
+  </body>
+</html>
