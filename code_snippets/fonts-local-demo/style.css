@@ -1,0 +1,14 @@
+@font-face {
+  font-family: Optimus Princeps;
+  src: url(fonts/OptimusPrinceps.ttf);
+}
+@font-face {
+  font-family: Gotham Book;
+  src: url("fonts/HomepageBaukasten-Book.woff") format("woff2"), url("fonts/HomepageBaukasten-Book.otf") format("otf"), url("fonts/HomepageBaukasten-Book.ttf") format("ttg");
+}
+
+* {
+  font-family: "Gotham Book", cursive, "Lucida Sans", sans-serif;
+}
+h1 {
+  font-family: "Optimus Princeps", cursive, "Lucida Sans", sans-serif;
