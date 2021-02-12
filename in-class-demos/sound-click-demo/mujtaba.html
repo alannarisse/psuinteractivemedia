@@ -61,8 +61,10 @@
     });
 
 
+
     var bell = $("#bell-sound")[0];
     $("#bell-button").click(function() {
+      bell.volume = 0.2;
       if ($('audio#bell-sound')[0].paused == false ){
         bell.pause();
       } else {

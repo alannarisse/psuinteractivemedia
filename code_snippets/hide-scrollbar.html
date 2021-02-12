@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>No Scrollbar! But it still scrolls</title>
+    <style>
+      html,
+      body {
+        overflow: -moz-scrollbars-vertical;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        height: 100%;
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body id="body" style="overflow: auto; height: 100%" onload="document.getElementById('body').style.width=document.body.offsetWidth+20+'px'">
+    <!--your stuff here-->
+
+    <!-- from here https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll -->
+  </body>
+</html>
