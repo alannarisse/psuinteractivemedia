@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      img {
+        width: 100%;
+        border-radius: 50%;
+        padding: 30px;
+        display: inline-block;
+      }
+      main {
+        width: 90%;
+        margin: auto;
+      }
+      header {
+        height: 220px;
+        background: #666;
+      }
+      .topic .content p {
+        display: none;
+      }
+      .topic .content .line {
+        display: none;
+      }
+      .topic .content {
+        position: relative;
+      }
+      .topic .content h3 {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        top: 80px;
+        left: 0;
+        margin: 0;
+        color: #fff;
+        margin-top: 60px;
+      }
+      .topic.left .content p {
+        text-align: left;
+      }
+      .topic.right .content p {
+        text-align: right;
+      }
+      .space {
+        display: none;
+      }
+      @media only screen and (min-width: 768px) {
+        .topic {
+          display: flex;
+        }
+        .space {
+          display: block;
+          height: 10px;
+          min-width: 50px;
+        }
+        .topic div {
+          flex: 1;
+        }
+        .topic .content h3 {
+          position: static;
+        }
+        .topic.left .content h3 {
+          text-align: left;
+        }
+        .topic.right .content h3 {
+          text-align: right;
+        }
+        .topic .content p {
+          display: block;
+        }
+        .topic .content p {
+          position: relative;
+        }
+        .topic.left .content p .line {
+          position: absolute;
+          bottom: 0px;
+          right: -100px;
+        }
+        .topic.right .img {
+          order: 2;
+        }
+        .topic.right .content {
+          order: 3;
+        }
+        .topic.right .space {
+          order: 1;
+        }
+        .topic.right .content p .line {
+          position: absolute;
+          bottom: 0px;
+          left: -100px;
+        }
+        .topic .content .line {
+          display: block;
+        }
+        .topic .content h3 {
+          color: #000;
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>I'm a header</header>
+    <main>
+      <div class="topic left">
+        <div class="content">
+          <h3>topic title</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quo voluptas perferendis excepturi quam voluptates corporis ab ipsum placeat est?. <span class="line">___________</span></p>
+        </div>
+        <div class="img"><img src="http://placekitten.com/200/200" /></div>
+        <div class="space"></div>
+      </div>
+
+      <div class="topic right">
+        <div class="content">
+          <h3>topic title 2</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quo voluptas perferendis excepturi quam voluptates corporis ab ipsum placeat est?.
+            <span class="line">___________</span>
+          </p>
+        </div>
+        <div class="img"><img src="http://placekitten.com/200/201" /></div>
+        <div class="space"></div>
+      </div>
+    </main>
+  </body>
+</html>

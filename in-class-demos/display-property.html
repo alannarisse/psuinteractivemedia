@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Property</title>
+    <style>
+      p {
+        border: 1px solid black;
+      }
+      h1 {
+        width: 300px;
+        display: inline-block;
+      }
+      h2 {
+        display: inline-block;
+      }
+      ul,
+      li {
+        display: inline-block;
+      }
+      a {
+        display: block;
+        background-color: pink;
+        color: limegreen;
+        margin: 10px;
+        padding: 16px;
+        text-decoration: none;
+        max-width: 300px;
+      }
+      a:hover {
+        background-color: limegreen;
+        color: pink;
+      }
+      .error {
+        color: red;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Header 1</h1>
+    <h2>Subheader here!</h2>
+    <p>I'm a paragraph</p>
+    <h2>A <span class="error">sunhead</span>! again!</h2>
+    <ul>
+      <li>I'm a list item</li>
+      <li>I'm a list item too</li>
+    </ul>
+
+    <div>I'm a div</div>
+    <p><a href="mailto:arisse@pdx.edu">email me</a>
+      <a href="mailto:arisse@pdx.edu?cc=mybizpartner@biz.com">email me</a>
+      
+      <a href="">I'm a link</a> inside of paragraph</p>
+    <p><span>Hi I'm a span</span> inside a paragraph</p>
+  </body>
+</html>
