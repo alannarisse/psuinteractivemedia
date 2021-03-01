@@ -21,7 +21,8 @@ function footerNavList() {
 
       <li><a href="https://www.facebook.com/PSUArtandDesign/?tn-str=k*F" target="_blank">PSUGD on Facebook</a></li>
       <li><a href="https://designportland.org/directory" target="_blank">Design PDX Directory</a></li>
-    <li>&copy; Copyright Alanna Risse 2020/2021</li>`
+      <li><a href="https://www.pdx.edu/registration/academic-calendar">PSU calendar</a></li>
+    <li>&copy; Copyright Alanna Risse 2021</li>`
   )
 }
 function init() {
