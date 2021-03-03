@@ -11,9 +11,18 @@
     },
     {
       "path": "../mujtaba-test"
+    },
+    {
+      "path": "../students/wi21/cedar/butterflykit"
+    },
+    {
+      "path": "../students/wi21/kaiala2"
+    },
+    {
+      "path": "../students/wi21/mujtaba/Mujti-Alsaihati.github.io"
     }
   ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "psuinteractivemedia"
+    "liveServer.settings.multiRootWorkspaceName": "Mujti-Alsaihati.github.io"
   }
 }

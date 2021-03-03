@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {
+			background: #ccc;
+			font-family: Helvetica;
+		}
+		h1 {
+			font-size: 24px;
+		}
+		.flexme {
+			display: flex;
+			flex-direction: column;
+		}
+		@media only screen and (min-width:768px){
+			body {
+				background: green;
+			}
+			h1 {
+				font-size: 60px;
+			}
+			.flexme {
+				flex-direction: row;
+			}
+		}
+		
+	</style>
+</head>
+<body>
+	<header><h1>Bears, bears bears!</h1>
+	<main class="flexme">
+		<div><img src="https://placebear.com/640/350">
+			<p>I'm a bear!</p></div>
+		<div><img src="https://placebear.com/640/360"><p>I'm a bear too!</p></div>
+	</main>
+	
+</body>
+</html>
