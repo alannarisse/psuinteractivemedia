@@ -1,0 +1,36 @@
+$error: #ff0000;
+$primary: rgba(214, 12, 80, 1);
+
+h1 {
+  font-size: 60px;
+  font-family: Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+
+a {
+  text-decoration: none;
+  color:coral;
+  &:hover {
+    color:blueviolet;
+  }
+}
+
+.grid {
+
+}
+ header{
+   p { font-size: 27px;
+      span.red { color: $error;
+        em { font-weight: 200;}
+      }
+    }
+ }
+
+.content-section {
+  p { font-size: 34px;}
+
+}
+
+.about-page .grid {
+
+}
