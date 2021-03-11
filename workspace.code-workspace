@@ -1,13 +1,22 @@
 {
   "folders": [
-	{
-		"path": "."
-	},
-	{
-		"path": "../scroll-triggering"
-	}
-],
+    {
+      "path": "."
+    },
+    {
+      "path": "../scroll-triggering"
+    },
+    {
+      "path": "../students/wi21/bryan/RedCastleGames_P2"
+    },
+    {
+      "path": "../students/wi21/seth/sdearmas.github.io"
+    },
+    {
+      "path": "../students/wi21/cedar/butterflykit"
+    }
+  ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "scroll-triggering"
+    "liveServer.settings.multiRootWorkspaceName": "butterflykit"
   }
 }
