@@ -14,9 +14,12 @@
     },
     {
       "path": "../students/wi21/cedar/butterflykit"
+    },
+    {
+      "path": "../students/wi21"
     }
   ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "butterflykit"
+    "liveServer.settings.multiRootWorkspaceName": "wi21"
   }
 }
