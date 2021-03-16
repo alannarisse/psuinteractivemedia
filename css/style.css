@@ -105,7 +105,7 @@ a {
   color: #d84727;
   text-decoration: none;
 }
-a:hover {
+a:hover, .name {
   color: #5eb1bf;
 }
 
