@@ -105,8 +105,12 @@ a {
   color: #d84727;
   text-decoration: none;
 }
-a:hover, .name {
+a:hover {
   color: #5eb1bf;
+}
+.name {
+  color: #5eb1bf;
+  font-weight: bold;
 }
 
 hr {
@@ -193,7 +197,8 @@ aside {
     width: 100%;
     padding: 60px;
     /* background-image: url("https://media.giphy.com/media/kolvlRnXh8Jj2/source.gif"); */
-    background-image: url("https://media.giphy.com/media/3oz8xRF0v9WMAUVLNK/source.gif");
+/*    background-image: url("https://media.giphy.com/media/3oz8xRF0v9WMAUVLNK/source.gif");
+*/    background-image: url('https://media.giphy.com/media/26uf80oUzpxWmuTOo/source.gif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 90%;
