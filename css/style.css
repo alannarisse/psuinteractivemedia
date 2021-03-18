@@ -197,11 +197,12 @@ aside {
     width: 100%;
     padding: 60px;
     /* background-image: url("https://media.giphy.com/media/kolvlRnXh8Jj2/source.gif"); */
-/*    background-image: url("https://media.giphy.com/media/3oz8xRF0v9WMAUVLNK/source.gif");
-*/    background-image: url('https://media.giphy.com/media/26uf80oUzpxWmuTOo/source.gif');
+    /*    background-image: url("https://media.giphy.com/media/3oz8xRF0v9WMAUVLNK/source.gif");
+*/
+    background-image: url("https://media.giphy.com/media/26uf80oUzpxWmuTOo/source.gif");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% 90%;
+    background-position: 50% 20%;
     height: 400px;
   }
 }
