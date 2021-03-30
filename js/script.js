@@ -2,9 +2,9 @@ function topNavList() {
   $("#topnavlist").html(
     `<li><a href="/index.html">Home</a></li>
         <li><a href="/videos/index.html">Videos</a></li>
-        <li>Basecamps: <br/><a href="https://3.basecamp.com/3840950/projects/20215530">341</a> <a href="https://3.basecamp.com/3840950/projects/20215531">342</a> &nbsp;</li>
+        <li><a href="https://3.basecamp.com/3840950/projects/21449773">Basecamps</a></li>
         <li><a href="/resources.html">Resources</a></li>
-        <li><a href="/terms/wi21des34x/index.html">Student Links</a></li>
+        <li><a href="/terms/sp21des342/index.html">Student Links</a></li>
         <li><a href="http://teaching.alannarisse.com/grades/">Gradesheet</a></li>
         <li><a href="mailto:arisse@pdx.edu" class="button">email alanna</a></li>`
   )
