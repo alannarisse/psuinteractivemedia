@@ -8,9 +8,12 @@
     },
     {
       "path": "../students/wi21"
+    },
+    {
+      "path": "../tlcindoorplants"
     }
   ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "wi21"
+    "liveServer.settings.multiRootWorkspaceName": "tlcindoorplants"
   }
 }
