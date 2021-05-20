@@ -6,6 +6,7 @@ function topNavList() {
         <li><a href="/resources.html">Resources</a></li>
         <li><a href="/terms/sp21des342/index.html">Student Links</a></li>
         <li><a href="http://teaching.alannarisse.com/grades/">Gradesheet</a></li>
+        <li><a href="/inspiring.html">Inspiration</a></li>
         <li><a href="mailto:arisse@pdx.edu" class="button">email alanna</a></li>`
   )
 }
