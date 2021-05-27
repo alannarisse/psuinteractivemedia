@@ -87,6 +87,7 @@ pre {
 nav {
   border-bottom: 12px solid #5eb1bf;
   padding: 30px;
+  margin-bottom: 30px;
 }
 nav a {
   color: #d84727;
@@ -160,6 +161,9 @@ aside {
   list-style-type: square;
   margin-left: 20px;
 }
+.home nav {
+  margin-bottom: 0;
+}
 /* Global button styles */
 .button {
   border-radius: 8px;
@@ -199,13 +203,14 @@ aside {
     /* background-image: url("https://media.giphy.com/media/kolvlRnXh8Jj2/source.gif"); */
     /*    background-image: url("https://media.giphy.com/media/3oz8xRF0v9WMAUVLNK/source.gif");
 */
-    background-image: url("https://media.giphy.com/media/4VWs1PfHe19mRYw6ia/giphy-downsized-large.gif");
+    background-image: url("https://media.giphy.com/media/nilmBu205MrCg/source.gif");
+    /* background-image: url("https://media.giphy.com/media/4VWs1PfHe19mRYw6ia/giphy-downsized-large.gif"); */
     /*    background-image: url("https://media.giphy.com/media/26uf80oUzpxWmuTOo/source.gif");
 */
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% 20%;
-    height: 360px;
+    background-position: 50% 70%;
+    height: 380px;
   }
 }
 
