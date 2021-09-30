@@ -43,14 +43,16 @@ h1 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 3rem;
   line-height: 3.6rem;
-  color: #5eb1bf;
+  /* color: #5eb1bf; */
+  color: #fff;
 }
 
 h2 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 2.4rem;
   line-height: 2.4rem;
-  color: #5eb1bf;
+  /* color: #5eb1bf; */
+  color: #fff;
   margin-bottom: 18px;
   margin-top: 1.4rem;
 }
@@ -203,13 +205,14 @@ aside {
     /* background-image: url("https://media.giphy.com/media/kolvlRnXh8Jj2/source.gif"); */
     /*    background-image: url("https://media.giphy.com/media/3oz8xRF0v9WMAUVLNK/source.gif");
 */
-    background-image: url("https://media.giphy.com/media/nilmBu205MrCg/source.gif");
+    /* background-image: url("https://media.giphy.com/media/nilmBu205MrCg/source.gif"); */
+    background-image: url("https://media.giphy.com/media/l2JhwIWzwUJO1I2OI/giphy.gif?cid=ecf05e47k36r285h99p408w0r0ghk0ezce0ga5hutgvh4bpc&rid=giphy.gif&ct=g");
     /* background-image: url("https://media.giphy.com/media/4VWs1PfHe19mRYw6ia/giphy-downsized-large.gif"); */
     /*    background-image: url("https://media.giphy.com/media/26uf80oUzpxWmuTOo/source.gif");
 */
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% 70%;
+    background-position: 50% 40%;
     height: 380px;
   }
 }
