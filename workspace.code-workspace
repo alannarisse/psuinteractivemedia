@@ -11,9 +11,12 @@
     },
     {
       "path": "../tlcindoorplants"
+    },
+    {
+      "path": "../students"
     }
   ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "wi21"
+    "liveServer.settings.multiRootWorkspaceName": "students"
   }
 }

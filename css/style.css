@@ -16,6 +16,12 @@ Colors
 
 General Styles
 *----------------------------------------------------------------------*/
+
+* {box-sizing: border-box;}
+body { margin:0;}
+img {width: 100%;}
+a { text-decoration: none;}
+
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 20px;
@@ -89,7 +95,7 @@ pre {
 nav {
   border-bottom: 12px solid #5eb1bf;
   padding: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 0;
 }
 nav a {
   color: #d84727;
@@ -206,7 +212,7 @@ aside {
     /*    background-image: url("https://media.giphy.com/media/3oz8xRF0v9WMAUVLNK/source.gif");
 */
     /* background-image: url("https://media.giphy.com/media/nilmBu205MrCg/source.gif"); */
-    background-image: url("https://media.giphy.com/media/l2JhwIWzwUJO1I2OI/giphy.gif?cid=ecf05e47k36r285h99p408w0r0ghk0ezce0ga5hutgvh4bpc&rid=giphy.gif&ct=g");
+    background-image: url("../images/backgrounds/clem-onojeghuo-love.jpg");
     /* background-image: url("https://media.giphy.com/media/4VWs1PfHe19mRYw6ia/giphy-downsized-large.gif"); */
     /*    background-image: url("https://media.giphy.com/media/26uf80oUzpxWmuTOo/source.gif");
 */
@@ -239,3 +245,51 @@ aside {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+
+
+.three-col {
+  display: flex;
+  height: 100vh;
+}
+
+.definition .left {
+  background-color: mediumpurple;
+}
+
+.left { 
+  flex: 30%;
+  padding: 40px;
+  }
+.center { flex: 55%;}
+.right { 
+  flex: 15%;
+  justify-content: flex-end;
+  }
+
+.definition .center-content {
+  background-color:blanchedalmond;
+}
+
+.center-content {
+  padding:20px;
+  margin: 60px;
+}
+
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+nav li {
+    margin-bottom:20px;
+    width:60px;
+    justify-content:flex-end;
+}
+.homelink { background-color:burlywood;}
+.definitionlink { background-color:rgb(102, 25, 146);}
+.other1link{ background-color:rgb(56, 122, 30);}
+.other2link { background-color:rgb(73, 44, 5);}
+.other3link { background-color:rgb(88, 58, 143);}
