@@ -17,10 +17,18 @@ Colors
 General Styles
 *----------------------------------------------------------------------*/
 
-* {box-sizing: border-box;}
-body { margin:0;}
-img {width: 100%;}
-a { text-decoration: none;}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+img {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
 
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -35,15 +43,22 @@ section {
 .container,
 header,
 .header {
-  width: 90%;
+  width: 100%;
+  padding: 0 40px;
   margin: auto;
 }
 header {
   margin-bottom: 40px;
+  background-color: rgb(3, 77, 77);
 }
 
 header p {
   font-size: 24px;
+}
+header h1,
+header h2,
+header h3 {
+  color: #fff;
 }
 h1 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
@@ -105,10 +120,11 @@ nav a:hover {
 }
 nav ul {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 nav li {
   padding-right: 20px;
+  white-space: nowrap;
 }
 a {
   color: #d84727;
@@ -246,9 +262,6 @@ aside {
 
 /*# sourceMappingURL=style.css.map */
 
-
-
-
 .three-col {
   display: flex;
   height: 100vh;
@@ -258,38 +271,47 @@ aside {
   background-color: mediumpurple;
 }
 
-.left { 
+.left {
   flex: 30%;
   padding: 40px;
-  }
-.center { flex: 55%;}
-.right { 
+}
+.center {
+  flex: 55%;
+}
+.right {
   flex: 15%;
   justify-content: flex-end;
-  }
+}
 
 .definition .center-content {
-  background-color:blanchedalmond;
+  background-color: blanchedalmond;
 }
 
 .center-content {
-  padding:20px;
+  padding: 20px;
   margin: 60px;
 }
 
-
 nav ul {
   list-style-type: none;
-  display: flex;
-  flex-direction: column;
 }
 nav li {
-    margin-bottom:20px;
-    width:60px;
-    justify-content:flex-end;
+  margin-bottom: 20px;
+  width: 60px;
+  justify-content: flex-end;
 }
-.homelink { background-color:burlywood;}
-.definitionlink { background-color:rgb(102, 25, 146);}
-.other1link{ background-color:rgb(56, 122, 30);}
-.other2link { background-color:rgb(73, 44, 5);}
-.other3link { background-color:rgb(88, 58, 143);}
+.homelink {
+  background-color: burlywood;
+}
+.definitionlink {
+  background-color: rgb(102, 25, 146);
+}
+.other1link {
+  background-color: rgb(56, 122, 30);
+}
+.other2link {
+  background-color: rgb(73, 44, 5);
+}
+.other3link {
+  background-color: rgb(88, 58, 143);
+}
