@@ -1,40 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <style>
-    #mydiv {
-      position: absolute;
-      z-index: 9;
-      background-color: #2196f3;
-      text-align: center;
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      border: 1px solid #d3d3d3;
-      z-index: -1;
-      background-image: url("http://placekitten.com/600/600");
-      background-size: cover;
-    }
+  <head>
+    <style>
+      #mydiv {
+        position: absolute;
+        z-index: 9;
+        background-color: #2196f3;
+        text-align: center;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border: 1px solid #d3d3d3;
+        z-index: 1;
+        background-image: url("http://placekitten.com/600/600");
+        background-size: cover;
+      }
 
-    .mypocket {
-      background-color: red;
-      position: absolute;
-      width: 900px;
-      height: 900px;
-      top: 300px;
-      left: 600px;
-      z-index: 1;
-      border-radius: 25%;
-      background-image: url("https://previews.123rf.com/images/dolimac/dolimac1411/dolimac141100001/33444567-funny-vector-cartoon-clip-art-illustration-of-a-big-hungry-alligator-looking-upward-with-his-mouth-o.jpg");
-      background-size: cover;
-    }
-  </style>
+      .mypocket {
+        background-color: red;
+        position: absolute;
+        width: 900px;
+        height: 900px;
+        top: 300px;
+        left: 600px;
+        z-index: -1;
+        border-radius: 25%;
+        background-image: url("https://previews.123rf.com/images/dolimac/dolimac1411/dolimac141100001/33444567-funny-vector-cartoon-clip-art-illustration-of-a-big-hungry-alligator-looking-upward-with-his-mouth-o.jpg");
+        background-size: cover;
+      }
+    </style>
+  </head>
   <body>
+    <audio id="scream">
+      <source src="sounds/screem.wav" type="audio/wav" />
+    </audio>
     <h1>Draggable DIV Element</h1>
 
     <p>Click and hold the mouse button down while moving the DIV element</p>
 
     <div id="mydiv"></div>
     <div class="mypocket"></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script>
+      var scream = $("#scream")[0]
+
+      <!-- $(".mypocket").mouseenter(function () {
+        scream.currentTime = 0
+
+      }) -->
+
+      var overlap = isOverlap("#scream",".mypocket")
+      $(".mypocket").hover(function () {
+        if(overlap){
+          scream.play()
+        } else {
+          scream.pause()
+        }
+      })
+    </script>
     <script>
       //Make the DIV element draggagle:
       dragElement(document.getElementById("mydiv"))
