@@ -20,9 +20,15 @@
     },
     {
       "path": "../students/wi21/mujtaba/Mujti-Alsaihati.github.io"
+    },
+    {
+      "path": "../students/sagebailey"
+    },
+    {
+      "path": "../students"
     }
   ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "psuinteractivemedia"
+    "liveServer.settings.multiRootWorkspaceName": "students"
   }
 }
