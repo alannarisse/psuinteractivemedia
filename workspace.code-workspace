@@ -14,6 +14,15 @@
     },
     {
       "path": "../students"
+    },
+    {
+      "path": "../../Desktop/DES341/mlk-speech"
+    },
+    {
+      "path": "../../Desktop/DES341/mlk-speech-jquery"
+    },
+    {
+      "path": "../../Desktop/DES341/mlk-speech-css"
     }
   ],
   "settings": {
