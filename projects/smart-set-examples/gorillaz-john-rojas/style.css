@@ -1,0 +1,395 @@
+* {
+
+    margin: 0;
+    box-model: border-box;
+
+}
+
+
+
+
+
+main {
+    background-color: black;
+    background-image: url(img/banner.gif), url(img/home_background3.gif);
+    background-size: 55%, cover;
+    background-position: 90% 1%;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.group {
+
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    position: fixed;
+    bottom: 0;
+
+}
+
+
+
+.twodee {
+
+    background-color: #ec3500;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+
+}
+
+
+.twodee-img {
+
+    background-image:
+        url(img/two_d_hero.png),
+        url(img/two_d_background.png);
+    background-repeat: no-repeat;
+    background-size: 400px, cover;
+    background-position: 60% 100%;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+
+}
+
+
+.murdoc {
+    background-color: #00888a;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+}
+
+
+.murdoc-img {
+
+    background-image:
+        url(img/murdoc_hero.png),
+        url(img/murdoc_background.png);
+    background-repeat: no-repeat;
+    background-size: 500px, cover;
+    background-position: 40% 90%;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+
+
+}
+
+
+.noodle {
+    background-color: #fe9300;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+}
+
+.noodle-img {
+
+    background-image:
+        url(img/noodle_hero.png),
+        url(img/noodle_background.png);
+    background-repeat: no-repeat;
+    background-size: 400px, cover;
+    background-position: 40% 90%;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+
+
+}
+
+
+.russel {
+    background-color: #b700c7;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+}
+
+.russel-img {
+
+    background-image:
+        url(img/russel_hero.png),
+        url(img/russel_background.png);
+    background-repeat: no-repeat;
+    background-size: 530px, cover;
+    background-position: 40% 90%;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+
+
+}
+
+.bio {
+
+    float: right;
+    width: 50%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    resize: vertical;
+
+
+}
+
+
+
+p {
+    padding-right: 15%;
+    padding-left: 10%;
+    font-family: 'helvetica', 'arial', 'sans-serif';
+    color: #ffff;
+    text-align: left;
+    line-height: 2em;
+    overflow-y: hidden;
+
+
+}
+
+br {
+    line-height: 50px;
+}
+
+
+
+
+.nav {
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    min-width: 600px;
+    padding-bottom: 40px;
+    padding-top: 0px;
+    padding-left: 10px;
+    position: fixed;
+    bottom: 0;
+
+
+}
+
+
+
+footer {
+    background-color: dimgrey;
+    height: 10px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-right: 0px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+
+
+}
+
+.footer-text {
+
+    text-align: right;
+    padding-right: 20px;
+    font-size: 13px;
+    font-family: helvetica, sans-serif;
+    color: aliceblue;
+
+}
+
+
+li {
+
+    padding-right: 30px;
+    padding-top: 15px;
+    display: inline-block;
+}
+
+
+.module {
+    cursor: url(img/cursor.png), pointer;
+}
+
+
+
+.hover-2d {
+    display: block;
+    height: 50px;
+    width: 80px;
+    background: url(img/two_d_grey.png) 0 0 no-repeat;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    transition: .3s all;
+}
+
+.hover-2d:hover {
+    background: url(img/two_d.png);
+    transform: translateY(-5px);
+    background-repeat: no-repeat;
+    transition: .3s all;
+}
+
+
+.hover-murdoc {
+    display: block;
+    height: 50px;
+    width: 130px;
+    background: url(img/murdoc_grey.png);
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    transition: .3s all;
+}
+
+.hover-murdoc:hover {
+    background: url(img/murdoc.png);
+    transform: translateY(-5px);
+    background-repeat: no-repeat;
+    transition: .3s all;
+}
+
+.hover-noodle {
+    display: block;
+    height: 50px;
+    width: 130px;
+    background: url(img/noodle_grey.png);
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    transition: .3s all;
+}
+
+.hover-noodle:hover {
+    background: url(img/noodle.png);
+    transform: translateY(-5px);
+    background-repeat: no-repeat;
+    transition: .3s all;
+}
+
+.hover-russel {
+    display: block;
+    height: 50px;
+    width: 130px;
+    background: url(img/russel_grey.png);
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    transition: .3s all;
+}
+
+.hover-russel:hover {
+    background: url(img/russel.png);
+    transform: translateY(-5px);
+    background-repeat: no-repeat;
+    transition: .3s all;
+}
+
+.hover-home {
+    position: fixed;
+    right: 30px;
+    bottom: 25px;
+    display: block;
+    height: 50px;
+    width: 40px;
+    background: url(img/home_grey.png);
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    transition: .3s all;
+}
+
+.hover-home:hover {
+    background: url(img/home.png);
+    transform: translateY(-5px);
+    background-repeat: no-repeat;
+    transition: .3s all;
+}
+
+
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+        opacity: 1\9;
+        /* IE9 only */
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+        opacity: 1\9;
+        /* IE9 only */
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        opacity: 1\9;
+        /* IE9 only */
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.fade-in {
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in 1;
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+}
+
+.fade-in.one {
+    -webkit-animation-delay: 0.1s;
+    -moz-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+.fade-in.two {
+    -webkit-animation-delay: 0.7s;
+    -moz-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+}
+
+
+.slide-left {
+    animation: call 1s ease-out;
+}
+
+@keyframes call {
+    0% {
+        transform: translateX(400%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
