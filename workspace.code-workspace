@@ -23,9 +23,21 @@
     },
     {
       "path": "../../Desktop/DES341/mlk-speech-css"
+    },
+    {
+      "path": "../../Desktop/DES341/form-fun"
+    },
+    {
+      "path": "../alannarisse.github.io"
+    },
+    {
+      "path": "../../Downloads/particles.js-master"
+    },
+    {
+      "path": "../../Downloads/particles-js-demo"
     }
   ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "psuinteractivemedia"
+    "liveServer.settings.multiRootWorkspaceName": "students"
   }
 }

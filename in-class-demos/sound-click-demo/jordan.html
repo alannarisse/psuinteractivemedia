@@ -31,6 +31,11 @@
 	    <source src="service-bell_daniel_simion.mp3"></source>
     </audio>
 
+    <!-- audio for alex -->
+    <audio id="pen-sound">
+	    <source src="squeak.wav"></source>
+    </audio>
+
     <audio id="duck-sound">
 	    <source src="Duck-quack.mp3"></source>
     </audio>
@@ -79,9 +84,9 @@
 
 
 
-    var bell = $("#bell-sound")[0];
+    var pen = $("#bell-sound")[0];
     $("#bell-button").click(function() {
-      bell.volume = 0.2;
+      pen.volume = 0.2;
       if ($('audio#bell-sound')[0].paused == false ){
         bell.pause();
       } else {
@@ -90,6 +95,17 @@
       $('.gif').attr('src', 'bear.gif')
     });
 
+//code for alex 
+    var pen = $("#pen-sound")[0];
+      $(document).ready(function(){
+
+   
+    $("body").mousemove(function() {
+      pen.currentTime = 0;
+      pen.play();
+    });
+  });
+  
     </script>
   </body>
 </html>

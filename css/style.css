@@ -31,10 +31,17 @@ a {
 }
 
 body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
   line-height: 1.4em;
   color: #042a2b;
+}
+body {
+  background-color: #171717;
+}
+
+#myCanvas {
+  background-color: #1f1f1f;
 }
 section {
   margin-bottom: 60px;
@@ -61,7 +68,7 @@ header h3 {
   color: #fff;
 }
 h1 {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 3rem;
   line-height: 3.6rem;
   /* color: #5eb1bf; */
@@ -69,7 +76,7 @@ h1 {
 }
 
 h2 {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 2.4rem;
   line-height: 2.4rem;
   /* color: #5eb1bf; */
@@ -96,13 +103,13 @@ strong {
   font-weight: bold;
 }
 blockquote {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 p {
   margin-bottom: 20px;
 }
 pre {
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 .inspire {
   width: 300px;
@@ -228,7 +235,7 @@ aside {
     /*    background-image: url("https://media.giphy.com/media/3oz8xRF0v9WMAUVLNK/source.gif");
 */
     /* background-image: url("https://media.giphy.com/media/nilmBu205MrCg/source.gif"); */
-    background-image: url("../images/backgrounds/clem-onojeghuo-love.jpg");
+    background-image: url('../images/backgrounds/clem-onojeghuo-love.jpg');
     /* background-image: url("https://media.giphy.com/media/4VWs1PfHe19mRYw6ia/giphy-downsized-large.gif"); */
     /*    background-image: url("https://media.giphy.com/media/26uf80oUzpxWmuTOo/source.gif");
 */
