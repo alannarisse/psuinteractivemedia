@@ -37,12 +37,9 @@ body {
   color: #042a2b;
 }
 body {
-  background-color: #171717;
+  background-color: #fff;
 }
 
-#myCanvas {
-  background-color: #1f1f1f;
-}
 section {
   margin-bottom: 60px;
 }

@@ -1,0 +1,99 @@
+main {
+  width: 90%;
+  margin: auto;
+}
+svg {
+  padding-top: 100px;
+  width: 100%;
+  overflow: visible;
+}
+.cls-1 {
+  isolation: isolate;
+}
+
+.cls-2 {
+  fill: #febc23;
+}
+
+.cls-3 {
+  mix-blend-mode: soft-light;
+}
+
+.cls-4 {
+  fill: #fff;
+}
+
+.cls-5 {
+  fill: #2d2932;
+}
+
+.cls-6 {
+  font-size: 36px;
+}
+
+.cls-6,
+.cls-7 {
+  fill: #231f20;
+  font-family: ChunkFivePrint, ChunkFive Print;
+}
+
+.cls-7 {
+  font-size: 24px;
+}
+
+.cls-8 {
+  letter-spacing: -0.06em;
+}
+
+.cls-9 {
+  letter-spacing: -0.04em;
+}
+[data-name='gear'] {
+  animation-name: turn;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation-iteration-count: infinite;
+}
+
+@keyframes turn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+.imtext {
+  transition: 1s;
+  animation-name: textscale;
+  animation-delay: 1s;
+  animation-duration: 3s;
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: scale(1) translateX(900px) translateY(-100px);
+  animation-fill-mode: forwards;
+}
+@keyframes textscale {
+  55% {
+    transform: scale(1.2) translateX(100px) translateY(40px);
+  }
+  80% {
+    transform: scale(0.8) translateX(200px) translateY(40px);
+  }
+  85% {
+    transform: scale(1) translateX(200px) translateY(40px);
+  }
+  90% {
+    transform: scale(0.8) translateX(200px) translateY(40px);
+  }
+  100% {
+    transform: scale(1) translateX(50px) translateY(40px);
+  }
+}
+
+.hide {
+  display: none;
+}
