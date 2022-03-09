@@ -174,7 +174,10 @@ footer a {
   color: #fff;
 }
 .grid-2 {
+  margin-top: 40px;
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
 }
 .terms li {
   padding-bottom: 16px;
