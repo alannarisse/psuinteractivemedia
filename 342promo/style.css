@@ -49,13 +49,13 @@ svg {
   letter-spacing: -0.04em;
 }
 [data-name='gear'] {
-  animation-name: turn;
   animation-duration: 3s;
-  animation-fill-mode: forwards;
+  animation-name: turn;
   animation-timing-function: linear;
   transform-origin: center;
   transform-box: fill-box;
   animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
 }
 
 @keyframes turn {

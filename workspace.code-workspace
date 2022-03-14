@@ -35,9 +35,12 @@
     },
     {
       "path": "../../Downloads/particles-js-demo"
+    },
+    {
+      "path": "../magic-eight-ball"
     }
   ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "psuinteractivemedia"
+    "liveServer.settings.multiRootWorkspaceName": "students"
   }
 }
