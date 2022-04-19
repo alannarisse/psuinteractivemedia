@@ -38,9 +38,18 @@
     },
     {
       "path": "../magic-eight-ball"
+    },
+    {
+      "path": "../../Desktop/DES342SP22/sleestak"
+    },
+    {
+      "path": "../stonk-ticker"
+    },
+    {
+      "path": "../../Desktop/DES342SP22/waypoints-demo"
     }
   ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "students"
+    "liveServer.settings.multiRootWorkspaceName": "waypoints-demo"
   }
 }
