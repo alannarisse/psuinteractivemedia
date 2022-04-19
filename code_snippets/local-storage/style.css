@@ -1,0 +1,14 @@
+.button {
+  background-color: #ccc;
+  padding: 8px;
+  border: 1px solid #333;
+  border-radius: 12px;
+}
+a.button {
+  color: #000;
+  text-decoration: none;
+}
+#lsOutput {
+  min-height: 100px;
+  border: 1px;
+}
