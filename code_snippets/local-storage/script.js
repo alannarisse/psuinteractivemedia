@@ -13,7 +13,7 @@ let lsClear = document.getElementById('lsClear')
 for (let i = 0; i < localStorage.length; i++) {
   let key = localStorage.key(i)
   let value = localStorage.getItem(key)
-  lsOutput.innerHTML += `${key}: ${value}<br>`
+  lsOutput.innerHTML += `${key}: ${value}<br>
 }
 
 btnSub.onclick = function () {
@@ -22,7 +22,7 @@ btnSub.onclick = function () {
   //console.log(key)
   //console.log(val)
 
-  if (key && val) {
+  if (key f&& val) {
     localStorage.setItem(key, val)
     lsOutput.innerHTML += `${key}: ${val}<br>`
     inpKey.value = ''

@@ -47,9 +47,15 @@
     },
     {
       "path": "../../Desktop/DES342SP22/waypoints-demo"
+    },
+    {
+      "path": "../../Desktop/DES342SP22"
+    },
+    {
+      "path": "../code-demos"
     }
   ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "psuinteractivemedia"
+    "liveServer.settings.multiRootWorkspaceName": "code-demos"
   }
 }
