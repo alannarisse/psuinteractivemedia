@@ -53,9 +53,12 @@
     },
     {
       "path": "../code-demos"
+    },
+    {
+      "path": "../localhost"
     }
   ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "code-demos"
+    "liveServer.settings.multiRootWorkspaceName": "students"
   }
 }
