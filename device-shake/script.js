@@ -1,12 +1,15 @@
-$(document).ready(function() {
-
+$(document).ready(function () {
   function phoneShake() {
-    $("#here").append("boo");
+    $('#here').append('boo')
   }
 
   $.shake({
-    callback: function() {
-      phoneShake();
+    callback: function () {
+      phoneShake()
     }
-  });
-});
+  })
+})
+
+window.addEventListener('devicemotion', event => {
+  alert('shakey')
+})
