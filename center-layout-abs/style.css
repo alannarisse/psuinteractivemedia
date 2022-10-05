@@ -43,3 +43,22 @@ main p {
 .two-cols p {
   margin-left: -120px;
 }
+.button {
+  display: inline-block;
+  background: rgb(67, 167, 210);
+  color: #fff;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 80px;
+  transition: 500ms;
+  -webkit-box-shadow: 11px 10px 30px -17px rgba(245, 14, 245, 0);
+  -moz-box-shadow: 11px 10px 30px -17px rgba(245, 14, 245, 0);
+  box-shadow: 11px 10px 30px -17px rgba(245, 14, 245, 0);
+}
+.button:hover {
+  background: rgb(208, 133, 73);
+  -webkit-box-shadow: 11px 10px 30px -17px rgba(245, 14, 245, 1);
+  -moz-box-shadow: 11px 10px 30px -17px rgba(245, 14, 245, 1);
+  box-shadow: 11px 10px 30px -17px rgba(245, 14, 245, 1);
+}
