@@ -1,0 +1,27 @@
+.gallery1 div {
+  border: 2px solid red;
+  flex: 1;
+}
+.gallery1 .one {
+  flex: 2;
+}
+
+main {
+  border: 2px solid blue;
+  width: 100%;
+}
+div img {
+  width: 100%;
+}
+.gallery1 {
+  border: 2px solid aquamarine;
+  display: flex;
+}
+
+.gallery2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery2 div {
+  flex: 25%;
+}
