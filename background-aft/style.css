@@ -30,3 +30,45 @@ body {
   margin: auto;
   margin-top: 100px;
 }
+.rhino-text-page header {
+  background-image: url('images/rhino.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 25vh;
+  width: 100vw;
+}
+h1 {
+  margin: 0;
+  padding-top: 60px;
+  text-align: center;
+  font-size: 140px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: black;
+  mix-blend-mode: screen;
+  background-color: rgb(244, 220, 211);
+}
+#background-video {
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  margin: 0;
+}
+
+.video-page h2,
+.video-page p,
+.video-page button {
+  font-size: 60px;
+  color: white;
+  margin-left: 100px;
+}
+.video-page p {
+  font-size: 32px;
+}
+.video-page button {
+  font-size: 18px;
+}
