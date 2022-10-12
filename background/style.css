@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+#example1 {
+  background-image: url(img_flwr.gif), url(paper.gif);
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+}
+h1 {
+  height: 100vh;
+  padding: 10vh;
+  color: white;
+  background: rgb(59, 2, 6);
+  mix-blend-mode: multiply;
+  font: bolder 16vw 'Alfa Slab One';
+  text-align: center;
+  margin: 0;
+}
+#background-video {
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  margin: 0;
+}
