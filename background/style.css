@@ -4,11 +4,31 @@
 body {
   margin: 0;
 }
-#example1 {
-  background-image: url(img_flwr.gif), url(paper.gif);
-  background-position: right bottom, left top;
-  background-repeat: no-repeat, repeat;
+.double {
+  background-image: url(images/grass.png), url(images/clouds.png);
+  background-position: bottom right, top left;
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 100vh;
+  width: 100vw;
+  background-color: #76ecf3;
 }
+.double main {
+  width: 60%;
+  margin: auto;
+}
+.page-one {
+  background: url('images/rhino.jpg');
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-color: violet;
+}
+.page-two {
+  height: 100vh;
+  background-color: violet;
+}
+
 h1 {
   height: 100vh;
   padding: 10vh;
@@ -29,4 +49,20 @@ h1 {
   bottom: 0;
   z-index: -1;
   margin: 0;
+}
+
+.flexorama {
+  display: flex;
+  border: 4px solid red;
+  width: 80%;
+  margin: auto;
+}
+
+.flexorama div {
+  flex: 1;
+  border: 4px solid aqua;
+  padding: 40px;
+}
+.flexorama .center {
+  flex: 2;
 }
