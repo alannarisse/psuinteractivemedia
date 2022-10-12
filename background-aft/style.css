@@ -15,7 +15,7 @@ body {
   width: 100vw;
   height: 100vh;
 }
-
+/* double background */
 .double-background {
   background-image: url(images/grass.png), url(images/clouds.png);
   background-position: right bottom, left top;
@@ -47,6 +47,8 @@ h1 {
   mix-blend-mode: screen;
   background-color: rgb(244, 220, 211);
 }
+
+/* video page */
 #background-video {
   width: 100vw;
   object-fit: cover;
