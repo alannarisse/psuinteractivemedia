@@ -1,0 +1,41 @@
+#goldenrod_star .cls-1 {
+  fill: #efb30c;
+}
+
+#blue_star .cls-2 {
+  fill: #0f89ed;
+}
+#blue_star .cls-2:hover {
+  animation-name: star-spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: center;
+}
+
+#goldenrod_star:hover {
+  animation-name: star-spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  transform-origin: center;
+  animation-direction: reverse;
+}
+@keyframes star-spin {
+  0% {
+    transform: rotate(0deg);
+    fill: #0f89ed;
+  }
+  100% {
+    transform: rotate(360deg);
+    fill: #ed0fda;
+  }
+}
+.stars {
+  width: 60%;
+  margin: auto;
+}
+svg {
+  overflow: visible;
+}

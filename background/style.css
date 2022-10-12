@@ -33,11 +33,12 @@ h1 {
   height: 100vh;
   padding: 10vh;
   color: white;
-  background: rgb(59, 2, 6);
-  mix-blend-mode: multiply;
+  background: rgba(255, 255, 255, 0.6);
+  mix-blend-mode: overlay;
   font: bolder 16vw 'Alfa Slab One';
   text-align: center;
   margin: 0;
+  text-transform: uppercase;
 }
 #background-video {
   width: 100vw;

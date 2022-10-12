@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 469.02 468.75">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #efb30c;
+      }
+
+      .cls-2 {
+        fill: #0f89ed;
+      }
+    </style>
+  </defs>
+  <g id="goldenrod_star" data-name="goldenrod star">
+    <polygon class="cls-1" points="469.02 335.07 303.29 333.26 207.84 468.75 158.36 310.57 0 261.66 135.14 165.72 132.73 0 265.73 98.88 422.59 45.37 369.65 202.43 469.02 335.07"/>
+  </g>
+  <g id="blue_star" data-name="blue star">
+    <polygon class="cls-2" points="346.8 106.12 301.1 203.11 379.22 276.55 272.85 263.06 227.15 360.05 207.11 254.72 100.75 241.23 194.73 189.62 174.69 84.29 252.81 157.73 346.8 106.12"/>
+  </g>
+</svg>

@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+}
+.simple-background .first {
+  background-image: url('images/rhino.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(33, 28, 22);
+  width: 100vw;
+  height: 100vh;
+}
+
+.simple-background .second {
+  background-color: bisque;
+  width: 100vw;
+  height: 100vh;
+}
+
+.double-background {
+  background-image: url(images/grass.png), url(images/clouds.png);
+  background-position: right bottom, left top;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  background-color: lightcyan;
+}
+
+.double-background main {
+  width: 60%;
+  margin: auto;
+  margin-top: 100px;
+}
