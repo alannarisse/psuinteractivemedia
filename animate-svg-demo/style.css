@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+}
+.pumpkin-page {
+  background: black;
+}
 #goldenrod_star .cls-1 {
   fill: #efb30c;
 }
@@ -38,4 +44,73 @@
 }
 svg {
   overflow: visible;
+}
+
+.my-pumpkin-stuff {
+  width: 60%;
+  margin: auto;
+  margin-top: 300px;
+}
+
+.letter-h,
+.letter-a,
+.letter-l,
+.letter-p,
+.letter-o,
+.letter-y {
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.letter-a,
+.letter-o,
+.letter-y {
+  animation-delay: 1s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-20px);
+  }
+  0% {
+    transform: translateY(0);
+  }
+}
+
+.letter-w {
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: center;
+}
+#eyes .poly2 {
+  fill: white;
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -183,6 +183,10 @@ footer a {
   padding-bottom: 16px;
 }
 
+.icon-sm {
+  height: 18px;
+  width: auto;
+}
 aside {
   background-color: #cdedf6; /* rgb(205, 237, 246) */
   padding: 10px;
