@@ -1,0 +1,28 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "../students"
+    },
+    {
+      "path": "../../Desktop/DES341/deepspacemermaid.github.io"
+    },
+    {
+      "path": "../konacopperfish"
+    },
+    {
+      "path": "../../Desktop/DES341/shugur"
+    },
+    {
+      "path": "../../Desktop/DES341/pasta-emogene"
+    },
+    {
+      "path": "../../Desktop/DES341/i-love-my-dog"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "psuinteractivemedia"
+  }
+}
