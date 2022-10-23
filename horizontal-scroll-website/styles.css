@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.slide {
+  width: 100vw;
+  height: 100vh;
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 400vw;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+}
+.one,
+.two,
+.three,
+.four {
+  background: #ccc;
+  width: 100vw;
+}
+.one {
+  background: rgb(251, 190, 190);
+}
+.two {
+  background: rgb(185, 229, 241);
+}
+.three {
+  background: rgb(198, 251, 190);
+}
+.four {
+  background: rgb(246, 190, 251);
+}
+
+.outer-wrapper {
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
