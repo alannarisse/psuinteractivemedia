@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+body {
+  color: #000;
+  font-family: 'Secular One', sans-serif;
+  font-size: 60px;
+  margin: 0;
+}
+.rotate {
+  color: goldenrod;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.statement {
+  text-align: left;
+  width: 40vw;
+  margin: auto;
+  white-space: nowrap;
+}
