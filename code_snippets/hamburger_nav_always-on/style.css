@@ -11,8 +11,8 @@
 .icon {
   position: fixed;
   cursor: pointer;
-  top: 14%;
-  left: 4%;
+  top: 60px;
+  right: -28px;
   width: 40px;
   height: 45px;
   transform: translate(-50%, -50%);
