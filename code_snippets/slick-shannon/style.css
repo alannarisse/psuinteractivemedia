@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #ddd;
+}
+/* slider styles start here */
+.slider {
+  width: 70vw;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.slide-content,
+.slick-initialized .slick-slide {
+  display: flex;
+}
+.slide-content .img-content {
+  flex: 60%;
+}
+.slide-content .text-content {
+  flex: 40%;
+  color: white;
+  background: #666;
+  padding: 10px;
+}
+
+.slide-content img {
+  width: 100%;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: #333;
+}
+/* slider styles end here */
