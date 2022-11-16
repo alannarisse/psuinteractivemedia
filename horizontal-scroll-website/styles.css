@@ -2,9 +2,16 @@ body {
   margin: 0;
   padding: 0;
 }
+img {
+  width: 100%;
+}
 .page {
   width: 100vw;
   height: 100vh;
+}
+.content {
+  width: 80%;
+  margin: 80px auto;
 }
 .wrapper {
   display: flex;
@@ -46,4 +53,8 @@ body {
 }
 ::-webkit-scrollbar {
   display: none;
+}
+.kitty {
+  width: 40%;
+  margin: auto;
 }
