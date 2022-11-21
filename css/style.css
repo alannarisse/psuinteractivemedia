@@ -16,7 +16,21 @@ Colors
 
 General Styles
 *----------------------------------------------------------------------*/
+@import url('https://use.typekit.net/fqz1wha.css');
+/*
+"Bungee Regular"
+font-family: bungee, sans-serif;
+font-weight: 400;
+font-style: normal;
 
+
+Bungee Shade
+font-family: bungee, sans-serif;
+font-weight: 800;
+font-style: normal;
+
+font-family: input-mono, monospace;
+*/
 * {
   box-sizing: border-box;
 }
@@ -31,7 +45,7 @@ a {
 }
 
 body {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: input-mono, monospace;
   font-size: 20px;
   line-height: 1.4em;
   color: #042a2b;
@@ -62,11 +76,14 @@ header p {
 header h1,
 header h2,
 header h3 {
+  font-family: bungee, sans-serif;
+  font-weight: 400;
   color: #fff;
 }
 h1 {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 3rem;
+  font-family: bungee, sans-serif;
+  font-weight: 400;
+  font-size: 3.5rem;
   line-height: 3.6rem;
   /* color: #5eb1bf; */
   color: #fff;
@@ -80,7 +97,7 @@ h1 {
 }
 h2 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 2.4rem;
   /* color: #5eb1bf; */
   color: #fff;
@@ -90,7 +107,7 @@ h2 {
 
 h3 {
   font-size: 1.8rem;
-  line-height: 1em;
+  line-height: 1.8em;
   margin-bottom: 18px;
 }
 h4 {
@@ -106,7 +123,8 @@ strong {
   font-weight: bold;
 }
 blockquote {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: input-mono, monospace;
+  font-weight: 300;
 }
 p {
   margin-bottom: 20px;
@@ -118,7 +136,7 @@ pre {
   width: 300px;
 }
 nav {
-  border-bottom: 12px solid #5eb1bf;
+  border-bottom: 12px solid #f5ca3a;
   padding: 30px;
   margin-bottom: 0;
 }
@@ -239,13 +257,14 @@ aside {
     width: 80%;
   }
   header {
+    border-bottom: 16px solid rgb(239, 123, 69);
     width: 100%;
     padding: 60px;
     /* background-image: url("https://media.giphy.com/media/kolvlRnXh8Jj2/source.gif"); */
     /*    background-image: url("https://media.giphy.com/media/3oz8xRF0v9WMAUVLNK/source.gif");
 */
     /* background-image: url("https://media.giphy.com/media/nilmBu205MrCg/source.gif"); */
-    background-image: url('/images/backgrounds/red-leaves-frost.jpg');
+    background-image: url('/images/headers/spiral.png');
     /* background-image: url("https://media.giphy.com/media/4VWs1PfHe19mRYw6ia/giphy-downsized-large.gif"); */
     /*    background-image: url("https://media.giphy.com/media/26uf80oUzpxWmuTOo/source.gif");
 */

@@ -37,7 +37,7 @@
 
 .hamburger:before,
 .hamburger:after {
-  content: "";
+  content: '';
   position: absolute;
   width: 40px;
   height: 4px;
@@ -77,7 +77,7 @@
   width: 100%;
   z-index: 999;
   padding-top: 150px;
-  font-family: "Helvetica", sans-serif;
+  font-family: 'Helvetica', sans-serif;
   text-align: center;
 }
 
