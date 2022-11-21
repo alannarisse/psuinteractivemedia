@@ -32,9 +32,12 @@
     },
     {
       "path": "../animated-avatar"
+    },
+    {
+      "path": "../breakbread"
     }
   ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "psuinteractivemedia"
+    "liveServer.settings.multiRootWorkspaceName": "students"
   }
 }
