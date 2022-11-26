@@ -10,6 +10,19 @@ function topNavList() {
   )
 }
 
+function toggleIcon() {
+  $('.icon').on('click', function () {
+    $('.icon').toggleClass('active')
+    $('.menu-mobile').slideToggle(300)
+  })
+}
+
+function closeMobileMenu() {
+  $('.menu-mobile').on('click', 'a', function () {
+    $('.icon').trigger('click')
+  })
+}
+
 function footerNavList() {
   $('#footernavlist').html(
     `<li><a href="mailto:arisse@pdx.edu">email alanna</a></li>
@@ -27,3 +40,6 @@ function init() {
 }
 
 $(init)
+//when the page loads call toggleIcon;
+$(toggleIcon)
+$(closeMobileMenu)

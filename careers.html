@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interactive Media at PSU Fall 2020</title>
@@ -10,28 +10,36 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
 
-<body>
-	<nav>
-      <ul id="topnavlist"></ul>
+  <body>
+    <nav class="nav">
+      <div class="logo">
+        <a href="/index.html"
+          ><h4>psuinteractivemedia</h4>
+          <img src="images/logo.png"
+        /></a>
+      </div>
+      <div class="icon">
+        <div class="hamburger"></div>
+      </div>
+      <div class="menu-mobile">
+        <ul id="topnavlist"></ul>
+      </div>
     </nav>
-	<main class="container">
-		<article>
-			
-			<h3>Job Descriptions</h3>
-			<ul>
-				<li><a href="https://careers.ghost.org/visual-designer/en" target="_blank"></a>
-					<a href="careers/ghost.html">read job posting</a>
-				</li>
-			</ul>
-
-			
-</article>
-	</main>
-<footer>
+    <main class="container">
+      <article>
+        <h3>Job Descriptions</h3>
+        <ul>
+          <li>
+            <a href="https://careers.ghost.org/visual-designer/en" target="_blank"></a>
+            <a href="careers/ghost.html">read job posting</a>
+          </li>
+        </ul>
+      </article>
+    </main>
+    <footer>
       <ul id="footernavlist"></ul>
     </footer>
     <script src="/js/jquery-3.3.1.min.js"></script>
     <script src="/js/script.js"></script>
-
-</body>
+  </body>
 </html>
