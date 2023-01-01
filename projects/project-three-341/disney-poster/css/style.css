@@ -1,0 +1,436 @@
+
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block
+}
+
+body {
+    line-height: 1
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+blockquote,
+q {
+    quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+/* Better box model */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*----------------------------------------------------------------------*
+
+	General Styles
+
+*----------------------------------------------------------------------*/
+
+.home {
+    background: url(../img/background.jpg) no-repeat;
+    width: 1500px;
+    height: 2495 px;
+}
+
+body {
+    height: 1880px;
+}
+
+.leftcloud {
+    position: absolute;
+    left: -184px;
+    animation: slideleft 5s linear infinite alternate-reverse;
+    animation-delay: 1s;
+}
+
+
+@keyframes slideleft {
+    100% {
+        left: 0;
+    }
+}
+
+.rightcloud {
+    position: absolute;
+    left: 700px;
+    animation: slideright 5s linear infinite alternate-reverse;
+    animation-delay: 1s;
+}
+
+@keyframes slideright {
+    100% {
+        left: 500px;
+    }
+}
+
+.sun {
+    position: absolute;
+    left: 500px;
+    animation: slidedown 10s linear infinite alternate-reverse;
+    animation-delay: 1s;
+}
+
+@keyframes slidedown {
+    0% {
+        top: -500px;
+    }
+    100% {
+        top: 80px;
+    }
+}
+
+.balloons {
+    position: absolute;
+    padding-top: 400px;
+    animation: diagonal 10s infinite;
+
+}
+
+@keyframes diagonal {
+    0% {
+        transform: translatex(0px) translatey(60px)
+    }
+    50% {
+        transform: translatex(20px) translatey(20px);
+    }
+    100% {
+        transform: translatex(-30px) translatey(-30px)
+    }
+}
+
+.boat1 {
+    position: absolute;
+    left: 600px;
+    padding-top: 560px;
+    animation: bounce 7s linear infinite both;
+}
+
+
+.boat2 {
+    position: absolute;
+    left: 713px;
+    padding-top: 644px;
+    animation: bounce 10s linear infinite both;
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.balldiv {
+    position: absolute;
+    padding-top: 1000px;
+    padding-left: 350px;
+
+}
+
+.ball {
+    position: absolute;
+    animation: roll-left 6s ease-in infinite alternate-reverse;
+}
+
+@keyframes roll-left {
+    0% {
+        transform: translateX(-200px) rotate(-540deg);
+    }
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+.goofy {
+    position: absolute;
+    padding-top: 1030px;
+    padding-left: 490px;
+    animation: bounce 10s linear infinite both;
+}
+
+.lightning {
+    position: absolute;
+    padding-top: 1174px;
+    padding-left: 50px;
+    animation: flickerin 2s linear infinite both;
+}
+
+@keyframes flickerin {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    10.1% {
+        opacity: 1;
+    }
+    10.2% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    20.1% {
+        opacity: 1;
+    }
+    20.6% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    30.1% {
+        opacity: 1;
+    }
+    30.5% {
+        opacity: 1;
+    }
+    30.6% {
+        opacity: 0;
+    }
+    45% {
+        opacity: 0;
+    }
+    45.1% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    55% {
+        opacity: 1;
+    }
+    55.1% {
+        opacity: 0;
+    }
+    57% {
+        opacity: 0;
+    }
+    57.1% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    60.1% {
+        opacity: 0;
+    }
+    65% {
+        opacity: 0;
+    }
+    65.1% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    75.1% {
+        opacity: 0;
+    }
+    77% {
+        opacity: 0;
+    }
+    77.1% {
+        opacity: 1;
+    }
+    85% {
+        opacity: 1;
+    }
+    85.1% {
+        opacity: 0;
+    }
+    86% {
+        opacity: 0;
+    }
+    86.1% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.tower {
+    position: absolute;
+    padding-top: 1094px;
+    padding-left: 167px;
+}
+
+
+.bus1 {
+    position: absolute;
+    padding-top: 1200px;
+    left: -700px;
+    animation: slideleft 7s linear infinite alternate-reverse;
+}
+
+.bus2 {
+    position: absolute;
+    padding-top: 1480px;
+    left: -400px;
+    animation: slideleft 7s linear infinite alternate-reverse;
+    animation-delay: 3s;
+}
+
+.bus3 {
+    position: absolute;
+    padding-top: 1650px;
+    left: 900px;
+    animation: slideright 7s linear infinite alternate-reverse;
+    animation-delay: 6s;
+}
+
+
+
+
+
+
+a:hover {}
+
+.container {
+    width: 800px;
+    margin: 50px auto;
+}
+
+
+
+
+
+/*----------------------------------------------------------------------*
+
+	Miscellaneous
+
+*----------------------------------------------------------------------*/
+
+/* Forces a box filled with floated elements to wrap around child elements */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

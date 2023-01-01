@@ -1,0 +1,299 @@
+
+/* General Styles */
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+img[src$='.svg'] {
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+.background {
+    background-color: #fe4e00;
+    display: flex;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-wrapper {
+    padding-top: 35vh;
+    position: relative;
+    flex: 1;
+    
+/*    filter: contrast(10);*/
+}
+
+.image-wrapper::before {
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 60vh;
+    background-color: #fe4e00;
+    z-index: 2;
+    position: absolute;
+    animation: beforeMove 5s ease infinite alternate;
+    filter: blur(3px);
+    
+}
+
+@keyframes beforeMove {
+    0% {
+        top: -10%;    
+    }
+    
+    100% {
+        top: -65%;    
+    }
+}
+
+.gun{
+    max-height: 60vh;
+    z-index: 4;
+    position: relative;
+}
+
+.smoke{
+    left: 33%;
+    bottom: 63%;
+    height: 38%;
+    width: auto;
+    position: absolute;
+    z-index: -1;
+    filter: blur(0px);
+}
+
+#eyeeye polygon {
+    transition: transform .3s ease;
+    transform-origin: 50% 65%;
+}
+
+#eyeeye:hover polygon:nth-child(2) {
+    transform: rotateX(45deg);
+}
+
+.eye{
+    left: 29%;
+    bottom: 37%;
+    height: 9%;
+    position: absolute;
+    z-index: 5;
+}
+
+
+
+.trigger{
+    left: 45%;
+    bottom: 18%;
+    height: 5%;
+    z-index: 5;
+    position: absolute;
+    transform: rotate(-10deg);
+ 
+}
+
+
+
+.trigger:hover{
+    animation: pull 1s ease alternate infinite;
+    animation-delay: -.5s;
+    
+}
+
+
+@keyframes pull{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(40deg);
+    }
+}
+
+
+
+
+.hammer{
+    left: 32%;
+    bottom: 9%;
+    height: 8%;
+    position: absolute;
+    z-index: 5;
+}
+
+.hammer {
+    animation: toggle 3s ease alternate infinite;
+    animation-delay: -.10s;
+    transform-origin: 70% 35%;
+}
+
+
+@keyframes toggle{
+    from {
+        transform: rotate(-50deg);
+    }
+    to {
+        transform: rotate(50deg);
+    }
+}
+
+    
+    
+
+.all-content {
+    width: 557px;
+}
+
+
+
+.container{
+    width: 800px;
+    margin: auto;
+        
+}
+
+.text{
+    
+    animation: slidein 5s;
+    animation-fill-mode: forwards;
+    
+    
+}
+
+@keyframes slidein {
+    0% {
+        transform: translateX(-100vw);
+    }
+    25% {
+        transform: translateX(0vw)
+    }
+    
+     75% {
+        transform: translateX(100vw)
+    }
+    
+    100% {
+        transform: translateX(5vw)
+    }
+
+}
+
+
+
+
+h1 {
+	font-weight: bold;
+    font-family: helvetica;
+    letter-spacing: 1px;
+    color: black;
+    font-size: 20px;
+    margin-top: -40px;
+    
+}
+
+h2{
+    font-weight: bold;
+    font-family: helvetica;
+    line-height: 50%;
+    letter-spacing: 1px;
+    color: #FFE7BE;
+    font-size: 70px;
+    margin-top: 17px;
+    margin-bottom: 40px;
+    
+}
+
+
+
+h3{
+    font-weight: 700;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color:black;
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 0px;
+    
+    
+}
+
+
+
+p{
+    font-weight: 400;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color:black;
+    font-size: 12px;
+    padding-bottom: 300px;
+    padding-right: 175px;
+    text-align: left;
+    line-height: 130%;
+    
+}
+
+
+a {
+	color: white;
+    text-decoration: none;
+}
+
+a:hover {
+	color: transparent;
+}
+
+
+
+
+
+
+
+
+/* Site-Specific Styles */
+
+
+
+.main {
+	background: #f4f4f4;
+	padding: 20px;
+    margin-left: 220px;
+}
+
+.thumbnail {
+	width: 153px;
+	height: 113px;
+	padding: 10px;
+	margin: 10px 10px;
+	background: #444;
+	color: #777;
+    float: left;
+    
+}
+
+
+.clear {
+	clear: both;
+}
+
+
+
+
+/* Clearfix */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; 
+    display: table; 
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}

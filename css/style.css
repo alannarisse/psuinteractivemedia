@@ -261,6 +261,9 @@ aside {
   grid-row-gap: 40px;
   list-style-type: none !important;
 }
+.portfolio-cards {
+  margin-bottom: 50px;
+}
 /* START of Mobile Menu */
 .nav,
 .desktop {
@@ -335,9 +338,9 @@ nav {
   height: 100vh;
   width: 100%;
   z-index: 999;
-  padding-top: 150px;
+  padding-top: 100px;
   font-family: 'Helvetica', sans-serif;
-  text-align: center;
+  text-align: left;
 }
 
 .menu-mobile,
@@ -346,12 +349,16 @@ nav {
   flex-direction: column;
   justify-content: space-evenly;
 }
+
 .menu-mobile a {
   clear: right;
   text-decoration: none;
   color: #333;
   height: 70px;
   line-height: 70px;
+  font-size: 45px;
+  font-weight: bold;
+  font-family: input mono, monospace;
 }
 .menu-mobile a:hover {
   color: red;
@@ -385,6 +392,9 @@ nav {
     background-repeat: no-repeat;
     background-position: 50% 40%;
     height: 380px;
+  }
+  header.short {
+    height: 120px;
   }
   /* START of desktop menu for 768 media query */
   .menu-desktop {
@@ -483,8 +493,9 @@ nav {
 nav ul {
   list-style-type: none;
   display: flex;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
+  padding-left: 100px;
 }
 nav li {
   margin-bottom: 20px;

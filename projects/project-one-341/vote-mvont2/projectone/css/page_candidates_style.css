@@ -1,0 +1,532 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+
+@font-face{
+    font-family: Futura Std;
+    src: url("../assets/FuturaStd-Medium.otf") format("opentype");
+}
+
+video {
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block
+}
+
+body {
+    line-height: 1
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+blockquote,
+q {
+    quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+
+
+/* Better box model */
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: sticky;
+    top: -1px;
+    overflow:hidden;
+
+}
+
+
+
+
+/*
+.outernav {
+    padding: 48px 56px;
+}
+*/
+
+.outernav {
+    font-family: Futura Std;
+    letter-spacing: 2px;
+    font-size: 12px;
+    position: fixed;
+    z-index: 999;
+
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    pointer-events: none;
+    text-transform: uppercase;
+}
+
+.outernav * {
+    pointer-events: auto;
+}
+
+
+.outernav__top {
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.outernav a {
+    color: #1e1e1e;
+}
+
+.outernav * {
+    pointer-events: auto;
+}
+
+a {
+    background: transparent;
+}
+
+
+a,
+a:focus,
+a:hover {
+    text-decoration: none;
+}
+
+a {
+    color: #1e1e1e;
+    cursor: pointer;
+}
+
+a {
+    background: transparent;
+}
+
+.outernav__tl {
+    max-width: 240px;
+    top: 0;
+    left: 0;
+}
+
+.outernav_tr {
+    display: flex;
+}
+
+
+@media (min-width: 768px) .outernav__tr {
+    display: flex;
+}
+
+.outernav__tr {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    display: none;
+}
+
+.outernav * {
+    pointer-events: auto;
+}
+
+.outernav__chapter {
+    list-style: none;
+    padding-left: 0;
+    display: inline-flex;
+}
+
+.outernav__chapter-item {
+    padding-left: 2vw;
+}
+
+.outernav * {
+    pointer-events: auto;
+      color:azure;
+    margin-right: auto;
+}
+
+*,
+:after,
+:before {
+    box-sizing: inherit;
+    position: relative;
+}
+
+.outernav a {
+    color:whitesmoke;
+}
+
+.outernav__chapter-item a {
+    display: inline-flex;
+    align-items: center;
+}
+
+.outernav__chapter-item span {
+
+    font-size: calc(18px + 14 * ((100vw - 768px) / 432));
+    display: flex;
+    align-items: center;
+}
+
+.djQPgt {
+    font-family: Futura Std;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 6vmin;
+    color: transparent;
+    -webkit-text-stroke: 0.02em rgb(250, 250, 250);
+}
+
+.djQPgt::before {
+    position: absolute;
+    display: inline;
+    white-space: nowrap;
+    top: 0px;
+    left: 0px;
+    content: attr(data-fill);
+    width: 0px;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.7s cubic-bezier(0.19, 1, 0.4, 1) 0s;
+    background: text rgb(250, 250, 250);
+    -webkit-text-stroke: 0px;
+}
+
+.outernav__chapter-item p {
+    text-align: left;
+    font-size: .75em;
+    padding-left: .55em;
+    margin: 0;
+    font-weight: 100;
+    color: #1e1e1e;
+    -webkit-text-stroke: 0;
+    line-height: 1.5;
+}
+
+.image {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+
+.splashhome {
+    color:azure;
+    font-family: Futura Std;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: left;
+    padding-left: 40px;
+    padding-bottom: 10px;
+}
+.splash-two {
+    font-family: Futura Std;
+    text-transform: uppercase;
+    font-size: 48px;
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke: 0.02em rgb(250, 250, 250);  
+    padding-right: 450px;
+    padding-left: 450px;
+}
+
+.header {
+    color:azure;
+    font-family: Futura Std;
+    font-size: 48px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.headerd {
+    color:dimgray;
+    font-family: Futura Std;
+    font-size: 48px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.smallheadd {
+    color:dimgray;
+    font-family: Futura Std;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+.smallhead {
+    color:azure;
+    font-family: Futura Std;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+.paragraph {
+    font-family: Futura Std;
+    color: azure;
+    text-align: center;
+    font-size: 20px;
+    line-height:normal; 
+    padding-right: 450px;
+    padding-left: 450px;
+}
+
+.paragraphd {
+    font-family: Futura Std;
+    color: dimgray;
+    text-align: center;
+    line-height:normal; 
+    padding-right: 450px;
+    padding-left: 450px;
+}
+
+.smallparagraph {
+    font-family: Futura Std;
+    color: azure;
+    text-align: center;
+    line-height:normal; 
+    padding-right: 450px;
+    padding-left: 450px;
+    font-size: 17px;
+}
+
+.smallparagraphd {
+    font-family: Futura Std;
+    color: dimgray;
+    text-align: center;
+    line-height:normal; 
+    padding-right: 450px;
+    padding-left: 450px;
+    font-size: 17px;
+}
+
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.left {
+    
+}
+
+
+
+
+ 
+
+.button {
+    font-family: Futura Std;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: transparent;
+    -webkit-text-stroke: 0.005em rgb(250, 250, 250);        
+
+}
+
+
+
+
+section:nth-child(1) {
+/*    this is the sticky nav?*/
+}
+
+section:nth-child(2) {
+    background: url(../img/inspect1.jpg);
+/*   background-position: center;*/
+   background-size: cover;
+   background-repeat: no-repeat;
+    
+}
+
+section:nth-child(3) {
+    background-color:darksalmon;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section:nth-child(4) {
+    background-color:#333;
+}
+
+/*
+section:nth-child(5) {
+
+   background-color: coral;
+
+}
+*/
+
+
+
+.quote {
+    font-family: Futura Std;
+    font-size: 40px;
+    text-align: center;
+    line-height:normal; 
+    padding-right: 450px;
+    padding-left: 450px;
+    color:azure;
+    
+}
+
+
+ 
+/*
+ .mickyvid {
+    
+    object-fit:cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+     
+}
+*/
+
+
+ 
+
+
+
+/*
+    color:azure;
+    font-family: sans-serif;
+    font-size: 48px;
+    padding-bottom: 20px;
+    
+}
+*/
