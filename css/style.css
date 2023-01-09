@@ -264,6 +264,22 @@ aside {
 .portfolio-cards {
   margin-bottom: 50px;
 }
+.glossary {
+  display: flex;
+}
+.glossary article {
+  flex: 65%;
+  padding-right: 40px;
+}
+.glossary article li {
+  padding-bottom: 14px;
+}
+.glossary article ul {
+  padding-top: 40px;
+}
+.glossary aside {
+  flex: 35%;
+}
 /* START of Mobile Menu */
 .nav,
 .desktop {

@@ -3,9 +3,10 @@ function topNavList() {
     `<li><a href="/index.html">Home</a></li>
         <li><a href="/videos/index.html">Videos</a></li>
         <li><a href="/resources.html">Resources</a></li>
+        <li><a href="/shortcuts.html">Shortcuts</a></li>
         <li><a href="/terms/current/index.html">Student Links</a></li>
         <li><a href="/inspiring.html">Inspiration</a></li>
-        <li><a href="/inspiration-4-projects.html">Projects</a></li>
+        <li><a href="/projects">Projects</a></li>
         `
   )
 }
