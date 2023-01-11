@@ -29,8 +29,6 @@ function footerNavList() {
     `<li><a href="mailto:arisse@pdx.edu">email alanna</a></li>
       <li><a href="/portfolios.html">Portfolio Inspiration</a></li>
       <li><a href="/glossary.html">Glossary</a></li>
-
-      <li><a href="https://designportland.org/directory" target="_blank">Design PDX Directory</a></li>
       <li><a href="https://www.pdx.edu/registration/academic-calendar">PSU calendar</a></li>
     <li>&copy; Alanna Risse 2022</li>`
   )
