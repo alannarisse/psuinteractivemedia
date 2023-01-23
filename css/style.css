@@ -227,7 +227,18 @@ aside {
   background-color: #cdedf6; /* rgb(205, 237, 246) */
   padding: 10px;
 }
-
+div.home-card img {
+  width: 50%;
+}
+div.home-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+  font-weight: bold;
+  border: 1px dotted #666;
+  padding: 20px;
+  margin-bottom: 40px;
+}
 .home article ul {
   list-style-type: square;
   margin-left: 20px;
@@ -350,7 +361,7 @@ nav {
 }
 
 .menu-mobile {
-  background-color: #efefef;
+  background-color: #f5ca3a;
   height: 100vh;
   width: 100%;
   z-index: 999;
