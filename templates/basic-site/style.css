@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+img {
+  width: 100%;
+}
+header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 400px;
+  background-image: url('images/peach-bg.jpg');
+  background-size: cover;
+}
+header h1 {
+  margin: 0;
+  padding: 40px;
+  color: lightgreen;
+}
+.home-page h2 {
+  width: 80%;
+  margin: 80px auto 20px auto;
+}
+nav {
+  position: fixed;
+  width: 100vw;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  text-align: center;
+  width: 100%;
+  background-color: rgba(237, 175, 186, 0.6);
+  padding: 16px;
+}
+nav a {
+  color: rgb(126, 78, 87);
+}
+nav li:hover {
+  background-color: rgba(185, 237, 175, 0.6);
+}
+.parent {
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+.parent div {
+  flex: 1;
+}
+.parent .right {
+  padding-left: 40px;
+}
+.parent .left {
+  padding-right: 40px;
+}
+.two-col-content {
+  display: flex;
+}
+.two-col-content div {
+  flex: 1;
+}
+.two-col-content img {
+  padding: 10px;
+}
+footer {
+  background: #333;
+  padding: 90px 0;
+}
+footer div {
+  width: 80%;
+  margin: auto;
+  color: white;
+}
+/* background image on header homepag
+Photo by <a href="https://unsplash.com/@nisoncoprseo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">NisonCo PR and SEO</a> on <a href="https://unsplash.com/s/photos/peach?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+   */
