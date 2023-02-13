@@ -32,10 +32,13 @@
     },
     {
       "path": "../code-demos"
+    },
+    {
+      "path": "../../Desktop/DES341-WI23/alannarisse.github.io"
     }
   ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "psuinteractivemedia",
+    "liveServer.settings.multiRootWorkspaceName": "students",
     "liveServer.settings.port": 5501
   }
 }

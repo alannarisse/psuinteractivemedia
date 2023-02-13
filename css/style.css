@@ -272,6 +272,11 @@ div.home-card {
   grid-row-gap: 40px;
   list-style-type: none !important;
 }
+.cards a:hover img {
+  -webkit-box-shadow: 10px 10px 11px -10px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: 10px 10px 11px -10px rgba(0, 0, 0, 0.65);
+  box-shadow: 10px 10px 11px -10px rgba(0, 0, 0, 0.65);
+}
 .portfolio-cards {
   margin-bottom: 50px;
 }
