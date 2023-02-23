@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Round Navigation</title>
+  <style>
+    
+
+.container {
+  height: 700px;
+  width:700px;
+  margin:auto;
+  background-image: url('images/twister.png');
+  background-size:100%;
+  background-repeat:no-repeat;
+  overflow:visible;
+}
+
+.menu-1,
+.menu-2,
+.menu-3,
+.menu-4 {
+  position: absolute;
+  z-index: 99;
+}
+
+.menu-1 {
+  width:300px;
+  height:300px;
+  top: 0px;
+  left: 400px;
+}
+
+.menu-2 {
+  width:400px;
+  height:300px;
+  top: 0px;
+  right: 300px;
+}
+
+.menu-3 {
+  width:330px;
+  height:400px;
+  bottom: 50px;
+  left: 380px;
+}
+
+.menu-4 {
+  width:300px;
+  height:400px;
+  bottom: 50px;
+  right: 400px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50px;
+  left: 695px;
+  height: 300px;
+  transform-origin:bottom;
+
+
+  -webkit-transition: all 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -moz-transition: all 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -o-transition: all 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: all 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+  <a href="#" class="menu-1 animation-trigger">
+    <img src="http://placehold.it/140x35&text=1" >
+  </a>
+
+  <a href="#" class="menu-2 animation-trigger">
+    <img src="http://placehold.it/140x35&text=2">
+  </a>
+
+  <a href="#" class="menu-3 animation-trigger">
+    <img src="http://placehold.it/140x35&text=3" >
+  </a>
+
+  <a href="#" class="menu-4 animation-trigger">
+    <img src="http://placehold.it/140x35&text=4" >
+  </a>
+
+  <img src="images/spinner-arrow.png" class="arrow">
+</div>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script><script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script>
+  $(function () {
+  var img = $('.arrow');
+
+  if (img.length > 0) {
+    var offset = img.offset();
+
+    $('.animation-trigger').mouseenter(function (event) {
+      var element = $(this);
+      var elementPosition = element.offset();
+      var elementX = elementPosition.left + (element.width() / 2);
+      var elementY = elementPosition.top + (element.height() / 2);
+      var imgX = offset.left + (img.width() / 2);
+      var imgY = offset.top + (img.height() / 2);
+      var radians = Math.atan2(elementX - imgX, elementY - imgY);
+      var degrees = (radians * (180 / Math.PI) * -1) + 180;
+      if(degrees <= 100){
+        degrees = degrees-35
+      } else {
+        degrees = degrees+10
+      }
+
+      img.css('-moz-transform', 'rotate(' + degrees + 'deg)')
+        .css('-webkit-transform', 'rotate(' + degrees + 'deg)')
+        .css('-o-transform', 'rotate(' + degrees + 'deg)')
+        .css('-ms-transform', 'rotate(' + degrees + 'deg)');
+        //alert(degrees)
+    });
+  }
+});
+
+</script>
+</body>
+</html>

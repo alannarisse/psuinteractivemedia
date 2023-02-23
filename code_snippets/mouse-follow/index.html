@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQuery mouse follow</title>
+  <style>
+
+    .follower {
+      position:absolute;
+      display:inline-block;
+      top:50%;
+      left:50%;
+      transform: translateY(-50%) translateX(-50%)
+    }
+    .follower img {
+    width:200px;
+    }
+    .container {
+      position:relative;
+      width:100vw;
+      height:100vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+<div class="follower"><img src="ghost.png"></div>
+</div>
+  
+
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script src="mousefollower.js"></script>
+<script>
+$(function(){
+	 $('.container').mousefollower();
+});
+</script>
+  
+</body>
+</html>

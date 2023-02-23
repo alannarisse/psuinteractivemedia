@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Round Navigation</title>
+  <style>
+    
+
+.container {
+  min-height: 500px;
+}
+
+.menu-1,
+.menu-2,
+.menu-3,
+.menu-4 {
+  position: absolute;
+  z-index: 99;
+}
+
+.menu-1 {
+  top: 20%;
+  left: 20%;
+}
+
+.menu-2 {
+  top: 20%;
+  right: 20%;
+}
+
+.menu-3 {
+  bottom: 20%;
+  left: 20%;
+}
+
+.menu-4 {
+  bottom: 20%;
+  right: 20%;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -100px;
+  height: 200px;
+  width: 200px;
+
+  -webkit-transition: all 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -moz-transition: all 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -o-transition: all 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: all 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+  <a href="#" class="menu-1">
+    <img src="http://placehold.it/140x35&text=4" class="animation-trigger">
+  </a>
+
+  <a href="#" class="menu-2">
+    <img src="http://placehold.it/140x35&text=1" class="animation-trigger">
+  </a>
+
+  <a href="#" class="menu-3">
+    <img src="http://placehold.it/140x35&text=3" class="animation-trigger">
+  </a>
+
+  <a href="#" class="menu-4">
+    <img src="http://placehold.it/140x35&text=2" class="animation-trigger">
+  </a>
+
+  <img src="images/arrow.png" class="arrow">
+</div>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script><script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script>
+  $(function () {
+  var img = $('.arrow');
+
+  if (img.length > 0) {
+    var offset = img.offset();
+
+    $('.animation-trigger').mouseenter(function (event) {
+      var element = $(this);
+      var elementPosition = element.offset();
+      var elementX = elementPosition.left + (element.width() / 2);
+      var elementY = elementPosition.top + (element.height() / 2);
+      var imgX = offset.left + (img.width() / 2);
+      var imgY = offset.top + (img.height() / 2);
+      var radians = Math.atan2(elementX - imgX, elementY - imgY);
+      var degrees = (radians * (180 / Math.PI) * -1) + 90;
+
+
+      img.css('-moz-transform', 'rotate(' + degrees + 'deg)')
+        .css('-webkit-transform', 'rotate(' + degrees + 'deg)')
+        .css('-o-transform', 'rotate(' + degrees + 'deg)')
+        .css('-ms-transform', 'rotate(' + degrees + 'deg)');
+    });
+  }
+});
+
+</script>
+</body>
+</html>
