@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+    <style>
+#menu-box {
+	background: #333;
+	color: #fff;
+	width: 500px;
+	height: 100%;
+	padding: 40px;
+	text-align: center;
+  transition:1s;
+  opacity:1;
+  margin-top:-6px;
+}
+#menu-box.hide {
+  opacity:0;
+  height: 0;
+  padding:0;
+}
+
+  </style>
+</head>
+<body>
+		<a href="#" id="menuSlide"><img src="http://placekitten.com/500/200"></a>
+
+    <div id="menu-box" class="hide">
+			<h1>Menu</h1>
+      <p>A whole bunch of content</p>
+		</div>
+  
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function(){
+
+  $('#menuSlide').click(function(){
+    $('#menu-box').toggleClass('hide')
+		});
+  });
+</script>
+</body>
+</html>
