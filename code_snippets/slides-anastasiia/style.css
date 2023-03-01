@@ -1,0 +1,60 @@
+
+
+.slider {
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid blue;
+}
+.slide-content {
+  position: relative;
+}
+
+.slide-content .cta {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+
+  width: 260px;
+  height: 180px;
+}
+.slide-content .cta.donate {
+  background-color: teal;
+}
+.slide-content .cta.volunteer {
+  background-color: pink;
+}
+
+.slide-content img {
+  width: 100%;
+}
+
+
+.my-slick {
+  width:100%;
+  margin:auto;
+}
+.slick-initialized .slick-slide {
+  display:flex;
+}
+.flex-me .left, .flex-me .right{flex:1;}
+.flex-me .right {
+  background:#ddd;
+}
+.my-slide img {
+  width: 100%;
+}
+
+.my-slide img {
+  width: 100%;
+}
+.my-slide {
+  margin: 0 0;
+}
+
+/* for Sam G only */
+.slick-slide {
+  margin: 8px;
+  width: 220px;
+}

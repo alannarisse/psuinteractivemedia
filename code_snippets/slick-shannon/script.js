@@ -4,11 +4,12 @@ $(function () {
 
   // code for single slider carousel
   $('.single-slide').slick({
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
+    centerMode: true,
     arrows: true,
-    autoplaySpeed: 3500,
+    autoplaySpeed: 1500,
     infinite: true,
     dots: true,
     draggable: false
