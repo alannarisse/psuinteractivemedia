@@ -3,18 +3,7 @@ $(function() {
 // Your Code from here on down. Don't delete that line above!
 
 
-$('.multiple-items').slick({
-  infinite: true,
-  slidesToShow: 6,
-  slidesToScroll: 2
-});
 
-$('.autoplay').slick({
-  slidesToShow: 6,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 3500,
-});
 
 // code for single slider carousel
 $('.single-slide').slick({
@@ -30,10 +19,11 @@ $('.single-slide').slick({
 
 
 $('.my-slick').slick({
-  dots: false,
+  dots: true,
   infinite: true,
   speed: 300,
-  slidesToShow: 4,
+  arrows: true,
+  slidesToShow: 5,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2500,
