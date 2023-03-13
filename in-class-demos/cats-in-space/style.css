@@ -1,0 +1,484 @@
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+#scene .cls-1 {
+  fill: #fff;
+}
+
+#scene .cls-2 {
+  fill: #262e36;
+}
+
+#scene .cls-3 {
+  fill: #96babe;
+}
+
+#scene .cls-4 {
+  fill: #79797e;
+}
+
+#scene .cls-5 {
+  fill: #44464b;
+}
+
+#scene .cls-6 {
+  fill: #4d727a;
+}
+
+#scene .cls-7 {
+  fill: #c1bfc2;
+}
+
+#scene .cls-8 {
+  fill: #f26344;
+}
+
+#scene .cls-9 {
+  fill: #7d9ca1;
+}
+
+#scene .cls-10 {
+  fill: #c8c7c9;
+}
+
+#scene .cls-11 {
+  fill: #404854;
+}
+
+#scene .cls-12 {
+  fill: #d1dee0;
+}
+.cls-1 {
+  fill: #fff;
+}
+
+.cls-2 {
+  fill: #262e36;
+}
+
+.cls-3 {
+  fill: #96babe;
+}
+
+.cls-4 {
+  fill: #79797e;
+}
+
+.cls-5 {
+  fill: #44464b;
+}
+
+.cls-6 {
+  fill: #4d727a;
+}
+
+.cls-7 {
+  fill: #c1bfc2;
+}
+
+.cls-8 {
+  fill: #f26344;
+}
+
+.cls-9 {
+  fill: #7d9ca1;
+}
+
+.cls-10 {
+  fill: #c8c7c9;
+}
+
+.cls-11 {
+  fill: #404854;
+}
+
+.cls-12 {
+  fill: #d1dee0;
+}
+
+.rocket {
+  position: absolute;
+  width: 120px;
+  bottom: 60px;
+  left: 450px;
+  transform: rotate(-22deg);
+}
+.rocket #flames {
+  opacity: 0.5;
+  transform: translateY(-100px) translateX(40px);
+  z-index: -1;
+  animation-name: flame;
+  animation-delay: 5s;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+}
+@keyframes flame {
+  0% {
+    transform: translateY(-100px) translateX(40px);
+    opacity: 1;
+  }
+  5% {
+    transform: translateY(-100px) translateX(40px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(-80px) translateX(30px);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(-40px) translateX(20px);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(-40px) translateX(10px);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0;
+  }
+  40% {
+    transform: translateY(-20px) translateX(5px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-20px) translateX(5px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-10px) translateX(0px);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 1;
+  }
+  95% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 1;
+  }
+}
+
+.rocket {
+  animation-name: rocket;
+  animation-delay: 11s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+@keyframes rocket {
+  0% {
+  }
+  80% {
+    transform: translateY(-90vh) translateX(10vw);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+.rocket .cls-1 {
+  fill: #eee8dc;
+  z-index: 1;
+}
+
+.rocket .cls-2 {
+  fill: #d83f41;
+  z-index: 1;
+}
+
+.rocket .cls-3 {
+  fill: #22bdb7;
+  z-index: 1;
+}
+
+.rocket .cls-4 {
+  fill: #fff;
+  z-index: 1;
+}
+
+.rocket .cls-5 {
+  fill: #473a31;
+  z-index: 1;
+}
+
+.rocket .cls-6 {
+  fill: #fdb813;
+  z-index: -1;
+}
+
+[data-name="little-star"] {
+  animation-name: blink;
+  animation-iteration-count: infinite;
+}
+[data-name="little-star"]:nth-child(even) {
+  animation-duration: 2s;
+}
+[data-name="little-star"]:nth-child(odd) {
+  animation-duration: 3s;
+  animation-delay: 750ms;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#blink {
+  animation-name: blink;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#background {
+  z-index: -3;
+}
+#floor,
+#mountains {
+  z-index: 1;
+  position: absolute;
+}
+/* start shooting star */
+#shooting-star {
+  animation-name: shooting-star;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+  transform-origin: 80% 90%;
+  animation-delay: 4s;
+  z-index: -2;
+  transform: translateX(100vw);
+}
+@keyframes shooting-star {
+  0% {
+    transform: rotate(359deg) translateX(10vw);
+  }
+  100% {
+    transform: rotate(200deg) translateX(-2600px);
+  }
+}
+/* end shooting star */
+
+/* start space ship */
+#spaceship {
+  animation-name: lift-off;
+  animation-duration: 12s;
+  animation-delay: 8s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  transform: translate(0px, 0px);
+  animation-timing-function: linear;
+}
+
+#shadow {
+  animation-name: shadow-lift-off;
+  animation-duration: 12s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  transform: translate(0px, 0px);
+  animation-timing-function: linear;
+}
+@keyframes lift-off {
+  0% {
+    transform: translate(0px, -300px);
+  }
+  20% {
+    transform: translate(100px, -900px);
+  }
+  40% {
+    transform: translate(-200px, -200px);
+  }
+  60% {
+    transform: translate(-400px, -800px);
+  }
+  80% {
+    transform: translate(-800px, -800px);
+  }
+  90% {
+    transform: translate(-2300px, -800px);
+  }
+  100% {
+    transform: translate(2300px, -200px);
+  }
+}
+@keyframes shadow-lift-off {
+  0% {
+    transform: translatey(0px, 100px);
+  }
+  20% {
+    transform: translate(100px, 100px);
+  }
+  40% {
+    transform: translate(-200px, 200px);
+  }
+  60% {
+    transform: translate(-400px, 400px);
+  }
+  80% {
+    transform: translate(-800px, 600px);
+  }
+  90% {
+    transform: translate(-2300px, 200px);
+  }
+  100% {
+    transform: translate(2300px, 200px);
+  }
+}
+/* start cats */
+#left-cat-left-leg {
+  transform: rotate(0deg);
+  transform-origin: 50% 80%;
+  animation-name: move-left-legs;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+#right-cat-left-leg {
+  transform: rotate(0deg);
+  transform-origin: 50% 80%;
+  animation-name: move-left-legs;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+#left-cat-right-leg {
+  transform: rotate(0deg);
+  transform-origin: 50% 80%;
+  animation-name: move-right-legs;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+#left-cat-left-arm-2 {
+  transform: rotate(0deg);
+  transform-origin: 50% 80%;
+  animation-name: move-right-legs;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+#right-cat-right-leg {
+  transform: rotate(0deg);
+  transform-origin: 50% 80%;
+  animation-name: move-right-legs;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+#left-cat-tail {
+  transform: rotate(0deg);
+  transform-origin: 50% 80%;
+  animation-name: move-right-legs;
+  animation-delay: 0.75s;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+#right-cat-tail {
+  transform: rotate(0deg);
+  transform-origin: 50% 80%;
+  animation-name: move-right-legs;
+  animation-delay: 1.5s;
+  animation-duration: 2.2s;
+  animation-iteration-count: infinite;
+}
+#right-cat-left-arm {
+  transform: rotate(0deg);
+  transform-origin: 50% 80%;
+  animation-name: move-right-legs;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes move-left-legs {
+  0% {
+    transform: rotate(0deg) translateX(60px);
+  }
+  50% {
+    transform: rotate(5deg) translateX(40px);
+  }
+  100% {
+    transform: rotate(-5deg) translateX(60px);
+  }
+}
+@keyframes move-right-legs {
+  0% {
+    transform: rotate(0deg) translateX(-5px);
+  }
+  50% {
+    transform: rotate(5deg) translateX(-10px);
+  }
+  100% {
+    transform: rotate(-5deg) translateX(-5px);
+  }
+}
+#two-cats {
+  animation-name: move-cats;
+  animation-duration: 26s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: 1;
+  transform: translateX(100vw);
+}
+@keyframes move-cats {
+  0% {
+    transform: translateX(100vw);
+    opacity: 1;
+  }
+  48% {
+    transform: translateX(-130vw);
+    opacity: 1;
+  }
+  49% {
+    transform: translateX(-140vw);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+}
+#cat-scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

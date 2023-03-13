@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+}
+.parent {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  border: 12px solid purple;
+  margin: auto auto;
+  width: 80%;
+
+  /* justify-items: center; */
+}
+.two {
+  background-color: rgb(240, 214, 214);
+}
+.child {
+  text-align: center;
+  border: 2px solid red;
+  flex: 1;
+}
+.juni {
+  height: 100px;
+}
+h1 {
+  display: inline-block;
+  border: 2px solid red;
+}
+p {
+  margin-bottom: 80px;
+}

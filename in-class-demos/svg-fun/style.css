@@ -1,0 +1,72 @@
+svg * {
+  transform-box: fill-box;
+}
+
+#circle {
+  fill: rgb(9, 132, 141);
+  animation-name: move-right;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes move-right {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(691px);
+  }
+}
+
+#square {
+  fill: rgb(244, 97, 5);
+  animation-name: move-left;
+  animation-duration: 3s;
+  animation-fill-mode: fowards;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes move-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-791px);
+  }
+}
+#letter-v {
+  fill: cornflowerblue;
+}
+
+#svg-fun path {
+  fill: rgb(170, 6, 121);
+}
+#svg-fun path:hover {
+  fill: rgb(6, 170, 93);
+}
+
+#svg-fun #letter-e2-2 {
+  transition: 500ms;
+  fill: cornflowerblue;
+}
+#svg-fun #letter-e2-2:hover {
+  fill: rgb(244, 136, 5);
+}
+
+#letter-s2,
+#letter-g,
+#letter-v {
+  transition: 500ms;
+}
+#letter-s2:hover,
+#letter-g:hover,
+#letter-v:hover {
+  transform-origin: center center;
+  transform: rotateY(15deg);
+}
