@@ -37,10 +37,13 @@
       "path": "../kittensarecute"
     },
     {
-      "path": "../alannarisse.com-static"
+      "path": "../alannarisse.github.io/docs"
+    },
+    {
+      "path": "../alannarisse.github.io"
     }
   ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "psuinteractivemedia"
+    "liveServer.settings.multiRootWorkspaceName": "alannarisse.github.io"
   }
 }
