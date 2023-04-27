@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      canvas {
+        background: black;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <script>
+      const canvas = document.getElementById('canvas')
+      const context = canvas.getContext('2d')
+      canvas.width = window.innerWidth
+      canvas.height = window.innerHeight
+      //arc()
+      //arc(x,y,radius,startAngle, endAngle)
+      let x = Math.random() * canvas.width
+      let y = Math.random() * canvas.height
+      
+      const draw = (x, y) => {
+        context.beginPath()
+        context.arc(x + 1, 75, 50, 0, 2 * Math.PI)
+
+        //context.arc(100,75,50,0,2 * Math.PI)
+        context.strokeStyle = 'white'
+        context.stroke()
+      }
+
+      const handeDrawCircle = event => {
+        x = event.x
+        y = event.y
+        const particle = new Particle(x,y);
+        particle.draw(x, y)
+      }
+      const animate = () => {
+        console.log('calling animation')
+        update()
+        context.clearRect(0, 0, canvas.width, canvas.height)
+        draw(x, y)
+        requestAnimationFrame(animate)
+        
+      }
+      const update = () => {
+        x = x + speedX
+        y = y - speedY
+      }
+      class Particle {
+        constructor(x, y) {
+          this.x = x
+          this.y = ythis.radius = Math.rondom() * 50
+          this.color = 'white'
+          thisspeedX = Math.random() * 5
+      this.speedY = Math.random() * 5
+        }
+        draw() {}
+      }
+      animate()
+
+      canvas.addEventListener()
+    </script>
+  </body>
+</html>
