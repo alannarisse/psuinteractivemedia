@@ -1,0 +1,94 @@
+main {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('image/mountain.png');
+  background-size: cover;
+  background-position: bottom center;
+  position: relative;
+}
+
+.home-page .person1 {
+  width: 200px;
+  position: absolute;
+  bottom: 80px;
+  left: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-page .person2 {
+  width: 200px;
+  position: absolute;
+  bottom: 80px;
+  left: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-page .person img {
+  width: 50%;
+}
+.home-page .person img.body {
+  width: 100%;
+}
+.home-page .person1 .head-top {
+  animation-name: talk-top;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+.home-page .person1 .head-bottom {
+  animation-name: talk-top;
+  animation-delay: 250ms;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes talk-top {
+  0% {
+    transform: translateY(5px) rotate(5deg);
+  }
+  35% {
+    transform: translateY(-5px) rotate(-5deg);
+  }
+  40% {
+    transform: translateY(5px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(-5px) rotate(-5deg);
+  }
+}
+/* https://www.w3schools.com/css/css3_animations.asp */
+
+.home-page #text {
+  padding-top: 180px;
+  padding-left: 80px;
+  padding-bottom: 180px;
+  padding-right: 180px;
+  width: 60%;
+  word-wrap: break-word;
+  text-align: left;
+  user-select: none;
+}
+
+#text::after {
+  content: '_';
+  opacity: 0;
+  animation: cursor 0.5s infinite alternate;
+}
+
+@keyframes cursor {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.8;
+  }
+}
+
+/* if you want to have a different cursor color from the text, include this and change the color to what you want */
+.cursor::after {
+  color: black;
+}
