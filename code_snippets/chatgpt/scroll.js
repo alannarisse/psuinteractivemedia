@@ -1,0 +1,1 @@
+// Add class to sections when scrolled toconst sections = document.querySelectorAll('.section');gsap.to(sections, {  scrollTrigger: {    trigger: sections,    start: 'top center',    end: 'bottom center',    toggleClass: 'active',  },});

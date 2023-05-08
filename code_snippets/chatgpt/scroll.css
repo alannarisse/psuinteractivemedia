@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+.section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section h1 {
+  font-size: 48px;
+}
+.section:nth-child(even) {
+  background-color: lightgray;
+}
+.section:nth-child(odd) {
+  background-color: darkgray;
+  color: #fff;
+}
