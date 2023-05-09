@@ -1,0 +1,11 @@
+body {
+  font-family: Sans-Serif;
+}
+
+.js-search-results {
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
