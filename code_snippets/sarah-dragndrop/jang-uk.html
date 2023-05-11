@@ -24,6 +24,7 @@
         width: 80%;
         margin: auto;
         padding: 8px;
+        position: relative;
       }
       .greenbar {
         background: green;
@@ -32,11 +33,19 @@
         border-top-left-radius: 50px;
         border-bottom-left-radius: 50px;
       }
+      #progress-bar-text {
+        position: absolute;
+        top: 8px;
+        left: 45%;
+        margin: 0;
+        padding: 0;
+      }
     </style>
   </head>
   <body>
     <div class="progress">
       <div class="greenbar"></div>
+      <p id="progress-bar-text">Progress Bar</p>
     </div>
     <section class="ju-practice">
       <div class="jang-uk visible">
