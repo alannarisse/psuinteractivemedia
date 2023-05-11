@@ -18,9 +18,26 @@
       img {
         width: 100%;
       }
+      .progress {
+        border: 2px solid black;
+        border-radius: 50px;
+        width: 80%;
+        margin: auto;
+        padding: 8px;
+      }
+      .greenbar {
+        background: green;
+        width: 10%;
+        height: 40px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+      }
     </style>
   </head>
   <body>
+    <div class="progress">
+      <div class="greenbar"></div>
+    </div>
     <section class="ju-practice">
       <div class="jang-uk visible">
         <img src="http://placekitten.com/205/200" alt="" />
@@ -72,10 +89,12 @@
       //disable clicks
 
       let jangNum = 1
-      let curNum = 1
+      let progress = 20
       $('.jang-uk').click(function () {
         if (jangNum <= 8) {
           jangNum++
+          progress = progress + 10
+          $('.greenbar').css('width', `${progress}%`)
           if (jangNum - 1) {
             $(this).addClass('invisible')
             $(this).disableClick(true)
@@ -85,6 +104,7 @@
           $(`.jang-uk:nth-child(${jangNum})`).addClass('visible')
         }
         if (jangNum == 9) {
+          $('.greenbar').css('border-radius', `50px`)
           setTimeout(() => {
             window.location = jangUrl
           }, 2000)
