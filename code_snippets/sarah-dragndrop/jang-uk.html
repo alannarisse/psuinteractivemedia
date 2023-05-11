@@ -28,7 +28,7 @@
       }
       .greenbar {
         background: green;
-        width: 10%;
+        width: 20%;
         height: 40px;
         border-top-left-radius: 50px;
         border-bottom-left-radius: 50px;
@@ -39,6 +39,7 @@
         left: 45%;
         margin: 0;
         padding: 0;
+        transition: width 1000s;
       }
     </style>
   </head>
@@ -103,7 +104,7 @@
         if (jangNum <= 8) {
           jangNum++
           progress = progress + 10
-          $('.greenbar').css('width', `${progress}%`)
+          $('.greenbar').css('width', `${progress}%`).css('transition', '500ms')
           if (jangNum - 1) {
             $(this).addClass('invisible')
             $(this).disableClick(true)
