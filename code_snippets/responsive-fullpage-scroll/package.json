@@ -1,0 +1,28 @@
+{
+  "name": "responsive-fullpage-scroll",
+  "version": "1.0.3",
+  "description": "Full Page Scroll library with responsive capabilities",
+  "license": "MIT",
+  "author": {
+    "name": "Fabian Graßl"
+  },
+  "devDependencies": {
+    "ts-loader": "^5.4.5",
+    "typescript": "^3.4.5",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server"
+  },
+  "dependencies": {
+    "event-target-shim": "^5.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabeat/responsive-fullpage-scroll.git"
+  },
+  "homepage": "https://github.com/fabeat/responsive-fullpage-scroll"
+}

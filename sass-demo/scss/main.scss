@@ -1,0 +1,28 @@
+/* top of Main.css */
+
+h1 {
+  font-size: 80px;
+  font-weight: 700;
+  color: $primary-text;
+}
+
+body.homepage {
+  h1 {
+    font-size: 120px;
+    font-weight: 900;
+    color: $cta-text;
+  }
+  section {
+    border: 1px solid orange;
+    .card {
+      margin: 10px;
+      box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+      a {
+        text-decoration: line-through;
+        .active {
+          color: red;
+        }
+      }
+    }
+  }
+}

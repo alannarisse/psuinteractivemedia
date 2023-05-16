@@ -1,0 +1,26 @@
+h1 {
+  font-size: 60px;
+  font-family: Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: coral;
+}
+a:hover {
+  color: blueviolet;
+}
+
+header p {
+  font-size: 27px;
+}
+header p span.red {
+  color: #ff0000;
+}
+header p span.red em {
+  font-weight: 200;
+}
+
+.content-section p {
+  font-size: 34px;
+}/*# sourceMappingURL=main.css.map */
