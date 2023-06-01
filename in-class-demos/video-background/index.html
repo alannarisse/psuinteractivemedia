@@ -20,5 +20,17 @@
       </div>
       <div>I'm the right column!</div>
     </div>
+    <script>
+      window.document.onload = function (e) {
+        let newElement = document.getElementsByClassName('video-container')
+
+        // newElement.innerHTML += `<ul><li>Item 1</li><li>Item 2</li></ul>`
+        // newElement.className = 'item-list'
+        // document.getElementById('root').append(newElement)
+
+        newElement.innerHTML += `<a href="#" class="playBtn">play sound</a>`
+      }
+      // $(‘video:nth-child(1)’).append(‘<div class=“play”>Play Audio</div>')
+    </script>
   </body>
 </html>
