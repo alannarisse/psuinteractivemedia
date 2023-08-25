@@ -1,0 +1,53 @@
+/* mixins */
+/* top of Main.css */
+h1 {
+  font-size: 80px;
+  font-weight: 700;
+  color: #ff9900;
+}
+
+body.homepage h1 {
+  font-size: 120px;
+  font-weight: 900;
+  color: rgb(34, 174, 25);
+}
+body.homepage section {
+  border: 1px solid orange;
+}
+body.homepage section .card {
+  margin: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+body.homepage section .card a {
+  text-decoration: line-through;
+}
+body.homepage section .card a .active {
+  color: red;
+}
+
+.danger-box {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blue;
+}
+
+.button-basic, .button-submit, .button-cta {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-cta {
+  background-color: rgb(200, 246, 197);
+  color: rgb(34, 174, 25);
+}
+
+.button-submit {
+  background-color: blue;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
