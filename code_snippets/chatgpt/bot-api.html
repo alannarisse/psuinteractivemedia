@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chatbot Example</title>
+    <style>
+      #chat-container {
+        width: 400px;
+        height: 500px;
+        border: 1px solid #ccc;
+        overflow: auto;
+      }
+      #user-input {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="chat-container"></div>
+    <input type="text" id="user-input" placeholder="Type your message..." />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        const chatContainer = $('#chat-container')
+        const userInput = $('#user-input')
+
+        // Helper function to append a message to the chat container
+        function appendMessage(sender, message) {
+          const messageHTML = `<div><strong>${sender}: </strong>${message}</div>`
+          chatContainer.append(messageHTML)
+          chatContainer.scrollTop(chatContainer.prop('scrollHeight'))
+        }
+
+        // Send user input to the chatbot and get a response
+        function sendMessage() {
+          const userInputText = userInput.val().trim()
+
+          if (userInputText !== '') {
+            appendMessage('User', userInputText)
+            userInput.val('')
+
+            // Send the user message to the chatbot API
+            const apiUrl = 'https://api.openai.com/v1/chat/completions'
+            const apiKey = 'your key here'
+            const data = {
+              prompt: 'User: ' + userInputText + '\nAI:',
+              max_tokens: 50
+            }
+
+            $.ajax({
+              url: apiUrl,
+              type: 'POST',
+              beforeSend: function (xhr) {
+                xhr.setRequestHeader('Authorization', 'Bearer ' + apiKey)
+                xhr.setRequestHeader('Content-Type', 'application/json')
+              },
+              data: JSON.stringify(data),
+              success: function (response) {
+                const aiResponse = response.choices[0].text.trim()
+                appendMessage('AI', aiResponse)
+              },
+              error: function () {
+                appendMessage('AI', 'An error occurred while communicating with the chatbot.')
+              }
+            })
+          }
+        }
+
+        // Submit user input when Enter key is pressed
+        userInput.keypress(function (event) {
+          if (event.which === 13) {
+            event.preventDefault()
+            sendMessage()
+          }
+        })
+      })
+    </script>
+  </body>
+</html>
