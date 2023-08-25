@@ -1,3 +1,5 @@
+@import 'variables';
+@import 'mixins';
 /* top of Main.css */
 
 h1 {
@@ -25,4 +27,27 @@ body.homepage {
       }
     }
   }
+}
+.danger-box {
+  @include important-text;
+}
+
+.button-basic {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-cta {
+  @extend .button-basic;
+  background-color: $cta-color;
+  color: $cta-text;
+}
+
+.button-submit {
+  @extend .button-basic;
+  background-color: blue;
+  color: white;
 }
