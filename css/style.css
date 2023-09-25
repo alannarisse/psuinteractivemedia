@@ -235,6 +235,10 @@ aside {
   background-color: #cdedf6; /* rgb(205, 237, 246) */
   padding: 10px;
 }
+.student-work li {margin-bottom:14px;}
+h2.student-work {
+  color:#333;
+}
 div.home-card img {
   width: 50%;
 }
