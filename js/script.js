@@ -12,6 +12,12 @@ function topNavList() {
   )
 }
 
+function glossaryTab() { 
+  $('.glossary-tab').html(`
+  <a href="/glossary.html"><img src="/images/icons/glossary.png"> Glossary</a>
+  `)
+}
+
 function toggleIcon() {
   $('.icon').on('click', function () {
     $('.icon').toggleClass('active')
@@ -37,6 +43,7 @@ function footerNavList() {
 function init() {
   topNavList()
   footerNavList()
+  glossaryTab()
 }
 
 $(init)

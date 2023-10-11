@@ -1,61 +1,87 @@
 {
   "folders": [
     {
+      "name": "psuinteractivemedia",
       "path": "."
     },
     {
+      "name": "students",
       "path": "../students"
     },
     {
+      "name": "deepspacemermaid.github.io",
       "path": "../../Desktop/DES341/deepspacemermaid.github.io"
     },
     {
+      "name": "konacopperfish",
       "path": "../konacopperfish"
     },
     {
+      "name": "shugur",
       "path": "../../Desktop/DES341/shugur"
     },
     {
+      "name": "pasta-emogene",
       "path": "../../Desktop/DES341/pasta-emogene"
     },
     {
+      "name": "funnel-cake",
       "path": "../../Desktop/DES341/funnel-cake"
     },
     {
+      "name": "tsai-fu",
       "path": "../tsai-fu"
     },
     {
+      "name": "saltys",
       "path": "../../Desktop/DES341/saltys"
     },
     {
+      "name": "animated-avatar",
       "path": "../animated-avatar"
     },
     {
+      "name": "breakbread",
       "path": "../breakbread"
     },
     {
+      "name": "kittensarecute",
       "path": "../kittensarecute"
     },
     {
+      "name": "docs",
       "path": "../alannarisse.github.io/docs"
     },
     {
+      "name": "alannarisse.github.io",
       "path": "../alannarisse.github.io"
     },
     {
+      "name": "clock-main",
+      "path": "../../Downloads/clock-main"
+    },
+    {
+      "name": "alannarisse.com-static",
       "path": "../alannarisse.com-static"
     },
     {
+      "name": "des342-sp23",
       "path": "../../Desktop/des342-sp23"
     },
     {
+      "name": "DES341-WI23",
       "path": "../../Desktop/DES341-WI23"
     },
     {
+      "name": "unix-is-cool",
       "path": "../unix-is-cool"
+    },
+    {
+      "name": "clock",
+      "path": "../clock"
     }
   ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "psuinteractivemedia"
+    "liveServer.settings.multiRootWorkspaceName": "clock"
   }
 }
