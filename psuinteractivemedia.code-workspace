@@ -79,6 +79,12 @@
     {
       "name": "clock",
       "path": "../clock"
+    },
+    {
+      "path": "../../Desktop/letters-svg"
+    },
+    {
+      "path": "../pour-bastard"
     }
   ],
   "settings": {

@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Bebas Neue";
+  src:
+    url("trickster-COLRv1.otf") format("opentype");
+} 
+
+.poop {
+  font-family: "Bebas Neue";
+}
+body {
+  font-family: "Roboto"
+}
+
+h1, h2, h3 {
+  font-family: "Bebas Neue";
+}
+.ad {
+  font-family: "Bebas Neue";
+}
