@@ -1,0 +1,17 @@
+
+
+.green-blob {
+  left:10%;
+}
+
+@media screen and (max-width: 768px) {
+
+
+  .hide-mobile {
+    display:none;
+  }
+  .green-blob {
+    left:10px;
+  }
+
+}
