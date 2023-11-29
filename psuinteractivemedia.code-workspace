@@ -88,10 +88,19 @@
     },
     {
       "path": "../leo-code-demo"
+    },
+    {
+      "path": "../chrisolyns"
+    },
+    {
+      "path": "../chrysolins-creations"
+    },
+    {
+      "path": "../thumbnail-image-swap"
     }
   ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "alannarisse.github.io",
+    "liveServer.settings.multiRootWorkspaceName": "students",
     "liveServer.settings.port": 5501
   }
 }
