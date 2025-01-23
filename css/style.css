@@ -305,6 +305,20 @@ width:40px;
   -moz-box-shadow: 10px 10px 11px -10px rgba(0, 0, 0, 0.65);
   box-shadow: 10px 10px 11px -10px rgba(0, 0, 0, 0.65);
 }
+.cards-flow {
+  margin-top:60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 60px;
+  grid-row-gap: 40px;
+  list-style-type: none !important;
+}
+.cards-flow img {
+  width:50%;
+}
+.cards-flow p {
+  font-size:16px;
+}
 .portfolio-cards {
   margin-bottom: 50px;
 }
