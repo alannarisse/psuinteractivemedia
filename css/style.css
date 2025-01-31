@@ -308,17 +308,19 @@ width:40px;
 .cards-flow {
   margin-top:60px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   grid-gap: 60px;
   grid-row-gap: 40px;
   list-style-type: none !important;
 }
 .cards-flow img {
-  width:50%;
+  max-width:50%;
 }
 .cards-flow p {
-  font-size:16px;
+  font-size:14px;
+  line-height:20px;
 }
+
 .portfolio-cards {
   margin-bottom: 50px;
 }
