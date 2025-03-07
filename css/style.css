@@ -223,6 +223,9 @@ footer a {
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
 }
+.back {
+  margin-left:50px;
+}
 .terms li {
   padding-bottom: 16px;
 }
