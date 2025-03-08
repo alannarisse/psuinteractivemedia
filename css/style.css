@@ -534,8 +534,7 @@ nav {
     margin: 60px auto;
   }
 }
-@media only screen and (min-width: 1200px) {
-}
+
 
 /*# sourceMappingURL=style.css.map */
 
@@ -595,4 +594,38 @@ nav li {
 }
 .other3link {
   background-color: rgb(88, 58, 143);
+}
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size:2rem;
+    line-height:2.8rem;
+  }
+  h2 {
+    font-size:1.5rem;
+    line-height:1.8rem;
+  }
+  body {
+    font-size:1rem;
+  }
+  footer {
+    padding:20px;
+  }
+  footer ul {
+    flex-direction:column;
+  }
+  .menu-mobile a {
+    font-size:1.2rem;
+    height:auto;
+    line-height:1.6rem;
+  }
+  .menu-mobile {padding-top:50px;}
+  .grid-2 {
+    grid-template-columns: 1fr;;
+  }
+  .ack {width:90%;
+  margin:auto;}
+  .glossary-tab img {
+    width:24px;
+  }
+  .glossary-tab {font-size:14px;}
 }
