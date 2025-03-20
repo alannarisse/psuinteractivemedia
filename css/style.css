@@ -192,7 +192,13 @@ hr {
 img {
   width: 100%;
 }
-
+ul.bullet {
+  list-style-type:square;
+  margin-left:40px;
+}
+ul.bullet li {
+  margin-bottom:14px;
+}
 td:nth-child(odd) {
   padding-right: 10px;
   white-space: nowrap;
