@@ -104,6 +104,7 @@ h1 {
 .white {
   color: #fff !important;
 }
+.black {color: #000;}
 .subpage h1,
 .subpage h2 {
   color: #333;
@@ -151,6 +152,14 @@ pre {
 nav {
   border-bottom: 12px solid #f5ca3a;
   margin-bottom: 0;
+}
+header nav {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+header nav .logo h4 {
+  color: rgb(239, 123, 69);
+  font-size: 1.4rem;
 }
 nav a {
   color: #d84727;
@@ -354,6 +363,10 @@ width:40px;
   width: 100%;
   z-index: 900;
 }
+header nav {
+  min-height: 0;
+  background: none;
+}
 nav {
   min-height: 80px;
   background: white;
@@ -465,6 +478,10 @@ nav {
   .container {
     width: 100%;
   }
+  .classpage header, .subpage header { 
+    padding: 30px 60px;
+    min-height: 280px;
+  }
   header {
     border-bottom: 16px solid rgb(239, 123, 69);
     width: 100%;
@@ -481,7 +498,7 @@ nav {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 80%;
-    height: 380px;
+    min-height: 380px;
   }
   header.short {
     height: 120px;

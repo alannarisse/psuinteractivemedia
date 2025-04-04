@@ -104,6 +104,9 @@
   ],
   "settings": {
     "liveServer.settings.multiRootWorkspaceName": "psuinteractivemedia",
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "formatSelectionAsHtml.formatter": "prettier",
+    "formatSelectionAsHtml.htmlWhitespaceSensitivity": "strict",
+    "formatSelectionAsHtml.maxPreserveNewlines": 2
   }
 }
