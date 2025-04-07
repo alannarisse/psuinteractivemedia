@@ -1,38 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<style>
-		* {box-sizing: border-box;}
+		* {
+			box-sizing: border-box;
+		}
+
 		main {
 			border: 1px solid red;
 
 		}
-		.gallery {
-				display: grid;
-				grid-template-columns: 1fr;
-			}
-		header {border: 1px solid aqua;}
-		div { border: 1px solid blue; }
 
-		@media only screen and (min-width:768px){
-			.home-page{
-				display: flex;
-			}
-			.col-left { flex: 40%; }
-			.col-right { 
-				flex: 60%; 
-			}
-			.gallery {
-				display: grid;
-				grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-				grid-gap: 20px;
-			}
+		.gallery {
+			display: grid;
+			grid-template-columns: 1fr;
+		}
+
+		header {
+			border: 1px solid aqua;
+		}
+
+		div {
+			border: 1px solid blue;
+		}
+
+		<blade media|%20only%20screen%20and%20(min-width%3A768px)%7B>.home-page {
+			display: flex;
+		}
+
+		.col-left {
+			flex: 40%;
+		}
+
+		.col-right {
+			flex: 60%;
+		}
+
+		.gallery {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+			grid-gap: 20px;
+		}
 		}
 	</style>
 </head>
+
 <body>
 
 	<header>
@@ -42,24 +58,25 @@
 		<div class="col-left">
 			<section>
 				<h2>About!</h2>
-				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores dicta aliquid labore impedit necessitatibus cupiditate, sit laudantium veniam pariatur, dolore?</p>
+				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores dicta aliquid labore impedit
+					necessitatibus cupiditate, sit laudantium veniam pariatur, dolore?</p>
 			</section>
 			<section>
 				<h2>Hours</h2>
 			</section>
 		</div>
 		<div class="col-right">
-				<h2>Instagram account name</h2>
+			<h2>Instagram account name</h2>
 
-				<section class="gallery">
-					<img src="http://placekitten.com/300/300">
-					<img src="http://placekitten.com/300/300">
-					<img src="http://placekitten.com/300/300">
-					<img src="http://placekitten.com/300/300">
-					<img src="http://placekitten.com/300/300">
-					<img src="http://placekitten.com/300/300">
-					<img src="http://placekitten.com/300/300">
-				</section>
+			<section class="gallery">
+				<img src="http://placebear.com/300/300">
+				<img src="http://placebear.com/300/300">
+				<img src="http://placebear.com/300/300">
+				<img src="http://placebear.com/300/300">
+				<img src="http://placebear.com/300/300">
+				<img src="http://placebear.com/300/300">
+				<img src="http://placebear.com/300/300">
+			</section>
 
 		</div>
 
@@ -67,4 +84,5 @@
 	</main>
 
 </body>
+
 </html>

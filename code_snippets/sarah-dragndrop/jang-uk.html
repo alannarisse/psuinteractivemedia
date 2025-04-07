@@ -1,125 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      .ju-practice {
-        display: flex;
-      }
-      .jang-uk {
-        padding: 10px;
-      }
-      .invisible {
-        opacity: 0;
-      }
-      img {
-        width: 100%;
-      }
-      .progress {
-        border: 2px solid black;
-        border-radius: 50px;
-        width: 80%;
-        margin: auto;
-        padding: 8px;
-        position: relative;
-      }
-      .greenbar {
-        background: green;
-        width: 20%;
-        height: 40px;
-        border-top-left-radius: 50px;
-        border-bottom-left-radius: 50px;
-      }
-      #progress-bar-text {
-        position: absolute;
-        top: 8px;
-        left: 45%;
-        margin: 0;
-        padding: 0;
-        transition: width 1000s;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="progress">
-      <div class="greenbar"></div>
-      <p id="progress-bar-text">Progress Bar</p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .ju-practice {
+      display: flex;
+    }
+
+    .jang-uk {
+      padding: 10px;
+    }
+
+    .invisible {
+      opacity: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .progress {
+      border: 2px solid black;
+      border-radius: 50px;
+      width: 80%;
+      margin: auto;
+      padding: 8px;
+      position: relative;
+    }
+
+    .greenbar {
+      background: green;
+      width: 20%;
+      height: 40px;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+    }
+
+    #progress-bar-text {
+      position: absolute;
+      top: 8px;
+      left: 45%;
+      margin: 0;
+      padding: 0;
+      transition: width 1000s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="progress">
+    <div class="greenbar"></div>
+    <p id="progress-bar-text">Progress Bar</p>
+  </div>
+  <section class="ju-practice">
+    <div class="jang-uk visible">
+      <img src="http://placebear.com/205/200" alt="" />
     </div>
-    <section class="ju-practice">
-      <div class="jang-uk visible">
-        <img src="http://placekitten.com/205/200" alt="" />
-      </div>
-      <div class="jang-uk invisible">
-        <img src="http://placekitten.com/200/204" alt="" />
-      </div>
-      <div class="jang-uk invisible">
-        <img src="http://placekitten.com/204/200" alt="" />
-      </div>
-      <div class="jang-uk invisible">
-        <img src="http://placekitten.com/203/200" alt="" />
-      </div>
-      <div class="jang-uk invisible">
-        <img src="http://placekitten.com/200/203" alt="" />
-      </div>
-      <div class="jang-uk invisible">
-        <img src="http://placekitten.com/202/200" alt="" />
-      </div>
-      <div class="jang-uk invisible">
-        <img src="http://placekitten.com/200/202" alt="" />
-      </div>
-      <div class="jang-uk invisible">
-        <img src="http://placekitten.com/200/201" alt="" />
-      </div>
-      <div class="jang-uk invisible">
-        <img src="http://placekitten.com/201/200" alt="" />
-      </div>
-    </section>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-    <script>
-      let jangUrl = 'whatever.html'
-      $.fn.disableClick = function (disable) {
-        this.each(function () {
-          if (disable) {
-            if (this.onclick) $(this).data('onclick', this.onclick).removeAttr('onclick')
-            if ($._data(this, 'events') && $._data(this, 'events').click)
-              $(this)
-                .data('click', $.extend(true, {}, $._data(this, 'events').click))
-                .off('click')
-          } else {
-            if ($(this).data('onclick')) this.onclick = $(this).data('onclick')
-            if ($(this).data('click')) for (var i in $(this).data('click')) $(this).on('click', $(this).data('click')[i].handler)
-          }
-        })
-        return this
-      }
-
-      //disable clicks
-
-      let jangNum = 1
-      let progress = 20
-      $('.jang-uk').click(function () {
-        if (jangNum <= 8) {
-          jangNum++
-          progress = progress + 10
-          $('.greenbar').css('width', `${progress}%`).css('transition', '500ms')
-          if (jangNum - 1) {
-            $(this).addClass('invisible')
-            $(this).disableClick(true)
-          } //ending if
-          console.log(jangNum)
-          $(`.jang-uk:nth-child(${jangNum})`).removeClass('invisible')
-          $(`.jang-uk:nth-child(${jangNum})`).addClass('visible')
-        }
-        if (jangNum == 9) {
-          $('.greenbar').css('border-radius', `50px`)
-          setTimeout(() => {
-            window.location = jangUrl
-          }, 2000)
+    <div class="jang-uk invisible">
+      <img src="http://placebear.com/200/204" alt="" />
+    </div>
+    <div class="jang-uk invisible">
+      <img src="http://placebear.com/204/200" alt="" />
+    </div>
+    <div class="jang-uk invisible">
+      <img src="http://placebear.com/203/200" alt="" />
+    </div>
+    <div class="jang-uk invisible">
+      <img src="http://placebear.com/200/203" alt="" />
+    </div>
+    <div class="jang-uk invisible">
+      <img src="http://placebear.com/202/200" alt="" />
+    </div>
+    <div class="jang-uk invisible">
+      <img src="http://placebear.com/200/202" alt="" />
+    </div>
+    <div class="jang-uk invisible">
+      <img src="http://placebear.com/200/201" alt="" />
+    </div>
+    <div class="jang-uk invisible">
+      <img src="http://placebear.com/201/200" alt="" />
+    </div>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script>
+    let jangUrl = 'whatever.html'
+    $.fn.disableClick = function (disable) {
+      this.each(function () {
+        if (disable) {
+          if (this.onclick) $(this).data('onclick', this.onclick).removeAttr('onclick')
+          if ($._data(this, 'events') && $._data(this, 'events').click)
+            $(this)
+            .data('click', $.extend(true, {}, $._data(this, 'events').click))
+            .off('click')
+        } else {
+          if ($(this).data('onclick')) this.onclick = $(this).data('onclick')
+          if ($(this).data('click'))
+            for (var i in $(this).data('click')) $(this).on('click', $(this).data('click')[i].handler)
         }
       })
-    </script>
-  </body>
+      return this
+    }
+
+    //disable clicks
+
+    let jangNum = 1
+    let progress = 20
+    $('.jang-uk').click(function () {
+      if (jangNum <= 8) {
+        jangNum++
+        progress = progress + 10
+        $('.greenbar').css('width', `${progress}%`).css('transition', '500ms')
+        if (jangNum - 1) {
+          $(this).addClass('invisible')
+          $(this).disableClick(true)
+        } //ending if
+        console.log(jangNum)
+        $(`.jang-uk:nth-child(${jangNum})`).removeClass('invisible')
+        $(`.jang-uk:nth-child(${jangNum})`).addClass('visible')
+      }
+      if (jangNum == 9) {
+        $('.greenbar').css('border-radius', `50px`)
+        setTimeout(() => {
+          window.location = jangUrl
+        }, 2000)
+      }
+    })
+  </script>
+</body>
+
 </html>

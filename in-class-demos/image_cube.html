@@ -1,150 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<style>
-		body { margin: 20px; }
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 20px;
+    }
 
-.sliced {
-    position: relative;
-    width: 500px; 
-    height: 800px;
-}
-.tile { 
-    float: left;
-    opacity: 1;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -ms-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-}
-.tile-animated {
-    opacity: 0;
-}
-.css3-preload .sliced * {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
-  transition: none !important;
-}
+    .sliced {
+      position: relative;
+      width: 500px;
+      height: 800px;
+    }
 
-	</style>
+    .tile {
+      float: left;
+      opacity: 1;
+      -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      -ms-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+    }
+
+    .tile-animated {
+      opacity: 0;
+    }
+
+    .css3-preload .sliced * {
+      -webkit-transition: none !important;
+      -moz-transition: none !important;
+      -ms-transition: none !important;
+      -o-transition: none !important;
+      transition: none !important;
+    }
+  </style>
 </head>
+
 <body>
-	
 
-	<button>Toggle</button>
-<div class="sliced">
-  <img src="http://placekitten.com/500/800"/>
-</div>
 
-<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+  <button>Toggle</button>
+  <div class="sliced">
+    <img src="http://placebear.com/500/800" />
+  </div>
 
-<script>
-	;(function( $, window ) {
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-  var _defaults = {
-    x      : 2, // number of tiles in x axis
-    y      : 2, // number of tiles in y axis
-    random : true, // animate tiles in random order
-    speed  : 2000 // time to clear all times
-  };
+  <script>
+    ;
+    (function ($, window) {
 
-  /**
-  * range Get an array of numbers within a range
-  * @param min {number} Lowest number in array
-  * @param max {number} Highest number in array
-  * @param rand {bool} Shuffle array
-  * @return {array}
-  */
-  function range( min, max, rand ) {
-    var arr = ( new Array( ++max - min ) )
-      .join('.').split('.')
-      .map(function( v,i ){ return min + i })
-    return rand
-      ? arr.map(function( v ) { return [ Math.random(), v ] })
-         .sort().map(function( v ) { return v[ 1 ] })
-      : arr
-  }
-  
+      var _defaults = {
+        x: 2, // number of tiles in x axis
+        y: 2, // number of tiles in y axis
+        random: true, // animate tiles in random order
+        speed: 2000 // time to clear all times
+      };
 
-  $.fn.sliced = function( options ) {
-
-    var o = $.extend( {}, _defaults, options );
-
-    return this.each(function() {
-
-      var $container = $(this);
-
-      /*---------------------------------
-       * Make the tiles:
-       ---------------------------------*/
-
-      var width = $container.width(),
-          height = $container.height(),
-          $img = $container.find('img'),
-          n_tiles = o.x * o.y,
-          tiles = [], $tiles;
-
-      for ( var i = 0; i < n_tiles; i++ ) {
-        tiles.push('<div class="tile"/>');
+      /**
+       * range Get an array of numbers within a range
+       * @param min {number} Lowest number in array
+       * @param max {number} Highest number in array
+       * @param rand {bool} Shuffle array
+       * @return {array}
+       */
+      function range(min, max, rand) {
+        var arr = (new Array(++max - min))
+          .join('.').split('.')
+          .map(function (v, i) {
+            return min + i
+          })
+        return rand ?
+          arr.map(function (v) {
+            return [Math.random(), v]
+          })
+          .sort().map(function (v) {
+            return v[1]
+          }) :
+          arr
       }
 
-      $tiles = $( tiles.join('') );
 
-      // Hide original image and insert tiles in DOM
-      $img.hide().after( $tiles );
+      $.fn.sliced = function (options) {
 
-      // Set background
-      $tiles.css({
-        width: width / o.x,
-        height: height / o.y,
-        backgroundImage: 'url('+ $img.attr('src') +')'
-      });
+        var o = $.extend({}, _defaults, options);
 
-      // Adjust position
-      $tiles.each(function() {
-        var pos = $(this).position();
-        $(this).css( 'backgroundPosition', -pos.left +'px '+ -pos.top +'px' );
-      });
+        return this.each(function () {
 
-      /*---------------------------------
-       * Animate the tiles:
-       ---------------------------------*/
+          var $container = $(this);
 
-      var tilesArr = range( 0, n_tiles, o.random ),
-          tileSpeed = o.speed / n_tiles; // time to clear a single tile
+          /*---------------------------------
+           * Make the tiles:
+           ---------------------------------*/
 
-      // Public method
-      $container.on( 'animate', function() {
+          var width = $container.width(),
+            height = $container.height(),
+            $img = $container.find('img'),
+            n_tiles = o.x * o.y,
+            tiles = [],
+            $tiles;
 
-        tilesArr.forEach(function( tile, i ) {
-          setTimeout(function(){
-            $tiles.eq( tile ).toggleClass( 'tile-animated' );
-          }, i * tileSpeed );
+          for (var i = 0; i < n_tiles; i++) {
+            tiles.push('<div class="tile"/>');
+          }
+
+          $tiles = $(tiles.join(''));
+
+          // Hide original image and insert tiles in DOM
+          $img.hide().after($tiles);
+
+          // Set background
+          $tiles.css({
+            width: width / o.x,
+            height: height / o.y,
+            backgroundImage: 'url(' + $img.attr('src') + ')'
+          });
+
+          // Adjust position
+          $tiles.each(function () {
+            var pos = $(this).position();
+            $(this).css('backgroundPosition', -pos.left + 'px ' + -pos.top + 'px');
+          });
+
+          /*---------------------------------
+           * Animate the tiles:
+           ---------------------------------*/
+
+          var tilesArr = range(0, n_tiles, o.random),
+            tileSpeed = o.speed / n_tiles; // time to clear a single tile
+
+          // Public method
+          $container.on('animate', function () {
+
+            tilesArr.forEach(function (tile, i) {
+              setTimeout(function () {
+                $tiles.eq(tile).toggleClass('tile-animated');
+              }, i * tileSpeed);
+            });
+
+          });
+
         });
 
-      });
+      };
 
+    }(jQuery, window));
+
+    $('.sliced').sliced({
+      x: 6,
+      y: 4,
+      speed: 1000
     });
 
-  };
-
-}( jQuery, window ));
-
-$('.sliced').sliced({ x: 6, y: 4, speed: 1000 });
-
-$('button').click(function() {
-    $('.sliced').trigger('animate');
-});
-
-</script>
+    $('button').click(function () {
+      $('.sliced').trigger('animate');
+    });
+  </script>
 </body>
+
 </html>

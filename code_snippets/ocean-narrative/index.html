@@ -1,61 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>replit</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <main>
-      <section id="two">
-        <img class="second" src="http://placekitten.com/600/400" alt="" />
-      </section>
-      <section id="one">
-        <img class="first" src="http://placekitten.com/600/400" alt="" />
-      </section>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>replit</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-      <section id="three">
-        this is three
-        <img class="third" src="http://placekitten.com/600/400" alt="" />
-      </section>
-      <section id="four">
-        <div id="dialog-anim">
-          <img class="d d1" src="http://placekitten.com/100/100" alt="" />
-          <img class="d d2" src="http://placekitten.com/100/100" alt="" />
-          <img class="d d3" src="http://placekitten.com/100/100" alt="" />
-          <img class="d d4" src="http://placekitten.com/100/100" alt="" />
-          <img class="fourth" src="http://placekitten.com/600/400" alt="" />
-          <img class="d d5" src="http://placekitten.com/100/100" alt="" />
-          <img class="d d6" src="http://placekitten.com/100/100" alt="" />
-          <img class="d d7" src="http://placekitten.com/100/100" alt="" />
-          <img class="d d8" src="http://placekitten.com/100/100" alt="" />
-        </div>
-      </section>
-    </main>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-    <script>
-      let one = document.getElementById('one')
-      one.scrollIntoView({ block: 'start', behavior: 'instant' })
-      $('.first').click(function () {
-        let two = document.getElementById('two')
-        two.scrollIntoView({ block: 'start', behavior: 'smooth' })
+<body>
+  <main>
+    <section id="two">
+      <img class="second" src="http://placebear.com/600/400" alt="" />
+    </section>
+    <section id="one">
+      <img class="first" src="http://placebear.com/600/400" alt="" />
+    </section>
+
+    <section id="three">
+      this is three
+      <img class="third" src="http://placebear.com/600/400" alt="" />
+    </section>
+    <section id="four">
+      <div id="dialog-anim">
+        <img class="d d1" src="http://placebear.com/100/100" alt="" />
+        <img class="d d2" src="http://placebear.com/100/100" alt="" />
+        <img class="d d3" src="http://placebear.com/100/100" alt="" />
+        <img class="d d4" src="http://placebear.com/100/100" alt="" />
+        <img class="fourth" src="http://placebear.com/600/400" alt="" />
+        <img class="d d5" src="http://placebear.com/100/100" alt="" />
+        <img class="d d6" src="http://placebear.com/100/100" alt="" />
+        <img class="d d7" src="http://placebear.com/100/100" alt="" />
+        <img class="d d8" src="http://placebear.com/100/100" alt="" />
+      </div>
+    </section>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script>
+    let one = document.getElementById('one')
+    one.scrollIntoView({
+      block: 'start',
+      behavior: 'instant'
+    })
+    $('.first').click(function () {
+      let two = document.getElementById('two')
+      two.scrollIntoView({
+        block: 'start',
+        behavior: 'smooth'
       })
+    })
 
-      //four
-      $('.third').click(function () {
-        let four = document.getElementById('four')
-        four.scrollIntoView({ block: 'start', behavior: 'smooth' })
-        setTimeout(startFour, 1000)
+    //four
+    $('.third').click(function () {
+      let four = document.getElementById('four')
+      four.scrollIntoView({
+        block: 'start',
+        behavior: 'smooth'
       })
+      setTimeout(startFour, 1000)
+    })
 
-      function startFour() {
-        $('#dialog-anim').find('.d').addClass('fadeIn')
-      }
-      $('.fourth').click(function () {
-        startFour()
-      })
-    </script>
-  </body>
+    function startFour() {
+      $('#dialog-anim').find('.d').addClass('fadeIn')
+    }
+    $('.fourth').click(function () {
+      startFour()
+    })
+  </script>
+</body>
+
 </html>

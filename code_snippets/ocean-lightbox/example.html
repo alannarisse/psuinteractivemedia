@@ -1,96 +1,119 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8" />
-    <title>Lightbox Example</title>
-    <link rel="stylesheet" href="lightbox/dist/css/lightbox.min.css" />
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-      .flex-me {
-        display: flex;
-        flex-wrap: wrap;
-        width: 80%;
-        margin: auto;
-      }
-      
-      .flex-me:nth-child(odd) {
-        flex-direction: row;
-      }
-      .flex-me:nth-child(even) {
-        flex-direction: row-reverse;
-      }
-      .flex-me div {
-        flex: 50%;
-        padding: 100px;
-      }
-      @media only screen and (max-width: 768px) {
-        .flex-me {
-          flex-direction: column;
-          width: 90%;
-        }
-        .flex-me div {
-          padding: 20px;
-        }
-        .flex-me img {
-        padding-top: 80x;
-      }
-      }
-    </style>
-  </head>
-  <body>
-    <article class="flex-me">
-      <div class="img-col">
-        <img src="http://placekitten.com/300/300" />
-      </div>
-      <div class="text-col">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis laborum sunt labore neque! Quibusdam quos reprehenderit voluptatibus suscipit dolor accusantium!</p>
-      </div>
-    </article>
-    <article class="flex-me">
-      <div class="img-col">
-        <img src="http://placekitten.com/300/300" />
-      </div>
-      <div class="text-col">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis laborum sunt labore neque! Quibusdam quos reprehenderit voluptatibus suscipit dolor accusantium!</p>
-      </div>
-    </article>
-    <article class="flex-me">
-      <div class="img-col">
-        <img src="http://placekitten.com/300/300" />
-      </div>
-      <div class="text-col">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis laborum sunt labore neque! Quibusdam quos reprehenderit voluptatibus suscipit dolor accusantium!</p>
-      </div>
-    </article>
-    <section>
-      <h3>Two Individual Images</h3>
-      <div>
-        <a class="example-image-link" href="http://placekitten.com/600/300" data-lightbox="riso-gallery" data-title="artist: bla bla">
-          <img class="example-image" src="http://placekitten.com/200/200" alt="image-1" />
-        </a>
-        <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-2.jpg" data-lightbox="riso-gallery" data-title="Optional caption."><img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-2.jpg" alt="image-1" /></a>
-      </div>
 
-      <hr />
+<head>
+  <meta charset="utf-8" />
+  <title>Lightbox Example</title>
+  <link rel="stylesheet" href="lightbox/dist/css/lightbox.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-      <h3>A Four Image Set</h3>
-      <div>
-        <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg" alt="" /></a>
-        <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard."><img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-4.jpg" alt="" /></a>
-        <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg" data-lightbox="example-set" data-title="The next image in the set is preloaded as you're viewing."><img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-5.jpg" alt="" /></a>
-        <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-6.jpg" data-lightbox="example-set" data-title="Click anywhere outside the image or the X to the right to close."><img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-6.jpg" alt="" /></a>
-      </div>
-    </section>
+    .flex-me {
+      display: flex;
+      flex-wrap: wrap;
+      width: 80%;
+      margin: auto;
+    }
 
-    <section>
-      <p>For more information, visit <a href="http://lokeshdhakar.com/projects/lightbox2/">http://lokeshdhakar.com/projects/lightbox2/</a></p>
-    </section>
+    .flex-me:nth-child(odd) {
+      flex-direction: row;
+    }
 
-    <script src="lightbox/dist/js/lightbox-plus-jquery.min.js"></script>
+    .flex-me:nth-child(even) {
+      flex-direction: row-reverse;
+    }
 
-    <!-- <script src="../bower_components/jquery/dist/jquery.js"></script>
+    .flex-me div {
+      flex: 50%;
+      padding: 100px;
+    }
+
+    <blade media|%20only%20screen%20and%20(max-width%3A%20768px)%20%7B>.flex-me {
+      flex-direction: column;
+      width: 90%;
+    }
+
+    .flex-me div {
+      padding: 20px;
+    }
+
+    .flex-me img {
+      padding-top: 80x;
+    }
+    }
+  </style>
+</head>
+
+<body>
+  <article class="flex-me">
+    <div class="img-col">
+      <img src="http://placebear.com/300/300" />
+    </div>
+    <div class="text-col">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis laborum sunt labore neque! Quibusdam quos
+        reprehenderit voluptatibus suscipit dolor accusantium!</p>
+    </div>
+  </article>
+  <article class="flex-me">
+    <div class="img-col">
+      <img src="http://placebear.com/300/300" />
+    </div>
+    <div class="text-col">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis laborum sunt labore neque! Quibusdam quos
+        reprehenderit voluptatibus suscipit dolor accusantium!</p>
+    </div>
+  </article>
+  <article class="flex-me">
+    <div class="img-col">
+      <img src="http://placebear.com/300/300" />
+    </div>
+    <div class="text-col">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis laborum sunt labore neque! Quibusdam quos
+        reprehenderit voluptatibus suscipit dolor accusantium!</p>
+    </div>
+  </article>
+  <section>
+    <h3>Two Individual Images</h3>
+    <div>
+      <a class="example-image-link" href="http://placebear.com/600/300" data-lightbox="riso-gallery"
+        data-title="artist: bla bla">
+        <img class="example-image" src="http://placebear.com/200/200" alt="image-1" />
+      </a>
+      <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-2.jpg"
+        data-lightbox="riso-gallery" data-title="Optional caption."><img class="example-image"
+          src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-2.jpg" alt="image-1" /></a>
+    </div>
+
+    <hr />
+
+    <h3>A Four Image Set</h3>
+    <div>
+      <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg"
+        data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img
+          class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg" alt="" /></a>
+      <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg"
+        data-lightbox="example-set" data-title="Or press the right arrow on your keyboard."><img class="example-image"
+          src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-4.jpg" alt="" /></a>
+      <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg"
+        data-lightbox="example-set" data-title="The next image in the set is preloaded as you're viewing."><img
+          class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-5.jpg" alt="" /></a>
+      <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-6.jpg"
+        data-lightbox="example-set" data-title="Click anywhere outside the image or the X to the right to close."><img
+          class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-6.jpg" alt="" /></a>
+    </div>
+  </section>
+
+  <section>
+    <p>For more information, visit <a
+        href="http://lokeshdhakar.com/projects/lightbox2/">http://lokeshdhakar.com/projects/lightbox2/</a></p>
+  </section>
+
+  <script src="lightbox/dist/js/lightbox-plus-jquery.min.js"></script>
+
+  <!-- <script src="../bower_components/jquery/dist/jquery.js"></script>
   <script src="../src/js/lightbox.js"></script> -->
-  </body>
+</body>
+
 </html>

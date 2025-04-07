@@ -11,7 +11,7 @@ main {
 }
 
 .grid-2 .pothos-bg {
-  background-image: url("http://placekitten.com/800/1200");
+  background-image: url("http://placebear.com/800/1200");
   background-size: cover;
   height: 100vh;
 }

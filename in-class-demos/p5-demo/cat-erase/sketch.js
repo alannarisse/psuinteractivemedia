@@ -1,7 +1,7 @@
 function setup() {
   // put setup code here
   createCanvas(640,480);
-  bg = loadImage('http://placekitten.com/1200/800');
+  bg = loadImage('http://placebear.com/1200/800');
   erase();
 }
 

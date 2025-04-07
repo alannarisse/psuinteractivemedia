@@ -1,72 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      header {
-        display: flex;
-        width: 100vw;
-        background-color: #ccc;
-        justify-content: space-around;
-      }
-      header h1 {
-        text-align: right;
-      }
-      header .disney {
-        background-image: url("http://placekitten.com/500/500");
-        background-size: cover;
-        background-position: 50% 50%;
-        height: 500px;
-        width: 500px;
-        flex: 20%;
-        position: relative;
-      }
-      header .disney h2 {
-        position: absolute;
-        bottom: 40px;
-        right: 40px;
-      }
-      header .right {
-        flex: 80%;
-        position: relative;
-      }
-      header nav {
-        display: flex;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-      }
-      header nav div {
-        flex: 1;
-        text-align: center;
-        padding: 20px;
-        border: 1px solid black;
-        border-right: 1px solid black;
-        border-bottom: 1px solid black;
-      }
 
-      header nav .about {
-        border-right: 1px solid black;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="disney"><h2>Disney</h2></div>
-      <div class="right">
-        <h1>About</h1>
-        <nav>
-          <div class="about"><a href="">Link</a></div>
-          <div><a href="">Link</a></div>
-          <div><a href="">Link</a></div>
-          <div><a href="">Link</a></div>
-          <div><a href="">Link</a></div>
-        </nav>
-      </div>
-    </header>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    header {
+      display: flex;
+      width: 100vw;
+      background-color: #ccc;
+      justify-content: space-around;
+    }
+
+    header h1 {
+      text-align: right;
+    }
+
+    header .disney {
+      background-image: url("http://placebear.com/500/500");
+      background-size: cover;
+      background-position: 50% 50%;
+      height: 500px;
+      width: 500px;
+      flex: 20%;
+      position: relative;
+    }
+
+    header .disney h2 {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+    }
+
+    header .right {
+      flex: 80%;
+      position: relative;
+    }
+
+    header nav {
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    header nav div {
+      flex: 1;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid black;
+      border-right: 1px solid black;
+      border-bottom: 1px solid black;
+    }
+
+    header nav .about {
+      border-right: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="disney">
+      <h2>Disney</h2>
+    </div>
+    <div class="right">
+      <h1>About</h1>
+      <nav>
+        <div class="about"><a href="">Link</a></div>
+        <div><a href="">Link</a></div>
+        <div><a href="">Link</a></div>
+        <div><a href="">Link</a></div>
+        <div><a href="">Link</a></div>
+      </nav>
+    </div>
+  </header>
+</body>
+
 </html>

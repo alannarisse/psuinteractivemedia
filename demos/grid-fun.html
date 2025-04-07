@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Auto Flow gallery grid</title>
+	<style>
+		.grid-2 {
+			display: grid;
+			grid-template-columns: 30% 70%;
+			grid-gap: 1em;
+		}
+
+		.left {
+			background-color: #ccc;
+			padding: 20px;
+		}
+
+		.gallery {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+			grid-column-gap: 16px;
+			grid-row-gap: 32px;
+		}
+
+		.card {
+			border: 1px solid #666;
+		}
+
+		img {
+			width: 100%;
+		}
+
+		.feature {
+			grid-column-end: span 2;
+			grid-row-end: span 2;
+		}
+
+		.modal-style {
+			position: absolute;
+			border: red;
+			padding: 60px;
+			top: 30%;
+			left: 45%;
+			width: 300px;
+			height: 300px;
+		}
+
+		.flex {
+			flex-direction: row;
+			display: flex;
+			width: 100%;
+			justify-content: flex-end;
+			border: 1px solid red;
+			align-items: center;
+		}
+	</style>
+</head>
+
+<body>
+
+
+	<header>
+		<h1>I heart bears</h1>
+	</header>
+
+
+	<section class="flex">
+		<div><img src="https://placebear.com/200x/00" alt=""></div>
+		<div><img src="https://placebear.com/200/200" alt=""></div>
+		<div><img src="https://placebear.com/200/200" alt=""></div>
+		<div><img src="https://placebear.com/200/200" alt=""></div>
+	</section>
+	<section class="flex">
+		<div><img src="https://placebear.com/200/200" alt=""></div>
+		<div><img src="http://placebear.com/200/200" alt=""></div>
+		<div><img src="http://placebear.com/200/200" alt=""></div>
+		<div><img src="http://placebear.com/200/200" alt=""></div>
+	</section>
+
+	<main class="grid-2">
+		<div class="left">
+			<p>Some content about how cool bears are.</p>
+		</div>
+		<div class="right">
+			<section class="gallery">
+				<div class="card feature">
+					<img src="https://placebear.com/301/300" alt="">
+					<p>bears are hot</p>
+				</div>
+				<div class="card">
+					<img src="https://placebear.com/300/301" alt="">
+					<p>bears are hot</p>
+				</div>
+				<div class="card">
+					<img src="https://placebear.com/300/303" alt="">
+					<p>bears are hot</p>
+				</div>
+				<div class="card">
+					<img src="https://placebear.com/302/300" alt="">
+					<p>bears are hot</p>
+				</div>
+				<div class="card">
+					<img src="https://placebear.com/300/300" alt="">
+					<p>bears are hot</p>
+				</div>
+				<div class="card modal">
+					<img src="https://placebear.com/300/300" alt="">
+					<p>bears is modal</p>
+				</div>
+				<div class="card">
+					<img src="https://placebear.com/300/300" alt="">
+					<p>bears are hot</p>
+				</div>
+				<div class="card">
+					<img src="https://placebear.com/300/300" alt="">
+					<p>bears are hot</p>
+				</div>
+				<div class="card">
+					<img src="https://placebear.com/300/300" alt="">
+					<p>bears are hot</p>
+				</div>
+				<div class="card">
+					<img src="https://placebear.com/301/300" alt="">
+					<p>bears are hot</p>
+				</div>
+				<div class="card">
+					<img src="https://placebear.com/300/301" alt="">
+					<p>bears are hot</p>
+				</div>
+				<div class="card">
+					<img src="https://placebear.com/300/303" alt="">
+					<p>bears are hot</p>
+				</div>
+				<div class="card">
+					<img src="https://placebear.com/302/300" alt="">
+					<p>bears are hot</p>
+				</div>
+
+			</section>
+		</div>
+
+
+
+	</main>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script>
+		$('.feature').hover(function () {
+				$(this).html(
+					'<h2>bears are awesome</h2><p> Bears are found across the world, from North America to South America and Europe to Asia, and their diversity in range has led to an amazing variety of sizes, habits, and food preferences. </p>'
+				)
+			},
+			function () {
+				$(this).html(
+					'<img src="https://placebear.com/301/300" alt=""><p>bears are super duper hot</p>')
+			})
+
+		$('.modal').click(function () {
+			$('main').css('background-color', 'black');
+			$('body').append(`<div class='modal-style'><h2>My modal</h2></div>`);
+		})
+	</script>
+</body>
+
+</html>

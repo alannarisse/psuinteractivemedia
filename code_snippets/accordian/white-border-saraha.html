@@ -1,63 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<style>
-		body{}
+		body {}
+
 		.content-box {
 			position: fixed;
-			top:0;
-			left:0;
-			right:0;
+			top: 0;
+			left: 0;
+			right: 0;
 			height: 100vh;
 			width: 90%;
 			margin: auto;
 			display: grid;
 			grid-template-columns: 10% 80% 10%;
 		}
-		.top, .bottom, .left, .right {
+
+		.top,
+		.bottom,
+		.left,
+		.right {
 			background-color: white;
 		}
+
 		.top {
 			grid-column: 1/4;
 			grid-row: 1/2;
 		}
+
 		.bottom {
 			grid-column: 1/4;
 			grid-row: 3/4;
 		}
-		.left h2, .right h2 {
+
+		.left h2,
+		.right h2 {
 			transform: rotate(90deg);
 			white-space: nowrap;
 		}
+
 		.middle {
 			height: 75vh;
 		}
+
 		img {
 			width: 100%;
 		}
 	</style>
 </head>
+
 <body>
 	<section class="content-box">
-		<div class="top"><h2>some top text</h2>
+		<div class="top">
+			<h2>some top text</h2>
 		</div>
 
-		<div class="left"><h2>some left text</h2></div>
-		<div class="middle">
-			<p>words Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores officia deserunt, nihil, quam fuga dolor delectus, deleniti facilis a amet maxime sint? Deleniti dolor blanditiis laborum nobis. Possimus omnis, laudantium.</p>
+		<div class="left">
+			<h2>some left text</h2>
 		</div>
-		<div class="right"><h2>some left text</h2></div>
-		<div class="bottom"><h2>some bottom text</h2>
+		<div class="middle">
+			<p>words Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores officia deserunt, nihil, quam fuga
+				dolor delectus, deleniti facilis a amet maxime sint? Deleniti dolor blanditiis laborum nobis. Possimus omnis,
+				laudantium.</p>
+		</div>
+		<div class="right">
+			<h2>some left text</h2>
+		</div>
+		<div class="bottom">
+			<h2>some bottom text</h2>
 		</div>
 	</section>
 
 	<section class="kitty1">
-		<img src="http://placekitten.com/1200/800">
+		<img src="http://placebear.com/1200/800">
 	</section>
 	<section class="kitty2">
-		<img src="http://placekitten.com/1202/801">
+		<img src="http://placebear.com/1202/801">
 	</section>
 </body>
+
 </html>

@@ -1,97 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Re Star Tavern</title>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        margin: 0;
-      }
-      img {
-        width: 100%;
-      }
-      .grid-2 {
-        display: flex;
-        flex-direction: column;
-      }
-      .about,
-      .reserve {
-        background-color: pink;
-      }
 
-      .reserve {
-        order: 1;
-      }
-      .about {
-        order: 3;
-      }
-      .drink {
-        order: 2;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Re Star Tavern</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-      .menu {
-        order: 4;
-      }
-      .map {
-        order: 1;
-      }
-      section,
-      header,
-      nav,
-      footer {
-        padding: 20px;
-      }
+    body {
+      margin: 0;
+    }
 
-      @media only screen and (min-width: 768px) {
-        section {
-          padding: 60px;
-        }
-      }
-      @media only screen and (min-width: 1024px) {
-        .grid-2 {
-          flex-direction: row;
-          flex-wrap: wrap;
-        }
-        .grid-2 section {
-          flex: 50%;
-        }
-        .reserve {
-          order: 0;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <nav></nav>
+    img {
+      width: 100%;
+    }
 
-    <header>
-      <h1>Red Star Tavern</h1>
-    </header>
-    <main class="grid-2">
-      <section class="about">
-        <h2>About</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus alias porro excepturi aliquid delectus, praesentium quis suscipit nihil, culpa modi nostrum perspiciatis optio molestias! Ipsa ipsam quas ullam incidunt nulla nihil consequuntur beatae? Repellendus magni sit repudiandae molestiae soluta unde.</p>
-      </section>
-      <section class="menu">
-        <h2>Menu</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus alias porro excepturi aliquid delectus, praesentium quis suscipit nihil, culpa modi nostrum perspiciatis optio molestias! Ipsa ipsam quas ullam incidunt nulla nihil consequuntur beatae? Repellendus magni sit repudiandae molestiae soluta unde.</p>
-      </section>
-      <section class="drinks">
-        <h2>Drinks</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus alias porro excepturi aliquid delectus, praesentium quis suscipit nihil, culpa modi nostrum perspiciatis optio molestias! Ipsa ipsam quas ullam incidunt nulla nihil consequuntur beatae? Repellendus magni sit repudiandae molestiae soluta unde.</p>
-      </section>
-      <section class="reserve">
-        <h2>Reserve a table</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus alias porro excepturi aliquid delectus, praesentium quis suscipit nihil, culpa modi nostrum perspiciatis optio molestias! Ipsa ipsam quas ullam incidunt nulla nihil consequuntur beatae? Repellendus magni sit repudiandae molestiae soluta unde.</p>
-      </section>
-      <section class="map">
-        <img src="http://placekitten.com/1200/600" alt="" />
-      </section>
-    </main>
-    <footer></footer>
-  </body>
+    .grid-2 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .about,
+    .reserve {
+      background-color: pink;
+    }
+
+    .reserve {
+      order: 1;
+    }
+
+    .about {
+      order: 3;
+    }
+
+    .drink {
+      order: 2;
+    }
+
+    .menu {
+      order: 4;
+    }
+
+    .map {
+      order: 1;
+    }
+
+    section,
+    header,
+    nav,
+    footer {
+      padding: 20px;
+    }
+
+    <blade media|%20only%20screen%20and%20(min-width%3A%20768px)%20%7B>section {
+      padding: 60px;
+    }
+    }
+
+    <blade media|%20only%20screen%20and%20(min-width%3A%201024px)%20%7B>.grid-2 {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .grid-2 section {
+      flex: 50%;
+    }
+
+    .reserve {
+      order: 0;
+    }
+    }
+  </style>
+</head>
+
+<body>
+  <nav></nav>
+
+  <header>
+    <h1>Red Star Tavern</h1>
+  </header>
+  <main class="grid-2">
+    <section class="about">
+      <h2>About</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus alias porro excepturi aliquid delectus,
+        praesentium quis suscipit nihil, culpa modi nostrum perspiciatis optio molestias! Ipsa ipsam quas ullam incidunt
+        nulla nihil consequuntur beatae? Repellendus magni sit repudiandae molestiae soluta unde.</p>
+    </section>
+    <section class="menu">
+      <h2>Menu</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus alias porro excepturi aliquid delectus,
+        praesentium quis suscipit nihil, culpa modi nostrum perspiciatis optio molestias! Ipsa ipsam quas ullam incidunt
+        nulla nihil consequuntur beatae? Repellendus magni sit repudiandae molestiae soluta unde.</p>
+    </section>
+    <section class="drinks">
+      <h2>Drinks</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus alias porro excepturi aliquid delectus,
+        praesentium quis suscipit nihil, culpa modi nostrum perspiciatis optio molestias! Ipsa ipsam quas ullam incidunt
+        nulla nihil consequuntur beatae? Repellendus magni sit repudiandae molestiae soluta unde.</p>
+    </section>
+    <section class="reserve">
+      <h2>Reserve a table</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus alias porro excepturi aliquid delectus,
+        praesentium quis suscipit nihil, culpa modi nostrum perspiciatis optio molestias! Ipsa ipsam quas ullam incidunt
+        nulla nihil consequuntur beatae? Repellendus magni sit repudiandae molestiae soluta unde.</p>
+    </section>
+    <section class="map">
+      <img src="http://placebear.com/1200/600" alt="" />
+    </section>
+  </main>
+  <footer></footer>
+</body>
+
 </html>

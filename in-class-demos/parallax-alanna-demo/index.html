@@ -1,57 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Parallax</title>
-    <style>
-      main {
-        display: grid;
-        grid-template-columns: repeat(5, 100vw);
-      }
-      .plax {
-        min-height: 400px;
-        background: transparent;
-      }
 
-      p {
-        color: #fff;
-        width: 60%;
-        margin: auto;
-        padding-top: 80px;
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <section class="plax parallax-window1" data-parallax="scroll">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem asperiores accusantium necessitatibus possimus facilis totam, velit, esse provident aliquid consequatur.</p>
-      </section>
+<head>
+  <meta charset="UTF-8" />
+  <title>Parallax</title>
+  <style>
+    main {
+      display: grid;
+      grid-template-columns: repeat(5, 100vw);
+    }
 
-      <section class="plax parallax-window2" data-parallax="scroll">
-        <div class="grid">
-          <!-- some grid stuff, all your page stuff, all the stuff! -->
-        </div>
-      </section>
+    .plax {
+      min-height: 400px;
+      background: transparent;
+    }
 
-      <section class="plax parallax-window3" data-parallax="scroll">
+    p {
+      color: #fff;
+      width: 60%;
+      margin: auto;
+      padding-top: 80px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="plax parallax-window1" data-parallax="scroll">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem asperiores accusantium necessitatibus possimus
+        facilis totam, velit, esse provident aliquid consequatur.</p>
+    </section>
+
+    <section class="plax parallax-window2" data-parallax="scroll">
+      <div class="grid">
         <!-- some grid stuff, all your page stuff, all the stuff! -->
-      </section>
+      </div>
+    </section>
 
-      <section class="plax parallax-window4" data-parallax="scroll">
-        <!-- some grid stuff, all your page stuff, all the stuff! -->
-      </section>
+    <section class="plax parallax-window3" data-parallax="scroll">
+      <!-- some grid stuff, all your page stuff, all the stuff! -->
+    </section>
 
-      <section style="height: 800px">
-        <p style="color: pink">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nesciunt, quasi esse qui nemo cumque sequi! Accusantium debitis tempora perspiciatis nobis, nulla illo ut adipisci quod inventore maiores laborum expedita sed rerum, consequuntur molestias neque! Pariatur mollitia perferendis eligendi, velit architecto excepturi corporis nihil tenetur blanditiis, quia porro doloremque iusto.</p>
-      </section>
-    </main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/parallax.js"></script>
-    <script>
-      $('.parallax-window1').parallax({ imageSrc: 'images/patrik.jpg' })
-      $('.parallax-window2').parallax({ imageSrc: 'http://placekitten.com/1200/600' })
-      $('.parallax-window3').parallax({ imageSrc: 'http://placekitten.com/1201/600' })
-      $('.parallax-window4').parallax({ imageSrc: 'http://placekitten.com/1201/601' })
-    </script>
-  </body>
+    <section class="plax parallax-window4" data-parallax="scroll">
+      <!-- some grid stuff, all your page stuff, all the stuff! -->
+    </section>
+
+    <section style="height: 800px">
+      <p style="color: pink">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nesciunt, quasi esse qui
+        nemo cumque sequi! Accusantium debitis tempora perspiciatis nobis, nulla illo ut adipisci quod inventore maiores
+        laborum expedita sed rerum, consequuntur molestias neque! Pariatur mollitia perferendis eligendi, velit
+        architecto excepturi corporis nihil tenetur blanditiis, quia porro doloremque iusto.</p>
+    </section>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/parallax.js"></script>
+  <script>
+    $('.parallax-window1').parallax({
+      imageSrc: 'images/patrik.jpg'
+    })
+    $('.parallax-window2').parallax({
+      imageSrc: 'http://placebear.com/1200/600'
+    })
+    $('.parallax-window3').parallax({
+      imageSrc: 'http://placebear.com/1201/600'
+    })
+    $('.parallax-window4').parallax({
+      imageSrc: 'http://placebear.com/1201/601'
+    })
+  </script>
+</body>
+
 </html>

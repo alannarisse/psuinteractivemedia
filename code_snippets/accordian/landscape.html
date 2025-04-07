@@ -1,604 +1,682 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Merienda:400,700|Poppins:400,600,700" rel="stylesheet">
   <style>
-    
-/*common styles !!!YOU DON'T NEED THEM */
-body {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-size: 17px;
-  color: #212121;
-  line-height: 1.4;
-}
+    /*common styles !!!YOU DON'T NEED THEM */
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-size: 17px;
+      color: #212121;
+      line-height: 1.4;
+    }
 
-.container {
-  width: 1100px;
-  margin: 50px auto 0;
-}
-.container h1 {
-  font-size: 25px;
-  text-align: center;
-}
-.container h1 span {
-  position: relative;
-  font-family: 'Merienda', cursive;
-  color: #CA9CE1;
-}
-.container h1 span:after {
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  content: "~";
-  width: 100%;
-  text-align: center;
-}
-.container .subheader {
-  text-align: center;
-  margin-top: 15px;
-}
+    .container {
+      width: 1100px;
+      margin: 50px auto 0;
+    }
 
-.link {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-  width: 800px;
-  margin: 30px auto 0;
-}
-.link a {
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  flex-shrink: 0;
-  margin-right: 40px;
-  color: inherit;
-  font-size: inherit;
-  text-decoration: none;
-}
-.link a:hover {
-  color: #CA9CE1;
-}
-.link a:last-child {
-  margin-right: 0;
-}
-.link a i {
-  color: #CA9CE1;
-  margin-right: 9px;
-  font-size: 30px;
-}
+    .container h1 {
+      font-size: 25px;
+      text-align: center;
+    }
 
-.slider-containers {
-  width: 100%;
-  margin-top: 60px;
-}
+    .container h1 span {
+      position: relative;
+      font-family: 'Merienda', cursive;
+      color: #CA9CE1;
+    }
 
-.slider-container {
-  margin-bottom: 60px;
-}
-.slider-container h2 {
-  text-align: center;
-}
+    .container h1 span:after {
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      content: "~";
+      width: 100%;
+      text-align: center;
+    }
 
-.flexbox-slider {
-  margin-top: 50px;
-}
+    .container .subheader {
+      text-align: center;
+      margin-top: 15px;
+    }
 
-/*slide styles !!!YOU NEED THEM */
-.flexbox-slider {
-  display: -webkit-box;
-  display: flex;
-  width: 100%;
-  height: 500px;
-  visibility: hidden;
-}
-.flexbox-slider .flexbox-slide {
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-  width: 20%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  visibility: visible;
-}
-.flexbox-slider .flexbox-slide:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.6);
-  z-index: 2;
-  opacity: 0;
-}
-.flexbox-slider .flexbox-slide img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: auto;
-  width: auto;
-  min-width: 100%;
-  min-height: 100%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 1;
-}
-.flexbox-slider .flexbox-slide .text-block {
-  position: absolute;
-  left: 30px;
-  bottom: 30px;
-  max-width: 400px;
-  padding: 20px;
-  border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  z-index: 4;
-  visibility: hidden;
-  opacity: 0;
-}
-.flexbox-slider .flexbox-slide .text-block h3 {
-  font-size: 20px;
-  font-weight: 700;
-}
-.flexbox-slider:hover .flexbox-slide:hover {
-  flex-shrink: 0;
-  width: 80%;
-}
+    .link {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: center;
+      justify-content: center;
+      width: 800px;
+      margin: 30px auto 0;
+    }
 
-/* effect 1 styles */
-.flexbox-slider.flexbox-slider-1 .flexbox-slide .text-block {
-  bottom: 60px;
-}
-.flexbox-slider.flexbox-slider-1:hover .flexbox-slide:hover .text-block {
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
-  bottom: 30px;
-  opacity: 1;
-  visibility: visible;
-}
+    .link a {
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+      -webkit-transition-timing-function: linear;
+      transition-timing-function: linear;
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      flex-shrink: 0;
+      margin-right: 40px;
+      color: inherit;
+      font-size: inherit;
+      text-decoration: none;
+    }
 
-/* effect 2 styles */
-.flexbox-slider.flexbox-slider-2 .flexbox-slide .text-block {
-  left: -60px;
-}
-.flexbox-slider.flexbox-slider-2:hover .flexbox-slide:not(:hover):after {
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-  opacity: 1;
-}
-.flexbox-slider.flexbox-slider-2:hover .flexbox-slide:hover .text-block {
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  -webkit-transition-timing-function: cubic-bezier(0, 0, 0, 1.82);
-          transition-timing-function: cubic-bezier(0, 0, 0, 1.82);
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
-  left: 30px;
-  opacity: 1;
-  visibility: visible;
-}
+    .link a:hover {
+      color: #CA9CE1;
+    }
 
-/* effect 3 styles */
-.flexbox-slider.flexbox-slider-3 .flexbox-slide:after {
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
-}
-.flexbox-slider.flexbox-slider-3 .flexbox-slide .text-block {
-  -webkit-transform: rotate(-20deg);
-          transform: rotate(-20deg);
-}
-.flexbox-slider.flexbox-slider-3:hover .flexbox-slide:hover:after {
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  opacity: 1;
-  visibility: visible;
-}
-.flexbox-slider.flexbox-slider-3:hover .flexbox-slide:hover .text-block {
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  opacity: 1;
-  visibility: visible;
-}
+    .link a:last-child {
+      margin-right: 0;
+    }
 
-/* effect 4 styles */
-.flexbox-slider.flexbox-slider-4 .flexbox-slide:after {
-  top: -100%;
-}
-.flexbox-slider.flexbox-slider-4 .flexbox-slide .text-block {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-.flexbox-slider.flexbox-slider-4:hover .flexbox-slide:not(:hover):after {
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-  top: 0;
-  opacity: 1;
-  visibility: visible;
-}
-.flexbox-slider.flexbox-slider-4:hover .flexbox-slide:hover .text-block {
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  opacity: 1;
-  visibility: visible;
-}
+    .link a i {
+      color: #CA9CE1;
+      margin-right: 9px;
+      font-size: 30px;
+    }
 
-/* effect 5 styles */
-.flexbox-slider.flexbox-slider-5 .flexbox-slide .text-block {
-  -webkit-transform: scale(0.85);
-          transform: scale(0.85);
-}
-.flexbox-slider.flexbox-slider-5:hover .flexbox-slide:hover .text-block {
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  -webkit-transition-delay: 0.7s;
-          transition-delay: 0.7s;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  opacity: 1;
-  visibility: visible;
-}
-.flexbox-slider.flexbox-slider-5:hover .flexbox-slide:hover:after {
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
-  opacity: 1;
-  visibility: visible;
-}
+    .slider-containers {
+      width: 100%;
+      margin-top: 60px;
+    }
 
+    .slider-container {
+      margin-bottom: 60px;
+    }
 
+    .slider-container h2 {
+      text-align: center;
+    }
+
+    .flexbox-slider {
+      margin-top: 50px;
+    }
+
+    /*slide styles !!!YOU NEED THEM */
+    .flexbox-slider {
+      display: -webkit-box;
+      display: flex;
+      width: 100%;
+      height: 500px;
+      visibility: hidden;
+    }
+
+    .flexbox-slider .flexbox-slide {
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-timing-function: linear;
+      transition-timing-function: linear;
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
+      width: 20%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      visibility: visible;
+    }
+
+    .flexbox-slider .flexbox-slide:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.6);
+      z-index: 2;
+      opacity: 0;
+    }
+
+    .flexbox-slider .flexbox-slide img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: auto;
+      width: auto;
+      min-width: 100%;
+      min-height: 100%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .flexbox-slider .flexbox-slide .text-block {
+      position: absolute;
+      left: 30px;
+      bottom: 30px;
+      max-width: 400px;
+      padding: 20px;
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      z-index: 4;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .flexbox-slider .flexbox-slide .text-block h3 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .flexbox-slider:hover .flexbox-slide:hover {
+      flex-shrink: 0;
+      width: 80%;
+    }
+
+    /* effect 1 styles */
+    .flexbox-slider.flexbox-slider-1 .flexbox-slide .text-block {
+      bottom: 60px;
+    }
+
+    .flexbox-slider.flexbox-slider-1:hover .flexbox-slide:hover .text-block {
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+      -webkit-transition-timing-function: linear;
+      transition-timing-function: linear;
+      -webkit-transition-delay: 0.5s;
+      transition-delay: 0.5s;
+      bottom: 30px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* effect 2 styles */
+    .flexbox-slider.flexbox-slider-2 .flexbox-slide .text-block {
+      left: -60px;
+    }
+
+    .flexbox-slider.flexbox-slider-2:hover .flexbox-slide:not(:hover):after {
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+      -webkit-transition-timing-function: linear;
+      transition-timing-function: linear;
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
+      opacity: 1;
+    }
+
+    .flexbox-slider.flexbox-slider-2:hover .flexbox-slide:hover .text-block {
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-timing-function: cubic-bezier(0, 0, 0, 1.82);
+      transition-timing-function: cubic-bezier(0, 0, 0, 1.82);
+      -webkit-transition-delay: 0.5s;
+      transition-delay: 0.5s;
+      left: 30px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* effect 3 styles */
+    .flexbox-slider.flexbox-slider-3 .flexbox-slide:after {
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+    }
+
+    .flexbox-slider.flexbox-slider-3 .flexbox-slide .text-block {
+      -webkit-transform: rotate(-20deg);
+      transform: rotate(-20deg);
+    }
+
+    .flexbox-slider.flexbox-slider-3:hover .flexbox-slide:hover:after {
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+      -webkit-transition-timing-function: linear;
+      transition-timing-function: linear;
+      -webkit-transition-delay: 0.4s;
+      transition-delay: 0.4s;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .flexbox-slider.flexbox-slider-3:hover .flexbox-slide:hover .text-block {
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+      -webkit-transition-timing-function: linear;
+      transition-timing-function: linear;
+      -webkit-transition-delay: 0.6s;
+      transition-delay: 0.6s;
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* effect 4 styles */
+    .flexbox-slider.flexbox-slider-4 .flexbox-slide:after {
+      top: -100%;
+    }
+
+    .flexbox-slider.flexbox-slider-4 .flexbox-slide .text-block {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+
+    .flexbox-slider.flexbox-slider-4:hover .flexbox-slide:not(:hover):after {
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+      -webkit-transition-timing-function: linear;
+      transition-timing-function: linear;
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
+      top: 0;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .flexbox-slider.flexbox-slider-4:hover .flexbox-slide:hover .text-block {
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+      -webkit-transition-timing-function: linear;
+      transition-timing-function: linear;
+      -webkit-transition-delay: 0.5s;
+      transition-delay: 0.5s;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* effect 5 styles */
+    .flexbox-slider.flexbox-slider-5 .flexbox-slide .text-block {
+      -webkit-transform: scale(0.85);
+      transform: scale(0.85);
+    }
+
+    .flexbox-slider.flexbox-slider-5:hover .flexbox-slide:hover .text-block {
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+      -webkit-transition-timing-function: linear;
+      transition-timing-function: linear;
+      -webkit-transition-delay: 0.7s;
+      transition-delay: 0.7s;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .flexbox-slider.flexbox-slider-5:hover .flexbox-slide:hover:after {
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+      -webkit-transition-timing-function: linear;
+      transition-timing-function: linear;
+      -webkit-transition-delay: 0.4s;
+      transition-delay: 0.4s;
+      opacity: 1;
+      visibility: visible;
+    }
   </style>
 </head>
+
 <body>
 
   <div class="container">
-  <h1>CSS3 accordion <span>slider</span> with Transitions and Flexbox</h1>
-  <div class="subheader">(5 different effects)</div>
-  <div class="link">
-    <a href="https://github.com/eisenfox/css-flex-slider" target="_blanc"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Check on Github</a>
-    <a href="http://100dayscode.co.uk/" title="Check Codepen Challenge" target="_blanc"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Check Codepen Challenge</a>
+    <h1>CSS3 accordion <span>slider</span> with Transitions and Flexbox</h1>
+    <div class="subheader">(5 different effects)</div>
+    <div class="link">
+      <a href="https://github.com/eisenfox/css-flex-slider" target="_blanc"><i class="fa fa-lightbulb-o"
+          aria-hidden="true"></i> Check on Github</a>
+      <a href="http://100dayscode.co.uk/" title="Check Codepen Challenge" target="_blanc"><i class="fa fa-lightbulb-o"
+          aria-hidden="true"></i> Check Codepen Challenge</a>
+    </div>
+
+    <div class="slider-containers">
+
+      <!--effect #1 -->
+      <div class="slider-container">
+        <h2>Effect #1</h2>
+        <div class="flexbox-slider flexbox-slider-1">
+          <div class="flexbox-slide">
+            <img src="http://placebear.com/1200/800" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #1 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox-slide">
+            <img src="http://placebear.com/1200/801" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #2 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox-slide">
+            <img src="http://placebear.com/1201/800" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #3 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox-slide">
+            <img src="http://placebear.com/1202/800" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #4 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox-slide">
+            <img src="http://placebear.com/1200/802" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #5 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--effect #2 -->
+      <div class="slider-container">
+        <h2>Effect #2</h2>
+        <div class="flexbox-slider flexbox-slider-2">
+          <div class="flexbox-slide">
+            <img src="http://placebear.com/1201/801" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #1 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox-slide">
+            <img src="http://placebear.com/1200/803" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #2 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox-slide">
+            <img src="http://placebear.com/1200/700" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #3 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox-slide">
+            <img src="http://placebear.com/1200/790" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #4 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox-slide">
+            <img src="http://placebear.com/1200/799" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #5 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--effect #3 -->
+      <div class="slider-container">
+        <h2>Effect #3</h2>
+        <div class="flexbox-slider flexbox-slider-3">
+          <div class="flexbox-slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-1.jpg" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #1 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox-slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-2.jpg" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #2 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox-slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-3.jpg" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #3 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox-slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-4.jpg" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #4 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox-slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-9.jpg" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #5 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--effect #4 -->
+      <div class="slider-container">
+        <h2>Effect #4</h2>
+        <div class="flexbox-slider flexbox-slider-4">
+          <div class="flexbox-slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-1.jpg" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #1 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox-slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-2.jpg" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #2 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox-slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-3.jpg" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #3 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox-slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-4.jpg" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #4 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox-slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-9.jpg" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #5 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--effect #5 -->
+      <div class="slider-container">
+        <h2>Effect #5</h2>
+        <div class="flexbox-slider flexbox-slider-5">
+          <div class="flexbox-slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-1.jpg" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #1 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox-slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-2.jpg" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #2 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox-slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-3.jpg" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #3 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox-slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-4.jpg" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #4 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox-slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-9.jpg" alt="Slide Image">
+            <div class="text-block">
+              <h3>Slide #5 is here</h3>
+              <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
-  
-  <div class="slider-containers">
-    
-    <!--effect #1 -->
-    <div class="slider-container">
-      <h2>Effect #1</h2>
-      <div class="flexbox-slider flexbox-slider-1">
-        <div class="flexbox-slide">
-          <img src="http://placekitten.com/1200/800" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #1 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-        <div class="flexbox-slide">
-          <img src="http://placekitten.com/1200/801" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #2 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-        <div class="flexbox-slide">
-          <img src="http://placekitten.com/1201/800" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #3 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-        <div class="flexbox-slide">
-          <img src="http://placekitten.com/1202/800" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #4 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-        <div class="flexbox-slide">
-          <img src="http://placekitten.com/1200/802" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #5 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!--effect #2 -->
-    <div class="slider-container">
-      <h2>Effect #2</h2>
-      <div class="flexbox-slider flexbox-slider-2">
-        <div class="flexbox-slide">
-          <img src="http://placekitten.com/1201/801" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #1 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-        <div class="flexbox-slide">
-          <img src="http://placekitten.com/1200/803" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #2 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-        <div class="flexbox-slide">
-          <img src="http://placekitten.com/1200/700" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #3 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-        <div class="flexbox-slide">
-          <img src="http://placekitten.com/1200/790" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #4 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-        <div class="flexbox-slide">
-          <img src="http://placekitten.com/1200/799" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #5 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!--effect #3 -->
-    <div class="slider-container">
-      <h2>Effect #3</h2>
-      <div class="flexbox-slider flexbox-slider-3">
-        <div class="flexbox-slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-1.jpg" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #1 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-        <div class="flexbox-slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-2.jpg" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #2 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-        <div class="flexbox-slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-3.jpg" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #3 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-        <div class="flexbox-slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-4.jpg" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #4 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-        <div class="flexbox-slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-9.jpg" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #5 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!--effect #4 -->
-    <div class="slider-container">
-      <h2>Effect #4</h2>
-      <div class="flexbox-slider flexbox-slider-4">
-        <div class="flexbox-slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-1.jpg" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #1 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-        <div class="flexbox-slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-2.jpg" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #2 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-        <div class="flexbox-slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-3.jpg" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #3 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-        <div class="flexbox-slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-4.jpg" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #4 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-        <div class="flexbox-slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-9.jpg" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #5 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!--effect #5 -->
-    <div class="slider-container">
-      <h2>Effect #5</h2>
-      <div class="flexbox-slider flexbox-slider-5">
-        <div class="flexbox-slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-1.jpg" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #1 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-        <div class="flexbox-slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-2.jpg" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #2 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-        <div class="flexbox-slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-3.jpg" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #3 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-        <div class="flexbox-slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-4.jpg" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #4 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-        <div class="flexbox-slide">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-9.jpg" alt="Slide Image">
-          <div class="text-block">
-            <h3>Slide #5 is here</h3>
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-</div>
-  
+
 </body>
+
 </html>

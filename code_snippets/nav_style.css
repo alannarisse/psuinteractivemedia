@@ -10,7 +10,7 @@ body {
 }
 
 .background-big {
-    background-image: url('http://placekitten.com/1200/400');
+    background-image: url('http://placebear.com/1200/400');
     background-size: cover;
     height: 400px;
     min-width: 1200px;

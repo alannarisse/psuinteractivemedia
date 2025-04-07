@@ -1,67 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>JQuery</title>
-    <style>
-      .active {
-        color: red;
-      }
-      .hide {
-        display: none;
-      }
-      .accordian {
-        background-color: #ccc;
-        border-radius: 20px;
-        padding: 10px 20px;
-      }
 
-      .sunriseyness {
-        animation-name: pretty;
-        animation-duration: 5s;
-        animation-fill-mode: forwards;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <title>JQuery</title>
+  <style>
+    .active {
+      color: red;
+    }
 
-      @keyframes pretty{
-        0% { background-color: navy; }
-        100% {background-color: goldenrod;}
-      }
+    .hide {
+      display: none;
+    }
 
+    .accordian {
+      background-color: #ccc;
+      border-radius: 20px;
+      padding: 10px 20px;
+    }
 
+    .sunriseyness {
+      animation-name: pretty;
+      animation-duration: 5s;
+      animation-fill-mode: forwards;
+    }
 
-    </style>
-  </head>
-  <body class="body-class">
-    <p class="first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facilis odio doloribus, vitae quaerat nisi! Hic perferendis consectetur earum ratione, animi similique dolor sint! Quidem odit quibusdam unde voluptates rerum.</p>
-    <p>Hic perferendis consectetur earum ratione, animi similique dolor sint! Quidem odit quibusdam unde voluptates rerum.</p>
+    <blade keyframes|%20pretty%7B>0% {
+      background-color: navy;
+    }
 
-    <button class="sunrise-button">Sunrise</button>
+    100% {
+      background-color: goldenrod;
+    }
+    }
+  </style>
+</head>
 
-    <hr />
+<body class="body-class">
+  <p class="first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facilis odio doloribus, vitae quaerat
+    nisi! Hic perferendis consectetur earum ratione, animi similique dolor sint! Quidem odit quibusdam unde voluptates
+    rerum.</p>
+  <p>Hic perferendis consectetur earum ratione, animi similique dolor sint! Quidem odit quibusdam unde voluptates rerum.
+  </p>
 
-    <div class="accordian">
-      <p class="expand-me">Here's some interesting thoughts...</p>
-      <p class="expanded-text hide"><img src="http://placekitten.com/300/300" /></p>
-    </div>
+  <button class="sunrise-button">Sunrise</button>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script>
+  <hr />
 
-      $('.first').css('color', 'red')
+  <div class="accordian">
+    <p class="expand-me">Here's some interesting thoughts...</p>
+    <p class="expanded-text hide"><img src="http://placebear.com/300/300" /></p>
+  </div>
 
-      $('.sunrise-button').click(function(){
-        $('.body-class').toggleClass('sunriseyness')
-      })
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>
+    $('.first').css('color', 'red')
 
-      // $("button").click(function () {
-      //   $("p.first").text("JQuery is easy!")
-      //   $("button").toggleClass("active")
-      // })
+    $('.sunrise-button').click(function () {
+      $('.body-class').toggleClass('sunriseyness')
+    })
 
-      //function changeText() {
-      //document.getElementsByTagName("P")[0].innerHTML = "Javscript is easy!";
-      //}
-    </script>
-    <script src="script.js"></script>
-  </body>
+    // $("button").click(function () {
+    //   $("p.first").text("JQuery is easy!")
+    //   $("button").toggleClass("active")
+    // })
+
+    //function changeText() {
+    //document.getElementsByTagName("P")[0].innerHTML = "Javscript is easy!";
+    //}
+  </script>
+  <script src="script.js"></script>
+</body>
+
 </html>

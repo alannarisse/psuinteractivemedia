@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
@@ -13,8 +14,7 @@
 			left: 0;
 		}
 
-		.anim2 
-		{
+		.anim2 {
 			animation-delay: 3s;
 			animation-duration: 3s;
 			animation-name: two;
@@ -23,40 +23,45 @@
 
 		}
 
-		@keyframes one{
-			0% { 
-				top: -400px;
-				left: 0; 
-		}
-		50% {
-				top: 0;
-				left: 0; 
-		}
-			100% { top: -400px;
-				left: 0; 
-			}
+		<blade keyframes|%20one%7B>0% {
+			top: -400px;
+			left: 0;
 		}
 
-		@keyframes two{
-			0% { 
-				top: -400px;
-				left: 0; 
-		}
 		50% {
-				top: 0;
-				left: 0; 
-		}
-			100% { top: -400px;
-				left: 0; 
-			}
+			top: 0;
+			left: 0;
 		}
 
+		100% {
+			top: -400px;
+			left: 0;
+		}
+		}
+
+		<blade keyframes|%20two%7B>0% {
+			top: -400px;
+			left: 0;
+		}
+
+		50% {
+			top: 0;
+			left: 0;
+		}
+
+		100% {
+			top: -400px;
+			left: 0;
+		}
+		}
 	</style>
 </head>
+
 <body>
 	<div>
-	<img class="anim1" src="http://placekitten.com/400/300" alt="">
-<img class="anim2" src="http://placekitten.com/401/300" alt="">
+		<img class="anim1" src="http://placebear.com/400/300" alt="">
+		<img class="anim2" src="http://placebear.com/401/300" alt="">
 	</div>
 </body>
+
 </html>
