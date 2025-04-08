@@ -1,0 +1,68 @@
+body {
+  font-family:'Courier New', Courier, monospace;
+  font-size: 20px;
+}
+
+a {
+  color: #000;
+}
+.flex {
+  display:flex;
+  align-items:center;
+}
+
+#outter {
+  fill: purple;
+}
+
+
+#star {
+  animation-duration: 1s;
+  animation-iteration-count: 4;
+  animation-timing-function: linear;
+  transform-origin: center;
+
+}
+
+
+.start-animation {
+  animation-name: star-all-spin;
+}
+
+#star path {
+  
+  animation-duration: 1s;
+  animation-iteration-count: 4;
+  animation-timing-function: linear;
+  transform-origin: center;
+}
+
+#star #inner:hover {
+  animation-direction: reverse;
+  animation-name: star-all-spin;
+}
+#star #outer:hover { 
+  animation-name: star-all-spin;
+}
+
+.button {
+  display: inline-flex;
+  padding: 1rem 1.25rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border: 2px solid #6E6B6B;
+  background: #C5F9BA;
+  transition-duration:1s;
+  transition: all;
+}
+.button:hover {
+  border: 2px solid #6E6B6B;
+  background: #FFFCC6;
+  box-shadow: 0px 0px 16px 0px #71F952;
+}
+
+@keyframes star-all-spin {
+  0% {transform:rotate(0);}
+  100% {transform:rotate(-360deg);}
+}

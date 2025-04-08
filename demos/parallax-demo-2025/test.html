@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #scene {
+
+      margin: 0;
+      min-height: 100vh;
+      border: 4px solid red;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    img {
+      width: 150%;
+      margin-left: -20%;
+      margin-bottom: 10vh;
+
+    }
+
+
+
+    .sun img {
+      width: 10%;
+      display: inline-block;
+      margin: auto;
+    }
+
+    .sun {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin: auto;
+      /* margin-top: -200px; */
+      /* margin-left: -60%; */
+    }
+
+    .one,
+    .two img {
+      margin-right: -600px;
+    }
+
+    /* .one,
+    .two,
+    .three {
+      border: 4px solid blue;
+    } */
+  </style>
+</head>
+
+<body>
+  <div id="scene" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15">
+    <div class="sun five" data-depth="0.05">
+      <img src="images/sun.svg">
+    </div>
+    <div class="mountain one" data-depth="0.10">
+      <img src="images/mountain1.svg">
+    </div>
+    <div class="mountain two" data-depth="0.15">
+      <img src="images/mountain2.svg">
+    </div>
+    <div class="mountain three" data-depth="0.20">
+      <img src="images/mountain3.svg">
+    </div>
+    <div class="mountain four" data-depth="0.25">
+      <img src="images/mountain4.svg">
+    </div>
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  <script>
+    var scene = document.getElementById('scene');
+    var parallaxInstance = new Parallax(scene);
+
+    var parallax = new Parallax(scene, {
+
+    });
+  </script>
+</body>
+
+</html>

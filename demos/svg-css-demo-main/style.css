@@ -1,0 +1,175 @@
+/*  */
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin:0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size:20px;
+}
+.home {  
+  background: lightblue;
+}
+li {
+  margin-bottom: .7rem;
+}
+
+main {
+  width:80%;
+  margin: auto;
+  border-radius: 40px;
+  background-color: white;
+  margin-top:80px;
+  padding:60px;
+}
+
+svg {
+  max-width:50%;
+  overflow:visible;
+}
+
+#eyeball-svg {
+     .cls-1 {
+        fill: #b25004;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+}
+
+#iris, #pupil {
+  animation-name: move-eye;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transition:all;
+  transform-origin: 50% 50%;
+}
+
+
+@keyframes move-eye {
+  0% {
+    scale:1; transform: translate(0, 0);
+  }
+  50% {
+    scale:1.1;  transform: translate(20px, -40px);
+  }
+  75% {
+    scale:1.1;  transform: translate(10px, -20px); transition-delay: 500ms;
+  }
+  100% {
+    scale:1;  transform: translate(-20px, 10px);
+  }
+}
+
+#loading-circle {
+  .cls-1 {
+    fill: none;
+    stroke: #1d0cd3;
+    stroke-miterlimit: 10;
+    stroke-width: 20px;
+  }
+}
+/* loading circles */
+.anim-red {
+  transform-origin: 50% 50%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.animate-loading {
+  animation-name: red-outer;
+  animation-name: red-inner;
+  animation-name: red-middle;
+}
+
+#red-outer { 
+  animation-duration: 5s;
+}
+
+@keyframes red-outer {
+  0% { rotate: 0deg;}
+  100% { rotate: 360deg;}
+}
+
+#red-inner { 
+  animation-duration: 3s;
+  animation-direction: reverse;
+  rotate: 90deg;
+}
+
+@keyframes red-inner {
+  from { rotate: 90deg;}
+  to { rotate: 450deg;}
+}
+
+#red-middle { 
+  animation-duration: 3s;
+  animation-direction: reverse;
+  rotate: -90deg;
+}
+
+@keyframes red-middle {
+  from { rotate: -90deg;}
+  to { rotate: 270deg;}
+}
+.anim-words {
+  animation-name:earth-anim;
+}
+
+#words path {
+  fill: red;
+  animation-duration:1300ms;
+  animation-iteration-count: infinite;
+  transform: translateY(0);
+}
+
+@keyframes earth-anim {
+  0% {transform: translateY(-8px);}
+  25% {transform: translateY(-16px);}
+  50% {transform: translateY(-8px);}
+  75% {transform: translateY(0px);}
+  100% {transform: translateY(0);}
+}
+
+#words path:nth-child(1) {
+  animation-delay:100ms;
+}
+#words path:nth-child(2) {
+  animation-delay:200ms;
+}
+#words path:nth-child(3) {
+  animation-delay:300ms;
+}
+#words path:nth-child(4) {
+  animation-delay:400ms;
+}
+#words path:nth-child(5) {
+  animation-delay:500ms;
+}
+#words path:nth-child(6) {
+  animation-delay:600ms;
+}
+#words path:nth-child(7) {
+  animation-delay:700ms;
+}
+#words path:nth-child(8) {
+  animation-delay:800ms;
+}
+#words path:nth-child(9) {
+  animation-delay:900ms;
+}
+#words path:nth-child(10) {
+  animation-delay:1000ms;
+}
+#words path:nth-child(11) {
+  animation-delay:1100ms;
+}
+#words path:nth-child(12) {
+  animation-delay:1200ms;
+}
+#words path:nth-child(13) {
+  animation-delay:1300ms;
+}

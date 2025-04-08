@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunrise CSS Parallax with Mountains</title>
+  <!-- modified fro https://codepen.io/oscicen/pen/zyJeJw -->
+  <style>
+    body {
+      margin: 0;
+      background-color: #1d1e22;
+      background: linear-gradient(180deg, #E8A5D4 0%, #E49A22 100%);
+    }
+
+    #parallax {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background-image: url(images/mountain1.svg), url(images/mountain2.svg),
+        url(images/mountain3.svg),
+        url(images/mountain4.svg), url(images/sun.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-position: 50% 50%;
+    }
+
+    h1 {
+      position: absolute;
+      top: 47%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-family: "Arial";
+      text-transform: uppercase;
+      opacity: .2;
+      font-size: 70px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="parallax">
+  </div>
+  <script>
+    (function () {
+      // Add event listener
+      document.addEventListener("mousemove", parallax);
+      const elem = document.querySelector("#parallax");
+      // Magic happens here
+      function parallax(e) {
+        let _w = window.innerWidth / 2;
+        let _h = window.innerHeight / 2;
+        let _mouseX = e.clientX;
+        let _mouseY = e.clientY;
+        let _depth1 = `${0 - (_mouseX - _w) * 0.001}% ${110 - (_mouseY - _h) * 0.06}%`;
+        let _depth2 = `${100 - (_mouseX - _w) * 0.001}% ${110 - (_mouseY - _h) * 0.06}%`;
+        let _depth3 = `${0 - (_mouseX - _w) * 0.001}% ${160 - (_mouseY - _h) * 0.03}%`;
+        let _depth4 = `${100 - (_mouseX - _w) * 0.001}% ${110 - (_mouseY - _h) * 0.01}%`;
+        let _sun = `${50 - (_mouseX - _w) * 0.00}% ${60 - (_mouseY - _h) * .1}%`;
+        let x = `${_depth4}, ${_depth3}, ${_depth2}, ${_depth1}, ${_sun}`;
+        console.log(x);
+        elem.style.backgroundPosition = x;
+      }
+
+    })();
+  </script>
+</body>
+
+</html>

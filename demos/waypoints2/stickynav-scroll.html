@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Waypoints</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    html {
+        scroll-behavior: smooth;
+      }
+    header {
+      background-image: url('http://placebear.com/1600/400');
+      background-size: cover;
+      height: 300px;
+    }
+    h1 {
+      margin:0;
+      padding:20px;
+    }
+    nav {
+      background-color: #333;
+      padding: 20px;
+
+    }
+
+    nav a {
+      color: #fff;
+      display: inline-block;
+      padding-right: 20px;
+    }
+
+    section {
+      min-height: 300px;
+      padding: 60px;
+    }
+
+    section:nth-child(even) {
+      background-color: #333;
+    }
+
+    section:nth-child(even) p {
+      color: #fff;
+    }
+
+    section:nth-child(odd) {
+      background-color: #ccc;
+    }
+
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Sticky</h1>
+  </header>
+  <div class="navbar">
+    <nav class="navbar">
+      <a href="#one">one</a><a href="#two">two</a><a href="#three">three</a><a href="#four">four</a>
+    </nav>
+  </div>
+  <section id="one">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, quos! Voluptatem, dolorum dolores
+      doloremque provident mollitia cum tempora laboriosam adipisci.</p>
+  </section>
+
+  <section id="two" class="grid">
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, quos! Voluptatem, dolorum dolores
+        doloremque provident mollitia cum tempora laboriosam adipisci.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, quos! Voluptatem, dolorum dolores
+        doloremque provident mollitia cum tempora laboriosam adipisci.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, quos! Voluptatem, dolorum dolores
+        doloremque provident mollitia cum tempora laboriosam adipisci.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, quos! Voluptatem, dolorum dolores
+        doloremque provident mollitia cum tempora laboriosam adipisci.</p>
+    </div>
+    <div class="stuck">right stickiness</div>
+  </section>
+
+  <section  id="three">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, quos! Voluptatem, dolorum dolores
+      doloremque provident mollitia cum tempora laboriosam adipisci.</p>
+  </section>
+  <section  id="four">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, quos! Voluptatem, dolorum dolores
+      doloremque provident mollitia cum tempora laboriosam adipisci.</p>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script>
+    var $navbar = $('.navbar');
+
+    $navbar.waypoint(function (direction) {
+      if (direction == 'down') {
+        $navbar.addClass('sticky');
+      } else {
+        $navbar.removeClass('sticky');
+      }
+    }, {
+      offset: '0%'
+    });
+  </script>
+</body>
+
+</html>
