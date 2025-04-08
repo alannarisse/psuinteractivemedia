@@ -5,8 +5,20 @@
       "path": "."
     },
     {
+      "name": "tsai-fu",
+      "path": "../tsai-fu"
+    },
+    {
       "name": "students",
       "path": "../students"
+    },
+    {
+      "name": "pour-bastard",
+      "path": "../pour-bastard"
+    },
+    {
+      "name": "chrysolins-creations",
+      "path": "../chrysolins-creations"
     },
     {
       "name": "deepspacemermaid.github.io",
@@ -27,10 +39,6 @@
     {
       "name": "funnel-cake",
       "path": "../../Desktop/DES341/funnel-cake"
-    },
-    {
-      "name": "tsai-fu",
-      "path": "../tsai-fu"
     },
     {
       "name": "saltys",
@@ -81,27 +89,27 @@
       "path": "../clock"
     },
     {
+      "name": "letters-svg",
       "path": "../../Desktop/letters-svg"
     },
     {
-      "path": "../pour-bastard"
-    },
-    {
+      "name": "leo-code-demo",
       "path": "../leo-code-demo"
     },
     {
+      "name": "chrisolyns",
       "path": "../chrisolyns"
     },
     {
-      "path": "../chrysolins-creations"
-    },
-    {
+      "name": "thumbnail-image-swap",
       "path": "../thumbnail-image-swap"
     },
     {
+      "name": "alanna-slideshow",
       "path": "../alanna-slideshow"
     },
     {
+      "name": "parallax-demo-2025",
       "path": "../parallax-demo-2025"
     }
   ],

@@ -8,13 +8,18 @@
     body {
       margin: 0;
     }
-
+    html {
+        scroll-behavior: smooth;
+      }
     header {
       background-image: url('http://placebear.com/1600/400');
       background-size: cover;
       height: 300px;
     }
-
+    h1 {
+      margin:0;
+      padding:20px;
+    }
     nav {
       background-color: #333;
       padding: 20px;
@@ -58,15 +63,15 @@
   </header>
   <div class="navbar">
     <nav class="navbar">
-      <a href="#">one</a><a href="#">two</a><a href="#">three</a><a href="#">four</a>
+      <a href="#one">one</a><a href="#two">two</a><a href="#three">three</a><a href="#four">four</a>
     </nav>
   </div>
-  <section>
+  <section id="one">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, quos! Voluptatem, dolorum dolores
       doloremque provident mollitia cum tempora laboriosam adipisci.</p>
   </section>
 
-  <section class="grid">
+  <section id="two" class="grid">
     <div>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, quos! Voluptatem, dolorum dolores
         doloremque provident mollitia cum tempora laboriosam adipisci.</p>
@@ -80,13 +85,16 @@
     <div class="stuck">right stickiness</div>
   </section>
 
-  <section>
+  <section  id="three">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, quos! Voluptatem, dolorum dolores
+      doloremque provident mollitia cum tempora laboriosam adipisci.</p>
+  </section>
+  <section  id="four">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, quos! Voluptatem, dolorum dolores
       doloremque provident mollitia cum tempora laboriosam adipisci.</p>
   </section>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="js/jquery.waypoints.min.js"></script>
   <script>
     var $navbar = $('.navbar');
