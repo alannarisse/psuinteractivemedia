@@ -133,7 +133,7 @@ svg {
   75% {transform: translateY(0px);}
   100% {transform: translateY(0);}
 }
-
+/* 
 #words path:nth-child(1) {
   animation-delay:100ms;
 }
@@ -172,4 +172,4 @@ svg {
 }
 #words path:nth-child(13) {
   animation-delay:1300ms;
-}
+} */

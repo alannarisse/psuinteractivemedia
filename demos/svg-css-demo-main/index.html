@@ -18,7 +18,6 @@
 
    <p class="anim-words">Animate words!</p>
 
-<?xml version="1.0" encoding="UTF-8"?>
 <svg id="earth" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 718.41 47.67">
   <g id="words-svg">
     <g id="words">
@@ -40,33 +39,25 @@
   </g>
 </svg>
 
-
   </main>
-  
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
   <script>
+    //alert(document.querySelectorAll("#words path").length)
+let pathCount = document.querySelectorAll("#words path").length
     $('.anim-words').click(
       function(){
         $('#words path').addClass('anim-words')
         $('#words path').css('fill','green')
       }
     )
+      let paths = $("#words path")
 
+      paths.each(function(index) {
+        paths[index] = $(this).css('animation-delay', `${index+1}00ms`)
+        console.log(this)
+      })
 
-// let num = 1;
-
-// for (let i = 0; i < 13; i++) {
-//   num = num + i;
-
-
-// }
-
-// return `
-// #words path:nth-child(${num}) {
-//   animation-delay:100ms;
-// }
-  `
   </script>
 </body>
 </html>

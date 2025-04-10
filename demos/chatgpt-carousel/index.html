@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Carousel with Play/Pause</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+    }
+
+    .carousel-container {
+      position: relative;
+      width: 80%;
+      min-width: 90vw;
+      min-height:90vh;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      margin:60px auto;
+    }
+
+    .carousel-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2.5rem;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+      transition: background 0.3s;
+    }
+
+    .arrow:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .arrow-left {
+      left: 10px;
+    }
+
+    .arrow-right {
+      right: 10px;
+    }
+
+    .play-pause-btn {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 1rem;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 6px;
+    }
+
+    .play-pause-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="carousel-container" id="carouselContainer">
+    <button class="arrow arrow-left" onclick="prevImage()">❮</button>
+    <img id="carousel" class="carousel-image" src="" alt="Carousel Image">
+    <button class="arrow arrow-right" onclick="nextImage()">❯</button>
+    <button id="playPauseBtn" class="play-pause-btn" onclick="toggleAutoplay()">Play</button>
+  </div>
+
+  <script>
+    const imageData = [
+      { url: "https://picsum.photos/id/1018/1200/600", alt: "Mountain View" },
+      { url: "https://picsum.photos/id/1025/1200/600", alt: "Dog" },
+      { url: "https://picsum.photos/id/1035/1200/600", alt: "Forest River" },
+      { url: "https://picsum.photos/id/1043/1200/600", alt: "Sunset at Beach" },
+      { url: "https://picsum.photos/id/1056/1200/600", alt: "Desert" }
+    ];
+
+    let currentIndex = 0;
+    const carousel = document.getElementById("carousel");
+    const playPauseBtn = document.getElementById("playPauseBtn");
+    let autoplayInterval = null;
+    let isPlaying = false;
+
+    function showImage(index) {
+      carousel.style.opacity = 0;
+      setTimeout(() => {
+        carousel.src = imageData[index].url;
+        carousel.alt = imageData[index].alt;
+        carousel.style.opacity = 1;
+      }, 250);
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % imageData.length;
+      showImage(currentIndex);
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + imageData.length) % imageData.length;
+      showImage(currentIndex);
+    }
+
+    function startAutoplay() {
+      autoplayInterval = setInterval(nextImage, 5000);
+      isPlaying = true;
+      playPauseBtn.textContent = "Pause";
+    }
+
+    function stopAutoplay() {
+      clearInterval(autoplayInterval);
+      isPlaying = false;
+      playPauseBtn.textContent = "Play";
+    }
+
+    function toggleAutoplay() {
+      if (isPlaying) {
+        stopAutoplay();
+      } else {
+        startAutoplay();
+      }
+    }
+
+    // Initialize first image without autoplay
+    showImage(currentIndex);
+  </script>
+</body>
+</html>

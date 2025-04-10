@@ -11,18 +11,21 @@
       margin: 0;
       background-color: #1d1e22;
       background: linear-gradient(180deg, #E8A5D4 0%, #E49A22 100%);
+      overflow-x:hidden;
     }
 
     #parallax {
       position: relative;
       width: 100%;
-      height: 100vh;
+      height: 120vh;
       background-image: url(images/mountain1.svg), url(images/mountain2.svg),
         url(images/mountain3.svg),
         url(images/mountain4.svg), url(images/sun.svg);
       background-repeat: no-repeat;
-      background-position: center;
+      /* background-position: bottom center; */
       background-position: 50% 50%;
+      margin:auto;
+      border:4px solid red;
     }
 
     h1 {
@@ -54,11 +57,11 @@
         let _h = window.innerHeight / 2;
         let _mouseX = e.clientX;
         let _mouseY = e.clientY;
-        let _depth1 = `${0 - (_mouseX - _w) * 0.001}% ${110 - (_mouseY - _h) * 0.06}%`;
-        let _depth2 = `${100 - (_mouseX - _w) * 0.001}% ${110 - (_mouseY - _h) * 0.06}%`;
-        let _depth3 = `${0 - (_mouseX - _w) * 0.001}% ${160 - (_mouseY - _h) * 0.03}%`;
-        let _depth4 = `${100 - (_mouseX - _w) * 0.001}% ${110 - (_mouseY - _h) * 0.01}%`;
-        let _sun = `${50 - (_mouseX - _w) * 0.00}% ${60 - (_mouseY - _h) * .1}%`;
+        let _depth1 = `${0 - (_mouseX - _w) * 0.04}% ${160 - (_mouseY - _h) * 0.06}%`;
+        let _depth2 = `${100 - (_mouseX - _w) * 0.03}% ${160 - (_mouseY - _h) * 0.06}%`;
+        let _depth3 = `${0 - (_mouseX - _w) * 0.02}% ${140 - (_mouseY - _h) * 0.03}%`;
+        let _depth4 = `${100 - (_mouseX - _w) * 0.01}% ${120 - (_mouseY - _h) * 0.01}%`;
+        let _sun = `${50 - (_mouseX - _w) * 0.01}% ${60 - (_mouseY - _h) * .2}%`;
         let x = `${_depth4}, ${_depth3}, ${_depth2}, ${_depth1}, ${_sun}`;
         console.log(x);
         elem.style.backgroundPosition = x;
