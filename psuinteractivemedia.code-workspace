@@ -111,6 +111,9 @@
     {
       "name": "parallax-demo-2025",
       "path": "../parallax-demo-2025"
+    },
+    {
+      "path": "../next-ecom"
     }
   ],
   "settings": {

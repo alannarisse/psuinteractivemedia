@@ -4,6 +4,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Auto Flow gallery grid</title>
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 	<style>
 		.grid-2 {
 			display: grid;
@@ -61,12 +65,13 @@
 
 
 	<header>
-		<h1>I heart bears</h1>
+		<h1 class="animate__animated animate__flash  animate__delay-1s">I heart bears</h1>
 	</header>
 
 
 	<section class="flex">
-		<div><img src="https://placebear.com/200x/00" alt=""></div>
+		<div class="animate__animated animate__rubberBand">Bouncy bouncy</div>
+		<div><img class="animate__animated animate__bounce" src="https://placebear.com/200x/00" alt=""></div>
 		<div><img src="https://placebear.com/200/200" alt=""></div>
 		<div><img src="https://placebear.com/200/200" alt=""></div>
 		<div><img src="https://placebear.com/200/200" alt=""></div>
@@ -80,7 +85,7 @@
 
 	<main class="grid-2">
 		<div class="left">
-			<p>Some content about how cool bears are.</p>
+			<p  class="animate__animated animate__bounce">Some content about how cool bears are.</p>
 		</div>
 		<div class="right">
 			<section class="gallery">

@@ -57,11 +57,11 @@
         let _h = window.innerHeight / 2;
         let _mouseX = e.clientX;
         let _mouseY = e.clientY;
-        let _depth1 = `${0 - (_mouseX - _w) * 0.04}% ${160 - (_mouseY - _h) * 0.06}%`;
-        let _depth2 = `${100 - (_mouseX - _w) * 0.03}% ${160 - (_mouseY - _h) * 0.06}%`;
-        let _depth3 = `${0 - (_mouseX - _w) * 0.02}% ${140 - (_mouseY - _h) * 0.03}%`;
-        let _depth4 = `${100 - (_mouseX - _w) * 0.01}% ${120 - (_mouseY - _h) * 0.01}%`;
-        let _sun = `${50 - (_mouseX - _w) * 0.01}% ${60 - (_mouseY - _h) * .2}%`;
+        let _depth1 = `${0 - (_mouseX - _w) * 0.08}% ${160 - (_mouseY - _h) * 0.06}%`;
+        let _depth2 = `${100 - (_mouseX - _w) * 0.09}% ${160 - (_mouseY - _h) * 0.05}%`;
+        let _depth3 = `${0 - (_mouseX - _w) * 0.1}% ${140 - (_mouseY - _h) * 0.04}%`;
+        let _depth4 = `${100 - (_mouseX - _w) * 0.01}% ${120 - (_mouseY - _h) * 0.03}%`;
+        let _sun = `${50 - (_mouseX - _w) * 0.00}% ${60 - (_mouseY - _h) * .2}%`;
         let x = `${_depth4}, ${_depth3}, ${_depth2}, ${_depth1}, ${_sun}`;
         console.log(x);
         elem.style.backgroundPosition = x;

@@ -2,9 +2,9 @@
 const blogData = [
   {
     id: 1,
-    title: 'My First Blog Post',
+    title: 'I love blogs',
     subtitle: 'Lorem ipsum dolor sit amet',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis magna at purus fringilla feugiat. Sed non convallis turpis. Donec non justo non lacus aliquam ultricies eu id mauris.',
+    content: 'I was just thinkging the other day about blogs and how wonderful they are.',
     image: 'https://via.placeholder.com/500x250'
   },
   {

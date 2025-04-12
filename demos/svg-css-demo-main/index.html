@@ -41,23 +41,8 @@
 
   </main>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+ <script src="script.js"></script>
 
-  <script>
-    //alert(document.querySelectorAll("#words path").length)
-let pathCount = document.querySelectorAll("#words path").length
-    $('.anim-words').click(
-      function(){
-        $('#words path').addClass('anim-words')
-        $('#words path').css('fill','green')
-      }
-    )
-      let paths = $("#words path")
 
-      paths.each(function(index) {
-        paths[index] = $(this).css('animation-delay', `${index+1}00ms`)
-        console.log(this)
-      })
-
-  </script>
 </body>
 </html>
