@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Scroll</title>
+  <style>
+  * {box-sizing: border-box;}
+  body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:20px;
+  }
+  section {
+    min-height:100vh;
+    padding:60px;
+  }
+  .one {
+    background-color:rgb(183, 217, 206);
+  }
+  .two {
+    background-color:rgb(183, 183, 217);
+  }
+  .three {
+    background-color:rgb(217, 183, 206);
+  }
+  .square1 {
+    background:red;
+    height:150px;
+    width:150px;
+  }
+  .square2 {
+    background:rgb(48, 15, 183);
+    height:150px;
+    width:150px;
+    margin-top:300px;
+  }
+  </style>
+</head>
+<body>
+  
+  <section class="one">
+
+  </section>
+  <section class="two">
+        <div class="square1"></div>
+    <div class="square2"></div>
+  </section>
+    <section class="three">
+    
+  </section>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script>
+    gsap.to(".square1", {
+      x:700,
+      duration: 3,
+      scrollTrigger: ".square2",
+      markers:true
+    })
+    </script>
+</body>
+</html>

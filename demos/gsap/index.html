@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSAP Demos</title>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  /* from CSS only Background patters: https://css-pattern.com/  */
+  html {
+  --s: 37px; /* control the size*/
+  --c1: #a4cef4;
+  --c2: #dbd9a3;
+  
+  --_c1: var(--c1) 99%,#0000 101%;
+  --_c2: var(--c2) 99%,#0000 101%;
+  
+  --r:calc(var(--s)*.866); 
+  --g0:radial-gradient(var(--s),var(--_c1));
+  --g1:radial-gradient(var(--s),var(--_c2));
+  --f:radial-gradient(var(--s) at calc(100% + var(--r)) 50%,var(--_c1));
+  --p:radial-gradient(var(--s) at 100% 50%,var(--_c2));
+  background:
+    var(--f) 0 calc(-5*var(--s)/2),
+    var(--f) calc(-2*var(--r)) calc(var(--s)/2),
+    var(--p) 0 calc(-2*var(--s)),
+    var(--g0) var(--r) calc(-5*var(--s)/2),
+    var(--g1) var(--r) calc( 5*var(--s)/2),
+    radial-gradient(var(--s) at 100% 100%,var(--_c1)) 0 calc(-1*var(--s)),   
+    radial-gradient(var(--s) at 0%   50% ,var(--_c1)) 0 calc(-4*var(--s)),
+    var(--g1) calc(-1*var(--r)) calc(-7*var(--s)/2),
+    var(--g0) calc(-1*var(--r)) calc(-5*var(--s)/2),
+    var(--p) calc(-2*var(--r)) var(--s),
+    var(--g0) calc(-1*var(--r)) calc(var(--s)/ 2),
+    var(--g1) calc(-1*var(--r)) calc(var(--s)/-2),
+    var(--g0) 0 calc(-1*var(--s)),
+    var(--g1) var(--r) calc(var(--s)/-2),
+    var(--g0) var(--r) calc(var(--s)/ 2) 
+    var(--c2);
+  background-size: calc(4*var(--r)) calc(6*var(--s));
+}
+  body {    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+    main {
+      padding:80px;
+      width:80%;
+      background:white;
+      margin: 80px auto;
+      border: 12px solid #7db3e6;
+      border-radius:30px;
+    }
+    h1 {
+      margin-top:0;
+      padding-top:60px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>GSAP Demos</h1>
+
+    <ul>
+      <li><a href="scroll1.html">Basic Scroll Trigger</a></li>
+      <li><a href="scroll2.html">Scroll Trigger Vertical + Horizontal</a></li>
+      <li><a href="scrub-video.html">Video Scrub</a></li>
+      <li><a href="timeline.html">timeline triggers</a></li>
+      <li><a href="sticky-nav.html">sticky nav on scroll</a></li>
+      <li><a href="scroll-standalone.html">Standalone Scrolls</a></li>
+    </ul>
+  </main>
+</body>
+</html>

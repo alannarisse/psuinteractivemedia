@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Scroll</title>
+  <style>
+  * {box-sizing: border-box;}
+  body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:20px;
+  }
+  section {
+    padding:60px 200px;
+  }
+  .one {
+    background-color:rgb(183, 217, 206);
+
+  }
+  nav {
+    background-color:rgb(183, 217, 206);
+    padding:40px;
+    color: #fff;
+    font-size: 42px;
+    
+  }
+  nav.nav-active {
+    background-color: white;
+    color: #000;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    transition:all;
+  }
+  .two {
+    background-color:rgb(183, 183, 217);
+  }
+  .three {
+    background-color:rgb(217, 183, 206);
+  }
+  .square {
+    background:red;
+    height:150px;
+    width:150px;
+  }
+  .purple {
+    background:rgb(190, 2, 190);
+  }
+
+  </style>
+</head>
+<body>
+<nav>This is the nav</nav>
+  <section class="one">
+    <p>Well, children, where there is so much racket there must be something out of kilter. I think that 'twixt the negroes of the South and the women at the North, all talking about rights, the white men will be in a fix pretty soon. But what's all this here talking about?</p>
+
+<p>That man over there says that women need to be helped into carriages, and lifted over ditches, and to have the best place everywhere. Nobody ever helps me into carriages, or over mud-puddles, or gives me any best place! And ain't I a woman? Look at me! Look at my arm! I have ploughed and planted, and gathered into barns, and no man could head me! And ain't I a woman? I could work as much and eat as much as a man - when I could get it - and bear the lash as well! And ain't I a woman? I have borne thirteen children, and seen most all sold off to slavery, and when I cried out with my mother's grief, none but Jesus heard me! And ain't I a woman?</p>
+
+<p>Then they talk about this thing in the head; what's this they call it? [member of audience whispers, "intellect"] That's it, honey. What's that got to do with women's rights or negroes' rights? If my cup won't hold but a pint, and yours holds a quart, wouldn't you be mean not to let me have my little half measure full?</p>
+
+<p>Then that little man in black there, he says women can't have as much rights as men, 'cause Christ wasn't a woman! Where did your Christ come from? Where did your Christ come from? From God and a woman! Man had nothing to do with Him.</p>
+
+<p>If the first woman God ever made was strong enough to turn the world upside down all alone, these women together ought to be able to turn it back , and get it right side up again! And now they is asking to do it, the men better let them.</p>
+
+Obliged to you for hearing me, and now old Sojourner ain't got nothing more to say.</p>
+  </section>
+  <section class="two">
+    <p>Friends and Fellow Citizens: I stand before you tonight under indictment for the alleged crime of having voted at the last presidential election, without having a lawful right to vote. It shall be my work this evening to prove to you that in thus voting, I not only committed no crime, but, instead, simply exercised my citizen’s rights, guaranteed to me and all United States citizens by the National Constitution, beyond the power of any State to deny.</p>
+
+<p>The preamble of the Federal Constitution says:</p>
+
+<p>“We, the people of the United States, in order to form a more perfect union, establish justice, insure domestic tranquility, provide for the common defense, promote the general welfare, and secure the blessings of liberty to ourselves and our posterity, do ordain and establish this Constitution for the United States of America.”</p>
+
+<p>It was we, the people; not we, the white male citizens; nor yet we, the male citizens; but we, the whole people, who formed the Union. And we formed it, not to give the blessings of liberty, but to secure them; not to the half of ourselves and the half of our posterity, but to the whole people–women as well as men. And it is a downright mockery to talk to women of their enjoyment of the blessings of liberty while they are denied the use of the only means of securing them provided by this democratic-republican government–the ballot.</p>
+
+<p>For any State to make sex a qualification that must ever result in the disfranchisement of one entire half of the people is to pass a bill of attainder, or an ex post facto law, and is therefore a violation of the supreme law of the land. By it the blessings of liberty are for ever withheld from women and their female posterity. To them this government has no just powers derived from the consent of the governed. To them this government is not a democracy. It is not a republic. It is an odious aristocracy; a hateful oligarchy of sex; the most hateful aristocracy ever established on the face of the globe; an oligarchy of wealth, where the right govern the poor. An oligarchy of learning, where the educated govern the ignorant, or even an oligarchy of race, where the Saxon rules the African, might be endured; but this oligarchy of sex, which makes father, brothers, husband, sons, the oligarchs over the mother and sisters, the wife and daughters of every household–which ordains all men sovereigns, all women subjects, carries dissension, discord and rebellion into every home of the nation.</p>
+
+<p>Webster, Worcester and Bouvier all define a citizen to be a person in the United States, entitled to vote and hold office.</p>
+
+<p>The only question left to be settled now is: Are women persons? And I hardly believe any of our opponents will have the hardihood to say they are not. Being persons, then, women are citizens; and no State has a right to make any law, or to enforce any old law, that shall abridge their privileges or immunities. Hence, every discrimination against women in the constitutions and laws of the several States is today null and void, precisely as in every one against Negroes.</p>
+  </section>
+  <section class="three">
+    
+  </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script>
+      ScrollTrigger.create({
+        trigger: '.one',
+        start: 'top 4%',
+        markers: true,
+        toggleClass: {targets: 'nav', className: 'nav-active'},
+
+      })
+    </script>
+</body>
+</html>

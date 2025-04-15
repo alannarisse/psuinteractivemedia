@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horizontal Scroll</title>
+    <style>
+      * {box-sizing: border-box;}
+      body {
+        margin: 0;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size:20px;
+      }
+      h2 {
+        font-size: 48px;
+      }
+      .wrapper-h {
+        overflow-x:hidden;
+        position:relative;
+      }
+      .horiz-container1 {
+        width: 300vw;
+        height:100vh;
+        display: flex;
+        
+      }
+      .horiz-container1 section {
+        width:100vw;
+        height:100vh;
+        display: flex;
+        flex:1;
+        gap: 3rem;
+      }
+      .horiz-container1 section article {
+        flex: 1;
+        padding: 80px 60px;
+      }
+      .horiz-container1 .one {
+        background-color: rgb(224, 225, 198);
+      }
+      .horiz-container1 .two {
+        background-color: rgb(176, 227, 230);
+      }
+      .horiz-container1 .three {
+        background-color: rgb(224, 202, 231);
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Start Wrapper -->
+    <div class="wrapper-1">
+      <!-- Start Container - set to number of sections you want in css. 300vw = 3 sections -->
+    <div class="horiz-container1 scrollx">
+      <section class="one">
+        <article class="left">
+          <h2>One is the loneliest number</h2>
+          <p>
+            One is the loneliest number that you'll ever do. Two can be as bad as one It's the loneliest number since the number one</p>
+          <p>"No" is the saddest experience you'll ever know. Yes, it's the saddest experience you'll ever know. 'Cause one is the loneliest number that you'll ever do. One is the loneliest number, whoa-oh, worse than two
+          </p>
+        </article>
+        <article class="right">
+          <img src="https://placebear.com/500/400">
+        </article>
+      </section>
+      <section class="two">
+        <article class="left">
+          <img src="https://placebear.com/500/410">
+        </article>
+        <article class="right">
+          <h2 class="anim">Two is much better than one</h2>
+          <p class="anim">It's just no good anymore since you went away
+Now I spend my time just making rhymes of yesterday</p>
+          <p>One is the loneliest number
+One is the loneliest number
+One is the loneliest number that you'll ever do
+One is the loneliest
+One is the loneliest
+One is the loneliest number that you'll ever do</p>
+        </article>
+      </section>
+      <section class="three">
+        <article class="left">
+          <h2 class="anim">Three is the Magic Number</h2>
+          <p class="anim">It's just no good anymore since you went away
+</p>
+          <p>One is the loneliest (number)
+One is the loneliest (number)
+One is the loneliest number that you'll ever do (number)
+One is the loneliest (number)
+One is the loneliest (number)
+One is the loneliest number that you'll ever do (number)
+One (one is the loneliest number that you'll ever do)(number)
+One is the loneliest number that you'll ever do (number)
+One is the loneliest number that you'll ever do</p>
+        </article>
+        <article class="right">
+          <img src="https://placebear.com/500/420">
+        </article>
+      </section>
+    </div>
+    <!-- End Container -->
+    </div> 
+    <!-- End Wrapper -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(ScrollTrigger)
+  // gsap code here!
+
+
+const containerH  = document.querySelector(".horiz-container1")
+const sectionsH = gsap.utils.toArray(".horiz-container1 section")
+const animIn = gsap.utils.toArray(".anim")
+
+let scrollTween = gsap.to(sectionsH, {
+  xPercent: -100 * (sectionsH.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".horiz-container1",
+    pin: true,
+    scrub: 1,
+    end: "+=3000",
+    markers: true
+  }
+})
+ //end gsap wrapper
+ });
+</script>
+  </body>
+</html>
