@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+<dotlottie-player src="https://lottie.host/3d6bdf5a-847e-40db-81c6-6b21d927a5ea/1AIVcme50u.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autostart="0"></dotlottie-player>
+
+<script>
+ScrollTrigger.create({
+        trigger: '.spin-me',
+        start: 'top 80%',
+        end: 'top 0%',
+        markers: true,
+        toggleClass: 'spin'
+      })
+      //can we figure out how to add the 'autoplay' attribute to dotlottie-player tag on scroll trigger. 
+      </script>
+
+
+<script>
+  let player = document.querySelector("lottie-player");
+let play = document.querySelector("#start");
+let stop = document.querySelector("#stop");
+
+//on stroll trigger target start
+play.onclick = function () {
+    player.play();
+};
+//on stroll trigger target end
+stop.onclick = function () {
+    player.stop();
+};
+
+
+</script>
+</body>
+</html>
