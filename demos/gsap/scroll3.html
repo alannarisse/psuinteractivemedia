@@ -57,7 +57,7 @@
   animation-name:spin;
   animation-duration:500ms;
   display:inline-block;
-  animation-iteration-count: 4;
+  animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
@@ -80,7 +80,7 @@
     <!-- Start Wrapper -->
     <div class="wrapper-1">
       <!-- Start Container - set to number of sections you want in css. 300vw = 3 sections -->
-    <div class="horiz-container1 scrollx">
+    <div class="horiz-container1">
       <section class="one">
         <article class="left">
           <h2 class="anim">One is the loneliest number</h2>
@@ -193,7 +193,7 @@ sections.forEach(section => {
 ScrollTrigger.create({
         trigger: '.spin-me',
         start: 'top 80%',
-        end: 'top 0%',
+        end: 'top 30%',
         markers: true,
         toggleClass: 'spin'
       })

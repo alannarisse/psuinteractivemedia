@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz App</title>
+    <meta name="description" content="Bloc Quiz. Test your knowledge of anatomy and physiology">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<body class="container">
+    <header role="banner">
+            <div name="start-page">
+                    <h1>Anatomy & Exercise Physiology Quiz</h1>
+                </div>
+    </header>
+
+    <main role="main">
+
+            <div class="start-page">
+                <p>This quiz contains 5 multiple choice questions about Anatomy & Physiology.</p>
+                <button type="button" class="startButton"> Begin Quiz</button>
+            </div>
+
+        <div class="quiz-pages">
+           <form class="quiz-form">
+                <fieldset>
+                    <legend><span id="question-text">Question:</span></legend>
+                    <label class="answerOption">
+                        <input type="radio" value="Answer1" name="answer" id="Answer1" required>
+                        <span id="answer-choice-1"></span>
+                    </label>
+                    <label class="answerOption">
+                        <input type="radio" value="Answer2" name="answer" id="Answer2" required>
+                        <span id="answer-choice-2"></span>
+                    </label>
+                    <label class="answerOption">
+                        <input type="radio" value="Answer3" name="answer" id="Answer3" required>
+                        <span id="answer-choice-3"></span>
+                    </label>
+                    <label class="answerOption">
+                        <input type="radio" value="Answer4" name="answer" id="Answer4" required>
+                        <span id="answer-choice-4"></span>
+                    </label>
+                    <button type="submit" class="submitButton">Submit</button>
+                </fieldset>
+            </form> 
+        </div>
+
+           <div class="answer-pages">
+                <div class="correct-page">
+                    <p>You are correct!</p>
+                </div>
+
+                <div class="incorrect-page">
+                    <p id="correct-answer-is"></p>
+                </div>
+                <button type='button' class='next-question'><span id='next-question-button'>Next Question</span></button>
+           </div>
+
+           <div class="finish-page">
+                <span id="your-score">Great job!</span>
+                <button type='button' class='restart-quiz'>Restart Quiz</button>
+           </div>
+
+    </main>
+    <footer>
+        <ul>
+            <li id='question-number'>Question <span id="onQuestion">0</span> of 5</li>
+            <li id="score-number">Score <span id="currentScore">0</span> of 5</li>
+        </ul>
+    </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

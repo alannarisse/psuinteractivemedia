@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin:0;
+    }
+    .wrapper {
+      height:500vh;
+      background:rgb(205, 205, 249);
+    }
+    section {
+      padding:60px;
+      height:100vh;
+      background: rgb(191, 206, 206);
+      display:flex;
+      flex-direction:column;
+
+    }
+    .box {
+      width:150px;
+      height:150px;
+    }
+        .a {
+      background:rgb(85, 0, 128);
+    }
+        .b {
+      background:rgb(233, 173, 23);
+    }
+    .c {
+      background:teal;
+      /* margin-bottom: -1000px; */
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+  <section>
+    <div class="box a">a</div>
+    <div class="box b">b</div>
+    <div class="box c">c</div>
+  </section>
+  </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+
+
+<!-- basic -->
+<!-- <script>
+  gsap.to('.c', {
+    scrollTrigger: {
+      trigger:'.c',  
+      toggleActions: 'restart pause reverse pause'
+    },
+    x: 400,
+    rotation:360,
+    duration:3,
+  })
+</script> -->
+
+<!-- add start -->
+<!-- <script>
+  gsap.to('.c', {
+    scrollTrigger: {
+      trigger:'.c',  
+      start: '20% 80%',
+      // end: 'bottom 100px',
+      //this makes it 300px down from the start
+      end: '+=300px', 
+      markers: true,
+      toggleActions: 'restart pause reverse pause'
+    },
+    x: 400,
+    rotation:360,
+    duration:3,
+  })
+</script> -->
+
+<!-- <script>
+  gsap.to('.c', {
+    scrollTrigger: {
+      trigger:'.a',  
+      start: 'center center',
+      markers: true,
+      toggleActions: 'restart pause reverse pause',
+      //dynamic end
+      end: () => '+=' +
+  document.querySelector('.c').offsetWidth,
+      
+    },
+    x: 400,
+    rotation:360,
+    duration:3,
+  })
+</script> -->
+
+<!-- <script>
+  gsap.to('.c', {
+    scrollTrigger: {
+      trigger:'.a',  
+      start: 'center top',
+      endTrigger: '.c',
+      markers: true,
+      toggleActions: 'restart pause reverse pause',
+      end: "bottom 80%"
+    },
+    x: 400,
+    rotation:360,
+    duration:3,
+  })
+</script> -->
+<!-- <script>
+  gsap.to('.c', {
+    scrollTrigger: {
+      trigger:'.c',  
+      start: 'top 80%',
+      end: "top 100px",
+      scrub:1, // numbers give it a delay
+      markers: true,
+      toggleActions: 'restart pause reverse pause',
+    },
+    x: 400,
+    rotation:360,
+    duration:3,
+  })
+</script> -->
+
+<!-- <script>
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger:'.c',  
+      start: 'top 90%',
+      end: "top 50px",
+      scrub:true, // numbers give it a delay
+      markers: true,
+    }
+  });
+
+  tl.to('.c', {
+    x: 400,
+    rotation:360,
+    duration:1,
+    })
+    .to('.c', {
+    background:'purple',
+    duration:1
+    });
+</script> -->
+
+//pinning
+<!-- <script>
+gsap.to('.c', {
+    scrollTrigger: {
+      trigger:'section',  
+      start: 'bottom bottom',
+      end: "bottom 5px",
+      scrub: true,
+      pin: true,
+      markers: true
+    },
+    x: 400,
+    rotation: 360,
+    ease: 'none',
+    duration:3,
+  })
+</script> -->
+
+//pinning with timeline
+<script>
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger:'section',  
+      start: 'bottom bottom',
+      end: "bottom 5px",
+      pin:true,
+      scrub:true,
+      markers: true,
+    }
+  });
+
+  tl.to('.a', {
+    x: 400,
+    rotation:360,
+    })
+    .to('.b', {
+    background:'red',
+    })
+    .to('.c', {
+    background:'blue',
+    x: 400,
+    rotation:360,
+    });
+</script>
+</body>
+</html>
