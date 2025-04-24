@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Carousel with Play/Pause</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      /* background: #111; */
+      color: #000;
+    }
+
+    .carousel-container {
+      position: relative;
+      width: 80%;
+      min-width: 90vw;
+      min-height:90vh;
+      /* overflow: hidden; */
+      /* border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5); */
+      margin:60px auto;
+    }
+
+    #carousel {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2.5rem;
+      color: #000;
+      /* background-color: rgba(0, 0, 0, 0.5); */
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+      transition: background 0.3s;
+    }
+
+    .arrow:hover {
+      /* background-color: rgba(0, 0, 0, 0.7); */
+    }
+
+    .arrow-left {
+      left: -60px;
+    }
+
+    .arrow-right {
+      right: -60px;
+    }
+
+    .play-pause-btn {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 1rem;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 6px;
+    }
+
+    .play-pause-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .jitter {
+      animation-name: jitter;
+      animation-duration: 200ms; /* speed up jitter */
+      animation-iteration-count: 2; /* how many times it jitters */
+    }
+    @keyframes jitter{ 
+      0% {
+
+        transform:translateX(2px) translateY(2px) rotate(2deg);
+      }
+      100% {
+        /* transform:rotate(-1deg); */
+        transform:translateX(-2px) translateY(-2px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="carousel-container" id="carouselContainer">
+    <button class="arrow arrow-left" onclick="prevImage()">❮</button>
+    <img id="carousel" class="" src="" alt="Carousel Image">
+    <button class="arrow arrow-right" onclick="nextImage()">❯</button>
+    <button id="playPauseBtn" class="play-pause-btn" onclick="toggleAutoplay()">Play</button>
+  </div>
+
+  <script>
+    const imageData = [
+      { id: '001', className: "jitter", alt: "" },
+      { id: '002', className: "", alt: "" },
+      { id: '003', className: "", alt: "" },
+      { id: '004', className: "jitter", alt: "" },
+      { id: '005', className: "", alt: "" },
+      { id: '006', className: "", alt: "" },
+      { id: '007', className: "", alt: "" },
+      { id: '008', className: "jitter", alt: "" },
+      { id: '009', className: "", alt: "" },
+      { id: '010', className: "", alt: "" },
+      { id: '011', className: "", alt: "" },
+      { id: '012', className: "jitter", alt: "" },
+      { id: '013', className: "", alt: "" },
+      { id: '014', className: "", alt: "" },
+      { id: '015', className: "", alt: "" },
+      { id: '016', className: "", alt: "" },
+      { id: '017', className: "", alt: "" },
+      { id: '018', className: "", alt: "" },
+      { id: '019', className: "", alt: "" },
+      { id: '020', className: "", alt: "" },
+    ];
+
+    //for jitter we want javascript to pick a random number to figure out what nth-child should jitter.
+
+    let currentIndex = 0;
+    const carousel = document.getElementById("carousel");
+    const playPauseBtn = document.getElementById("playPauseBtn");
+    let autoplayInterval = null;
+    let isPlaying = false;
+
+    function getRndInteger(min, max) {
+      return Math.floor(Math.random() * (max - min) ) + min;
+      //Hey Alanna, this needs to figure out which items have jitter. 
+    }
+
+    function showImage(index) {
+      carousel.style.opacity = 1;
+      //setTimeout(() => {
+        carousel.src = `images/chapt1/${imageData[index].id}risograph.png`;
+        carousel.alt = imageData[index].alt;
+        carousel.className = imageData[index].className;
+        //carousel.style.opacity = 1;
+      //}, 250);
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % imageData.length;
+      showImage(currentIndex);
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + imageData.length) % imageData.length;
+      showImage(currentIndex);
+    }
+
+    function startAutoplay() {
+      autoplayInterval = setInterval(nextImage, 100);
+      isPlaying = true;
+      playPauseBtn.textContent = "Pause";
+    }
+
+    function stopAutoplay() {
+      clearInterval(autoplayInterval);
+      isPlaying = false;
+      playPauseBtn.textContent = "Play";
+    }
+
+    function toggleAutoplay() {
+      if (isPlaying) {
+        stopAutoplay();
+      } else {
+        startAutoplay();
+      }
+    }
+
+    // Initialize first image without autoplay
+    showImage(currentIndex);
+    getRndInteger(1, imageData.length)
+  </script>
+</body>
+</html>

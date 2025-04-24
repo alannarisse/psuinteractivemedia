@@ -27,7 +27,7 @@
       margin:60px auto;
     }
 
-    .carousel-image {
+    #carousel {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -77,43 +77,61 @@
     .play-pause-btn:hover {
       background: rgba(0, 0, 0, 0.8);
     }
+
+    .carousel-container {
+      position: relative;
+    }
+    .chapt1 .words-p1-t1 {
+      position: absolute;
+      top: 40px;
+      left: 100px;
+      width:100px;
+      min-height:69px;
+      padding:20px;
+    }
+
+    .chapt2 .animate1 {
+
+    }
   </style>
 </head>
-<body>
+<body class="chapt1">
 
   <div class="carousel-container" id="carouselContainer">
     <button class="arrow arrow-left" onclick="prevImage()">❮</button>
-    <img id="carousel" class="carousel-image" src="" alt="Carousel Image">
+    <img id="carousel" class="" src="" alt="Carousel Image">
     <button class="arrow arrow-right" onclick="nextImage()">❯</button>
     <button id="playPauseBtn" class="play-pause-btn" onclick="toggleAutoplay()">Play</button>
   </div>
+  <img id="words" src="" class="" alt="">
 
   <script>
     const imageData = [
-      { id: '001', class: "", alt: "" },
-      { id: '002', class: "", alt: "" },
-      { id: '003', class: "", alt: "" },
-      { id: '004', class: "", alt: "" },
-      { id: '005', class: "", alt: "" },
-      { id: '006', class: "", alt: "" },
-      { id: '007', class: "", alt: "" },
-      { id: '008', class: "", alt: "" },
-      { id: '009', class: "", alt: "" },
-      { id: '010', class: "", alt: "" },
-      { id: '011', class: "", alt: "" },
-      { id: '012', class: "", alt: "" },
-      { id: '013', class: "", alt: "" },
-      { id: '014', class: "", alt: "" },
-      { id: '015', class: "", alt: "" },
-      { id: '016', class: "", alt: "" },
-      { id: '017', class: "", alt: "" },
-      { id: '018', class: "", alt: "" },
-      { id: '019', class: "", alt: "" },
-      { id: '020', class: "", alt: "" },
+      { id: '001', className: "boo", alt: "" },
+      { id: '002', className: "foo", alt: "" },
+      { id: '003', className: "blue", alt: "" },
+      { id: '004', className: "", alt: "" },
+      { id: '005', className: "", alt: "" },
+      { id: '006', className: "", alt: "" },
+      { id: '007', className: "", alt: "" },
+      { id: '008', className: "", alt: "" },
+      { id: '009', className: "", alt: "" },
+      { id: '010', className: "", alt: "" },
+      { id: '011', className: "", alt: "" },
+      { id: '012', className: "", alt: "" },
+      { id: '013', className: "red fluff", alt: "" },
+      { id: '014', className: "", alt: "" },
+      { id: '015', className: "", alt: "" },
+      { id: '016', className: "", alt: "" },
+      { id: '017', className: "", alt: "" },
+      { id: '018', className: "", alt: "" },
+      { id: '019', className: "", alt: "" },
+      { id: '020', className: "", alt: "" },
     ];
 
     let currentIndex = 0;
     const carousel = document.getElementById("carousel");
+    const words = document.getElementById("words");
     const playPauseBtn = document.getElementById("playPauseBtn");
     let autoplayInterval = null;
     let isPlaying = false;
@@ -123,6 +141,10 @@
       //setTimeout(() => {
         carousel.src = `images/${imageData[index].id}risograph.png`;
         carousel.alt = imageData[index].alt;
+        carousel.className = imageData[index].className;
+        words.className = imageData[index].className;
+        //the class will make the words image appear.
+
         //carousel.style.opacity = 1;
       //}, 250);
     }
