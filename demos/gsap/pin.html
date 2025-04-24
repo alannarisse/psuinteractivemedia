@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pinning</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin:0;
+    }
+    .wrapper {
+      background:rgb(205, 205, 249);
+      
+    }
+    section {
+      width:100vw;
+      background: rgb(191, 206, 206);
+      display:flex;
+      flex-direction:column;
+    }
+    .box {
+      width:150px;
+      height:150px;
+      opacity:1;
+    }
+    .a {
+      background:rgb(85, 0, 128);
+    }
+    .b {
+      background:rgb(233, 173, 23);
+      position:absolute;
+      top:400px;
+      left:400px;
+    }
+    .c {
+      background:teal;
+      /* margin-bottom: -1000px; */
+    }
+    .d {
+      background:rgb(226, 8, 201);
+      /* margin-bottom: -1000px; */
+    }
+    .e {
+      background:rgb(21, 178, 52);
+      /* margin-bottom: -1000px; */
+    }
+    .f {
+      display:inline-block;
+      border:1px solid red;
+      max-width:300px;
+    }
+    .g {
+      height:100px;
+      width:100px;
+      border:1px solid red;
+    }
+    .h {
+      height:500px;
+      width:100px;
+      background: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+  <section>
+    <div class="box a">a</div>
+    <div class="box b">b</div>
+    <div class="box c">c</div>
+    <div class="box d">d</div>
+    <div class="box e">e</div>
+    <p class="f">This is some text</p>
+    <div class="g"></div>
+    <div class="h"></div>
+  </section>
+  </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+
+
+
+//pinning with timeline
+<script>
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger:'section',
+      start: '5px top',
+      endTrigger: '.h',
+      //end: "bottom top",
+      end: '+=4000', // ha! this slows it down!
+      pin:true,
+      scrub:3,
+      markers: true,
+    }
+  });
+
+  tl.to('.a', {
+    x: 400,
+    rotation:360,
+    delay:1,
+    duration:1,
+    opacity:0,
+    // visibility:hidden,
+    })
+    .to('.f', {
+    color:'white',
+    x: 800,
+    rotation:360,
+    scale: 2,
+    delay:0,
+    duration:2,
+    opacity:0,
+    })
+    .to('.b', {
+    background:'red',
+    duration:2,
+    x: 100,
+    })
+    .to('.b', {
+    x: 400,
+    rotation:360,
+    delay:1,
+    duration:1,
+    opacity:0,
+    })
+    .to('.c', {
+    background:'blue',
+    x: 400,
+    rotation:360,
+    delay:1,
+    duration:2,
+    opacity:0,
+    })
+    .to('.d', {
+    background:'pink',
+    x: 200,
+    y:100,
+    rotation:90,
+    delay:1,
+    duration:1,
+    opacity:0,
+    })
+    .to('.e', {
+    background:'aquamarine',
+    x: 800,
+    rotation:180,
+    delay:1,
+    duration:2,
+    opacity:0,
+    })
+    .to('.f', {
+    opactity:1,
+    color:'aquamarine',
+    x: 800,
+    rotation:360,
+    scale: 2,
+    delay:2,
+    duration:2,
+    opacity:0,
+    })
+    .to('.g', {
+    color:'aquamarine',
+    x: 800,
+    rotation:360,
+    scale: .5,
+    delay:2,
+    duration:2,
+    opacity:0,
+    })
+    .to('.h', {
+    opacity:'1',
+    x: 800,
+    scale: .5,
+    delay:2,
+    duration:2,
+    opacity:0,
+    })
+</script>
+</body>
+</html>

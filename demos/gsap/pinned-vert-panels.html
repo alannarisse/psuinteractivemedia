@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pinning</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin:0;
+      overflow-x: hidden;
+    }
+    h1 {
+      margin:0;
+    }
+    .container {
+      display:flex;
+      width: 400vw;
+    }
+    .page {
+      width:100vw;
+      height:100vh;
+      background: rgb(191, 206, 206);
+      display:flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .one {
+      background: rgb(54, 157, 157);
+    }
+    .two {
+      background: rgb(161, 235, 197);
+    }
+    .three {
+      background: rgb(245, 221, 151);
+    }
+    .four {
+      background: rgb(245, 183, 144);
+    }      
+  </style>
+</head>
+<body>
+  <div class="container">
+
+  <section class="page one">
+    <h1>I'm the first section</h1>
+  </section>
+  <section class="page two">
+    <h1>I'm the second section</h1>
+  </section>
+  <section class="page three">
+    <h1>I'm the third section</h1>
+  </section>
+  <section class="page four">
+    <h1>I'm the last section</h1>
+  </section>    
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+
+
+
+//pinning with timeline
+<script>
+  let sections = gsap.utils.toArray('.page');
+gsap.to(sections, {
+  xPercent: -100* (sections.length - 1),
+  ease: 'none',
+  scrollTrigger: {
+    trigger: '.container',
+    pin: true,
+    scrub: 1,
+    snap: 1 / (sections.length - 1),
+    end: () => '+=' + document.querySelector('.container').offsetWidth
+  }
+});
+ 
+</script>
+</body>
+</html>

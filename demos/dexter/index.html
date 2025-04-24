@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {box-sizing: border-box;}
+    body {background: black;
+    color: white;}
+    section {
+      height:100vh;
+      width:100vw;
+    }
+
+    .words {
+      position:absolute;
+      min-width:300px;
+      min-height:100px;
+      border:1px solid red;
+    }
+
+    .one {
+      top:10%;
+      right:20%;
+    }
+    .two {
+      top:10%;
+      left:20%;
+    }
+    .three {
+      top:20%;
+      right:40%;
+    }
+    .four {
+      top:60%;
+      left:50%;
+    }
+    .five {      
+      top:40%;
+      right:40%;
+    }
+    .foo {
+      background:red;
+    }
+    .egg {
+      display:inline-block;
+      width:100px; 
+      height:150px;
+      border: 1px solid white;
+      border-radius: 50%;
+    }
+
+  </style>
+</head>
+<body>
+  <section>
+    <div class="words one">one</div>
+    <div class="words two">two</div>
+    <div class="words three">three</div>
+    <div class="words four">four</div>
+    <div class="words five">five</div>
+<div class="egg"></div>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <script>
+
+    const array = [
+  {
+    "id": "1",
+    "content": "this is line one",
+    "className": "class-line-one"
+  },
+  {
+    "id": "2",
+    "content": "this is line whatver",
+    "className": "class-line-whatver"
+  },
+  {
+    "id": "3",
+    "content": "I'm a flower.",
+    "className": "class-im-a-flower"
+  }
+]
+    
+    $(function () {
+   // your code goes here
+
+   $('.egg').click(function(){
+    $('.one').toggleClass('foo');
+   })
+
+
+});
+  </script>
+
+  <script src="//s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js?v=0.6.0">
+
+  </script>
+</body>
+</html>

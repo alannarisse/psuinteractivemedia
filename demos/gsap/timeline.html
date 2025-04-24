@@ -18,6 +18,14 @@
   .one {
     background-color:rgb(183, 217, 206);
   }
+  .bar {
+    background:rgb(129, 108, 220);
+    height:150px;
+    width:150px;
+  }
+  .foo {
+    background:red;
+  }
     .two {
     background-color:rgb(183, 183, 217);
   }
@@ -40,6 +48,7 @@
 
   </section>
    <section class="two">
+    <div class="bar">boo</div>
         <div class="square1"></div>
         <h1 class="header1">Hi there</h1>
    </section>
@@ -52,17 +61,20 @@
     <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
 
     <script>
+ 
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: '.square1',
           markers: true,
           start: 'top 90%',
           end: 'top 10%',
+          duration:5000,
           scrub: .5
 
         }
-      });
+      })
       
+
       
       tl
       .to('.square1', {x:500, duration:2})

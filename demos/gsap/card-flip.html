@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {box-sizing: border-box;}
+    body {
+      background: #828fd1;
+      background: radial-gradient(circle,rgba(130, 143, 209, 1) 0%, rgba(230, 142, 160, 1) 100%); 
+    }
+    section {
+      width:100vw;
+      height:100vh;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction:column;
+    }
+    .cardholder {
+      width:100vw;
+      position:relative;
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+    .card {
+      --spacing: 4rem;
+      top: var(--spacing);
+  z-index: 3;
+  padding: 2rem;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      width:80%;
+      height: calc(100vh - var(--spacing) * 4);
+      margin:auto;
+      border-radius: 30px;
+      border: 1px solid #333;
+    }
+    .card:nth-child(1) {
+      top:150px;
+      left:10%;
+      z-index: 10;
+    }
+    .card:nth-child(2) {
+      top:100px;
+      left:10%;
+      z-index: 9;
+    }
+    .card:nth-child(3) {
+      top:50px;
+      left:10%;
+      z-index: 8;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h1>The next section flips some cards.</h1>
+  </section>
+  
+  <section class="cardholder">
+    <article class="card">
+      <h2>Card Title</h2>
+      <p>Yay I'm a card</p>
+    </article>
+    <article class="card">
+      <h2>Card Title</h2>
+      <p>Yay I'm a card</p>
+    </article>
+    <article class="card">
+      <h2>Card Title</h2>
+      <p>Yay I'm a card</p>
+    </article>
+  </section>
+  <section>
+<p>another section</p>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+  
+  <script>
+    const cards = document.querySelectorAll(".card");
+
+gsap.set(cards, {position:'absolute'});
+
+gsap.to(".card", {
+  yPercent: -200,
+  stagger: 0.5,
+  scrollTrigger: {
+    trigger: ".cardholder",
+    pin: true,
+    markers: true,
+    scrub: 1,
+    start: "top =+50",
+    end: "bottom top",
+    snap: {
+        snapTo: 0.33,
+        duration: {min: 0.1, max: 0.4},
+        ease: "power1.inOut"
+      }
+  }
+});
+  </script>
+</body>
+</html>

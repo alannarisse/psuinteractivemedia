@@ -18,9 +18,11 @@
     section {
       padding:60px;
       height:100vh;
+      width:100vw;
       background: rgb(191, 206, 206);
       display:flex;
       flex-direction:column;
+      position:fixed;
 
     }
     .box {
@@ -180,9 +182,9 @@ gsap.to('.c', {
     scrollTrigger: {
       trigger:'section',  
       start: 'bottom bottom',
-      end: "bottom 5px",
+      //end: "bottom 5px",
       pin:true,
-      scrub:true,
+      scrub:.5,
       markers: true,
     }
   });
