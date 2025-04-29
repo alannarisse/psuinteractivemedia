@@ -1,0 +1,43 @@
+* { padding: 0; margin: 0; box-sizing: border-box;}
+
+.background {
+    position:relative;
+    overflow-x: hidden;
+}
+
+.body{
+    overflow-x:hidden;
+}
+.line {
+    font: 36px "Raleway", sans-serif;
+    position: sticky;
+}
+
+.bird { 
+    position: relative;
+    z-index: 3;
+}
+
+.branch {
+    position: fixed;
+    z-index: 1;
+}
+/* .text {
+
+} */
+
+.note {
+    position:relative;
+    z-index: 3;
+    top: 90%;
+    left: 10%;
+    scale: 0.7;
+}
+
+.text {
+    position: fixed;
+    z-index: 4;
+    
+    left:15%;
+    top:30%;
+}

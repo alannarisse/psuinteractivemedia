@@ -45,12 +45,12 @@
 <body>
   
   <section class="one">
-
-  </section>
-   <section class="two">
     <div class="bar">boo</div>
         <div class="square1"></div>
         <h1 class="header1">Hi there</h1>
+  </section>
+   <section class="two">
+
    </section>
     <section class="three"></section>
 
@@ -64,12 +64,15 @@
  
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: '.square1',
+          trigger: '.one',
           markers: true,
-          start: 'top 90%',
-          end: 'top 10%',
-          duration:5000,
-          scrub: .5
+          start: '=+50px top',
+          //end: '+=2000',
+          endTrigger: '.three',
+          duration: 5000,
+          scrub: .5,
+          pin: true,
+          pinSpacing:true,
 
         }
       })

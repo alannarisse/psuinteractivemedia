@@ -107,9 +107,9 @@
 
   <script>
     const imageData = [
-      { id: '001', className: "boo", alt: "" },
-      { id: '002', className: "foo", alt: "" },
-      { id: '003', className: "blue", alt: "" },
+      { id: '1', className: "", alt: "" },
+      { id: '2', className: "", alt: "" },
+      { id: '3', className: "", alt: "" },
       { id: '004', className: "", alt: "" },
       { id: '005', className: "", alt: "" },
       { id: '006', className: "", alt: "" },
@@ -119,7 +119,7 @@
       { id: '010', className: "", alt: "" },
       { id: '011', className: "", alt: "" },
       { id: '012', className: "", alt: "" },
-      { id: '013', className: "red fluff", alt: "" },
+      { id: '013', className: "", alt: "" },
       { id: '014', className: "", alt: "" },
       { id: '015', className: "", alt: "" },
       { id: '016', className: "", alt: "" },
@@ -136,10 +136,12 @@
     let autoplayInterval = null;
     let isPlaying = false;
 
+
     function showImage(index) {
       carousel.style.opacity = 1;
       //setTimeout(() => {
-        carousel.src = `images/${imageData[index].id}risograph.png`;
+        carousel.src = `images/santa${imageData[index].id}.png`;
+        //'images' + imageData[index].id + "risograph.png"
         carousel.alt = imageData[index].alt;
         carousel.className = imageData[index].className;
         words.className = imageData[index].className;

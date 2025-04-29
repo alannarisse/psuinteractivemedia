@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Absolute Demo</title>
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: fantasy;
+    font-size: 20px;
+    background: rgb(163, 200, 200);
+    height:200vh;
+    position:relative;
+  }
+  header, main {
+    width:80%;
+    background: #fff;
+    margin:auto;
+    padding:80px;
+  }
+  section {
+    display:flex;
+  }
+  section article {
+    border:1px solid red;
+    flex:1;
+    height:600px;
+    padding:20px;
+  }
+  .star {
+    width:260px;
+    position: absolute;
+    bottom:0;
+    right:0;
+  }
+  .ad-text {
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    right:0px;
+    width:110px;
+  }
+  .right-col {
+  }
+  .right-col h2 {
+    margin-left: -60px;
+  }
+  h2 {
+    background:pink;
+  }
+
+</style>
+<body>
+  
+<header>
+  <h1>I'm a header!</h1>
+</header>
+
+<main>
+  <section>
+    <article>
+      <h2>I'm the left</h2>
+    </article>
+    <article class="right-col">
+
+      <h2>I'm the right</h2>
+      
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, tempore suscipit nisi excepturi necessitatibus sint, mollitia earum ad eos similique omnis aperiam corrupti accusamus amet nesciunt ducimus nam. Veritatis accusamus dignissimos aspernatur harum sunt. Suscipit, accusamus excepturi quod officia vel, fuga temporibus repudiandae iure ratione deserunt et quae voluptate odit?</p>
+      
+<img class="star" src="images/sales-star.png">
+
+    </article>
+  </section>
+
+</main>
+
+</body>
+</html>

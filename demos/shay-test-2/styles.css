@@ -1,0 +1,54 @@
+* { padding: 0; margin: 0; box-sizing: border-box;}
+
+.background {
+    position:relative;
+    overflow: hidden;
+    height:100vh;
+    width:100vw;
+}
+
+body{
+    overflow-x:hidden;
+    height:100vh;
+    width:100vw;
+}
+.line {
+    font: 36px "Raleway", sans-serif;
+    position: sticky;
+}
+
+.bird img { 
+    position: absolute;
+    right:0;
+    bottom:-160px;
+    z-index: 3;
+    border: 2px solid red;
+    transform:scale(0.4);
+}
+
+.branch img {
+    position: absolute;
+    z-index: 1;
+    right:0;
+    bottom:100px;
+    transform:scale(0.7);
+}
+/* .text {
+
+} */
+
+.note {
+    position:relative;
+    z-index: 3;
+    top: 90%;
+    left: 10%;
+    scale: 0.7;
+}
+
+.text {
+    position: fixed;
+    z-index: 4;
+    
+    left:15%;
+    top:30%;
+}
