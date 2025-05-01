@@ -1,3 +1,18 @@
+.flash { 
+  animation - name: flash;
+}
+.intro { 
+  animation - name: intro;
+  animation - delay: 3;
+  
+}
+
+@keyframes flash{ 
+  0 % {}
+  100 % {}
+}
+
+
 const myObj = [
   {
     id: 1,
@@ -6,7 +21,7 @@ const myObj = [
     person: '',
     personClass: '', 
     storyContent: '',
-    storyClass: ''
+    storyClass: 'flash intro'
   },
 ]
 
