@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shay redo</title>
+  <style>
+    body {
+     
+      border-bottom:4px solid red;
+      overflow-x: hidden;
+    }
+    main {
+       background-image: url('assets/sunny-bg-full.png');
+      background-repeat: no-repeat;
+      background-size: fit;
+      background-position:0% 0%;
+      height:500vh;
+      width:100vw;
+      padding-top:200px;
+      display:flex;
+      align-items:flex-start;
+      position:relative;
+    }
+    section {
+      flex:1;
+      height:400vh;
+      width:100vw;
+    }
+    .right {
+      /* display:flex;
+      justify-content: right; */
+      position:relative;
+    }
+    img {
+      border:1px solid red;
+    }
+    .bird {
+      position:absolute;
+      top:10vh;
+      right:4vw;
+    }
+    .bird img{
+      height:300px;
+    }
+    .branch {
+      position:absolute;
+      top:10vh;
+      right:-50vw;
+    }
+    .branch-move {
+      top:10vh;
+      right:0vw;
+    }
+    .branch img{
+      width:700px;
+    }
+    .notes {
+      position:absolute;
+      left: 5vw;
+      top:25vh;
+    }
+    .notes img {
+      width:400px;
+      margin-left:400px;
+      /* opacity:0; */
+    }
+    .words {
+      width:300px;
+      padding:40px;
+      border: 8px solid black;
+      margin-left:20%;
+      background: white;
+    }
+    .words1 {opacity:0;}
+    .words2 {opacity:0;}
+    .words3 {opacity:0;}
+  </style>
+</head>
+<body>
+  <main>
+    <section class="left">
+      <div class="words words1">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus laborum non iusto officia repudiandae nostrum eveniet iste omnis, error nihil!</p>
+      </div>
+      <div class="words words2">
+      <p>Ipsum dolor sit, amet consectetur adipisicing elit. Ducimus laborum non iusto officia repudiandae nostrum eveniet iste omnis, error nihil!</p>
+      </div>
+      <div class="words words3">
+      <p>Ipsum dolor sit, amet consectetur adipisicing elit. Ducimus laborum non iusto officia repudiandae nostrum eveniet iste omnis, error nihil!</p>
+      </div>
+      <div class="notes"><img src="assets/notes.png"></div>
+    </section>
+    <section class="right">
+      <div class="branch"><img src="assets/branch.png"></div>
+      <div class="bird"><img src="assets/bird-full.png"></div>
+    </section>
+  </main>
+  <div class="end"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+    <script>
+
+const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: 'main',
+          markers: true,
+          start: 'top top',
+          end: '+=2000',
+          endTrigger: '.end',
+          // duration: 5000,
+          scrub: true,
+          pin: true,
+          pinSpacing:true,
+        }
+      })
+      
+
+      
+      tl
+      .to('.bird img', {scale:1.2, x: -100})
+      .to('.branch', {right: '0vw'})
+      .to('.words1', {opacity: '1', stagger: 0.8,})
+      .to('.notes img', {opacity: '1', scale:'1.5'})
+      .to('.notes img', {opacity: '0', scale:'1'})
+      .to('.words1', {opacity: '0'})
+      .to('.words2', {opacity: '2'})
+      .to('.bird', {scale:1, x: 100})
+      .to('.branch', {right: '-50vw'})
+
+
+
+      
+      // ScrollTrigger.create({
+      //   trigger: 'main',
+      //   start: 'top top',
+      //   end: 'bottom +=3000',
+      //   markers: true,
+      //   pin: true,
+      // })
+
+    </script>
+</body>
+</html>
