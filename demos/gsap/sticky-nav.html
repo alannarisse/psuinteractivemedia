@@ -13,6 +13,7 @@
   }
   section {
     padding:60px 200px;
+    height:100vh;
   }
   .one {
     background-color:rgb(183, 217, 206);
@@ -23,6 +24,7 @@
     padding:40px;
     color: #fff;
     font-size: 42px;
+    transition:all 1s;
     
   }
   nav.nav-active {
@@ -32,7 +34,7 @@
     top:0;
     left:0;
     width:100vw;
-    transition:all;
+    transition:all 1s;
   }
   .two {
     background-color:rgb(183, 183, 217);
@@ -52,6 +54,7 @@
   </style>
 </head>
 <body>
+  <div class="wrapper">
 <nav>This is the nav</nav>
   <section class="one">
     <p>Well, children, where there is so much racket there must be something out of kilter. I think that 'twixt the negroes of the South and the women at the North, all talking about rights, the white men will be in a fix pretty soon. But what's all this here talking about?</p>
@@ -82,16 +85,19 @@ Obliged to you for hearing me, and now old Sojourner ain't got nothing more to s
 <p>The only question left to be settled now is: Are women persons? And I hardly believe any of our opponents will have the hardihood to say they are not. Being persons, then, women are citizens; and no State has a right to make any law, or to enforce any old law, that shall abridge their privileges or immunities. Hence, every discrimination against women in the constitutions and laws of the several States is today null and void, precisely as in every one against Negroes.</p>
   </section>
   <section class="three">
-    
+    <p>The only question left to be settled now is: Are women persons? And I hardly believe any of our opponents will have the hardihood to say they are not. Being persons, then, women are citizens; and no State has a right to make any law, or to enforce any old law, that shall abridge their privileges or immunities. Hence, every discrimination against women in the constitutions and laws of the several States is today null and void, precisely as in every one against Negroes.</p>
   </section>
-
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script>
       ScrollTrigger.create({
         trigger: '.one',
-        start: 'top 4%',
+        start: 'top top',
+        endTrigger: '.three',
+        end: 'bottom bottom+=300',
+        //end: () => "+=" + document.querySelector(".wrapper").offsetHeight,
         markers: true,
         toggleClass: {targets: 'nav', className: 'nav-active'},
 

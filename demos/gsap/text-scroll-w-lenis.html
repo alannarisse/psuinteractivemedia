@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSAp + Lenis Text Scroll</title>
+  <!-- from https://codepen.io/designcourse/pen/vYQQKBW -->
+  <style>
+    body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+section {
+  height: 100vh;
+  padding: 0 clamp(4rem, 12vw, 20rem);
+  display: grid;
+  place-content: center;
+}
+section p {
+  font-size: clamp(2rem, 5vw, 8rem);
+}
+section:nth-of-type(1) {
+  border-bottom: 1px solid black;
+}
+section:nth-of-type(3) {
+  background: #ffff00;
+}
+section:nth-of-type(4) {
+  background: #1d1d1d;
+  color: white;
+}
+  </style>
+</head>
+<body>
+  <!-- 
+  data-bg-color is the start color of the text, data-fg-color is the color it changes to -->
+      <section>
+        <h1>Scroll down for awesomeness.</h1>
+    </section>
+
+    <section>
+        <p class="reveal-type" data-bg-color="#cccccc" data-fg-color="teal" data-bg-scale="0.8" data-fg-scale="1.2">Systematically ushering in a new generation of amazing designers from across the globe.</p>
+    </section>
+
+    <section>
+        <p class="reveal-type" id="dscale" data-bg-color="#b6b600" data-fg-color="black" data-bg-scale="0.8" data-fg-scale="1.2">Modern UI designers will expand their skillsets to include frontend.</p>
+    </section>
+
+    <section>
+        <p class="reveal-type" data-bg-color="#353535" data-fg-color="red" data-bg-scale="0.8" data-fg-scale="1.2">The web isn't static anymore, interactivity and motion now dominate.</p>
+    </section>
+
+    <section></section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script>
+      const mySet = document.getElementById('dscale')
+console.log(mySet)
+        gsap.registerPlugin(ScrollTrigger)
+
+        const splitTypes = document.querySelectorAll('.reveal-type')
+
+        splitTypes.forEach((char,i) => {
+
+            const bg = char.dataset.bgColor
+            const fg = char.dataset.fgColor
+            const bgscale = char.dataset.bgScale
+            const fgscale = char.dataset.fgScale
+            const text = new SplitType(char, { types: 'chars'})
+
+            gsap.fromTo(text.chars, 
+                {
+                    color: bg,
+                    scale: bgscale,
+                },
+                {
+                    color: fg,
+                    scale: fgscale,
+                    duration: 0.3,
+                    stagger: 0.02,
+                    scrollTrigger: {
+                        trigger: char,
+                        start: 'top 80%',
+                        end: 'top 20%',
+                        scrub: true,
+                        markers: false,
+                        toggleActions: 'play play reverse reverse'
+                    }
+            })
+        })
+
+
+        const lenis = new Lenis()
+
+        lenis.on('scroll', (e) => {
+        console.log(e)
+        })
+
+        function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+
+    </script>
+</body>
+</html>

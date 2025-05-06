@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Waypoints Example with sound trigger</title>
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.1/dist/lenis.css">
+
   <style>
     body {
       margin: 0;
@@ -127,7 +129,7 @@
   </section>
   <section class="three play-sound panel">
     <h1>I'm panel with a squeaky noise</h1>
-    <audio id="my-sound" class="audio">
+    <audio volume="0.1" id="my-sound" class="audio">
       <source src="Duck-quack.mp3"></source>
     </audio>
   </section>
@@ -148,6 +150,8 @@
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="js/jquery.waypoints.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script> 
+
   <!-- <script>
   	var waypoints = $('#context-example-offset').waypoint({
   handler: function() {
@@ -157,6 +161,18 @@
   offset: '50%'
 })
   </script> -->
+  <script>
+    //https://github.com/darkroomengineering/lenis
+    // Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+  </script>
   <script>
     var mySound = $("#my-sound")[0];
     $("#sound-button").click(function () {
@@ -221,6 +237,7 @@
 
 
     var mySound = $("#my-sound")[0];
+    mySound.volume = 0.1;
 
     var $playSound = $('.play-sound');
 

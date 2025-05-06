@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSAP Demos</title>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  /* from CSS only Background patters: https://css-pattern.com/  */
+ html {
+  --s: 133px; /* control the size*/
+  --c1: #67917a;
+  --c2: #b8af03;
+  
+  --c:var(--c1) 0 60deg,#0000 0 50%;
+  background:
+    repeating-conic-gradient(from -15deg,var(--c))
+     calc(var(--s)/2) calc(var(--s)/2),
+    repeating-conic-gradient(from  15deg,var(--c))
+    var(--c2);
+  background-size: var(--s) var(--s)
+}
+  body {    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+    main {
+      padding:80px;
+      width:80%;
+      background:white;
+      margin: 80px auto;
+      border: 12px solid #7db3e6;
+      border-radius:30px;
+    }
+    h1 {
+      margin-top:0;
+      padding-top:60px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>GSAP Demos</h1>
+
+    <ul>
+      <li><a href="narrative-sections.html">Section fade-in on click</a></li>
+      <li><a href="quiz-app/">Quiz app using JQuery</a></li>
+    </ul>
+
+    
+  </main>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Sets</title>
+  <style>
+    * {box-sizing: border-box;}
+    main {
+      width:60%;
+      margin:auto;
+    }
+    #test-div::after {
+      content: attr(data-name);
+    }
+
+
+    div[data-fav-color="blue"] {
+      color:blue;
+    }
+    form {
+      display:flex;
+      flex-direction:column;
+    }
+    button {
+      max-width:200px;
+      margin-top:10px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+  <h1>Data Sets</h1>
+  <p>Coming back to work on this some more! She said to no one.</p>
+  <form>
+
+    <label for="name">Name <input id="name" type="text"></label><br>
+
+    <label for="color">Color <input id="color" type="text"></label>
+    <button id="submit">Submit</button>
+  </form>
+  <div id="test-div" data-fav-color="blue" data-status="online" data-username="alanna">
+    <p id="name"></p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa doloribus dolorum minus quisquam omnis excepturi exercitationem magnam nihil libero non odio eum nostrum temporibus asperiores repudiandae, pariatur natus voluptatum, laborum commodi ex similique dolore! Tempore soluta laboriosam vel voluptatibus magni ex in molestias at tempora. Quis error similique illum labore!</p>
+  </div>
+  </main>
+  <script>
+    let submitBtn = document.getElementById('submit')
+
+    const div = document.getElementById('test-div')
+    console.log(div.dataset)
+    console.log(div.dataset.favColor)
+    console.log(div.dataset.status)
+
+    div.dataset.status = 'offline'
+    div.dataset.starsign = 'zodiac'
+
+    const dataArray = Object.keys(div.dataset)
+    console.log(dataArray)
+
+    //document.querySelectorAll('form input')
+    //this puts all the input ids into an array
+    Array.from(document.querySelectorAll('form input')).reduce((acc, input) => ({...acc, [input.id]: input.value }), {})
+  </script>
+</body>
+</html>

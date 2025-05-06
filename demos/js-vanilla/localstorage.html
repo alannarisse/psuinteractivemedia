@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List with onclick dataset</title>
+  <style>
+    * {box-sizing: border-box;}
+    body {
+      background: lightsteelblue;
+    }
+    main {
+      width:60%;
+      margin:auto;
+      background:white;
+      border-radius:30px;
+      padding:60px;
+    }
+    h1 {
+      margin-top:0;
+    }
+    ul {
+      list-style-type: none;
+      display:inline-block;
+    }
+    li {
+      padding:6px;
+    }
+    li::before {
+      content: '▢ '
+    }
+    .add-x::before {
+      content: '√ '
+    }
+    .strike {
+      text-decoration: line-through;
+    }
+    #type {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Todo List using datasets</h1>
+
+  <ul id="list" class="todos">
+    <li onClick="taskComplete(this)" class="todo" data-item-status="todo" data-item-type="Grocery">
+      Grocery Shop
+    </li>
+    <li onClick="taskComplete(this)" class="todo" data-item-status="todo" data-item-type="Laundry">Laundry</li>
+    <li onClick="taskComplete(this)" class="todo" data-item-status="todo" data-item-type="Exercise">Exercise</li>
+  </ul>
+
+  <p>
+    <form id="addtolist"  onSubmit="addItem(event)">
+      <input type="text" id="type" placeholder="li" value="li" />
+      <input type="text" id="add-item" name="add-item" data-item-add="">
+      <button>add</button>
+    </form>
+</p>
+  </main>
+
+  <script>
+
+        let todos = ["apples", "bananas", "pears",
+             "oranges", "grapes"]
+        // let item = JSON.stringify(todos)
+        localStorage.setItem("todos", JSON.stringify(todos))
+        
+        // let retString = localStorage.getItem("todos")
+        // let retArray = JSON.parse(retString)
+        // console.log(retArray);
+
+
+getTodos = JSON.parse(localStorage.getItem("todos"))
+
+        let todoList = document.querySelector(".todos")
+        getTodos.forEach(todo => {
+            let li = document.createElement("li")
+            li.innerText = todo
+            todoList.appendChild(li)
+        });
+
+        
+    function addItem(event){
+      event.preventDefault();
+        // Get type of element from form invisible field
+        let type = document.getElementById("type").value; 
+      
+        // Get the text/value for the tag from the form 
+        let value = document.getElementById("add-item").value; 
+
+      if(value != ''){
+        // createElement() is used for creating a new element 
+        type = document.createElement(type); 
+      
+        // Use value as textnode in this example 
+        type.appendChild(document.createTextNode(value)); 
+      
+        // Append as child to the parent tag ul 
+        document.getElementById("list").appendChild(type);
+
+        // set the form field back to empty
+        document.getElementById("add-item").value = ''
+      } else {
+        alert('Add a to do item by filling in the field')
+      }
+    }
+
+
+    function taskComplete(item){
+      console.log(item)
+      if(item.dataset.itemStatus === 'todo'){
+        item.dataset.itemStatus = 'done';
+        item.innerText = item.dataset.itemType;
+        item.classList.add('add-x')
+      } else if(item.dataset.itemStatus === 'done'){ 
+        item.dataset.itemStatus = 'delete'
+        item.classList.add('strike')
+      } else {
+        item.remove();
+      }
+    }
+  </script>
+</body>
+</html>

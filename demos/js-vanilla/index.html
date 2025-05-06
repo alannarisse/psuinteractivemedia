@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanilla Javascrip</title>
+  <style>
+    html {
+  --s: 64px; /* control the size*/
+  --c1: #c02942;
+  --c2: #53777a;
+  --c3: #ecd078;
+  --c4: #d95b43;
+  
+  background:
+    radial-gradient(var(--c1) 24%,#0000 25%),
+    radial-gradient(var(--c2) 30%,#0000 32%) calc(var(--s)/2) calc(var(--s)/2),
+    repeating-conic-gradient(from 30deg,var(--c3) 0 30deg,var(--c4) 0 25%);
+  background-size: var(--s) var(--s);
+}
+ body {    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+    main {
+      padding:80px;
+      width:80%;
+      background:white;
+      margin: 80px auto;
+      border: 12px solid #ecd078;
+      border-radius:30px;
+    }
+    h1 {
+      margin-top:0;
+      padding-top:60px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>All the Vanilla JavaScript Fun!</h1>
+  <ul>
+    <li><a href="scroll-triggering/">Scroll Trigger JS Vanilla</a></li>
+    <li><a href="todo-dataset-nolocal.html">Todo list datasets, not stored</a></li>
+    <li><a href="localstorage.html">Local Storage TODO list - needs work still</a></li>
+    <li><a href="local-freecodecamp.html">Free code camp's complex todo app</a></li>
+  </ul>
+  </main>
+</body>
+</html>

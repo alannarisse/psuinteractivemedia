@@ -10,36 +10,21 @@
   }
   /* from CSS only Background patters: https://css-pattern.com/  */
   html {
-  --s: 37px; /* control the size*/
-  --c1: #a4cef4;
-  --c2: #dbd9a3;
+  --s: 84px; /* control the size*/
+  --c1: #f2f2f2;
+  --c2: #cdcbcc;
+  --c3: #999999;
   
-  --_c1: var(--c1) 99%,#0000 101%;
-  --_c2: var(--c2) 99%,#0000 101%;
-  
-  --r:calc(var(--s)*.866); 
-  --g0:radial-gradient(var(--s),var(--_c1));
-  --g1:radial-gradient(var(--s),var(--_c2));
-  --f:radial-gradient(var(--s) at calc(100% + var(--r)) 50%,var(--_c1));
-  --p:radial-gradient(var(--s) at 100% 50%,var(--_c2));
+  --_g: 0 120deg,#0000 0;
   background:
-    var(--f) 0 calc(-5*var(--s)/2),
-    var(--f) calc(-2*var(--r)) calc(var(--s)/2),
-    var(--p) 0 calc(-2*var(--s)),
-    var(--g0) var(--r) calc(-5*var(--s)/2),
-    var(--g1) var(--r) calc( 5*var(--s)/2),
-    radial-gradient(var(--s) at 100% 100%,var(--_c1)) 0 calc(-1*var(--s)),   
-    radial-gradient(var(--s) at 0%   50% ,var(--_c1)) 0 calc(-4*var(--s)),
-    var(--g1) calc(-1*var(--r)) calc(-7*var(--s)/2),
-    var(--g0) calc(-1*var(--r)) calc(-5*var(--s)/2),
-    var(--p) calc(-2*var(--r)) var(--s),
-    var(--g0) calc(-1*var(--r)) calc(var(--s)/ 2),
-    var(--g1) calc(-1*var(--r)) calc(var(--s)/-2),
-    var(--g0) 0 calc(-1*var(--s)),
-    var(--g1) var(--r) calc(var(--s)/-2),
-    var(--g0) var(--r) calc(var(--s)/ 2) 
-    var(--c2);
-  background-size: calc(4*var(--r)) calc(6*var(--s));
+    conic-gradient(             at calc(250%/3) calc(100%/3),var(--c3) var(--_g)),
+    conic-gradient(from -120deg at calc( 50%/3) calc(100%/3),var(--c2) var(--_g)),
+    conic-gradient(from  120deg at calc(100%/3) calc(250%/3),var(--c1) var(--_g)),
+    conic-gradient(from  120deg at calc(200%/3) calc(250%/3),var(--c1) var(--_g)),
+    conic-gradient(from -180deg at calc(100%/3) 50%,var(--c2)  60deg,var(--c1) var(--_g)),
+    conic-gradient(from   60deg at calc(200%/3) 50%,var(--c1)  60deg,var(--c3) var(--_g)),
+    conic-gradient(from  -60deg at 50% calc(100%/3),var(--c1) 120deg,var(--c2) 0 240deg,var(--c3) 0);
+  background-size: calc(var(--s)*sqrt(3)) var(--s);
 }
   body {    
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -60,21 +45,35 @@
 </head>
 <body>
   <main>
-    <h1>GSAP Demos</h1>
+    <article>
+    <h1 class="headertext">GSAP Demos</h1>
 
+    <h2>Basics, scroll triggering</h2>
     <ul>
       <li><a href="scroll1.html">Basic Scroll Trigger</a></li>
-      <li><a href="scroll2.html">Scroll Trigger Vertical + Horizontal</a></li>
-      <li><a href="scroll3.html">vertical and horizontal with animations</a></li>
+      <li><a href="scroll-vert-and-horiz-plain.html">Scroll Trigger Vertical + Horizontal</a></li>
+      <li><a href="scroll-vert-and-horiz-plus.html">Scroll vertical and horizontal with animations</a></li>
       <li><a href="scrub-video.html">Video Scrub</a></li>
       <li><a href="card-flip.html">Sticky card flip</a></li>
       <li><a href="pinned-panels.html">sticky panels using array</a></li>
-      <li><a href="pinned-panels.html">pinned panels vertical using array</a></li>
+      <li><a href="pinned-vert-panels.html">pinned panels vertical using array</a></li>
       <li><a href="timeline.html">timeline triggers</a></li>
       <li><a href="pin.html">More pinned timeline triggers</a></li>
       <li><a href="sticky-nav.html">sticky nav on scroll</a></li>
       <li><a href="scroll-standalone.html">Standalone Scrolls</a></li>
+      <li><a href="text-scroll-w-lenis.html">Text Scroll color change with Lenis and Gsap using js datasets</a></li>
+      <li><a href="from-to.html">GSAP Parallax fromTo mountains and ext change</a></li>
+      </ul>
+      <h2>SVG paths and Morphing</h2>
+      <ul>
+      <li><a href="scramble-text.html">Scramble Text</a></li>
+      <li><a href="svg-path-burrito.html">SVG path with Burrito</a></li>
+      <li><a href="svg-path.html">SVG path generic</a></li>
+      <li><a href="morph.html">MorphSVG generic</a></li>
+      <li><a href="morph-cat.html">MorphSVGing cats!</a></li>
+      <li><a href="morph-burrito.html">MorphSVGing burrito with multiple paths in timeline!</a></li>
     </ul>
+    </article>
   </main>
 </body>
 </html>
