@@ -120,11 +120,11 @@
 
     function showImage(index) {
       carousel.style.opacity = 1;
-      //setTimeout(() => {
+      setTimeout(() => {
         carousel.src = `images/${imageData[index].id}risograph.png`;
         carousel.alt = imageData[index].alt;
-        //carousel.style.opacity = 1;
-      //}, 250);
+        carousel.style.opacity = 1;
+      }, 250);
     }
 
     function nextImage() {

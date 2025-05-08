@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moon 2</title>
+  <style>
+  * {box-sizing: border-box;}
+  body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:20px;
+  }
+  section {
+    position:relative;
+    height:100vh;
+    padding:20px 80px;
+    /* display:flex;
+    flex-direction: column; */
+
+
+  }
+  .one {
+    background-color:rgb(183, 217, 206);
+  }
+
+    .two {
+    background-color:rgb(183, 183, 217);
+  }
+  .three {
+    background-color:rgb(217, 183, 206);
+  }
+.header1 {
+  display:inline-block;
+}
+img {
+  transition:all;
+}
+.moon {
+  border:1px solid red;
+  position:absolute;
+  top:100vh;
+  left:50%;
+  width:20vw;
+  transform: translate(-50%, -90%);
+}
+.earth {
+  position:absolute;
+  top:110vh;
+  left:50%;
+  width:60vw;
+  transform: translate(-50%, -100%);
+}
+.moon img {
+  width:100%;
+}
+.earth img {
+  width:100%;
+  
+}
+.three .moon img{
+  width:200vw;
+}
+.satelite img {
+  width:100%;
+}
+.satelite {
+  opacity:0;
+  position:absolute;
+  top:40vh;
+  left:50%;
+  width:10vw;
+  transform: translate(-50%, -90%);
+}
+  </style>
+</head>
+<body>
+  
+  <section class="one">
+    <div class="moon"><img src="images/moon.png"></div>
+    <div class="earth"><img src="images/earth.png"></div>
+    <div class="satelite"><img src="images/space station.png"></div>
+  </section>
+   <section class="two">
+
+   </section>
+    <section class="three">
+
+<section class="four">
+
+</section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
+
+    <script>
+ 
+      const tl1 = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.one',
+          markers: true,
+          start: 'top top',
+          endTrigger: '.two',
+          end: '+=3000',
+          duration: 5000,
+          scrub: true,
+          pin: true,
+          pinSpacing:true,
+
+        }
+      })
+      
+
+      
+      tl1
+      .to('.one .moon', {y:-800, duration:1}, "-=1")
+      .to('.one .moon', {scale:1.6, duration:1}, "-=1")
+      .to('.one .earth', {y:-500, duration:2}, "-=1")
+      .to('.one .earth', {y:500, duration:8}, "+=2")
+      .to('.one .earth', {opacity:0, duration:2}, "+=1")
+      .to('.one .moon', {scale:2, duration:1}, "-=1")
+      .to('.one .moon', {scale:10, duration:4}, "+=1")
+      .to('.one', {}, "-=1")
+
+      //and now the satelite
+      
+      .to('.one .moon', {scale:1, /* in the middle */duration:4}, "+=1")
+      .to('.one .satelite', {opacity:1, duration:4}, "+=1")
+      .to('.one .satelite', {y:-100}, "+=1")
+      .to('.one .satelite', {rotate:-45, x:-100, y:-90}, "+=1")
+      .to('.one .satelite', {scale:.9}, "+=1")
+      .to('.one .satelite', {rotate:-60, x:-200, y:-180}, "+=1")
+      .to('.one .satelite', {scale:.6}, "+=1")
+      .to('.one .satelite', {scale:.0, opacity:0}, "+=1")
+      .to('.one .satelite', {scale:.2, opacity:1, rotate:-90, x:200, y:-180}, "+=1")
+      
+    </script>
+</body>
+</html>
