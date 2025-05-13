@@ -1,0 +1,31 @@
+* {box-sizing: border-box;}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1 {
+  margin-top:0;
+  font-size:80px;
+  font-weight:900;
+}
+header, main {
+  width:75%;
+  margin:auto;
+}
+header {
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  background-image:url('images/flowers-bright.jpg');
+  background-size:cover;
+  min-height:260px;
+}
+.grid {
+  margin-top:80px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 60px;
+}
+img {
+  width:100%;
+}

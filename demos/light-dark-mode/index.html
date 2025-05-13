@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light Dark modes</title>
+
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" class="mode" data-mode="light" href="light.css">
+
+</head>
+<body>
+  <nav>
+    <a id="mode" href="#">change mode</a>
+  </nav>
+  <header>
+    <h1>I'm a demo of Switching From Light to Dark Mode</h1>
+  </header>
+  <main>
+    <section class="grid">
+      <article class="left">
+        <h2>Some interesting text</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident molestiae quidem cumque ullam illo repellat obcaecati! Vel, perferendis. Distinctio perferendis recusandae, accusamus voluptatibus aut neque ipsam minus saepe voluptatem modi obcaecati nihil fugit nesciunt dolores, doloribus impedit rerum cupiditate, illo vero delectus similique sint maiores. Optio eius debitis expedita soluta?</p>
+      </article>
+      <article class="right">
+        <img src="images/pexels-pixabay-68507.jpg">
+      </article>
+    </section>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script>
+let mode = 'light'
+$('#mode').click(function(){
+  if ( mode == 'light') {
+    // do this 
+    $('head').find('link.mode').attr('href', 'dark.css')
+    mode = 'dark'
+    } else {
+        // do that
+        $('head').find('link.mode').attr('href', 'light.css')
+        mode = 'light'
+    }
+
+})
+
+// some code about checking screen 
+// https://www.html-code-generator.com/javascript/detect-dark-mode
+// // Check if the device is in dark mode
+// const isDarkMode = () => {
+//     return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+// };
+
+// if (isDarkMode()) {
+//     console.log("The device is in dark mode.");
+//     // document.documentElement.className = "dark-mode";
+//     // callback();
+// } else {
+//     console.log("The device is in light mode.");
+//     // document.documentElement.className = "light";
+// }
+
+
+  </script>
+</body>
+</html>
