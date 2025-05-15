@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slime Conveyor Belt with Timeline</title>
+  <style>
+    * {
+	position:relative;
+}
+
+
+body {
+  background-color:#3c3c3c;
+  overflow: hidden;
+  text-align:center;
+	font-family:sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+	color:#ccc;
+	text-align:center;
+}
+
+.main {
+	width:100%;
+	display:flex;
+	justify-content:center;
+	flex-direction:column;
+	align-items:center;
+}
+.demo {
+	visibility:hidden;
+	width:600px;
+	height:450px;
+	background:#1d1d1d;
+	overflow:hidden;
+}
+
+.slime {
+	width:80px;
+	height:50px;
+	background-image:url("images/slime.svg");
+	background-size:cover;
+	position:absolute;
+	/* background-color:red; */
+	transform:translateY(450px);
+}
+
+.conveyor {
+	width:400px;
+	height:20px;
+	border-radius:10px;
+	background:#4aa5ff;
+	top:250px;
+	left:125px;
+	position:absolute;
+}
+
+
+
+.buttonNav {
+	padding:20px;
+}
+
+button {
+	margin-right:10px;
+	padding:10px;
+}
+
+  </style>
+</head>
+<body>
+
+
+  <div class="main">
+    <h1>Slime Conveyor Belt</h1>
+  <div class="demo">
+    <div class="conveyor"></div>
+    <div class="slime"></div>
+    <div class="slime"></div>
+    <div class="slime"></div>
+    <div class="slime"></div>
+    <div class="slime"></div>
+    <div class="slime"></div>
+  </div>
+    <div class="buttonNav">
+      <button id="play">play</button>	 
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script>
+
+
+  gsap.set(".demo", {autoAlpha:1})
+  const slimes = gsap.utils.toArray(".slime")
+  const mainTL = gsap.timeline()
+
+  slimes.forEach((slime, index) => {
+    const tl = gsap.timeline()
+  //edit the timeline so that the timing and easing is better!
+  tl.to(slime, {y:25, ease:"power2", duration:0.5})
+    .to(slime, {y:200, ease:"power1.in", duration:0.3})
+    .to(slime, {scaleY:0.6, transformOrigin:"center bottom", duration:0.15, repeat:1, yoyo:true})
+    .to(slime, {rotation:360, duration:0.9, ease:"power2"}, 0.1)
+    .to(slime, {x:500,ease:"none", duration:3}, 0)
+    .to(slime, {y:480, rotation:90, ease:"power2", duration:0.8})
+  mainTL.add(tl, index * 0.75)
+  })
+
+  play.addEventListener("click", ()=> mainTL.restart())
+  GSDevTools.create({animation:mainTL})
+  </script>
+  
+</body>
+</html>

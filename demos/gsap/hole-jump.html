@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hole jump GSAP</title>
+  <style>
+    body,
+html {
+	width: 100%;
+	height: 100%;
+}
+* {
+	position:relative;
+}
+
+body {
+	margin: 0;
+	background: #20253f;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.demo {
+	border:1px solid grey;
+	width: 400px;
+	height: 400px;
+	background:#d6deff;
+}
+
+.herman {
+	position:absolute;
+	width:100px;
+	bottom:0;
+	left:150px;
+}
+
+.hermanWrapper {
+	width:100%;
+	height:305px;
+	/* border:1px solid red;   */
+	overflow:hidden;
+  border-radius: 50%;
+}
+
+
+
+.hole {
+	position:absolute;
+	width:150px;
+	height:20px;
+	border-radius:50%;
+	background:black;
+	left:125px;
+	top:290px;
+}
+.shadow {
+  position:absolute;
+  left:125px;
+  top:290px;
+  opacity:0;
+  width:150px;
+  height:20px;
+  background: radial-gradient(rgb(100,100,100,0.6), rgb(0,0,0,0)75%);
+  background-repeat: no-repeat;
+}
+  </style>
+</head>
+<body>
+
+<div class="demo">
+  <div class="shadow"></div>
+	<div class="hole"></div>
+	
+	<div class="hermanWrapper">
+		<img class="herman" src="https://assets.codepen.io/32887/herman.svg" alt="" />
+	</div>
+	
+	
+</div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/GSDevTools.min.js"></script>
+<script>
+  const hole = document.querySelector(".hole")
+  const herman = document.querySelector(".herman")
+  const shadow = document.querySelector(".shadow")
+  const tl = gsap.timeline({repeat:1, yoyo:true, repeatDelay:0.5})
+
+  tl.from(hole, {scale:0, repeat:1, yoyo:true}) //from a scale of zero to default css
+    .fromTo(herman, {y:160, scaleY:2}, {y:-175, scaleY:1}, 0.2)
+    .to(herman, {y:-4, ease:"power1.in"}, ">")
+    .to(herman, {scaleY:0.5, scaleX:1.3, duration:'0.2', 
+      transformOrigin:'50% 100%', repeat:1, yoyo:true})
+      .to(shadow, {opacity:1, duration:0.2}, 0.7)
+      .to(shadow, {scaleX:0.7, ease:'power1.in'}, '>')
+
+
+
+  GSDevTools.create({animation:tl})
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyframes Simple Jump with GSAP</title>
+  <style>
+    * {
+	position:relative;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color:#3c3c3c;
+  overflow: hidden;
+	font-family:sans-serif;
+  color:white;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+	color:#ccc;
+	text-align:center;
+}
+
+main {
+	width:100vw;
+	display:flex;
+	justify-content:center;
+	flex-direction:column;
+	align-items:center;
+}
+
+.tween-rotate{
+  position:absolute;
+  left:90vw;
+  top:200px;
+  opacity:0;
+  border:1px solid red;
+  transform-origin: center center;
+  width:auto;
+  white-space: nowrap;
+}
+h1 {
+  font-size:58px;
+
+}
+h2.tween-rotate {
+  padding-top:120px;
+  padding-left:160px;
+  left:100vw;
+  font-size:42px;
+}
+
+
+.buttonNav {
+	padding:20px;
+}
+
+button {
+	margin-right:10px;
+	padding:10px;
+}
+
+  </style>
+</head>
+<body>
+  <main>
+    <h1 class="tween-rotate">Keyframes Tween scale-rotate</h1>
+    <h2 class="tween-rotate">Subtitle is here!</h2>
+
+    <div class="buttonNav">
+      <button id="play">play</button>	 
+    </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/GSDevTools.min.js"></script>
+
+<script>
+const tl = gsap.timeline()
+tl.to('.tween-rotate', {
+  keyframes: {
+    '0%': {x:100, opacity:0,scale:0.4},
+    '5%': {opacity:1},
+    '15%': {scale:0.5, ease:'power4.in'},
+    '40%': {x:-$(window).innerWidth()/1.8,ease:'power1.out'},
+    '60%': {scale:1.5,ease:'power1.out'},
+    '75%': {ease:'power1'},
+    '85%': {scale:0.4},
+    '100%': {x:100, opacity:0},
+    //easeEach:'back'
+  },
+  duration:4,
+  stagger:0.2
+})
+
+play.addEventListener('click', ()=> tl.restart())
+GSDevTools.create({animation:tl})
+</script>
+</body>
+</html>

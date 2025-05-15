@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Split Text GSAP</title>
+  <style>
+    body {
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .wrapper {
+      /* visibility:hidden; */
+      width:100vw;
+      height:100vh;
+      padding:100px;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <h1>Letter by letter animation</h1>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/GSDevTools.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script>
+  gsap.registerPlugin(GSDevTools, SplitText)
+let split
+let animation = gsap.timeline({})
+
+function init(){
+  gsap.set('.wrapper', {autoAlpha:1})
+  split = new SplitText('h1', {type:'chars'})
+ //console.log(split.chars)
+  animation.from(split.chars, {opacity:0, y:50, ease:'back(4)',stagger:0.05})
+  //GSDevTools.create({animation:animation})
+}
+init()
+</script>
+</body>
+</html>

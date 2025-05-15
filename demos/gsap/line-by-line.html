@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Line By Line GSAP</title>
+  <style>
+    body {
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    p{
+      font-size: 20px;
+      perspective:200px;
+    }
+    .wrapper {
+      visibility:hidden;
+      max-width:100vw;
+      max-height:100vh;
+      padding:100px;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrapper">
+	<p>The Only Way To Do Great Work Is To Love What You Do. If You Haven't Found It Yet, Keep Looking. Don't Settle. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem illo id corporis reprehenderit adipisci! Et, iusto exercitationem ipsa consequatur est nemo dolor nam. Optio corrupti, voluptatibus incidunt autem consequuntur placeat!</p>
+  </main>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/GSDevTools.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script>
+  gsap.registerPlugin(GSDevTools, SplitText)
+let split
+let animation = gsap.timeline({})
+
+function init(){
+  split = new SplitText('p', {type:'lines'})
+  gsap.set('.wrapper', {autoAlpha:1})
+
+ //console.log(split.chars)
+  animation.from(split.lines, {opacity:0,rotationX:-90,stagger:0.5,
+    transformOrigin: '50% 50% -150', duration:1
+  })
+  //GSDevTools.create({animation:animation})
+}
+init()
+</script>
+</body>
+</html>

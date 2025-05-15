@@ -40,6 +40,8 @@ function footerNavList() {
     <li>&copy; Alanna Risse 2025</li>`
   )
 }
+
+
 function init() {
   topNavList()
   footerNavList()

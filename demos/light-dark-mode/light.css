@@ -1,11 +1,8 @@
 body {
-
   background:white;
   color:black;
 }
-header {
-  background-blend-mode: lighten;
-}
+
 header h1 {
   color:white;
 }

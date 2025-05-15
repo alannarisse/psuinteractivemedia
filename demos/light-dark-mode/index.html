@@ -6,7 +6,7 @@
   <title>Light Dark modes</title>
 
   <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" class="mode" data-mode="light" href="light.css">
+  <link rel="stylesheet" class="mode" data-mode="light" href="light.css">
 
 </head>
 <body>
@@ -23,7 +23,7 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident molestiae quidem cumque ullam illo repellat obcaecati! Vel, perferendis. Distinctio perferendis recusandae, accusamus voluptatibus aut neque ipsam minus saepe voluptatem modi obcaecati nihil fugit nesciunt dolores, doloribus impedit rerum cupiditate, illo vero delectus similique sint maiores. Optio eius debitis expedita soluta?</p>
       </article>
       <article class="right">
-        <img src="images/pexels-pixabay-68507.jpg">
+        <img src="images/pexels-suzyhazelwood-3216086.jpg">
       </article>
     </section>
   </main>
@@ -41,23 +41,27 @@ $('#mode').click(function(){
         mode = 'light'
     }
 
-})
+});
 
-// some code about checking screen 
-// https://www.html-code-generator.com/javascript/detect-dark-mode
-// // Check if the device is in dark mode
-// const isDarkMode = () => {
-//     return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-// };
+//some code about checking screen 
+https://www.html-code-generator.com/javascript/detect-dark-mode
+// Check if the device is in dark mode
 
-// if (isDarkMode()) {
-//     console.log("The device is in dark mode.");
-//     // document.documentElement.className = "dark-mode";
-//     // callback();
-// } else {
-//     console.log("The device is in light mode.");
-//     // document.documentElement.className = "light";
-// }
+
+var isDarkMode = () => {
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+};
+
+if (isDarkMode()) {
+    console.log("The device is in dark mode.");
+    $('head').find('link.mode').attr('href', 'dark.css')
+    mode = 'dark'
+} else {
+    console.log("The device is in light mode.");
+     $('head').find('link.mode').attr('href', 'light.css')
+        mode = 'light'
+    //document.documentElement.className = "light";
+}
 
 
   </script>

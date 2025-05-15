@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyframes Simple Jump with GSAP</title>
+  <style>
+    * {
+	position:relative;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color:#3c3c3c;
+  overflow: hidden;
+  text-align:center;
+	font-family:sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+	color:#ccc;
+	text-align:center;
+}
+
+main {
+	width:100%;
+	display:flex;
+	justify-content:center;
+	flex-direction:column;
+	align-items:center;
+}
+.demo {
+	/* visibility:hidden; */
+	width:800px;
+	height:500px;
+	background:#1d1d1d;
+	overflow:hidden;
+}
+
+.slime {
+	width:80px;
+	height:50px;
+	background-image:url("images/slime.svg");
+	background-size:cover;
+	position:absolute;
+	/* background-color:red; */
+	top:400px;
+  left:-100px;
+}
+
+
+.buttonNav {
+	padding:20px;
+}
+
+button {
+	margin-right:10px;
+	padding:10px;
+}
+
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Keyframes Simple Jump with GSAP</h1>
+  <div class="demo">
+    <div class="slime"></div>
+    <div class="slime"></div>
+    <div class="slime"></div>
+  
+  </div>
+    <div class="buttonNav">
+      <button id="play">play</button>	 
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/GSDevTools.min.js"></script>
+
+<script>
+const tl = gsap.timeline()
+tl.from('h1', {x:400,opacity:0})
+tl.to('.slime', {
+  keyframes: {
+    '0%': {x:-1, opacity:0},
+    '5%': {opacity:1},
+    '25%': {y:0},
+    '50%': {y:-300},
+    '70%': {scaleY:1},
+    '75%': {y:20, scaleY:0.6, ease:'power1.in'},
+    '85%': {y:0, scaleY:1},
+    '100%': {x:900},
+    //easeEach:'back'
+  },
+  duration:3,
+  delay:0.4,
+  stagger:0.8
+})
+
+play.addEventListener('click', ()=> tl.restart())
+GSDevTools.create({animation:tl})
+</script>
+</body>
+</html>

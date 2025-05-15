@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {box-sizing: border-box;}
+    body{
+      margin:0;
+    }
+    main {
+      display:grid;
+      grid-template-columns: 100px 100px 100px;
+    }
+    .grow {
+      width:100px;
+      height:100px;
+      background:#ff9900;
+      transition: all 3s;
+      position:static;
+    }
+    .two {
+      background:#79bdbd;
+    }
+    .three {
+      background:#bd79ba;
+    }
+    .big {
+      width:100vw;
+      height:100vh;
+    }
+    .pos-abs {
+      position:absolute;
+      top:0;
+      left:0;
+      
+    }
+    .inner-content {
+      transform-origin: 0% 0%;
+      padding:100px;
+      width:100%;
+      scale:0;
+      opacity:0;
+      visibility:hidden;
+      transition: all 3s;
+    }
+
+    .show {
+      scale:1;
+      opacity:1;
+      visibility:visible;
+    }
+  </style>
+</head>
+<body>
+  <main>
+  <section class="grow one">
+    <div class="inner-content">
+      I'm a whole world of content!
+      <div><img src="https://picsum.photos/600/500"></div>
+    </div>
+  </section>
+  <section class="grow two">
+    <div class="inner-content">
+      I'm another whole world of content!
+      <div><img src="https://picsum.photos/400/300"></div>
+    </div>
+  </section>
+  <section class="grow three">
+    <div class="inner-content">
+      I'm yet another whole world of content!
+      <div><img src="https://picsum.photos/404/300"></div>
+    </div>
+  </section>
+</main>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <script>
+    let showing = false;
+    let pos = document.querySelectorAll('.grow').length
+    console.log(pos)
+    $('.grow').click(function(){
+      if(showing==false){
+      $(this).addClass('big').animate({marginLeft:`-${pos}00`})
+      // $(this).addClass('pos-abs')
+      $(this).find('.inner-content').addClass('show')
+      showing=true;
+
+    } else {
+      $(this).find('.inner-content').removeClass('show')
+      $(this).removeClass('big')
+      // $(this).removeClass('pos-abs')
+      showing=false;
+    }
+
+
+    })
+
+  </script>
+</body>
+</html>
