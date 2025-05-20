@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="link rel="preconnect href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">"
+    <link rel="stylesheet" href="style.css">
+    <title>9 - Down! Down! Down!</title>
+</head>
+<body class="pg9">
+    <div class="powerpuff">
+    <div class="yeet">
+    <div class="prince4">
+        <img src="images/prince/prince4.png"></div></div></div>
+    <div class="story8">
+        <p>What was his horror to see,
+            instead of Rapunzel,
+            a hideous old Witch!</p></div>
+    <div class="story6">
+        <p>Soon as he reached
+            the top of the tower
+            she pushed him!</p></div>
+    <a href="pg10.html"><img src="images/arrowr.png" class="arrow-right"/></a>
+    <script>
+        function reveal() {var reveals = document.querySelectorAll("p, h1, h2, h3");
+        
+        for (var i = 0; i < reveals.length; i++) {var windowHeight = window.innerHeight;
+                                                    var elementTop = reveals[i].getBoundingClientRect().top;
+                                                    var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");}
+
+        else {reveals[i].classList.remove("active");}}}
+
+        window.addEventListener("scroll", reveal);
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="link rel="preconnect href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">"
+    <link rel="stylesheet" href="style.css">
+    <title>4 - Prince's Climb</title>
+</head>
+<body class="pg4">
+    <header>
+        <div class="music3">
+            <img src="images/music/music3.gif"></div>
+        <div class="sing">
+            <img src="images/rapunzel/rsing.gif"></div>
+    </header>
+    <div class="story1">
+        <p>He saw the Witch
+            climb up. . .</p>
+        <h3>up. . .</h3>
+        <h2>up. . .</h2>
+        <h1>up. . .</h1></div>
+    <div class="story2">
+        <p>. . . the beautiful maiden's long hair.</p></div>
+    <div class="story4">
+        <p>So on the following
+            night he too stood below
+            and cried:</p></div>
+    <div class="rhyme2">
+        <img src="images/rhyme.png"></div>
+    <div class="pspeak">
+        <img src="images/prince/pspeak.gif"></div>
+    <a href="pg5.html"><img src="images/arrowr.png" class="arrow-center"/></a>
+    <script>
+        function reveal() {var reveals = document.querySelectorAll("p, h1, h2, h3");
+        
+        for (var i = 0; i < reveals.length; i++) {var windowHeight = window.innerHeight;
+                                                    var elementTop = reveals[i].getBoundingClientRect().top;
+                                                    var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");}
+
+        else {reveals[i].classList.remove("active");}}}
+
+        window.addEventListener("scroll", reveal);
+    </script>
+</body>
+</html>

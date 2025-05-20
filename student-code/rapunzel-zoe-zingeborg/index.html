@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="link rel="preconnect href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">"
+    <link rel="stylesheet" href="style.css">
+    <title>1 = Beginning</title>
+</head>
+<body class="pg1">
+    <header>
+        <div class="title">
+            <img src="images/music/title.gif"></div>
+        <div class="music3">
+            <img src="images/music/music3.gif"></div>
+        <div class="sing">
+            <img src="images/rapunzel/rsing.gif"></div>
+    </header>
+        <div class="story1">
+            <p>Once upon a time
+                there was a girl with
+                a fair voice and long hair
+                who lived in a tall. . .</p>
+        <h3>tall. . .</h3>
+        <h2>tall. . .</h2>
+        <h1>tall. . .</h1></div>
+        <div class="story2">
+            <p>. . .tower, the prison
+                of an evil Witch.</p></div>
+        <div class="story3">
+            <p>The tower had no stairs
+                and no door and only
+                the small window</p></div>
+        <div class="story4">
+            <p>When the Witch visited
+                Rapunzel she stood below and cried:</p></div>
+    <div class="rhyme1">
+        <img src="images/rhyme.png"></div>
+    <div class="wspeak">
+        <img src="images/witch/wspeak.gif"></div>
+    <a href="pg2.html"><img src="images/arrowr.png" class="arrow-center"/></a>
+    <script>
+        function reveal() {var reveals = document.querySelectorAll("p, h1, h2, h3");
+        
+        for (var i = 0; i < reveals.length; i++) {var windowHeight = window.innerHeight;
+                                                    var elementTop = reveals[i].getBoundingClientRect().top;
+                                                    var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");}
+
+        else {reveals[i].classList.remove("active");}}}
+
+        window.addEventListener("scroll", reveal);
+    </script>
+</body>
+</html>

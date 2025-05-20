@@ -1,0 +1,380 @@
+/*font-family: 'Yeseva One', cursive;*/
+
+body {background-size:100vmax;
+        font-family: 'Yeseva One', cursive;
+        color:#fff;}
+
+body.pg2, body.pg3, body.pg5, body.pg6, body.pg7, body.pg9, body.pg10, body.pg11, body.pg12 {overflow:hidden;}
+
+body.pg1 {background-image: url("images/bg/bg-tower1.png");}
+
+body.pg2, body.pg7, body.pg12 {background-image: url("images/bg/bg-forest1.png");}
+
+body.pg3 {background-image: url("images/bg/bg-tower4.png");}
+
+body.pg4 {background-image: url("images/bg/bg-tower2.png");}
+
+body.pg5, body.pg6 {background-image: url("images/bg/bg-interior.png");}
+
+body.pg8 {background-image: url("images/bg/bg-tower3.png");}
+
+body.pg9  {background-image: url("images/bg/bg-fall1.png");}
+
+body.pg10 {background-image: url("images/bg/bg-fall2.png");}
+
+body.pg11 {background-image: url("images/bg/bg-forest2.png");}
+                
+header  {position:relative;}
+
+.title img  {position:absolute;
+                width:43%;
+                height:auto;
+                padding-top:15%;
+                padding-left:5%;}
+
+.music3 img  {position:absolute;
+                width:20%;
+                height:auto;
+                padding-top:27%;
+                padding-left:23%;}
+
+.sing img {position:absolute;
+            width:6%;
+            height:auto;
+            padding-top:31%;
+            padding-left:47.5%;}
+
+/*Tower Text HERE*/
+
+.story1 p {width:27%;
+            text-align:center;
+            font-size:18pt;
+            padding-top:40%;
+            padding-left:70%;}
+
+.story1 h1 {font-size:46pt;
+            padding-top:17%;
+            padding-left:60%;}
+
+.story1 h2 {font-size:30pt;
+            padding-top:17%;
+            padding-left:70%;}
+
+.story1 h3 {font-size:24pt;
+            padding-top:17%;
+            padding-left:80%;}
+                                
+.story2 p {width:17%;
+            text-align:center;
+            font-size:18pt;
+            padding-top:15%;
+            padding-left:8%;}
+
+.story3 p {width:20%;
+            text-align:center;
+            font-size:18pt;
+            padding-top:10%;
+            padding-left:70%;}
+
+.story4 p {width:20%;
+            text-align:center;
+            font-size:18pt;
+            padding-top:30%;
+            padding-left:8%;}
+
+.story1 p, .story2 p, .story3 p, .story4 p, h1, h2, h3 {position:relative;
+                                                        opacity:0;
+                                                        transition:3s all ease;}
+
+p.active, h1.active, h2.active, h3.active {transform:translateY(0);
+                                            opacity:1;}
+
+.rhyme1 img  {width:40%;
+                height:auto;
+                padding-top:30%;
+                padding-left:55%;}
+
+.rhyme2 img  {width:40%;
+                height:auto;
+                padding-top:47%;
+                padding-left:55%;}
+
+.wspeak img {width:40%;
+                height:auto;
+                padding-top:2.5%;
+                padding-left:55%;}
+
+.pspeak img  {width:25%;
+                height:auto;
+                padding-top:2.5%;
+                padding-left:55%;}
+
+/*Left & Right Text HERE*/
+
+.story5 p {position:absolute;
+            width:25%;
+            text-align:center;
+            font-size:18pt;
+            padding-top:30%;
+            left:8%;
+            z-index:5;
+            animation:fade 5s;
+            animation-iteration-count:1;}
+
+.story6 p {position:absolute;
+            width:25%;
+            text-align:center;
+            font-size:18pt;
+            padding-top:30%;
+            right:8%;
+            z-index:5;
+            animation:fade 5s;
+            animation-iteration-count:1;}
+                        
+            @keyframes fade{0%{opacity:0}
+                            100%{opacity:1}}
+
+.prince1 img  {position:absolute;
+                width:auto;
+                height:100vh;
+                padding-left:25.5%;
+                z-index:2;}
+
+.music1a img  {position:absolute;
+                width:40%;
+                height:auto;
+                padding-top:10%;
+                padding-left:3%;
+                z-index:1;}
+
+.music1b img  {position:absolute;
+                width:40%;
+                height:auto;
+                padding-top:10%;
+                padding-left:55%;
+                z-index:1;}
+
+.rapunzel3 img  {position:absolute;
+                    width:40%;
+                    height:auto;
+                    padding-top:5%;
+                    padding-left:30%;}
+
+/*Bramble Drag HERE*/
+
+.witch-incantation {position:realtive;
+                    width: 100vw;
+                    height: 100vh;}
+
+.witch-incantation .witch {position:absolute;
+                            height:60%;
+                            left:10%;
+                            bottom:10%;
+                            z-index:1;}
+  
+#pdrag {position:relative;
+        position:absolute;
+        width:100vw;
+        height:100vh;
+        bottom:0%;
+        left:40%;
+        cursor:move;}
+  
+#pdrag .bramble {position:absolute;
+                    height:100vh;
+                    left:4%;
+                    bottom:0;
+                    z-index:5;}
+
+/*Wall Drag HERE*/
+       
+#tower-couple .couple1 {position:absolute;
+                        height:100vh;
+                        width:auto;
+                        top:0;
+                        left:3%;
+                        z-index:1;}
+        
+.window {position:absolute;
+            height:65vh;
+            left:27%;
+            bottom:25%;
+            z-index:0;}
+          
+#wdrag {position:relative;
+        position: absolute;
+        left:40%;
+        top:0;
+        z-index:4}
+        
+#wdrag .wall {height:100vh;
+                z-index:4;}
+
+/*Center Text HERE*/
+
+.story7 p {position:absolute;
+            width:35%;
+            text-align:center;
+            font-size:18pt;
+            padding-top:30%;
+            padding-left:33%;
+            z-index:5;
+            animation:fade 5s;
+            animation-iteration-count:1;}
+
+            /*See Above Keyframes*/
+
+.prince6 img  {position:absolute;
+                width:auto;
+                height:100vh;
+                padding-left:5%;}
+
+.rapunzel4 img  {position:absolute;
+                    width:auto;
+                    height:100vh;
+                    padding-left:50%;}
+
+/*Witch & Rapunzel HERE*/
+
+.witch3 {position:absolute;
+            height:150%;
+            width:auto;
+            left:0;
+            animation:loom 500s;
+            animation-iteration-count:1;}
+
+            @keyframes loom{0%{transform:translateY(0%)}
+                            1%{transform:translateY(-18%)}}
+
+.rapunzel2 {position:absolute;
+            width:auto;
+            height:100vh;
+            padding-left:50%;animation:shrink 500s;
+            animation-iteration-count:1;}
+
+            @keyframes shrink{0%{transform:translateY(0%)}
+                                0.75%{transform:translateY(10%)}}
+
+/*Prince Fall HERE*/
+
+.story8 p {position:absolute;
+            width:35%;
+            text-align:center;
+            font-size:18pt;
+            padding-top:5%;
+            padding-left:8%;
+            z-index:5;
+            animation:fade 5s;
+            animation-iteration-count:1;}
+
+            /*See Above Keyframes*/
+
+.prince4 img  {position:absolute;
+                width:30%;
+                height:auto;
+                padding-top:15%;
+                padding-left:20%;
+                z-index:2;
+                animation:fall 750s;
+                animation-iteration-count:1;}
+    
+                @keyframes fall {0%{transform:translateY(0)}
+                                    1.5%{transform:translateY(100%);}}
+                
+.yeet   {animation:yote 750s;
+            animation-iteration-count:1;}
+            
+            @keyframes yote {0%{transform:translateX(0)}
+                                0.75%{transform:translateX(-20%)}
+                                1.5%{transform:translateX(-80%);}}
+
+.powerpuff {animation:blink 4s infinite;}
+
+            @keyframes blink {0%{opacity:1}
+                                25%{opacity:0}
+                                45%{opacity:0}
+                                50%{opacity:1}
+                                75%{opacity:0}
+                                95%{opacity:0}
+                                100%{opacity:1}}
+
+/*Crown Fall HERE*/
+
+.crown  {position:absolute;
+            width:10%;
+            height:auto;
+            padding-top:0;
+            padding-left:45%;
+            z-index:1;
+            animation:falling 750s;
+            animation-iteration-count:1;}
+
+            @keyframes falling {0%{transform:translateY(0)}
+                                3%{transform:translateY(500%);}}
+
+.thorns {position:absolute;
+            width:100vw;
+            height:auto;
+            padding-top:25%;
+            z-index:4;}
+
+/*END*/
+
+.couple2a  {position:absolute;
+    height:100vh;
+    width:auto;
+    top:0;
+    left:10%;
+    z-index:2;
+    animation:change 400s;
+    animation-iteration-count:1;}
+    
+    @keyframes change{0%{opacity:1}
+                        0.5%{opacity:1}
+                        1%{opacity:0}}
+
+.couple2b {position:absolute;
+                    height:100vh;
+                    width:auto;
+                    top:0;
+                    left:10%;
+                    z-index:1;}
+
+.end p {position:absolute;
+        width:35%;
+        text-align:center;
+        font-size:28pt;
+        padding-top:37%;
+        padding-left:33%;
+        z-index:5;
+        animation:fin 500s;
+        animation-iteration-count:1;}
+
+        @keyframes fin{0%{opacity:0}
+                        0.5%{opacity:0}
+                        1%{opacity:1}}
+
+/*Arrow Positions HERE*/
+
+.arrow-center {height:50px;
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                z-index:4;}
+
+.arrow-ten {position:absolute;
+                height:50px;
+                padding-top:20%;
+                padding-left:47%;
+                z-index:4;}
+
+.arrow-hidden {position:absolute;
+                height:50px;
+                padding-left:47%;
+                z-index:4;}
+
+.arrow-right {position:absolute;
+                height:50px;
+                padding-top:40%;
+                padding-left:77%;
+                z-index:4;}

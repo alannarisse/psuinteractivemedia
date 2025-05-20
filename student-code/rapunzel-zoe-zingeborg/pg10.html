@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="link rel="preconnect href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">"
+    <link rel="stylesheet" href="style.css">
+    <title>10 - Crown of Thorns</title>
+</head>
+<body class="pg10">
+    <img src="images/thorns.png" class="thorns">
+    <div class="powerpuff">
+        <img src="images/crown.png" class="crown"></div>
+    <div class="story7">
+        <p>He fell among the thorn trees beneath.
+            The thorns stuck into his eyes
+            and blinded him.</p></div>
+    <a href="pg11.html"><img src="images/arrowr.png" class="arrow-hidden"/></a>
+    <script>
+        function reveal() {var reveals = document.querySelectorAll("p, h1, h2, h3");
+        
+        for (var i = 0; i < reveals.length; i++) {var windowHeight = window.innerHeight;
+                                                    var elementTop = reveals[i].getBoundingClientRect().top;
+                                                    var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");}
+
+        else {reveals[i].classList.remove("active");}}}
+
+        window.addEventListener("scroll", reveal);
+    </script>
+</body>
+</html>

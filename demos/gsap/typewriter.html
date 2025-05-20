@@ -12,7 +12,7 @@
 </head>
 <body>
   <main>
-  <h1></h1>
+  <h1>Who doesn't love a typewriter effect?</h1>
   <p class="one">I'm some text in a paragraph tag</p>
   <p class="two">this is another paragraph</p>
   <p class="three">I'm starting at the same time as the above paragraph</p>
@@ -24,13 +24,15 @@
 <script>
 
 
+gsap.from('h1', {text:`I don't love it!`, duration:3})
 
-gsap.to('h1', {text:`Who doesn't love a typewriter effect?`, ease:'power1.in', duration:3})
-gsap.from('.one', {text:``, ease:'power1.in', duration:2}, '+=1')
-gsap.to('.one', {text:``, opacity:0, duration:2}, '+=1')
-gsap.to('.one', {text:`I'm the to text`, opacity:1, ease:'power1.in', duration:2}, '+=1')
-gsap.from('.two', {text:'', ease:'power1.in', duration:3}, '+=1')
-gsap.from('.three', {text:'', ease:'power1.in', duration:2}, '<') 
+
+//gsap.to('h1', {text:`Who doesn't love a typewriter effect?`, ease:'power1.in', duration:3})
+// gsap.from('.one', {text:``, ease:'power1.in', duration:2}, '+=1')
+// gsap.to('.one', {text:``, opacity:0, duration:2}, '+=1')
+// gsap.to('.one', {text:`I'm the to text`, opacity:1, ease:'power1.in', duration:2}, '+=1')
+// gsap.from('.two', {text:'', ease:'power1.in', duration:3}, '+=1')
+// gsap.from('.three', {text:'', ease:'power1.in', duration:2}, '<') 
 
 
 //the less than symbol means you want the start position to be the same as the one before it.

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="link rel="preconnect href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">"
+    <link rel="stylesheet" href="style.css">
+    <title>8 - Tricky Trap</title>
+</head>
+<body class="pg8">
+    <div class="story1">
+        <p>The next night the Witch
+            took Rapunzel's cut hair
+            and she waited. . .</p>
+        <h3>waited. . .</h3>
+        <h2>waited. . .</h2>
+        <h1>waited. . .</h1></div>
+    <div class="story2">
+        <p>   </p></div>
+    <div class="story4">
+        <p>. . . for when the Prince
+            stood below and cried:</p></div>
+    <div class="rhyme2">
+        <img src="images/rhyme.png"></div>
+    <div class="pspeak">
+        <img src="images/prince/pspeak.gif"></div>
+    <a href="pg9.html"><img src="images/arrowr.png" class="arrow-center"/></a>
+    <script>
+        function reveal() {var reveals = document.querySelectorAll("p, h1, h2, h3");
+        
+        for (var i = 0; i < reveals.length; i++) {var windowHeight = window.innerHeight;
+                                                    var elementTop = reveals[i].getBoundingClientRect().top;
+                                                    var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");}
+
+        else {reveals[i].classList.remove("active");}}}
+
+        window.addEventListener("scroll", reveal);
+    </script>
+</body>
+</html>

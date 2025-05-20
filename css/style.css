@@ -285,7 +285,15 @@ div.home-card {
 .button:hover {
   border: 2px solid #5eb1bf;
 }
-
+.button-sm {
+  border-radius: 8px;
+  padding: 2px 6px;
+  border: 2px solid #ef7b45;
+  display:inline-block;
+}
+.button-sm:hover {
+  border: 2px solid #5eb1bf;
+}
 .glossary-tab {
   position:absolute;
   top:40%;
