@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sxcroll Trigger Basics from Creative Coding Club</title>
+  <style>
+    * {
+  box-sizing:border-box;
+}
+
+body {
+  background:#efefef;
+  font-family:sans-serif;
+  margin:0;
+}
+
+.header {
+  display:flex;
+  height:100vh;
+  align-items:center;
+  justify-content:center;
+  background-color:#fee;
+  background-image: url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.4" fill-rule="evenodd"%3E%3Cpath d="M0 40L40 0H20L0 20M40 40V20L20 40"/%3E%3C/g%3E%3C/svg%3E');
+}
+
+.mainContent {
+ // background:#9FA8DA;
+  padding:2vw;
+}
+
+.footer {
+  background:#1d1d1d;
+  color:#ccc;
+}
+
+.animation {
+  height:50vh;
+  background:#FFCA28;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  
+}
+
+h2 {
+  font-size:6vw;
+}
+
+p {
+  font-size:2.5vw
+}
+
+@media screen and (max-width: 600px) {
+  
+  p  {font-size: 3vw}
+  
+}
+
+
+.herman {
+  width:25vh;
+  
+}
+
+/* from Sarah Drasner's Hero Generator */
+
+/* Photo by Benjamin Voros on Unsplash  https://unsplash.com/photos/phIFdC6lA4E */
+
+.masthead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  height: 100vh; /* if you don't want it to take up the full screen, reduce this number */
+  overflow: hidden;
+  background-size: cover;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 37%, rgba(0,0,0,0.65) 100%), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/32887/benjamin-voros-phIFdC6lA4E-unsplash.jpg) no-repeat center center scroll;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: bold;
+  color: #eee;
+  font-size: 11vmin;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 40px;
+}
+    
+      
+div.button {
+  background: #7CB342;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin: 0;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+
+
+
+
+
+
+.masthead, .mainContent, .footer {
+  /* display:none; */
+}
+
+
+/* .gsap-marker-scroller-start {
+  background:white;
+} */
+  </style>
+</head>
+<body>
+  <section class="masthead" role="img" aria-label="Image Description">
+    <h1>
+      Every Website
+    </h1>
+      <div class="button">
+        Scroll Down
+      </div>
+  </section>
+      
+  <div class="contentWrapper">
+   <div class="mainContent">
+    <h2>Introduction</h2>
+    <p>Morbi accumsan at enim ac rhoncus. Maecenas ut porttitor est. Aliquam nec ultrices nibh, et hendrerit nunc. Sed quis metus pretium, varius risus sit amet, ultrices enim. Sed vehicula diam purus, id euismod nunc porta sit amet. Etiam vitae eleifend nisi.</p>
+  <p>Phasellus aliquam sapien arcu, vel elementum lectus volutpat eu. Morbi ac nibh ut turpis lobortis laoreet. Phasellus hendrerit finibus lorem, et condimentum eros vehicula convallis. Cras lobortis risus quis nibh euismod, vel mollis odio suscipit. Vivamus vel auctor dolor, id vestibulum erat. </p>
+  
+  <p>Duis in lectus nec urna semper sollicitudin. Pellentesque sed magna vitae urna iaculis ullamcorper eu non dui. Vestibulum vel enim sed lacus semper ultricies. Fusce eu viverra nibh. Integer vitae ornare odiocurae;</p>
+    </div>
+    
+    <div class="animation">
+      <img class="herman" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/32887/herman.svg" />
+    </div>
+    <div class="mainContent">
+    <h2>Conclusion</h2>
+    <p>Morbi accumsan at enim ac rhoncus. Maecenas ut porttitor est. Aliquam nec ultrices nibh, et hendrerit nunc. Sed quis metus pretium, varius risus sit amet, ultrices enim. Sed vehicula diam purus, id euismod nunc porta sit amet. Etiam vitae eleifend nisi.</p>
+  <p>Phasellus aliquam sapien arcu, vel elementum lectus volutpat eu. Morbi ac nibh ut turpis lobortis laoreet. Phasellus hendrerit finibus lorem, et condimentum eros vehicula convallis. Cras lobortis risus quis nibh euismod, vel mollis odio suscipit. Vivamus vel auctor dolor, id vestibulum erat. </p>
+  
+  <p>Duis in lectus nec urna semper sollicitudin. Pellentesque sed magna vitae urna iaculis ullamcorper eu non dui. Vestibulum vel enim sed lacus semper ultricies. Fusce eu viverra nibh. Integer vitae ornare odiocurae;</p>
+    </div>
+    <div class="mainContent footer">
+    <h2>Footer</h2>
+    <p>Morbi accumsan at enim ac rhoncus. Maecenas ut porttitor est. Aliquam nec ultrices nibh, et hendrerit nunc. Sed quis metus pretium, varius risus sit amet, ultrices enim. Sed vehicula diam purus, id euismod nunc porta sit amet. Etiam vitae eleifend nisi.</p>
+  <p>Phasellus aliquam sapien arcu, vel elementum lectus volutpat eu. Morbi ac nibh ut turpis lobortis laoreet. Phasellus hendrerit finibus lorem, et condimentum eros vehicula convallis. Cras lobortis risus quis nibh euismod, vel mollis odio suscipit. Vivamus vel auctor dolor, id vestibulum erat. </p>
+  
+  <p>Duis in lectus nec urna semper sollicitudin. Pellentesque sed magna vitae urna iaculis ullamcorper eu non dui. Vestibulum vel enim sed lacus semper ultricies. Fusce eu viverra nibh. Integer vitae ornare odiocurae;</p>
+    </div>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger)
+
+gsap.from(".herman", {
+  duration:10, x:"-50vw", rotation:-360, ease:"linear", 
+    scrollTrigger: {
+      trigger:".herman",
+      markers:true,
+      start:"top 75%", //when top of herman passes 75% viewport height
+      end:"bottom 25%", //when bottom of herman passes 25% viewport height
+      
+           //events: onEnter onLeave onEnterBack onLeaveBack
+      toggleActions:"restart complete reverse reset"
+          //options: play, pause, resume, reset, restart, complete, reverse,none
+    }
+}) 
+
+
+</script>
+  
+</body>
+</html>

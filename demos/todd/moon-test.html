@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo</title>
+  <style>
+    * {box-sizing: border-box;}
+    body {
+      margin:0;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    h1 {
+      font-size:140px;
+      margin:0;
+    }
+    h2 {
+      font-size: 56px;
+      margin:0;
+    }
+    section {
+      width:100vw;
+      height:100vh;
+      overflow:hidden;
+    }
+    .intro {
+      position:relative;
+      background-color:navy;
+      display:flex;
+      flex-direction: column;
+      align-items:center;
+      justify-content: center;
+      text-align:center;
+    }
+    .intro img {
+    }
+    .intro .stars {
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+    }
+    .intro .moon {
+      margin-bottom:-100px;
+      scale:.6
+    }
+    .intro .earth {
+      margin-top:-100px;
+    }
+    .date1 {
+      background:white;
+      display:flex;
+      align-items:center;
+      justify-content: center;
+      text-align:center;
+    }
+    .grid-section {
+      background:rgb(238, 231, 221);
+    }
+    .grid-section h3 {
+      display:inline-block;
+      font-size:32px;
+    }
+    .grid-section .sat {
+      position:absolute;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:10px;
+    }
+    .grid-section .sat h3 {
+      position:relative;
+    }
+    .grid-section .ap1 {
+      top:5%;
+      left:10%;
+    }
+    .grid-section .ap2 {
+      bottom:15%;
+      left:40%;
+    }
+    .grid-section .ap3 {
+      top:15%;
+      right:10%;
+    }
+    .grid {
+      width:100vw;
+      height:100vh;
+    }
+    .artemis {
+      background-color:#ccc;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
+    .gateway {
+      background-color:#929090;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
+    .beyond {
+      background-color:#666565;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
+    .ap-info {
+      position:absolute;
+      left: 140px;
+      top:130px;
+      width:300px;
+      background:white;
+      border:4px solid black;
+      padding:20px 40px;
+      opacity:0;
+      transition:all 500ms;
+    }
+
+    .show {
+      opacity:1;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+  <section class="intro" id="intro">
+    <img class="stars" src="images/stars.png">
+    <img class="moon" src="images/moon-simple.png">
+    <img class="earth" src="images/earth-simple.png">
+  </section>
+  <section class="video" id="jfk">
+    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/239862299?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Moon Landing"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+  </section>
+
+  <section class="date1" id="1961">
+    <div class="words">
+      <h2>May 7</h2>
+      <h1>1961</h1>
+    </div>
+  </section>
+  <section class="grid-section" id="grid-section">
+    <img class="grid" src="images/gridlines.png">
+    <div class="sat ap1">
+      <img class="sat-one" src="images/sat-one.png">
+      <h3>Apollo I</h3>
+      <article class="ap-info aside1"><p>I'm some content about Apollo I in a box</p></article>
+    </div>
+    <div class="sat ap2">
+      <img class="sat-two" src="images/sat-two.png">
+      <h3>Apollo II</h3>
+      <article class="ap-info aside2"><p>I'm some content about Apollo I in a box</p></article></div>
+    <div class="sat ap3">
+      <img class="sat-three" src="images/sat-three.png">
+      <h3>Apollo III</h3>
+      <article class="ap-info aside3"><p>I'm some content about Apollo I in a box</p></article>
+    </div>
+  </section>
+  <section class="artemis">
+    <h1>The Artemis Era</h1>
+  </section>
+  <section class="gateway">
+    <h1>Lunar Gateway</h1>
+  </section>
+  <section class="beyond">
+    <h1>Beyond the Moon</h1>
+  </section>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script>
+    // hover on apollo cards
+    $('.sat').click(function(){
+      $(this).find('.ap-info').toggleClass('show')
+      //$('.aside1').toggleClass('show')
+    })
+
+       const tlintro = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.wrapper',
+          markers: true,
+          start: 'top top',
+          endTrigger: '.beyond',
+          end: 'bottom +=780vh',
+          scrub: .5,
+          pin: true,
+          pinSpacing:false,
+
+        }
+      })
+      
+      
+      tlintro
+      .from('.moon', {scale:1.2,y:200, duration:8})
+      .from('.earth', {y:200, duration:6})
+      .to('.video', {y:'-100vh', duration:8})
+      .to('.date1', {y:'-200vh', duration:8})
+      .to('.grid-section', {y:'-300vh', duration:8})
+      .to('.artemis', {y:'-400vh', duration:8})
+      .to('.gateway', {y:'-500vh', duration:8})
+      .to('.beyond', {y:'-600vh', duration:8})
+
+</script>
+</body>
+</html>

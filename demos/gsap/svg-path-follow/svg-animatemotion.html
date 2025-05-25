@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    circle[r] {
+      fill: green;
+      animation-name:orbit;
+      animation-timing-function: linear;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+    }
+    @keyframes orbit{
+      0% { scale: 1;}
+      10% { scale: 1.5;}
+      25% { scale: 5; opacity:.6}
+      55% { scale: .5; opacity:.0}
+      99% { scale: 0; opacity:.6}
+      100% { scale: 1;}
+    }
+  </style>
+</head>
+<body>
+<svg viewBox="-1000 -600 2000 1200">
+<path id="path" d="M-700,0 a700,480 0 1,1 1400,0a700,480 0 1,1 -1400,0" style="stroke: none; fill: none;">
+</path>
+ <circle r="20" fill="red" id="circ">
+ <animateMotion begin="0s" dur="10s" rotate="auto" fill="freeze" repeatCount="indefinite">
+ <mpath xlink:href="#path"></mpath>
+ </animateMotion>
+ </circle>
+</svg>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+<script>
+  $( document ).ready(function() {
+  // Handler for .ready() called.
+
+// let rad = $('#circ').attr('r');
+// $('#circ').attr('r', '5')
+// setTimeout(function(){ 
+//   $('#circ').attr('r', '10')
+//  }, 1000);
+// setTimeout(function(){ 
+//   $('#circ').attr('r', '15')
+//  }, 2000);
+//  setTimeout(function(){ 
+//   $('#circ').attr('r', '20')
+//  }, 3000);
+// setTimeout(function(){ 
+//   $('#circ').attr('r', '15')
+//  }, 4000);
+// setTimeout(function(){ 
+//   $('#circ').attr('r', '5')
+//  }, 5000);
+//  setTimeout(function(){ 
+//   $('#circ').attr('r', '10')
+//  }, 7000);
+// });
+
+</script>
+
+</body>
+</html>

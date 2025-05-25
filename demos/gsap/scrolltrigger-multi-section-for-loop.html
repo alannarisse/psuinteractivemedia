@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll trigger multi section for loop</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&display=swap');
+
+
+
+* {
+	position:relative;
+}
+
+body {
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	color:white;
+  	margin:0;
+	background:#263238;
+}
+h1 {
+  font-size: 60px;
+  margin-bottom:0px;
+}
+h2 {
+  font-size: 48px;
+  margin-top:0;
+}
+.banner {
+	width:100vw;
+	height:60vh;
+	overflow:hidden;
+	min-height:300px;
+}
+
+
+.background {
+	filter:brightness(1);
+	min-width:400px;
+	width:100%;
+	height:100%;
+	
+	background-size:100%;
+	background-position:50%;
+	background-repeat:no-repeat;
+	position:absolute;
+}
+
+.flower1 {
+	background-image: url("images/flower-l1.jpg");
+}
+
+.flower2 {
+	background-image: url("images/flower-l2.jpg");
+}
+
+.flower3 {
+	background-image: url("images/flower-l3.jpg");
+}
+
+.flower4 {
+	background-image: url("images/flower-l4.jpg");
+}
+
+.foreground {
+	position:absolute;
+	padding:25px;
+}
+
+h1, h2 {
+	text-shadow:3px 3px 6px #999;
+	letter-spacing:1px;
+}
+
+.content {
+	font-family:sans-serif;
+	padding:50px 50px 150px 50px;
+	line-height:1.6em;
+	font-size:1.3em;
+	
+}
+
+.hero {
+	width:100%;
+	height:100vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	background:#ddd;
+	color:#333;
+	font-size:10vw;
+}
+  </style>
+</head>
+<body>
+  <div class="hero">Ephemeral Flowers</div>
+<div class="banner">
+	<div class="background flower1"></div>
+	<div class="foreground">
+		<h1>Purple and White Cherry Blossoms</h1>
+		<h2>March Blossom Time</h2>
+	</div>	
+</div>
+<div class="content">
+	<p>Any given tree may only be in full bloom for about a week.<br><br>
+
+    Cherry blossom season usually lasts about a month from the earliest bloomers—this year the ever-blooming cherry (Prunus ‘Fudan-zakura’)—to the latest, usually the ‘Kanzan’ (P. ‘Kanzan’) and the ‘Ukon’ (P. ‘Ukon’). But an individual tree may only be in bloom for a week or two, depending on the weather. Of course, if they were in bloom all the time, they wouldn’t be so special.
+	</p>
+ <p>Like their blossoms, flowering cherry trees themselves are fairly ephemeral too, at least as trees go. Most cultivars live only 30 to 40 years. Brooklyn Botanic Garden’s collection includes some of the oldest specimens in North America, though—the two weeping higan cherries (Prunus pendula ‘Pendula Rosea’) at the north end of Cherry Walk. Those were part of the original 1921 planting.</p>
+</div>
+
+
+<div class="banner">
+	<div class="background flower2"></div>
+	<div class="foreground">
+		<h1>Pink Cherry Blossoms</h1>
+		<h2>Blooms in May in Portland</h2>
+	</div>	
+</div>
+<div class="content">
+	<p>In Japan, flowering cherries, with their short blooming period, symbolize the ephemeral. They’re more likely to be planted in parks, where hanami is often celebrated as a drunken picnic. Office workers make their interns go out early in the morning with a blanket to stake out a spot under the cherry trees—kind of like movie nights in Bryant Park. Then later everyone shows up with the food and sake.
+
+  </p>
+	<p>The overall trend is for cherry trees to blossom a little earlier each year. That’s due to climate change. It wasn’t that long ago that Sakura Matsuri was scheduled for the first weekend in May, which corresponded pretty well with Cherry Esplanade being in bloom. Now, more often then not, Cherry Esplanade blooms in April.
+	</p>
+ <p>There are over one hundred varieties of cherry blossom trees. Over the years, hundreds of more cultivars have been produced to make the cherry trees easy to grow in residential gardens. Some of the most decorative cherry trees are weeping cherry blossom trees or dwarf weeping cherry trees.</p>
+</div>
+
+<div class="banner">
+	<div class="background flower3"></div>
+	<div class="foreground">
+		<h1>Kentucky Bluegrass</h1>
+		<h2>Summer Blossom</h2>
+	</div>	
+</div>
+<div class="content">
+	<p>Kentucky bluegrass, scientifically known as Poa pratensis, is a perennial cool-season grass native to Europe and Asia, commonly used for lawns and pastures in the United States. It is known for its dense, lush appearance and thrives in cooler temperatures, making it popular in northern climates.
+	</p>
+ <p>Poa pratensis was one of the many species described by Carl Linnaeus in his landmark work Species Plantarum in 1753. Poa is Greek for fodder and pratensis is derived from pratum, Latin for meadow. The name Kentucky bluegrass derives from its flower heads, which are blue when the plant is allowed to grow to its natural height of 60 to 90 cm (2 to 3 feet).</p>
+</div>
+
+
+<div class="banner">
+	<div class="background flower4"></div>
+	<div class="foreground">
+		<h1>Kentucky Bluegrass</h1>
+		<h2>Summer Blossom</h2>
+	</div>	
+</div>
+<div class="content">
+	<p>Poa pratensis is a herbaceous perennial plant 30–70 centimetres (12–28 in) tall. The leaves have boat-shaped tips, narrowly linear, up to 20 centimetres (8 in) long and 3–5 millimetres (0.12–0.20 in) broad, smooth or slightly roughened, with a rounded to truncate ligule 1–2 millimetres (0.039–0.079 in) long. The conical panicle is 5–20 centimetres (2–8 in) long, with 3 to 5 branches in the basal whorls; the oval spikelets are 3–6 millimetres (0.12–0.24 in) long with 2 to 5 florets, and are purplish-green or grey. They are in flower from May to July, compared to annual meadowgrass (Poa annua) which is in flower for eight months of the year. Poa pratensis has a fairly prominent mid-vein (center of the blade).</p>
+	<p>Poa pratensis is among the food plants of the caterpillars of the meadow brown (Maniola jurtina), gatekeeper (Pyronia tithonus), and pepper-and-salt skipper butterflies; the common sun beetle (Amara aenea) (adults feed on the developing seeds), the leafhopper Eupelix cuspidata, the grassbug Myrmus miriformis (feeds on young blades and developing seeds), and the club-horned grasshopper (Aeropedellus clavatus) (feeds on the blades, seeds, and glumes).
+	</p>
+ <p>Poa pratensis is host to a number of fungi, including Claviceps purpurea, which causes ergotism when consumed, Drechslera poae, Epichloë typhina, Phaeoseptoria poae, Puccinia brachypodii var. poae-nemoralis, Stagonospora montagnei, Stagonospora nodorum and Wojnowicia hirta.</p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script>
+  console.clear()
+
+let banners = document.querySelectorAll(".banner")
+
+banners.forEach( (element) => {
+	let background = element.querySelector(".background")
+	let headings = element.querySelectorAll("h1, h2")
+	
+	
+	let tl = gsap.timeline()
+	   .to(background, {
+      start: 'top top',
+      end:'bottom top',
+      pin:true
+    })
+     .from(background, {
+      backgroundPosition:"60% 0%", 
+      filter:"brightness(0.1)", duration:1})
+		.from(headings, {y:200, stagger:0.1}, 0)
+	
+	ScrollTrigger.create({
+		trigger:element,
+		start:"top 70%",
+		toggleActions:"play none none reverse",
+		animation:tl
+	})
+		
+})
+
+// master the art of GreenSock Animation
+// https://www.creativeCodingClub.com
+
+// unlock over 200 lessons designed to keep you out of the GreenSock Forums
+
+</script>
+</body>
+</html>
