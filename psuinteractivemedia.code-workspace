@@ -120,7 +120,7 @@
     }
   ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "psuinteractivemedia",
+    "liveServer.settings.multiRootWorkspaceName": "students",
     "liveServer.settings.port": 5501,
     "formatSelectionAsHtml.formatter": "prettier",
     "formatSelectionAsHtml.htmlWhitespaceSensitivity": "strict",

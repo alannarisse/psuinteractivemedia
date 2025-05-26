@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>little lemon</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgray;
+  background-color: white;
+}
+
+.video {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  bottom: 16px;
+  width: 100vw;
+  height: auto;
+}
+
+p {
+  font-family: "Caudex", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+}
+
+
+
+.arrow {
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 48px;
+  position: fixed;
+  top: 40%;
+  right: 1%;
+  animation: MoveUpDown 2s ease-in infinite;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    top: 40%;
+  }
+  50% {
+    top: 41%;
+  }
+}
+
+
+.walkman {
+  position: fixed;
+  z-index: 3;
+  bottom: 10%;
+  left: -20%;
+}
+
+
+.wrapper {
+  display:grid;
+  grid-template-columns: 90% 20%;
+  height:100%;
+}
+.drop {
+  height:100%;
+  display:flex;
+  align-items:flex-start;
+  justify-content: flex-end;
+}
+.treebg {
+  background-image: url('DES342_Proj01_Mother-TreeMother-Tree-V2.png');
+  background-size: auto 200vh;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  height:200vh;
+}
+
+.lemon {
+  display:inline-block;
+  margin-top:40vh;
+  margin-left:-40vw;
+  width:90px;
+}
+.verses {
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  margin-left:-20vw;
+  position:relative;
+}
+.verse {
+  opacity:0;
+  width:500px;
+  position:absolute;
+  left:-60px;
+  top:30vh;
+}
+.title {
+  margin-top:36vh;
+  margin-left:-300px;
+  font-family: "Caudex", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: xx-large;
+  white-space: nowrap;
+}
+section.end {height:160vh;}
+  </style>
+</head>
+<body>
+  <div class="treebg">
+<div class="wrapper">
+<section class="drop">
+  <div class="lemonbox">
+    <img class="lemon" src="lemon.png" alt="The Little lemon">
+  </div>
+</section>
+
+<section class="verses">
+  <div class="title">little lemon</div>
+
+  <div class="verse verse1">
+    <p>little lemon, little lemon</p>
+    <p>hanging on a tree</p>
+    <p>clinging to its branch</p>
+    <p>as you dance in the breeze</p>
+  </div>
+  <div class="verse verse2">
+    <p>mother tree, mother tree</p>
+    <p>you let your lemon go</p>
+    <p>it&apos;s falling through the sky</p>
+    <p>as your bare branch shows</p>
+  </div>
+  <div class="verse verse3">
+    <p>cold earth, cold earth</p>
+    <p>your dirt is on its flesh</p>
+    <p>yet it still fell on you</p>
+    <p>now there it will rest</p>
+  </div>
+  <div class="verse verse4">
+    <p>walk man, walk man</p>
+    <p>what&apos;s that in the dirt?</p>
+    <p>there&apos;s a little lemon</p>
+    <p>for you to give some worth</p>
+  </div>
+  <div class="verse verse5">
+    <p>little lemon, little lemon</p>
+    <p>walk man passed you by</p>
+    <p>now you've been left alone</p>
+    <p>please don't cry.</p>
+  </div>
+</section>
+</div>
+<div class="arrow">⌄</div>
+</div>
+<div class="walkman">
+  <img src="DES342_Proj01_walk-cycle.gif" alt="walking man walking">
+</div>
+<section class="end"></section>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script>
+
+gsap.registerPlugin(ScrollTrigger);
+
+const tllemon = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.wrapper',
+          //markers: true,
+          start: 'top top',
+          duration:30,
+          endTrigger: '.end',
+          end: 'top bottom',
+          scrub: .5,
+          pin: true,
+          pinSpacing:true,
+
+        }
+      })
+      tllemon
+      .to('.title', {opacity:'0'})
+      .to('.verse1', {opacity:'1'})
+      .to('.verse1', {opacity:'0'})
+      .to('.verse2', {opacity:'1'})
+      .to('.verse2', {opacity:'0'})
+      .to('.verse3', {opacity:'1'})
+      .to('.verse3', {opacity:'0'})
+      .to('.verse4', {opacity:'1'})
+      .to('.verse4', {opacity:'0'})
+      .to('.verse5', {opacity:'1'})
+      .to('.lemon', {y:'160px', rotate:60, ease:'ease.in'}, '>')
+      
+
+      const tlwalk = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.end',
+          //markers: true,
+          start: 'top bottom',
+          duration:5,
+          endTrigger: '.end',
+          end: 'bottom bottom',
+          scrub: .5,
+          pin: true,
+          pinSpacing:true,
+
+        }
+      })
+      tlwalk
+      .to('.treebg', {position:'fixed', bottom:'0'})
+      .fromTo('.walkman', {x:'-100'}, {x:'2500px'} )
+
+</script>
+</body>
+</html>
