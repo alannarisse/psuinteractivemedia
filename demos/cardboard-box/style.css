@@ -1,0 +1,52 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #242424;
+}
+
+.page {
+  width: 100%;
+  height: 200vh;
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.container .ui-controls {
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  user-select: none;
+  font-family: sans-serif;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.container .ui-controls div {
+  color: white;
+}
+
+.container button {
+  /*     display: inline-block; */
+  display: none;
+  text-align: center;
+  padding: 0;
+  cursor: pointer;
+  font-size: 15px;
+  width: 25px;
+  height: 25px;
+  margin-bottom: 1em;
+  margin-right: 0.2em;
+}
+.container button.disabled {
+  pointer-events: none;
+  cursor: auto;
+  opacity: 0.3;
+}

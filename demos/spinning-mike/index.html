@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {box-sizing: border-box;}
+    body {margin:0;}
+    .spin {
+      display:flex;
+      align-items: center;
+      justify-content:center;
+      transform-origin: 50% 40%;
+      animation-name: spin;
+      animation-duration:20s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      overflow:visible;
+    }
+    @keyframes spin {
+      0% {transform: rotate(0);}
+      100% {transform: rotate(360deg);}
+    }
+    .spin img {
+      width:200vw;
+    }
+    .spin-window {
+      max-height:100vh;
+      max-width:100vw;
+      position:relative;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .spin-window section { /* content section for spin window box */
+      height:100vh;
+      width:100vw;
+      position:absolute;
+      top:0;
+      left:0;
+      overflow:hidden;
+      z-index:99;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .words {
+      border:4px solid white;
+      width:45%;
+      font-size:80px;
+      color:red;
+      z-index:99;
+      font-weight: 900;
+    }
+    .two {
+      height:100vh;
+      width:100vw;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="spin-window">
+    <div class="spin"><img src="pattern.jpg"></div>
+    <section>
+      <p class="words">I'm some words. I like pie. This is nice. Thje sun is pretty.</p>
+    </section>
+  </div>
+  <div class="two">
+    <h1>New section</h1>
+  </div>
+  
+</body>
+</html>
