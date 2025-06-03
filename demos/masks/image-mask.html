@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concave Image Mask</title>
+  <style>
+    * {box-sizing: border-box;}
+    body {margin:0;}
+    nav {
+      padding:20px;
+      border-bottom:1px solid black;
+    }
+    .intro {
+      width:100vw;
+      height:100vh;
+      background: #fff;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .intro article {
+      width:80%;
+      margin:0 auto;
+    }
+    section{border-bottom:22px solid #bedcb2;}
+   .banner img:first-of-type {
+  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+
+
+    mask-size: 95%, 100%;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-image:
+    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg),
+    /* repeating-radial-gradient(transparent 0 5px, black 5px 10px); */
+  }
+  section.two img:first-of-type {
+  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+}
+.three #green {
+  mask-image: url(#greenMask);
+}
+.three #stroke {
+  mask-image: url(#strokeMask);
+}
+.three #both {
+  mask-image: url(#bothMask);
+}
+.three #alphaMode {
+  mask-image: url(#black);
+}
+
+.three:has(:checked) img {
+  mask-mode: alpha;
+}
+  </style>
+</head>
+<body>
+  
+  <section class="intro">
+    <nav>I'm a nav</nav>
+    <article>
+      <h1>Hello</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus magni eaque dolor autem, soluta fugit, suscipit ipsum ea maxime alias tempore quibusdam quia sed est at! Nobis nihil velit reiciendis nesciunt, atque, at sed earum dolorum doloribus aperiam culpa? Debitis velit libero eos sint voluptatum veritatis nihil quaerat nam commodi.</p>
+    </article>
+    <div class="banner">
+      <img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
+
+
+    </div>
+  </section>
+  <section class="two">
+    <img
+    src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+    alt="Pride flag" />
+  
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/mask-star.svg"
+    alt="A star" />
+  </section>
+  <section class="three">
+    <img
+  id="green"
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
+<img
+  id="stroke"
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
+<img
+  id="both"
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
+<img
+  id="alphaMode"
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
+
+<svg height="0" width="0">
+  <mask id="greenMask">
+    <path
+      d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
+      fill="green" />
+  </mask>
+  <mask id="strokeMask">
+    <path
+      d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
+      fill="none"
+      stroke="white"
+      stroke-width="20" />
+  </mask>
+  <mask id="bothMask">
+    <path
+      d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
+      fill="green"
+      stroke="white"
+      stroke-width="20" />
+  </mask>
+  <mask id="black">
+    <path
+      d="M20,70 A40,40,0,0,1,100,70 A40,40,0,0,1,180,70 Q180,130,100,190 Q20,130,20,70 Z"
+      fill="black" />
+  </mask>
+</svg>
+  </section>
+</body>
+</html>

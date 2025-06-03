@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll to Top</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+.panel {
+  width: 100%;
+
+}
+
+.panel.gray {
+   background: var(--color-just-black);
+}
+
+.jumps {
+  color: dodgerblue;
+  z-index: 5;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  color: #777;
+}
+.jumps a {
+  color: dodgerblue;
+}
+body {
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 300;
+  overscroll-behavior: none;
+}
+h1, h2 {
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+h1 {
+  font-size: 40px;
+}
+h1, h2, p, li {
+  max-width: none;
+}
+
+.panel p, .panel li {
+  font-weight: 300;
+}
+
+.panel {
+  font-weight: 300;
+  height: auto;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.pin {
+  background-color: var(--color-just-black);
+  min-height: 100vh;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 94%;
+  padding: 1rem;
+  position: fixed;
+  text-align: center;
+}
+
+.standard, .features {
+  width: 100%;
+  padding: 1rem;
+}
+.standard {
+  border-bottom: 2px solid #555;
+
+}
+.features h2 {
+  margin-bottom: 0;
+}
+
+.boxes {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.box {
+  width: 5vw;
+  height: 5vw;
+  position: relative;
+  padding: 1%;
+  border-radius: 10px;
+  transform: scale(0);
+}
+
+#checkboxes {
+  padding: 12px;
+  background-color: #111;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+#checkboxes input {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+#checkboxes label {
+  white-space: nowrap;
+  margin: 0 14px;
+}
+.panel p code, .panel li code {
+  background-color: rgba(0,0,0,0.25);
+  padding: 2px 6px;
+}
+.panel li {
+  margin-bottom: 10px;
+}
+
+.box {
+   background-blend-mode: unset;
+}
+
+.box-5 {
+  visibility: hidden;
+}
+
+.explanation {
+  position: relative;
+  top: 0;
+  transform: translateY(-50px);
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  display: inline-block;
+  /*min-width: 80%;*/
+  /*left: 50%;*/
+}
+.explanation-container {
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 100vh;
+  bottom: 0;
+  position: fixed;
+  z-index: 100;
+  overflow: visible;
+}
+.explanation .tab {
+  height: 50px;
+  font-size: 20px;
+  color: var(--color-just-black);
+  text-align: center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 0 30px;
+  line-height: 50px;
+  display: inline-block;
+  cursor: pointer;
+  transform: translateY(1px);
+  border-top: 1px solid #aa70c8;
+}
+.explanation .content {
+  overflow: auto;
+  height: calc(100vh - 65px);
+  border: 3px solid var(--color-shockingly-green);
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: left;
+}
+.explanation .panel {
+  height: auto;
+  min-height: auto;
+  padding: 40px;
+}
+.explanation h2 {
+  margin: 0;
+}
+.explanation p, .explanation h2, .explanation ul {
+  max-width: 800px;
+}
+.prettyprinted {
+  overflow: auto;
+  max-width: 80vw;
+}
+@media (max-height: 500px) {
+  .panel h1, .panel h2 {
+    font-size: 24px;
+  }
+  .panel p {
+    font-size: 17px;
+  }
+  #checkboxes input {
+    width: 12px;
+    height: 12px;
+  }
+  #checkboxes label {
+    font-size: 14px;
+    margin: 0 5px;
+  }
+  .explanation .tab {
+    height: 32px;
+    line-height: 32px;
+    font-size: 18px;
+    padding: 0 14px;
+  }
+  .explanation {
+    transform: translateY(-32px);
+  }
+}
+/* Typography */
+
+@font-face {
+  font-display: block;
+  font-family: Mori;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://assets.codepen.io/16327/PPMori-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-display: block;
+  font-family: Mori;
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://assets.codepen.io/16327/PPMori-SemiBold.woff) format("woff");
+}
+
+@font-face {
+  font-display: block;
+  font-family: Fraktion Mono;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://assets.codepen.io/16327/PPFraktionMono-Bold.woff)
+    format("woff");
+}
+
+:root {
+  --color-shockingly-green: #0ae448;
+  --color-just-black: #0e100f;
+  --color-surface-white: #fffce1;
+  --color-pink: #fec5fb;
+  --color-shockingly-pink: #f100cb;
+  --color-orangey: #ff8709;
+  --color-lilac: #9d95ff;
+  --color-lt-green: #abff84;
+  --color-blue: #00bae2;
+  --color-grey: gray;
+  --color-surface75: #bbbaa6;
+  --color-surface50: #7c7c6f;
+  --color-surface25: #42433d;
+  --gradient-macha: linear-gradient(
+    114.41deg,
+    var(--color-shockingly-green) 20.74%,
+    var(--color-lt-green) 65.5%
+  );
+  --gradient-orange-crush: linear-gradient(
+    111.45deg,
+    var(--color-orangey) 19.42%,
+    #f7bdf8 73.08%
+  );
+  --gradient-lipstick: linear-gradient(
+    165.72deg,
+    #f7bdf8 21.15%,
+    #cd237f 81.93%
+  );
+  --gradient-purple-haze: linear-gradient(
+    153.58deg,
+    #f7bdf8 32.25%,
+    #2f3cc0 92.68%
+  );
+  --gradient-skyfall: linear-gradient(
+    131.77deg,
+    #0a157a 30.82%,
+    #15bfe4 81.82%
+  );
+  --gradient-emerald-city: linear-gradient(
+    166.9deg,
+    var(--color-shockingly-green) 53.19%,
+    #0085d0 107.69%
+  );
+  --gradient-summer-fair: linear-gradient(
+    144.02deg,
+    var(--color-blue) 4.56%,
+    var(--color-pink) 72.98%
+  );
+  --color-core-green: #dfffd1;
+  --color-core-green-lt: #f3ffee;
+  --color-core-gradient: radial-gradient(
+    89.08% 84.62% at 16.54% 78.46%,
+    #fbfefa 0%,
+    #c9f6b4 39.58%,
+    #abff84 77.6%,
+    #2fee65 100%
+  );
+  --color-core-button-gradient: linear-gradient(
+    114.41deg,
+    #0ae448 20.74%,
+    #abff84 65.5%
+  );
+  --color-core-heading-gradient: linear-gradient(
+      180deg,
+      #d6ffc3 0%,
+      rgba(214, 255, 195, 0) 100%
+    ),
+    #f3ffee;
+  --color-core-intro-gradient: linear-gradient(
+      144.5deg,
+      #e8ffdd 65.09%,
+      #7dea7b 122.73%
+    ),
+    linear-gradient(311.31deg, #7ef89e 36.08%, #e5ffd9 106.98%);
+  --color-text-purple: #d2ceff;
+  --color-text-purple-lt: #dfdcff;
+  --color-text-gradient: radial-gradient(
+    129.03% 100% at 120.97% 81.45%,
+    #dfdcff 27.08%,
+    #a69eff 100%
+  );
+  --color-svg-tangerine: #ffe3c7;
+  --color-svg-tangerine-lt: #fff0e0;
+  --color-svg-gradient: radial-gradient(
+    70.77% 70.77% at 0% 70.77%,
+    #ffd9b0 0%,
+    #fd9f3b 80.73%,
+    #ff8709 100%
+  );
+  --color-svg-heading-gradient: linear-gradient(
+      180deg,
+      #ffbd77 0%,
+      rgba(254, 197, 251, 0) 100%
+    ),
+    #ffe4c7;
+  --color-ui-blue: #bef3fe;
+  --color-ui-blue-lt: #e1faff;
+  --color-ui-blue-codeblk: #f6feff;
+  --color-ui-text-gradient: linear-gradient(
+    168.89deg,
+    #fec5fb -21.3%,
+    #00bae2 89.88%
+  );
+  --color-ui-code-blocktext-gradient: linear-gradient(
+    142.91deg,
+    #cef6ff 18.75%,
+    #a6efff 54.93%
+  );
+  --color-ui-gradient: radial-gradient(
+    78.77% 78.77% at 71.71% 30.77%,
+    #f0fcff 0%,
+    #9bedff 67.21%,
+    #98ecff 76.04%,
+    #5be1ff 84.9%,
+    #00bae2 94.79%
+  );
+  --color-ui-gradient-background: linear-gradient(
+    137.1deg,
+    #ecfcff 27.5%,
+    #a6efff 94.09%
+  );
+  --color-ui-gradient-flip-background: radial-gradient(
+    140% 190% at 117.54% 131.12%,
+    #f0fcff 0%,
+    #9bedff 25.52%,
+    #98ecff 42.71%,
+    #5be1ff 60.94%,
+    #00bae2 94.79%
+  );
+  --color-scroll-pink: #ffd7fd;
+  --color-scroll-pink-lt: #ffe9fe;
+  --color-scroll-gradient: linear-gradient(
+    317.42deg,
+    #ffe9fe 10.4%,
+    #ff96f9 83.03%
+  );
+  --ease-in: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.86, 0, 0.07, 1);
+  --ease-out-quart: cubic-bezier(0.175, 0.79, 0.38, 0.905);
+  --ease-in-out-quart: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+:root {
+  --dark: var(--color-just-black);
+  --grey-dark: #42433d;
+  --light: var(--color-surface-white);
+  --mid: #7c7c6f;
+  --grey: #gray;
+  --gray: #gray;
+  --green: var(--color-shockingly-green);
+  --green-dark: #0ae448;
+  --green-light: var(--color-lt-green);
+  --blue: var(--color-blue);
+  --purple: var(--color-lilac);
+  --red: #cd237f;
+  --orange: var(--color-orangey);
+  accent-color: var(--color-shockingly-green);
+}
+/* lovely fluid fonts */
+
+:root {
+  --fluid-min-width: 320;
+  --fluid-max-width: 1140;
+
+  --fluid-screen: 100vw;
+  --fluid-bp: calc(
+    (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
+      (var(--fluid-max-width) - var(--fluid-min-width))
+  );
+}
+
+@media screen and (min-width: 1140px) {
+  :root {
+    --fluid-screen: calc(var(--fluid-max-width) * 1px);
+  }
+}
+
+:root {
+  --f-0-min: 16;
+  --f-0-max: 18;
+  --step-0: calc(
+    ((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-1-min: 16;
+  --f-1-max: 22.5;
+  --step-1: calc(
+    ((var(--f-1-min) / 16) * 1rem) + (var(--f-1-max) - var(--f-1-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-2-min: 23.04;
+  --f-2-max: 28.13;
+  --step-2: calc(
+    ((var(--f-2-min) / 16) * 1rem) + (var(--f-2-max) - var(--f-2-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-3-min: 27.65;
+  --f-3-max: 35.16;
+  --step-3: calc(
+    ((var(--f-3-min) / 16) * 1rem) + (var(--f-3-max) - var(--f-3-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-4-min: 33.18;
+  --f-4-max: 46;
+  --step-4: calc(
+    ((var(--f-4-min) / 16) * 1rem) + (var(--f-4-max) - var(--f-4-min)) *
+      var(--fluid-bp)
+  );
+}
+
+/* fluid paddings */
+
+:root {
+  --fluid-min-width: 320;
+  --fluid-max-width: 1140;
+
+  --fluid-screen: 100vw;
+  --fluid-bp: calc(
+    (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
+      (var(--fluid-max-width) - var(--fluid-min-width))
+  );
+}
+
+@media screen and (min-width: 1140px) {
+  :root {
+    --fluid-screen: calc(var(--fluid-max-width) * 1px);
+  }
+}
+
+:root {
+  --fc-s-min: (var(--f-0-min, 21));
+  --fc-s-max: (var(--f-0-max, 24));
+
+  --fc-m-min: (var(--fc-s-min) * 6);
+  --fc-m-max: (var(--fc-s-max) * 6);
+
+  --fc-l-min: (var(--fc-s-min) * 8);
+  --fc-l-max: (var(--fc-s-max) * 8);
+
+  --fc-xl-min: (var(--fc-s-min) * 10);
+  --fc-xl-max: (var(--fc-s-max) * 10);
+
+  /* T-shirt sizes */
+  --space-s: calc(
+    ((var(--fc-s-min) / 16) * 1rem) + (var(--fc-s-max) - var(--fc-s-min)) *
+      var(--fluid-bp)
+  );
+  --space-m: calc(
+    ((var(--fc-m-min) / 16) * 1rem) + (var(--fc-m-max) - var(--fc-m-min)) *
+      var(--fluid-bp)
+  );
+  --space-l: calc(
+    ((var(--fc-l-min) / 16) * 1rem) + (var(--fc-l-max) - var(--fc-l-min)) *
+      var(--fluid-bp)
+  );
+  --space-xl: calc(
+    ((var(--fc-xl-min) / 16) * 1rem) + (var(--fc-xl-max) - var(--fc-xl-min)) *
+      var(--fluid-bp)
+  );
+
+  /* One-up pairs */
+  --space-s-m: calc(
+    ((var(--fc-s-min) / 16) * 1rem) + (var(--fc-m-max) - var(--fc-s-min)) *
+      var(--fluid-bp)
+  );
+  --space-m-l: calc(
+    ((var(--fc-m-min) / 16) * 1rem) + (var(--fc-l-max) - var(--fc-m-min)) *
+      var(--fluid-bp)
+  );
+  --space-l-xl: calc(
+    ((var(--fc-l-min) / 16) * 1rem) + (var(--fc-xl-max) - var(--fc-l-min)) *
+      var(--fluid-bp)
+  );
+}
+
+/* commonly used utils */
+
+.pad-s {
+  padding-top: var(--space-s);
+  padding-bottom: var(--space-s);
+}
+
+.pad-m {
+  padding-top: var(--space-m);
+  padding-bottom: var(--space-m);
+}
+
+.pad-l {
+  padding-top: var(--space-l);
+  padding-bottom: var(--space-l);
+}
+
+.pad-xl {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+.flow > * + * {
+  margin-top: 1em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.box {
+  width: 75px;
+  height: 75px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--green);
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.2;
+  will-change: transform;
+}
+
+.circle {
+  width: 75px;
+  height: 75px;
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--green);
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.2;
+  will-change: transform;
+}
+
+/* always doing this */
+.flex-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* and this */
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* colors */
+
+.green {
+  background-color: var(--green);
+}
+.blue {
+  background-color: var(--blue);
+}
+.purple {
+  background-color: var(--purple);
+}
+.red {
+  background-color: var(--red);
+}
+.orange {
+  background-color: var(--orange);
+}
+
+.dark {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.light {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.text-light {
+  color: var(--light);
+}
+
+.text-dark {
+  color: var(--dark);
+}
+
+.gray,
+.grey {
+  background-color: var(--grey);
+}
+
+body {
+  color: var(--color-surface-white);
+  background-color: var(--dark);
+  font-family: Mori, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  font-size: var(--step-0);
+  line-height: 1.45;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 10px 0 10px 0;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1,
+.h1 {
+  font-size: var(--step-4);
+}
+
+h2,
+.h2 {
+  font-size: var(--step-3);
+}
+
+h3,
+.h3 {
+  font-size: var(--step-2);
+}
+
+h4,
+.h4,
+.lead {
+  font-size: var(--step-1);
+}
+
+a {
+  color: var(--green);
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.light a {
+  color: var(--green-dark);
+}
+
+
+button {
+  display: inline-block;
+  outline: none;
+  padding: 8px 14px;
+  background: var(--dark);
+  border: solid 2px var(--light);
+  color: var(--light);
+  text-decoration: none;
+  border-radius: 99px;
+  padding: 12px 25px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 18px;
+}
+
+.gsap-logo {
+  width: 20vw;
+  max-width: 90px;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  mix-blend-mode: difference;
+  z-index: 9999;
+}
+
+.gsap-logo img {
+  width: 100%;
+}
+
+.gsap-3-logo {
+  width: 20vw;
+  max-width: 150px;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+
+/* panels  */
+
+.panel {
+  min-height: 100vh;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel.gray {
+  background-color: #777;
+  background-image: var(--gradient-macha);
+}
+.panel.blue {
+  background-color: #2c7ad2;
+  background-image: var(--gradient-summer-fair);
+}
+.panel.orange {
+  background-color: #e77614;
+  background-image: var(--gradient-orange-crush);
+}
+
+.panel.red {
+  background-color: #c82736;
+  background-image: var(--gradient-lipstick);
+}
+
+.panel.purple {
+  background-color: #8d3dae;
+  background-image: var(--gradient-purple-haze);
+}
+.panel.green {
+  background-color: #28a92b;
+  background-image: var(--gradient-macha);
+}
+
+.panel.simple {
+   background-image: none!important;
+}
+
+/* SCROLL DOWN */
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: black;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 16px;
+  overflow: visible;
+}
+.scroll-down .arrow {
+  position: relative;
+  top: -4px;
+  margin: 0 auto;
+  width: 20px;
+  height: 20px;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KPHBhdGggZmlsbD0iYmxhY2siIGQ9Ik00ODMuMiwxOTIuMmMtMjAuNS0yMC41LTUzLjUtMjAuOC03My43LTAuNkwyNTcsMzQ0LjFMMTA0LjUsMTkxLjZjLTIwLjItMjAuMi01My4yLTE5LjktNzMuNywwLjYKCWMtMjAuNSwyMC41LTIwLjgsNTMuNS0wLjYsNzMuN2wxOTAsMTkwYzEwLjEsMTAuMSwyMy40LDE1LjEsMzYuOCwxNWMxMy4zLDAuMSwyNi43LTQuOSwzNi44LTE1bDE5MC0xOTAKCUM1MDMuOSwyNDUuNyw1MDMuNywyMTIuNyw0ODMuMiwxOTIuMnoiLz4KPC9zdmc+);
+  background-size: contain;
+}
+
+/* h1, h2, p, li {
+  max-width: 800px;
+breaking stuff
+}
+ */
+.panel p strong,
+.panel li strong {
+  color: white;
+  font-weight: 400;
+}
+.panel p code,
+.panel li code {
+  background-color: #1d1e22bd;
+  color: var(--color-surface-white);
+  padding: 2px 4px;
+  border-radius: 5px;
+}
+.panel li {
+  margin: 0;
+}
+
+pre.prettyprint {
+  max-width: 100%;
+  overflow: auto;
+}
+
+ul pre.prettyprint {
+  margin-left: -0.5rem;
+}
+
+/* prism */
+
+code {
+  border: none;
+  border-radius: 4px;
+  padding: 0.1em;
+  font-size: 0.9em;
+  vertical-align: baseline;
+  background: #28292b;
+  color: var(--color-surface-white);
+}
+
+pre {
+  --ifm-pre-background: var(--ifm-color-gray-800) !important;
+  --ifm-font-family-monospace: "Fraktion Mono";
+}
+/* Plain text style */
+pre code {
+  border: none;
+  border-radius: 4px;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  vertical-align: baseline;
+  background: #28292b;
+  color: #f5f4e6de;
+}
+
+/* Comment */
+code .token.comment {
+  color: #9c9c9c;
+  font-style: italic;
+}
+
+/* String and inserted */
+code .token.string,
+code .token.inserted {
+  color: #63d55a;
+}
+
+/* Number */
+code .token.number {
+  color: rgb(247, 140, 108);
+}
+
+/* Builtin, char, constant, and function */
+code .token.builtin,
+code .token.char,
+code .token.constant,
+code .token.function {
+  color: rgb(130, 170, 255);
+}
+
+/* Punctuation and selector */
+code .token.punctuation,
+code .token.selector {
+  color: rgb(199, 146, 234);
+}
+
+/* Variable */
+code .token.variable {
+  color: rgb(191, 199, 213);
+}
+
+/* Class-name and attr-name */
+code .token.class-name,
+code .token.attr-name {
+  color: rgb(255, 203, 107);
+}
+
+/* Tag and deleted */
+code .token.tag,
+code .token.deleted {
+  color: rgb(255, 85, 114);
+}
+
+/* Operator */
+code .token.operator {
+  color: rgb(137, 221, 255);
+}
+
+/* Boolean */
+code .token.boolean {
+  color: rgb(255, 88, 116);
+}
+
+/* Keyword */
+code .token.keyword {
+  font-style: italic;
+}
+
+/* Doctype */
+code .token.doctype {
+  color: rgb(199, 146, 234);
+  font-style: italic;
+}
+
+/* Namespace */
+code .token.namespace {
+  color: rgb(178, 204, 214);
+}
+
+/* URL */
+code .token.url {
+  color: rgb(221, 221, 221);
+}
+
+/* Hide elements visually, but not for screenreaders by clipping it */
+
+.vh {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+/* checkboxes */
+
+/*  Add a :before to each label and style this as the checkbox you want to have */
+.checkbox label {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.checkbox label:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  background: var(--light);
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.checkbox input[type="checkbox"]:checked ~ label:before {
+  background: var(--green) no-repeat center;
+  background-size: 12px 12px;
+  background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDQ1LjcwMSA0NS43IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NS43MDEgNDUuNzsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0yMC42ODcsMzguMzMyYy0yLjA3MiwyLjA3Mi01LjQzNCwyLjA3Mi03LjUwNSwwTDEuNTU0LDI2LjcwNGMtMi4wNzItMi4wNzEtMi4wNzItNS40MzMsMC03LjUwNCAgICBjMi4wNzEtMi4wNzIsNS40MzMtMi4wNzIsNy41MDUsMGw2LjkyOCw2LjkyN2MwLjUyMywwLjUyMiwxLjM3MiwwLjUyMiwxLjg5NiwwTDM2LjY0Miw3LjM2OGMyLjA3MS0yLjA3Miw1LjQzMy0yLjA3Miw3LjUwNSwwICAgIGMwLjk5NSwwLjk5NSwxLjU1NCwyLjM0NSwxLjU1NCwzLjc1MmMwLDEuNDA3LTAuNTU5LDIuNzU3LTEuNTU0LDMuNzUyTDIwLjY4NywzOC4zMzJ6IiBmaWxsPSIjRkZGRkZGIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+}
+
+.flair {
+  width: 100px;
+  height: 100px;
+  background-image: url("https://assets.codepen.io/16327/flair.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+
+.flair--2 {
+  background-image: url("https://assets.codepen.io/16327/flair-2.png");
+}
+
+.flair--3 {
+  background-image: url("https://assets.codepen.io/16327/flair-3.png");
+}
+
+.flair--4 {
+  background-image: url("https://assets.codepen.io/16327/flair-4.png");
+}
+
+.flair--5 {
+  background-image: url("https://assets.codepen.io/16327/flair-5.png");
+}
+
+.flair--6 {
+  background-image: url("https://assets.codepen.io/16327/flair-6.png");
+}
+
+.flair--7 {
+  background-image: url("https://assets.codepen.io/16327/flair-7.png");
+}
+
+.flair--8 {
+  background-image: url("https://assets.codepen.io/16327/flair-8.png");
+}
+
+.flair--9 {
+  background-image: url("https://assets.codepen.io/16327/flair-9.png");
+}
+
+.flair--10 {
+  background-image: url("https://assets.codepen.io/16327/flair-10.png");
+}
+
+.flair--11 {
+  background-image: url("https://assets.codepen.io/16327/flair-11.png");
+}
+
+.flair--12 {
+  background-image: url("https://assets.codepen.io/16327/flair-12.png");
+}
+
+.flair--13 {
+  background-image: url("https://assets.codepen.io/16327/flair-13.png");
+}
+
+.flair--14 {
+  background-image: url("https://assets.codepen.io/16327/flair-14.png");
+}
+
+.flair--15 {
+  background-image: url("https://assets.codepen.io/16327/flair-15.png");
+}
+
+.flair--16 {
+  background-image: url("https://assets.codepen.io/16327/flair-16.png");
+}
+
+.flair--17 {
+  background-image: url("https://assets.codepen.io/16327/flair-17.png");
+}
+
+.flair--18 {
+  background-image: url("https://assets.codepen.io/16327/flair-18.png");
+}
+
+.flair--19 {
+  background-image: url("https://assets.codepen.io/16327/flair-19.png");
+}
+
+.flair--20 {
+  background-image: url("https://assets.codepen.io/16327/flair-20.png");
+}
+
+.flair--21 {
+  background-image: url("https://assets.codepen.io/16327/flair-21.png");
+}
+
+.flair--22 {
+  background-image: url("https://assets.codepen.io/16327/flair-22.png");
+}
+
+.flair--23 {
+  background-image: url("https://assets.codepen.io/16327/flair-23.png");
+}
+
+.flair--24 {
+  background-image: url("https://assets.codepen.io/16327/flair-24.png");
+}
+
+.flair--25 {
+  background-image: url("https://assets.codepen.io/16327/flair-25.png");
+}
+
+.flair--26 {
+  background-image: url("https://assets.codepen.io/16327/flair-26.png");
+}
+
+.flair--27 {
+  background-image: url("https://assets.codepen.io/16327/flair-27.png");
+}
+
+.flair--28 {
+  background-image: url("https://assets.codepen.io/16327/flair-28.png");
+}
+
+.flair--29 {
+  background-image: url("https://assets.codepen.io/16327/flair-29.png");
+}
+
+.flair--30 {
+  background-image: url("https://assets.codepen.io/16327/flair-30.png");
+}
+
+.flair--31 {
+  background-image: url("https://assets.codepen.io/16327/flair-31.png");
+}
+
+.flair--32 {
+  background-image: url("https://assets.codepen.io/16327/flair-32.png");
+}
+
+.flair--33 {
+  background-image: url("https://assets.codepen.io/16327/flair-33.png");
+}
+
+.flair--34 {
+  background-image: url("https://assets.codepen.io/16327/flair-34.png");
+}
+
+.flair--35 {
+  background-image: url("https://assets.codepen.io/16327/flair-35.png");
+}
+
+.flair-cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.box.green, .gradient-green {
+  background: var(--gradient-macha),
+  url('https://assets.codepen.io/16327/noise-e82662fe.png'); /* Replace with the path to your noise texture image */
+      background-blend-mode: color-dodge; /* Blend the noise texture with the gradient */
+}
+
+.box.green-lt, .gradient-green-2 {
+  background: var(--gradient-emerald-city),
+  url('https://assets.codepen.io/16327/noise-e82662fe.png'); /* Replace with the path to your noise texture image */
+      background-blend-mode: color-dodge; /* Blend the noise texture with the gradient */
+}
+
+.box.orange, .gradient-orange {
+  background: var(--gradient-orange-crush),
+  url('https://assets.codepen.io/16327/noise.png'); /* Replace with the path to your noise texture image */
+      background-blend-mode: color-dodge; /* Blend the noise texture with the gradient */
+}
+
+.box.purple, .gradient-purple {
+  background: var(--gradient-purple-haze),
+  url('https://assets.codepen.io/16327/noise.png'); /* Replace with the path to your noise texture image */
+      background-blend-mode: color-dodge; /* Blend the noise texture with the gradient */
+}
+
+.box.blue-lt .gradient-blue-2 {
+  background: var(--gradient-summer-fair),
+  url('https://assets.codepen.io/16327/noise.png'); /* Replace with the path to your noise texture image */
+      background-blend-mode: color-dodge; /* Blend the noise texture with the gradient */
+}
+
+.box.blue, .gradient-blue {
+  background: var(--color-ui-gradient),
+  url('https://assets.codepen.io/16327/noise-e82662fe.png'); /* Replace with the path to your noise texture image */
+      background-blend-mode: color-dodge; /* Blend the noise texture with the gradient */
+}
+
+.box.red, .gradient-red {
+  background: var(--gradient-lipstick),
+  url('https://assets.codepen.io/16327/noise.png'); /* Replace with the path to your noise texture image */
+      background-blend-mode: color-dodge; /* Blend the noise texture with the gradient */
+}
+
+.box.pink, .gradient-pink {
+  background: var(--color-scroll-gradient),
+  url('https://assets.codepen.io/16327/noise.png'); /* Replace with the path to your noise texture image */
+      background-blend-mode: color-dodge; /* Blend the noise texture with the gradient */
+}
+
+.gradient-blue-dark {
+    background: var(--gradient-skyfall), url(/assets/images/noise-47698c6….png);
+    background-blend-mode: color-dodge;
+}
+
+.noise {
+  position: relative;
+}
+.noise:after {
+  content: '';
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: url('https://assets.codepen.io/16327/noise.png');
+  opacity: 0.4;
+  pointer-events: none;
+}
+  </style>
+</head>
+<body>
+ 
+<div class="container">
+  <div class="jumps">Jump to: <a href="#end" id="link">bottom</a> | <a href="#top">top</a></div>
+  
+	<section class="panel pin">
+		<div class="standard">
+			<h2>Standard behavior</h2>
+			<div class="boxes">
+				<div class="box box-1 gradient-blue">1</div>
+				<div class="box box-2 gradient-red">2</div>
+				<div class="box box-3 gradient-green">3</div>
+				<div class="box box-4 gradient-purple">4</div>
+				<div class="box box-5">5</div>
+			</div>
+		</div>
+		<div class="features">
+			<div class="boxes">
+				<div class="box box-1 gradient-blue">1</div>
+				<div class="box box-2 gradient-red">2</div>
+				<div class="box box-3 gradient-green">3</div>
+				<div class="box box-4 gradient-purple">4</div>
+				<div class="box box-5">5</div>
+			</div>
+			<h2>With features:</h2>
+			<div style="display: inline-block">
+				<div id="checkboxes">
+					<label><input id="checkboxPO" type="checkbox" value="preventOverlaps" checked/>&nbsp;<code>preventOverlaps</code></label>
+					<label><input id="checkboxFSE" type="checkbox" value="fastScrollEnd" checked/>&nbsp;<code>fastScrollEnd</code></label>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="panel move-1 gray"></section>
+	<section class="panel move-2 gradient-blue"></section>
+	<section class="panel move-3 gradient-red"></section>
+	<section class="panel move-4 gradient-green"></section>
+	<section class="panel move-5 gradient-purple"></section>
+	<section class="panel spacer gray"></section>
+  <a name="end"></a>
+</div>
+<div class="explanation-container">
+<div class="explanation">
+	<div class="tab green">Explanation</div>
+	<div class="content">
+	<section class="panel gray">
+		<div>
+      <p>Scroll down <strong>slowly</strong> to trigger <i>non-scrubbing</i> animations. Looks great, right? Then try scrolling <i>fast</i> and notice how the animations overlap! </p>
+			<ul>
+				<li><code>preventOverlaps: true</code> kicks in when the ScrollTrigger is about to affect its animation (e.g. a toggleAction) - it finds other [prior] ScrollTrigger-based animations and forces them to their end state to avoid overlaps.</li>
+				<li> <code>fastScrollEnd: true</code> kicks in only when you <strong>LEAVE</strong> the ScrollTrigger's area; it simply says <i>"how fast was the scroll onLeave/onLeaveBack? If it's above the 2500px/second, force the animation to its end immediately"</i>.</li>
+			</ul>
+		</div>
+	</section>
+	<section class="panel gray">
+		<div>
+			<h2>Advanced configuration</h2>
+			<ul>
+        <li>If <code>preventOverlaps</code> is a <strong>string</strong>, it acts as a group name so that you can control which ScrollTriggers affect each other's preventOverlaps behavior. It's like setting <code>preventOverlaps: true</code> but only for other ScrollTriggers with the matching string. For example, you could assign <code>preventOverlaps: "group1"</code> (or any arbitrary string) to 3 of your ScrollTriggers so that each of them only prevents overlaps from the other ScrollTriggers that have that same "group1" value.
+				</li>
+        
+				<li>If <code>preventOverlaps</code> is a <strong>function</strong>, it'll be called <i>before</i> the non-scrub animation is affected (unlike other callbacks which occur <i>after</i> it's affected), so you can do whatever you want in preparation. All ScrollTriggers have a <code>getTrailing()</code> method you can use to get an Array of all ScrollTriggers that precede this one in the updating order according to the current scroll direction. Use the <code>endAnimation()</code> method to force a ScrollTrigger's animation to jump to its end state according to its direction (so if it's going backwards, it'll <code>.progress(0)</code> if it's forward, it'll <code>.progress(1)</code>).
+					<pre class="prettyprint">preventOverlaps: (self) => {
+  self.getTrailing().forEach((trigger) => {
+    trigger.endAnimation();
+  });
+}</pre>
+				</li>
+				<li>If <code>fastScrollEnd</code> is a <strong>number</strong>, it will be interpreted as the velocity threshold in pixels-per-second, like <code>fastScrollEnd: 1000</code> would only activate if the velocity is more than 1000 px/second in either direction when leaving the ScrollTrigger's active area.</li>
+			</ul>
+		</div>
+	</section>
+	</div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+  <script>
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+let boxes = gsap.utils.toArray(".boxes"),
+    checkboxPO = document.querySelector("#checkboxPO"),
+    checkboxFSE = document.querySelector("#checkboxFSE");
+
+function setup() {
+  ScrollTrigger.getAll().forEach(t => {t.scroll(0); t.kill(true); });
+
+  gsap.set(".box", {
+    scale: (i, target) => target.classList.contains("box-1") ? 1 : 0
+  });
+  boxes.forEach((container, i) => {
+    let preventOverlaps = i === 1 && checkboxPO.checked && "group1",
+        fastScrollEnd = i === 1 && checkboxFSE.checked,
+        box = gsap.utils.toArray(".box", container);
+    box.pop();
+    box.forEach((el, i) => {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".move-" + (i + 2),
+          start: "top center",
+          end: "+=100%",
+          toggleActions: "play none none reverse",
+          preventOverlaps: preventOverlaps,
+          fastScrollEnd: fastScrollEnd
+        }
+      });
+      if (i) {
+        tl.fromTo(el, {scale: 0}, {scale: 1, duration: 0.5, immediateRender: false, ease: "back"}, 0);
+      }
+      tl.fromTo(el, {left: "0%"}, {left: "23.75%", duration: 2, immediateRender: false, ease: "power1.inOut"}, i ? "-=0.25" : 0);
+      tl.to(el, {scale: 0.6, backgroundColor: "#555", duration: 0.5, opacity: 0.5, ease: "power1.in"});
+    });
+
+  });
+}
+
+checkboxPO.addEventListener("change", setup);
+checkboxFSE.addEventListener("change", setup);
+
+setup();
+
+
+// explanation tab
+let isOpen;
+document.querySelector(".explanation .tab").addEventListener("click", () => {
+  isOpen = !isOpen;
+  gsap.to(".explanation", {
+    top: isOpen ? ((window.innerHeight - 65) / window.innerHeight * -100) + "vh" : "0",
+    ease: "power4",
+    duration: 0.5
+  });
+});
+
+// jump links
+gsap.utils.toArray(".jumps a").forEach((el, i) => {
+  el.addEventListener("click", e => gsap.to(window, {scrollTo: i ? 0 : "max", overwrite: true}) && e.preventDefault());
+});
+
+// making the code pretty/formatted.
+PR.prettyPrint();
+</script>
+</body>
+</html>

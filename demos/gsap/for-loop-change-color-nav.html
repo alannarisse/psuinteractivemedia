@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Locomotive Smooth Scroll</title>
+  <style>
+ * {
+	position:relative;
+	box-sizing:border-box;
+}
+body {
+	margin:0;
+	padding:0;
+	font-size:1.6em;
+	overflow-x:hidden;
+	font-family:Kanit, sans-serif;
+	background:dodgerblue;
+}
+
+.fullscreen {
+	width:100vw;
+	height:100vh;
+	padding:5vw;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-size:8vw;
+	color:white;
+}
+
+.nav {
+	top:0;
+	width:100vw;
+	padding:20px;
+	position:fixed;
+	background:#00BFFF;
+	display:flex;
+	align-items:center;
+	flex-wrap:wrap;
+}
+
+
+a {
+	margin-right:20px;
+	text-decoration:none;
+	color:black;
+	display:inline-block;
+	font-size:1.7em;
+}
+  </style>
+</head>
+<body>
+
+  <div class="fullscreen">DODGER BLUE</div>
+  <div class="fullscreen">SALMON</div>
+  <div class="fullscreen">GREEN</div>
+  <div class="fullscreen">PURPLE</div>
+  <div class="fullscreen">MAROON</div>
+  <div class="nav">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Blog</a>
+    <a href="#">Shop</a>
+    <a href="#">Contact Us</a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script>
+const sectionColors = ["dodgerblue", "salmon", "green",   "purple",    "maroon"]
+const navColors =     ["#00BFFF",    "#FFA07A", "#90EE90", "#EE82EE", "#FF6347"]
+
+//apply sectionColors to each .fullscreen element
+gsap.set(".fullscreen", {backgroundColor:gsap.utils.wrap(sectionColors)})
+
+const sections = gsap.utils.toArray(".fullscreen")
+let navHeight 
+sections.forEach(function(section, index){
+	console.log(section, navColors[index])
+	ScrollTrigger.create({
+		trigger:section,
+		start:() => "top " + navHeight,
+		end:() => "bottom "  + navHeight,
+    //can use these two on enter backs or the animation, toggleAction, and preventOverlaps instead. both do the same thing. The onEnter and onEnterBack are a little neater.
+    onEnter:() => gsap.to('.nav', {backgroundColor:navColors[index]}),
+    onEnterBack:() => gsap.to('.nav', {backgroundColor:navColors[index]}),
+		// animation:gsap.to(".nav", {
+		// 	backgroundColor:navColors[index], 
+		// 	immediateRender:false}),
+		// toggleActions:"restart none none reverse",
+		//preventOverlaps:true,
+	})
+})
+
+ScrollTrigger.addEventListener("refreshInit", function() {
+ 	navHeight = document.querySelector(".nav").offsetHeight;
+});
+
+</script>
+</body>
+</html>

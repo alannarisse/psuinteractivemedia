@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading Progress</title>
+  <style>
+    * {
+	position:relative;
+	box-sizing:border-box;
+}
+body {
+	margin:0;
+}
+
+header {
+	height:25vw;
+	background:#07598C;
+	color:white;
+	font-size:10vw;
+	font-weight:800;
+}
+
+main {
+  padding-top:20px;
+}
+
+p {
+	max-width:800px;
+	margin-top:0;
+	margin-left:20px;
+	font-size:1.5rem;
+	line-height:2rem;
+}
+
+
+
+.progressSpaceReserve {
+	width:100%;
+	height:60px;
+	background:grey;
+}
+
+.progressHolder {
+	border-top:1px solid #ccc;
+	background:white;
+	width:100%;
+	height:60px;
+	bottom:0;
+	position:absolute;
+	z-index:1000;
+	display:flex;
+	align-items:center;
+	justify-content:space-evenly;
+	flex-direction:column;
+}
+
+.progressBarBG {
+	width:400px;
+	height:10px;
+	background:#ccc;
+}
+
+.progressBar {
+	width:400px;
+	height:10px;
+	background:red;
+	transform:scaleX(0);
+	transform-origin:0 0;
+}
+
+.fixed {
+	position:fixed;
+}
+
+
+h4, header, h1, h2 {
+	font-family:sans-serif;
+}
+
+h4 {
+	color:#222;
+	margin:0;
+	padding:0;
+}
+
+.centered {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+
+.comments {
+	padding:20px;
+	color:white;
+	font-family:sans-serif;
+	background:#7AA5BF;
+}
+
+h2 {
+	color:white;
+	font-size:4em;
+}
+
+
+
+.comment {
+	width:80%;
+	margin-bottom:20px;
+	padding:20px;
+	margin-left:20px;
+	font-size:1.5em;
+	color:white;
+	background:#022840;
+	border-radius: 1em;
+}
+
+.ads {
+	padding:20px;
+	background:#F2F2F2;
+}
+
+.adBlock {
+	
+
+	display:flex;
+	flex-direction:row;
+	align-items:space-evenly;
+	justify-content:space-evenly;
+	flex-wrap:wrap;
+}
+
+.ads h2{
+	color:#595959;
+}
+
+.ad {
+	width:30vw;
+	height:16vw;
+	min-width:150px;
+	background:#595959;
+	border-radius:12px;
+	margin-bottom:5vw;
+	margin-right:5vw;
+}
+
+footer {
+	height:40vh;
+	background:#1d1d1d;
+}
+  </style>
+</head>
+<body>
+  <header class="centered">SomeSite.com</header>
+<main>
+<p>
+Vel curae; arcu adipiscing posuere dictumst nostra blandit feugiat. Quisque ornare hac pharetra vulputate etiam faucibus vestibulum. Fringilla litora consectetur lectus sed lorem blandit massa duis ultrices quisque fusce. Vitae laoreet tempor eu ipsum. Neque consequat, dis ullamcorper fames dis lectus. Ornare consequat, cum elementum rutrum facilisi pellentesque aenean. Quam dignissim vivamuisis! Sed ligula rhoncus sem per et donec eu inceptos taciti consectetur. Ligula  Facilisis leo ultrices fusce sociosqu felis quisque ac porta praesent? Curabitur leo aenean vehicula libero, conubia at. Convallis.
+</p>
+<p>
+Natoque urna luctus dictumst magnis semper magna et proin nam bibendum curabitur. Duis luctus viverra adipiscing vivamus tortor duis nunc aliquet vulputate magnis iacu tempor magna? In euismod ridiculus a ornare curae; semper turpis eu feugiat ultricies commaucibus euismod blandit gravida per nulla consequat iaculis. Convallis sociosqu per; augue natoque tortor lectus non integer et dui felis. Neque, erat fusce cubilia dictum conubia tellg sem montes et. Nam senectus malesuada penatibus. Quis phasellus taciti curae; himenaeos lectus fermentum sagittis rhoncus. Accumsan.
+</p>
+<p>
+Luctus iaculis habitasse pretium sodales blandit parturient mattis. Aliquet erat iaculis velit vestibulum elementum ad viverra. Pharetra mattis praesent sem sem et iaculis cum lectus penatibus diam egestas. Netus curae; quis tristique orci porttitor pellentesque ornare faucibus est ipsum quam aliquam. Malesuada n Ullamcorper gravida taciti sapien habitasse nostra nec! Suscipit urna commodo duis ipsum nisl eu nam gravida praesent phasellus ultricies facilisis. Natoque magnis convallis suscipit rhoncus!
+</p>
+<p>
+Justo scelerisque, nulla lorem sed venenatis. Ultricies pretium justo eget. Mi est dictumst ad! Cursus duis sodales ultricies sollicitudin tortor ridiculus nisi tellus vulputate nisi bibendum. Per lacinia curabitur eu urna venenatis quis vivamus eleifend hit imperdiet, vivamus potenti. Consectetur accumsan accumsan cum ridiculus ipsum. Suscipit nisl ad erat risus turpis vestibulum neque sed eros diam arcu et. Et nunc faucibus feugiat etiam, dis torquent primis penatibus quam vestibulum enim. Tellus urna elementum sollicitudin diam taciti venenatis volutpat hendrerit. Consectetur turpis amet class luctus. Purus suspendisse posuere elit sem, interdum fringilla. Dolor, primis.
+</p>
+<div class="progressSpaceReserve">
+	<div class="progressHolder fixed">
+		<h4>Reading Progress</h4>
+		<div class="progressBarBG">
+			<div class="progressBar"></div>
+		</div>		
+	</div>
+</div>
+		
+</main>
+<section class="comments">
+  <h2>Comments</h2>
+	<div class="comment">First!</div>
+	<div class="comment">This is great</div>
+	<div class="comment">Worst article... E V E R !!!!</div>
+	<div class="comment">Yo!</div>
+	<div class="comment">Thank you so much for this article.</div>
+	<div class="comment">I followed your advice exactly but it didn't work for me</div>
+</section>
+<section class="ads">
+	<h2>Bunch of Ads</h2>
+	<div class="adBlock">
+		<div class="ad"></div>
+		<div class="ad"></div>
+		<div class="ad"></div>
+		<div class="ad"></div>
+		<div class="ad"></div>
+		<div class="ad"></div>	
+	</div>
+</section>
+<footer class="centered">
+	<h2>Footer<h2>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script>
+  const progressHolder = document.querySelector(".progressHolder")
+const progressBar = document.querySelector(".progressBar")
+
+
+const tween = gsap.to(progressBar, {scaleX:1, ease:"none", paused:true})
+
+ScrollTrigger.create({
+	trigger:"body", 
+	start:"top top",
+	scrub:true,
+	endTrigger:"main",
+	end:"bottom bottom",
+	once:true, //only happens the first scroll! totally kills the scrolltrigger until refreshed
+	onLeave:self=>{
+		progressHolder.classList.remove("fixed")
+	},
+	onUpdate:function(self){
+		if(self.progress > tween.progress()){
+			tween.progress(self.progress)	
+		}	
+	}
+})
+
+
+</script>
+</body>
+</html>

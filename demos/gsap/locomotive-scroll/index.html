@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Locomotive Smooth Scroll</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&display=swap');
+
+html, body {
+  margin: 0;  
+}
+
+body {
+	font-family:sans-serif;
+	color:#333;
+	background:#efefef;
+	font-size:3vw;
+}
+
+svg {
+	width:50%;
+}
+
+.clockWrapper {
+	background:#fff;
+	display:flex;
+	justify-content:center;
+	background:#323232;
+	height:60vw;
+}
+
+.flexContainer {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dark {
+	background:#263238;
+}
+
+h1 {
+	font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.dark h1 {
+	color:#ccc;
+}
+
+.content {
+	padding:3vw;
+	line-height:1.8;
+}
+  </style>
+</head>
+<body>
+  <div class="scrollContainer">
+
+    <div class="content">
+      <h1>Smooth Scrolling: Yes</h1>
+       <p>arcu, non mattis nunc. Pellentesque quis enim eget ex congue ornare quis eu dolor. Sed ac egestas dissim velit mi, at semper risussellus consequat libero sed auctor pulvinar. Du</p>
+       <p>or sit amet. Nulla facilisi. Integer id placerat massa. Duis justo arcu, luctus sit amet pharetra a, pretium id ligula. Donec efficitur nunc vitae eros hendrerit feugiat. Phasellus consequat libero sed auctor pulvinar. Duis cursus libero at justo aliquet accumsan. Class aptent taciti sociosqu adauris, sagittis sagittis justo. Nam et semper felis, et malesuada erat.</p>
+       <p>Donec et ultricies arcu, non mattis nunc. Pellentesque quis enim eget ex congue ornare quis eu dolor. Sed ac egestas dolor, vitae placerat elit. Ut luctus massa sit amet etra cumsan. Class aptent taciti sociosqu adauris, sagittis sagittis justo. Nam et semper feli quam facilisis congue. Donec mauris dolor, congue ac euismod eu, fs sagittis justo. Nam et semper felis, et malesuada erat.</p>
+        <p>arcu, non mattis nunc. Pellentesque quis enim eget ex congue ornare quis eu dolor. Sed ac egestas dissim velit mi, at semper risussellus consequat libero sed auctor pulvinar. Du</p>
+       <p>or sit amet. Nulla facilisi. Integer id placerat massa. Duis justo arcu, luctus sit amet pharetra cumsan. Class aptent taciti sociosqu adauris, sagittis sagittis justo. Nam et semper felis, et malesuada erat.</p>
+       <p>ongue ornare quis eu dolor. Sed ac egestas dolor, vitae placerat elit. Ut luctus massa sit amet quam facilisis congue. Donec mauris dolor, congue ac euismod eu, fs sagittis justo. Nam et semper felis, et malesuada erat.</p>
+    </div> 
+    
+    
+    <div class="clockWrapper">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+      <defs>
+        <style>
+          .cls-1 {
+            fill: #323232;
+          }
+    
+          .cls-2 {
+            fill: none;
+            stroke: #f6c;
+            stroke-linejoin: round;
+            stroke-width: 8px;
+          }
+    
+          .cls-3 {
+            fill: #a4a4a4;
+          }
+    
+          .cls-4 {
+            fill: #ccc;
+          }
+        </style>
+      </defs>
+      <g id="bg">
+        <g id="Layer3_0_FILL" data-name="Layer3 0 FILL">
+          <path class="cls-1" d="M400,400V0H0V400Z"/>
+        </g>
+      </g>
+      <g id="face">
+        <g id="Layer2_0_FILL" data-name="Layer2 0 FILL">
+          <path d="M200,181.5a18.5,18.5,0,0,0,0,37,18.5,18.5,0,0,0,0-37Z"/>
+        </g>
+        <path id="Layer2_0_1_STROKES" data-name="Layer2 0 1 STROKES" class="cls-2" d="M388.5,200q0,78.11-55.2,133.3T200,388.5q-78.1,0-133.3-55.2T11.5,200q0-78.1,55.2-133.3T200,11.5q78.11,0,133.3,55.2T388.5,200Z"/>
+      </g>
+      <g id="smallHand">
+        <g id="smallHand_0_Layer0_0_FILL" data-name="smallHand 0 Layer0 0 FILL">
+          <path class="cls-3" d="M195,69V200h10V69l-5-10.25Z"/>
+        </g>
+      </g>
+      <g id="bigHand">
+        <g id="bigHand_0_Layer0_0_FILL" data-name="bigHand 0 Layer0 0 FILL">
+          <path class="cls-4" d="M195,44V200h10V44l-5-10.25Z"/>
+        </g>
+      </g>
+    </svg>
+    
+      </div>
+     <div class="content">
+      <h1>more text</h1>
+       <p>arcu, non mattis nunc. Pellentesque quis enim eget ex congue ornare quis eu dolor. Sed ac egestas dissim velit mi, at semper risussellus consequat libero sed auctor pulvinar. Du</p>
+       <p>or sit amet. Nulla facilisi. Integer id placerat massa. Duis justo arcu, luctus sit amet pharetra a, pretium id ligula. Donec efficitur nunc vitae eros hendrerit feugiat. Phasellus consequat libero sed auctor pulvinar. Duis cursus libero at justo aliquet accumsan. Class aptent taciti sociosqu adauris, sagittis sagittis justo. Nam et semper felis, et malesuada erat.</p>
+       <p>Donec et ultricies arcu, non mattis nunc. Pellentesque quis enim eget ex congue ornare quis eu dolor. Sed ac egestas dolor, vitae placerat elit. Ut luctus massa sit amet etra cumsan. Class aptent taciti sociosqu adauris, sagittis sagittis justo. Nam et semper feli quam facilisis congue. Donec mauris dolor, congue ac euismod eu, fs sagittis justo. Nam et semper felis, et malesuada erat.</p>
+        <p>arcu, non mattis nunc. Pellentesque quis enim eget ex congue ornare quis eu dolor. Sed ac egestas dissim velit mi, at semper risussellus consequat libero sed auctor pulvinar. Du</p>
+       <p>or sit amet. Nulla facilisi. Integer id placerat massa. Duis justo arcu, luctus sit amet pharetra cumsan. Class aptent taciti sociosqu adauris, sagittis sagittis justo. Nam et semper felis, et malesuada erat.</p>
+       <p>ongue ornare quis eu dolor. Sed ac egestas dolor, vitae placerat elit. Ut luctus massa sit amet quam facilisis congue. Donec mauris dolor, congue ac euismod eu, fs sagittis justo. Nam et semper felis, et malesuada erat.</p>
+    </div> 
+      </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="locomotive-scroll.min.js"></script>
+  <script>
+    //watch the free video on how this demo was made
+// https://www.snorkl.tv/scrolltrigger-smooth-scroll/
+
+
+const locoScroll = new LocomotiveScroll({
+  el: document.querySelector(".scrollContainer"),
+  smooth: true
+}); 
+
+// each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+
+
+
+       locoScroll.on("scroll", ScrollTrigger.update);
+
+// tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
+    ScrollTrigger.scrollerProxy(".scrollContainer", {
+      	scrollTop(value) {
+    			return arguments.length ? locoScroll.scrollTo(value, 0, 0) : 		locoScroll.scroll.instance.scroll.y;
+  }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+  getBoundingClientRect() {
+    return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+  },
+  // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+  pinType: document.querySelector(".scrollContainer").style.transform ? "transform" : "fixed"
+});
+
+
+
+gsap.set("#bigHand, #smallHand", {svgOrigin:"200 200"})
+
+let tl = gsap.timeline({defaults:{ease:"none"}})
+	.to("#bigHand", {rotation:360, duration:3})
+   .to("#smallHand", {rotation:30, duration:3}, 0)
+
+ScrollTrigger.create({
+	trigger:".clockWrapper",
+	start:"50% 50%",
+	end:"+=300",
+	scroller:".scrollContainer",
+	animation:tl,
+	scrub:true,
+	pin:true
+})
+
+// each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
+ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+// after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+ScrollTrigger.refresh();
+
+//watch the free video on how this demo was made
+// https://www.snorkl.tv/scrolltrigger-smooth-scroll/
+  </script>
+</body>
+</html>

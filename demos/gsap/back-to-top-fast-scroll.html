@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll to Top</title>
+  <style>
+.fullscreen {
+	height:100vh;
+	background:grey;
+	display:flex;
+	align-items:center;
+	padding-left:10vw;
+	font-size:8vw;
+	font-family:Kanit, sans-serif;
+}
+body {
+	margin:0;
+}
+.dark {
+	background:#333;
+	color:#ccc;
+}
+
+.light {
+	background:#ccc;
+}
+
+
+.pink {
+	background:#fcf;
+}
+
+
+
+.message {
+  visibility: hidden;
+  height:80px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  font-weight:bold;
+  font-family:sans-serif;
+  border-radius:8px 8px 0 0;
+  overflow:hidden;
+}
+
+.message img {
+	position:absolute;
+}
+.linkwrap {
+	position:absolute;
+	width:250px;
+	overflow:hidden;
+	height:80px;
+	display:flex;
+	align-items:center;
+	left:65px;
+	top:10px;
+	
+}
+a {
+	width:120px;
+	color:#f60;
+	background:black;
+	padding:16px 16px 16px 30px;
+	border-radius:0 20px 20px 0;	
+}
+  </style>
+</head>
+<body>
+  <div class="message">
+    <div class="linkwrap">
+      <a href="#top">Go back to top</a>
+    </div>
+    <img src="https://assets.codepen.io/32887/herman.svg" width="80"/>
+  </div>
+  
+  <div class="fullscreen light">Scroll Down</div>
+  <div class="fullscreen dark">Section 2</div>
+  <div class="fullscreen light">Section 3</div>
+  <div class="fullscreen pink">Section 4</div>
+  
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script>
+const animation = gsap.timeline()
+		.set(".message", {autoAlpha:1})
+		.from(".message", {yPercent:100, ease:"back"})
+		.from("a", {xPercent:-100, duration:0.35})
+
+ScrollTrigger.create({
+	trigger:"body",
+	start:"75% bottom",
+	animation:animation,
+	toggleActions:"play none none reverse",
+  //toggleASctions: "play complete reverse reset", or just use this and it'll work in almost every instance
+	fastScrollEnd:true //if you scroll faster than 2500ms it'll reset your animation
+})
+
+
+
+
+</script>
+</body>
+</html>
