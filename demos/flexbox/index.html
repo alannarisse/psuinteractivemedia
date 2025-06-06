@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basics with grow shrink and basis</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin:0;
+    }
+    h1 {
+      margin:0;
+    }
+    main {
+      width:80%;
+      margin:auto;
+    }
+    .box1 {
+      flex-grow: 0;
+      flex-shrink:1;
+      flex-basis:auto;
+      
+    }
+    .box2 {
+      /* grow - shrink - basis */
+      flex: 0 1 auto;
+    }
+    .child{
+    }
+    .parent1 {
+      display:flex;
+      border:10px solid red;
+    }
+    .parent1 .child{
+      /* flex-basis:auto;*/ /* just makes it nature content width */
+      /*flex-basis:600px;*/ /* tries to use the width */
+      
+      /*width: 600px;*/
+      /*flex-basis:content;*/ /* ignores the width. but aut uses the width first */
+      
+      flex-grow:0;
+      flex-shrink:1; /* ratios */
+      flex-basis:auto;
+      
+      background:#aae3f7;
+      padding:60px;
+    }
+    .parent2 {
+      display:flex;
+      flex-wrap:wrap;
+      border:10px solid red;
+      flex-wrap:wrap;
+      justify-content:start;
+      align-items:start;
+      /* align-content:space-between; */
+      min-height:500px;
+      gap:20px;
+    }
+
+    .child:nth-child(1) {
+      background:pink;
+      flex: 0 1 auto;
+    }
+    .child:nth-child(2) {
+      background:rgb(169, 242, 211);
+      flex: 0 1 auto;
+      /* order:4; */
+    }    
+    .child:nth-child(3) {
+      background:rgb(149, 184, 239);
+      flex: 0 1 auto;
+      /* align-self:end; */
+    } 
+    .child:nth-child(4) {
+      background:rgb(249, 169, 248);
+      flex: 0 1 auto;
+    }     
+    .parent3 .child{
+      flex-grow:0; /* grow 0 means it won't grow. 1 means everyone gets an equal share (based on their content) */
+      flex-shrink:1; /* ratios */
+      flex-basis:auto;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="parent1">
+      <div class="child">
+        <p>content content content content</p>
+      </div>
+    </section>
+
+    <section class="parent2">
+      <div class="child">
+        <p>I'm the first content div.</p>
+      </div>
+      <div class="child">
+        <p>I'm the second one and I might be a little bigger</p>
+      </div>
+      <div class="child">
+        <p>I'm the third</p>
+      </div>
+      <div class="child">
+        <p>I'm the fourth one</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
