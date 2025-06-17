@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG Gsap</title>
+  <style>
+    svg {
+      border: 1px solid black;
+      background: #ccc;
+    }
+    circle {
+      fill: blue;
+      stroke:red;
+      stroke-width:0px;
+      vector-effect:non-scaling-stroke;
+
+
+    }
+  </style>
+</head>
+<body>
+  <svg class="demo" viewBox="0 0 400 400">
+    <circle class="c1" r="100" cx="200" cy="200"/>
+    <circle class="c2" r="50" cx="200" cy="200"/>
+  </svg>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+<script>
+
+
+  // gsap.to('.c1', {
+
+  //     fill:'green',
+  //     //strokeWidth:'20',
+  //     duration: 3,
+  //     scale: 2,
+  //     // attr: {r:200}
+
+  //     // r: 250,
+  //     // cx: 600
+
+  //   })
+
+    const tl = gsap.timeline({
+          //duration: 3000,
+          ease: 'none',
+          delay: 0,
+          repeat: -1,
+          yoyo: 'true',
+
+      })
+      
+
+      
+      tl
+      
+      .to('.c1', {r:200, opacity:0,strokeOpacity:0, duration:1})
+      .to('.c2', {r:100,duration:1})
+      .to('.c2', {strokeWidth:250, stroke:'orange',duration:1})
+      .to('.c2', {strokeWidth:0, stroke:'yellow',r:150,duration:1})
+      .to('.c2', {strokeWidth:150, r:50,duration:1})
+      .to('.c2', {strokeWidth:0, r:0,duration:1})
+      .to('.c1', {r:0,duration:.5})
+      .to('.c1', {opacity:1,duration:1})
+      .to('.c1', {fill:'green',r:200,duration:1})
+</script>
+</body>
+</html>

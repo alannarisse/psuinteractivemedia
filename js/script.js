@@ -7,7 +7,7 @@ function topNavList() {
         <li><a href="/terms/current/index.html">Student Links</a></li>
         <li><a href="/terms/past/index.html">Student Work Archive</a></li>
         <li><a href="/inspiring.html">Inspiration</a></li>
-        <li><a href="/projects">Projects</a></li>
+        <li><a href="/demos">Code Demos</a></li>
         `
   )
 }
