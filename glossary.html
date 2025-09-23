@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+      .term::after {
+        content: ": ";
+      }
+      .def {
+      }
+    </style>
   </head>
 
   <body class="subpage">
@@ -32,22 +39,10 @@
       <main class="glossary">
         <article class="terms">
           <h1>Terms</h1>
-          <ul>
-            <li>
-              <strong>HTML:</strong> Hypertext Markup Language. The markup language we use to structure our page. html tags look like this:
-              <pre>&lt;p&gt;I'm some text&lt;/p></pre>
-            </li>
-            <li>
-              <strong>CSS:</strong> Cascading Stylesheets. The markup language we use to style or pages, including fonts, colors, margin, padding, and layout. CSS looks like this:
-              <pre>h1 {font-family: 'Helvetica', sans-serif;}</pre>
-            </li>
-            <li><strong>Javascript:</strong> A scripting language that, among many other things, lets us manipulate an html page on the fly. Javascript and Java are Completely different languages.</li>
-            <li><strong>Git:</strong> Git is an application that can run on personal computers as well as servers. It is a versioning control software, meaning it keeps track of changes made to files. It is also a very powerful collaboration tool because many people can work on the same set of files with very little hassle. It is very good at merging mutiple people's changes together. A folder that is tracked by git is called a "repository."</li>
-            <li><strong>GitHub:</strong> GitHub is a popular server for hosting git repositories (aka folders that git is tracking).</li>
-            <li><strong>Repo or repository:</strong> Git and github refer to projects as "repos" or "repositories." They are basically folders where all of the files reside. You can't have repositories inside of other repositories.</li>
-            <li><strong>JQuery:</strong> A library written in Javascript that makes manipulating html and css in a broswer easier than writing it in plain "vanilla" javascript.</li>
-            <li><strong>CDN:</strong> Content Delivery Network. A server that is really good at delivering content, like images (cloudImage, Amazon CloudFront, cloudinary, cloudflare), code snippets (releases.jquery.com, cdnjs), fonts (google fonts, typekit), or videos (vimeo, youtube)</li>
-          </ul>
+          <ul id="glossary-list">
+
+          </li>
+       
         </article>
         <aside>
           <strong>Key Commands</strong>
@@ -75,5 +70,242 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="/js/script.js"></script>
+    <script>
+      const glossary = [
+        {
+          id: 1,
+          letter: 'h',
+          term: 'HTML',
+          def: `Hypertext Markup Language. The markup language we use to structure our page. html tags look like this:
+              <pre>&lt;p&gt;I'm some text&lt;/p></pre>`,
+          img: 'frog.png',
+          link: 'http://fla.com'
+        },
+        {
+          id: 2,
+          letter: 'j',
+          term: 'JavaScript',
+          def: `A scripting language that, among many other things, lets us manipulate an html page on the fly. Javascript and Java are Completely different languages.`,
+          img: 'bird.png',
+          link: 'link value'
+        },
+        {
+          id: 3,
+          letter: 'g',
+          term: 'git',
+          def: `Git is an application that can run on personal computers as well as servers. It is a versioning control software, meaning it keeps track of changes made to files. It is also a very powerful collaboration tool because many people can work on the same set of files with very little hassle. It is very good at merging mutiple people's changes together. A folder that is tracked by git is called a repository.`,
+          img: 'frog.png',
+          link: 'http://fla.com'
+        },
+        {
+          id: 4,
+          letter: 'g',
+          term: 'Github',
+          def: `GitHub is a popular server for hosting git repositories (aka folders that git is tracking).`,
+          img: 'frog.png',
+          link: 'http://fla.com'
+        },
+        {
+          id: 5,
+          letter: 'c',
+          term: 'CSS',
+          def: `Cascading Stylesheets. The markup language we use to style or pages, including fonts, colors, margin, padding, and layout. CSS looks like this:
+              <pre>h1 {font-family: 'Helvetica', sans-serif;}</pre>`,
+          img: 'frog.png',
+          link: 'http://fla.com'
+        },
+        {
+          id: 6,
+          letter: 'r',
+          term: 'repo or repository',
+          def: `Git and github refer to projects as "repos" or "repositories." They are basically folders where all of the files reside. You can't have repositories inside of other repositories.`,
+          img: 'frog.png',
+          link: 'http://fla.com'
+        },
+        {
+          id: 7,
+          letter: 'j',
+          term: 'JQuery',
+          def: `A library written in Javascript that makes manipulating html and css in a broswer easier than writing it in plain "vanilla" javascript.`,
+          img: 'frog.png',
+          link: 'http://fla.com'
+        },
+        {
+          id: 8,
+          letter: 'c',
+          term: 'CDN or Content Delivery Network',
+          def: `Content Delivery Network. A server that is really good at delivering content, like images (cloudImage, Amazon CloudFront, cloudinary, cloudflare), code snippets (releases.jquery.com, cdnjs), fonts (google fonts, typekit), or videos (vimeo, youtube)`,
+          img: 'frog.png',
+          link: 'http://fla.com'
+        },
+        {
+          id: 9,
+          letter: 'v',
+          term: 'variable',
+          def: `A variable is a way to store a value.`,
+          img: 'frog.png',
+          link: 'http://fla.com'
+        },
+        {
+          id: 10,
+          letter: 'b',
+          term: 'boolean',
+          def: `A boolean is a true/false value. You can set a boolean to true or false. Sometimes you see this as 0 for false, 1 for true.`,
+          img: 'frog.png',
+          link: 'http://fla.com'
+        },
+        {
+          id: 11,
+          letter: 'i',
+          term: 'if statement',
+          def: `An if statement is used to ask a yes or no logic question. e.g. if faucet is running, turn it off, otherwise turn it on`,
+          img: 'frog.png',
+          link: 'http://fla.com'
+        },
+        {
+          id: 12,
+          letter: 'f',
+          term: 'for loop',
+          def: `A for loop will continue to run a piece of code as long as a condition is true. "For every goal team x makes, add a 1 to the final score. For loops have the ability to do lots of different things for every element.`,
+          img: 'frog.png',
+          link: 'http://fla.com'
+        },
+        {
+          id: 13,
+          letter: 'f',
+          term: 'for each',
+          def: `Similar to a for loop, but less complex in some ways. ForEach is typicalled used to loop through an array. You can't stop a forEach loop until its done with the array or data set, so this is <em>can be<em> major drawback. It just depends on the circumstances for when to use each.`,
+          img: 'frog.png',
+          link: 'http://fla.com'
+        },
+        {
+          id: 14,
+          letter: 'f',
+          term: 'function',
+          def: `A function is a self cxontained program inside of code. They acn be very tiny or very large, for instance the entire JQuery libraby is a function. Its a way of organizing your code into component parts and helps avoid spaghetti code`,
+          img: 'frog.png',
+          link: 'http://fla.com'
+        },
+        {
+          id: 15,
+          letter: 's',
+          term: 'Spaghetti code',
+          def: `When your code is not well organized, doesn't use functions to keep tasks together, and jumps from one idea to another in a non-logical order, it can be called 'spaghetti code'. It's not a good thing!`,
+          img: 'frog.png',
+          link: 'http://fla.com'
+        },
+        {
+          id: 16,
+          letter: 'c',
+          term: 'css class or className',
+          def: `In css a class is used to identify an html tag in order to add style to it. If you are using vanilla javascript, you need to use the term 'className' instead, because Javascript uses the word 'class' in a different way programatically`,
+          img: 'frog.png',
+          link: 'http://fla.com'
+        },
+        {
+          id: 17,
+          letter: 't',
+          term: 'Tag Name',
+          def: `This refers to the HTML tag name, like ul, li, p, div, img. You can also add attributes to a tagname like class or src, depending on the tag.`,
+          img: 'frog.png',
+          link: 'http://fla.com'
+        }, 
+        {
+          id: 18,
+          letter: 'a',
+          term: 'attribute',
+          def: `An attribute is an element of a tag that adds some meaning to the tag. For instance in the 'img' tag, you would add the attribute of src='' in order to add the image file you want to display. Another example: class="" is an attribute that can be added to almost every html tag.`,
+          img: 'frog.png',
+          link: 'http://fla.com'
+        },
+        {
+          id: 19,
+          letter: 'o',
+          term: 'Opening tag',
+          def: `This refers to the starting part of an html tag that also needs to be closed. Most tags need both an opening tag and closing tag, like <p></p>, <h1></h1>, <div></div> etc in order to work properly. the <img> tag is an example of a tag that is "self closing" and doesn't need a closing tag.`,
+          img: 'frog.png',
+          link: 'http://fla.com'
+        },
+        {
+          id: 20,
+          letter: 'c',
+          term: 'Closing tag',
+          def: `The closing tag is the part of the html tag that tells the browser to stop using the current tag. <p> needs to be closed with a </p> closing tag in order for the paragraph to be completed.`,
+          img: 'frog.png',
+          link: 'http://fla.com'
+        },                                                                      
+        {
+          id: 21,
+          letter: 's',
+          term: 'Self-Closing tag',
+          def: `A few tags are what is called self-closing, meaning they don't need a closing tag in order to complete. <img is an example of this. In some cases you'll see self closing tags with '/'' at the end of them. like <img src="bird.png" />`,
+          img: 'frog.png',
+          link: 'http://fla.com'
+        },                                                                                                                                            
+      ]
+
+// Step 2: Get the container where we’ll insert items
+    const glossaryList = document.getElementById("glossary-list");
+
+    //sort the terms alphabetically
+    glossary.sort(function (a, b) {
+      if (a.letter < b.letter) {
+        return -1;
+      }
+      if (a.name > b.name) {
+        return 1;
+      }
+      return 0;
+    });
+
+
+//console.log(glossary)
+
+    // Step 3: Iterate through JSON and render HTML
+    glossary.forEach(item => {
+
+      // Create a wrapper div for each entry
+      const entry = document.createElement("li");
+
+
+      //fix this
+      // Add the letter
+      const letter = document.createElement("span");
+      letter.classList.add("letter");
+      letter.textContent = item.letter;
+
+      // Add the term
+      const term = document.createElement("strong");
+      term.classList.add("term");
+      term.textContent = ` ${item.term}`;
+
+      // Add the definition
+      const def = document.createElement("span");
+      def.classList.add("def");
+      def.textContent = item.def;
+
+      // Add the image
+      const img = document.createElement("div");
+      img.classList.add("glossimg");
+      img.textContent = item.img;
+      
+      // Add the link
+      const link = document.createElement("div");
+      link.classList.add("link");
+      link.textContent = item.link;
+
+
+      // Append to entry and glossary container
+      entry.appendChild(term);
+      entry.appendChild(def);
+      entry.appendChild(img);
+      entry.appendChild(link);
+      //entry.appendChild(letter);
+      glossaryList.appendChild(entry);
+    });
+
+      
+
+    </script>
   </body>
 </html>
