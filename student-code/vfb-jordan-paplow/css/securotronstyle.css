@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body{
+    background-color: black;
+    color:rgb(142, 255, 37);
+    font-family: 'IBM Plex Mono', monospace;
+    background-image: url(../images/background.gif); 
+    background-repeat: repeat;  
+}
+
+h1{
+    padding-left: 3vw;
+    padding-top: 3vh;
+    line-height: 2em;
+    font-family:'Press Start 2P', 'Courier New', Courier, monospace;
+    font-size: large;
+    color:white;
+}
+
+#securotron,
+#denied{
+    color:red;
+    opacity: 0.0;
+    animation: fadein .001s ease-in infinite
+}
+
+@keyframes fadein {
+    0% {opacity:.75;}
+    100% {opacity:1;}
+}
+
+#captcha{
+    display: grid;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 200px 200px 200px;
+    width: 606px;
+    height: 606px;
+    border-color: red;
+    border-style: double;
+    border-radius: .5em;
+    margin:0 auto;
+}
+
+.box {
+  border: 1px solid chartreuse;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #AAA;
+  margin: 10px;
+}
+
+.box img{
+    height: 170px;
+    padding-top: 3px;
+}
+
+.container {
+    width: 600px;
+    min-height: 120px;
+    margin: 2vh auto 0;
+}
+
+.container .typer {
+    color: chartreuse;
+    line-height: 1.75;
+    font-size: 1em;
+    text-align: left;
+    padding-top: 15px;
+}
+
+#bottomtext{
+    color: yellow;
+    font-size: x-small;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    h1{
+        margin-top: 40px;
+        text-align: center;
+        font-size: small;
+    }
+
+    #captcha{
+        display: grid;
+        grid-template-rows: 100px 100px 100px;
+        grid-template-columns: 100px 100px 100px;
+        width:306px;
+        height:306px;
+        border-color: red;
+        border-style: double;
+        border-radius: .5em;
+        margin:0 auto;
+        padding:0;
+    }
+    
+    .box {
+      border: 1px solid chartreuse;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #AAA;
+      margin: 5px;
+    }
+    
+    .box img{
+        height: 85px;
+        padding-top: 1px;
+    }
+
+    .container {
+        width: 300px;
+        min-height: 120px;
+        margin: 2vh auto 0;
+        padding-bottom: 30px;
+    }
+    
+    .container .typer {
+        color: chartreuse;
+        line-height: 1.75;
+        font-size: 1em;
+        text-align: center;
+        padding-top: 15px;
+    }
+    
+}
