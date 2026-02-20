@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DES342 Fall 2023 Students</title>
+  <link rel="stylesheet" href="/css/meyer-reset.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <!--  Essential META Tags -->
+
+  <meta property="og:title" content="PSU Interactive Media" />
+  <meta property="og:description"
+    content="Website design and coding class at Portland State University, taught by Alanna Risse" />
+  <meta property="og:image" content="http://alannacodes.github.io/terms/fa20des341/screenshot.png" />
+  <meta property="og:url" content="http://yourusername.github.io/project2/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!--  Non-Essential, But Recommended -->
+
+  <meta property="og:site_name" content="PSU Interactive Media" />
+  <meta name="twitter:image:alt" content="Alt text for image" />
+</head>
+
+<body class="subpage">
+  <div class="glossary-tab"></div>
+  <nav class="nav">
+    <div class="logo">
+      <a href="/index.html">
+        <h4>psuinteractivemedia</h4>
+        <img src="/images/logo.png" />
+      </a>
+    </div>
+    <div class="icon">
+      <div class="hamburger"></div>
+    </div>
+    <div class="menu-mobile">
+      <ul id="topnavlist"></ul>
+    </div>
+  </nav>
+  <header>
+    <h1 class="white">Student Links</h1>
+    <h2 class="white">DES340, DES341, DES342</h2>
+
+  </header>
+  <main class="container grid-2">
+    <section class="morning">
+      <h2>Spring 2025</h2>
+      <ul>
+        <li><a href="/terms/sp25des340/">DES340 Spring 25</a></li>
+        <li><a href="/terms/sp25des342/">DES342 Spring 25</a></li>
+
+      </ul>
+    </section>
+
+    <section>
+      <h2>the full list of past projects</h2>
+      <ul>
+        <li><a href="/terms/wi25des340/">Winter 25 DES340</a></li>
+        <li><a href="/terms/fa23des341/">Fall 23 DES341</a></li>
+        <li><a href="/terms/sp23des34x/">Spring 23 DES340, DES342</a></li>
+        <li><a href="/terms/wi23des341/">Winter 23 DES341</a></li>
+        <li><a href="/terms/sp22des342/">Spring 22 DES342</a></li>
+        <li><a href="/terms/wi22des341/">Winter 22 DES341</a></li>
+        <li><a href="/terms/fa22des341">Fall 22 DES341</a></li>
+        <li><a href="/terms/sp21des342">Spring 21 DES342</a></li>
+        <li><a href="/terms/wi21des34x/">Winter 21 DES341, DES342</a></li>
+        <li><a href="/terms/fa21des341">Fall 21 DES341</a></li>
+        <li><a href="/terms/sp20des342">Spring 20 DES342</a></li>
+        <li><a href="/terms/wi20des342/">Winter 20 DES342</a></li>
+        <li><a href="/terms/wi20des341/">Winter 20 DES341</a></li>
+        <li><a href="/terms/fa20des341">Fall 20 DES341</a></li>
+        <li><a href="/terms/fa19des341">Fall 19 DES341</a></li>
+
+        <li>-----</li>
+
+        <li><a href="/terms/past/">The class archives</a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <ul id="footernavlist"></ul>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script src="/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script>
+    let tl = gsap.timeline()
+  .from('header', {backgroundPosition:"50% 70%", duration:1})
+  //.from(headings, {y:200, stagger:0.1}, 0)
+
+ScrollTrigger.create({
+  trigger:'header',
+  start:"+=50top +=120",
+  toggleActions:"play none none reverse",
+  animation:tl
+})
+  
+</script>
+</body>
+
+</html>
+
+</body>
+
+</html>
