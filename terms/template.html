@@ -109,14 +109,14 @@
     ]
     const listDiv = document.getElementById('the-list');
 
-    const link = (url, text) => url ? `<a href="${url}">${text}</a><br>` : '';
-    const img = (src) => src ? `<img src="/images/students/${src}"><br>` : '';
+    const link = (url, text) => url ? `<a href="${url}" target="_blank">${text}</a><br>` : '';
+    const img = (src) => src ? `<img src="/images/students/${src}" alt="project thumbnail image"><br>` : '';
 
     students.forEach(student => {
       const li = document.createElement('li');
       li.innerHTML = `
         ${student.name} 
-        ${link(student.homepage, student.p1Name || 'Homepage')}
+        ${link(student.homepage, 'Homepage' || 'Homepage')}
         ${link(student.p1Fig, 'P1 Figma')}
         ${link(student.p1Link, student.p1Name || 'Project 1')}
         ${img(student.p1Thumb)}
