@@ -455,8 +455,11 @@ div.home-card {
   margin-right: 6px;
   margin-bottom: -4px;
 }
-.student-list {
-  
+
+.student-list {}
+
+#the-list li {
+  margin-bottom: 20px;
 }
 
 .glossary {
