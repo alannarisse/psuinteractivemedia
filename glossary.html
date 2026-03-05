@@ -15,6 +15,65 @@
     }
 
     .def {}
+
+    /* Search and filter styles */
+    .glossary-controls {
+      margin-bottom: 20px;
+    }
+
+    .search-box {
+      width: 100%;
+      padding: 10px 15px;
+      font-size: 16px;
+      border: 2px solid #5eb1bf;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+
+    .search-box:focus {
+      outline: none;
+      border-color: #042a2b;
+    }
+
+    .letter-filter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 10px;
+    }
+
+    .letter-filter a {
+      display: inline-block;
+      padding: 5px 10px;
+      text-decoration: none;
+      color: #042a2b;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 3px;
+      transition: background-color 0.2s;
+    }
+
+    .letter-filter a:hover {
+      background-color: #5eb1bf;
+      color: #fff;
+    }
+
+    .letter-filter a.active {
+      background-color: #042a2b;
+      color: #fff;
+    }
+
+    .letter-filter a.disabled {
+      color: #ccc;
+      pointer-events: none;
+    }
+
+    .no-results {
+      padding: 20px;
+      font-style: italic;
+      color: #666;
+    }
   </style>
 </head>
 
@@ -40,6 +99,40 @@
     <main class="glossary">
       <article class="terms">
         <h1>Terms</h1>
+
+        <div class="glossary-controls">
+          <input type="text" id="search-box" class="search-box" placeholder="Search terms or definitions...">
+          <div class="letter-filter" id="letter-filter">
+            <a href="#" data-letter="all" class="active">All</a>
+            <a href="#" data-letter="a">a</a>
+            <a href="#" data-letter="b">b</a>
+            <a href="#" data-letter="c">c</a>
+            <a href="#" data-letter="d">d</a>
+            <a href="#" data-letter="e">e</a>
+            <a href="#" data-letter="f">f</a>
+            <a href="#" data-letter="g">g</a>
+            <a href="#" data-letter="h">h</a>
+            <a href="#" data-letter="i">i</a>
+            <a href="#" data-letter="j">j</a>
+            <a href="#" data-letter="k">k</a>
+            <a href="#" data-letter="l">l</a>
+            <a href="#" data-letter="m">m</a>
+            <a href="#" data-letter="n">n</a>
+            <a href="#" data-letter="o">o</a>
+            <a href="#" data-letter="p">p</a>
+            <a href="#" data-letter="q">q</a>
+            <a href="#" data-letter="r">r</a>
+            <a href="#" data-letter="s">s</a>
+            <a href="#" data-letter="t">t</a>
+            <a href="#" data-letter="u">u</a>
+            <a href="#" data-letter="v">v</a>
+            <a href="#" data-letter="w">w</a>
+            <a href="#" data-letter="x">x</a>
+            <a href="#" data-letter="y">y</a>
+            <a href="#" data-letter="z">z</a>
+          </div>
+        </div>
+
         <ul id="glossary-list">
 
           </li>
@@ -371,65 +464,131 @@
 
     ]
 
-    // Step 2: Get the container where we’ll insert items
+    // Step 2: Get the container where we'll insert items
     const glossaryList = document.getElementById("glossary-list");
+    const searchBox = document.getElementById("search-box");
+    const letterFilter = document.getElementById("letter-filter");
+
+    // Base URL for glossary images
+    const imageBaseUrl = "/images/glossary/";
+
+    // Track current filter state
+    let currentLetter = "all";
+    let currentSearch = "";
 
     //sort the terms alphabetically
     glossary.sort(function (a, b) {
       if (a.letter < b.letter) {
         return -1;
       }
-      if (a.name > b.name) {
+      if (a.letter > b.letter) {
+        return 1;
+      }
+      // If same letter, sort by term
+      if (a.term.toLowerCase() < b.term.toLowerCase()) {
+        return -1;
+      }
+      if (a.term.toLowerCase() > b.term.toLowerCase()) {
         return 1;
       }
       return 0;
     });
 
+    // Function to render glossary items based on filters
+    function renderGlossary() {
+      // Clear the list
+      glossaryList.innerHTML = "";
 
-    //console.log(glossary)
+      // Filter items
+      const filteredItems = glossary.filter(item => {
+        // Check letter filter
+        const matchesLetter = currentLetter === "all" || item.letter.toLowerCase() === currentLetter;
 
-    // Step 3: Iterate through JSON and render HTML
-    glossary.forEach(item => {
+        // Check search filter (searches term and definition)
+        const searchLower = currentSearch.toLowerCase();
+        const matchesSearch = currentSearch === "" ||
+          item.term.toLowerCase().includes(searchLower) ||
+          item.def.toLowerCase().includes(searchLower);
 
-      // Create a wrapper div for each entry
-      const entry = document.createElement("li");
+        return matchesLetter && matchesSearch;
+      });
 
+      // Show message if no results
+      if (filteredItems.length === 0) {
+        const noResults = document.createElement("li");
+        noResults.classList.add("no-results");
+        noResults.textContent = "No terms found matching your search.";
+        glossaryList.appendChild(noResults);
+        return;
+      }
 
-      //fix this
-      // Add the letter
-      const letter = document.createElement("span");
-      letter.classList.add("letter");
-      letter.textContent = item.letter;
+      // Render filtered items
+      filteredItems.forEach(item => {
+        const entry = document.createElement("li");
 
-      // Add the term
-      const term = document.createElement("strong");
-      term.classList.add("term");
-      term.textContent = ` ${item.term}`;
+        // Add the term
+        const term = document.createElement("strong");
+        term.classList.add("term");
+        term.textContent = ` ${item.term}`;
 
-      // Add the definition
-      const def = document.createElement("span");
-      def.classList.add("def");
-      def.textContent = item.def;
+        // Add the definition
+        const def = document.createElement("span");
+        def.classList.add("def");
+        def.innerHTML = item.def;
 
-      // Add the image
-      const img = document.createElement("div");
-      img.classList.add("glossimg");
-      img.textContent = item.img;
+        // Append term and definition
+        entry.appendChild(term);
+        entry.appendChild(def);
 
-      // Add the link
-      const link = document.createElement("div");
-      link.classList.add("link");
-      link.textContent = item.link;
+        // Add the image only if img property has a value
+        if (item.img) {
+          const img = document.createElement("img");
+          img.classList.add("glossimg");
+          img.src = imageBaseUrl + item.img;
+          img.alt = item.term;
+          entry.appendChild(img);
+        }
 
+        // Add the link only if link property has a value
+        if (item.link) {
+          const linkWrapper = document.createElement("div");
+          linkWrapper.classList.add("link");
+          const link = document.createElement("a");
+          link.href = item.link;
+          link.target = "_blank";
+          link.textContent = item.linkName || "read more";
+          linkWrapper.appendChild(link);
+          entry.appendChild(linkWrapper);
+        }
 
-      // Append to entry and glossary container
-      entry.appendChild(term);
-      entry.appendChild(def);
-      entry.appendChild(img);
-      entry.appendChild(link);
-      //entry.appendChild(letter);
-      glossaryList.appendChild(entry);
+        glossaryList.appendChild(entry);
+      });
+    }
+
+    // Search box event listener
+    searchBox.addEventListener("input", function (e) {
+      currentSearch = e.target.value;
+      renderGlossary();
     });
+
+    // Letter filter event listener
+    letterFilter.addEventListener("click", function (e) {
+      if (e.target.tagName === "A") {
+        e.preventDefault();
+
+        // Update active class
+        const allLinks = letterFilter.querySelectorAll("a");
+        allLinks.forEach(link => link.classList.remove("active"));
+        e.target.classList.add("active");
+
+        // Update filter and re-render
+        currentLetter = e.target.dataset.letter;
+        renderGlossary();
+      }
+    });
+
+    // Initial render
+    renderGlossary();
 
 
 

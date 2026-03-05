@@ -358,7 +358,7 @@
     students.forEach(student => {
       const li = document.createElement('li');
       li.innerHTML = `
-        ${student.name}<br>
+        <em>${student.name}</em><br>
         ${link(student.homepage, 'Homepage' || 'Homepage')}
         ${link(student.p1Fig, 'P1 Figma')}
         ${link(student.p1Link, student.p1Name || 'Project 1 Video')}

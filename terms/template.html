@@ -115,13 +115,13 @@
     students.forEach(student => {
       const li = document.createElement('li');
       li.innerHTML = `
-        ${student.name} 
+        <em>${student.name}</em><br>
         ${link(student.homepage, 'Homepage' || 'Homepage')}
         ${link(student.p1Fig, 'P1 Figma')}
-        ${link(student.p1Link, student.p1Name || 'Project 1')}
+        ${link(student.p1Link, student.p1Name || 'Project 1 Video')}
         ${img(student.p1Thumb)}
-        ${link(student.p2Fig, 'P2 Figma')}
-        ${link(student.p2Link, student.p2Name || 'Project 2')}
+        ${link(student.p2Fig, 'P2 Figma File')}
+        ${link(student.p2Link, student.p2Name || 'Project 2 Prototype')}
         ${img(student.p2Thumb)}
       `;
       listDiv.appendChild(li);

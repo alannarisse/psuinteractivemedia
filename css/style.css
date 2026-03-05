@@ -462,6 +462,10 @@ div.home-card {
   margin-bottom: 20px;
 }
 
+#the-list em {
+  font-weight: bold;
+}
+
 .glossary {
   display: flex;
   flex-direction: column;
