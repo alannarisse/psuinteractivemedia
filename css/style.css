@@ -483,6 +483,19 @@ div.home-card {
   padding-top: 40px;
 }
 
+#glossary-list .link {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.glossimg {
+  max-height: 120px;
+  width: auto;
+  padding-top: 20px;
+  display: block;
+  margin: auto;
+}
+
 .top {
   padding-top: 20px;
 }
