@@ -466,6 +466,10 @@ div.home-card {
   font-weight: bold;
 }
 
+#the-list img {
+  max-width: 50%;
+}
+
 .glossary {
   display: flex;
   flex-direction: column;
