@@ -456,8 +456,6 @@ div.home-card {
   margin-bottom: -4px;
 }
 
-.student-list {}
-
 #the-list li {
   margin-bottom: 20px;
 }
@@ -467,7 +465,7 @@ div.home-card {
 }
 
 #the-list img {
-  max-width: 50%;
+  max-width: 75%;
 }
 
 .glossary {
