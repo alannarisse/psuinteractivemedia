@@ -29,9 +29,31 @@
       grid-template-rows: repeat(5, 1fr);
     }
 
+    #the-list img {
+      padding-top: 10px;
+      padding-bottom: 40px;
+    }
+
     .grid-2 {
       grid-template-columns: 2fr 1fr;
       grid-column-gap: 1rem;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        margin: 0;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+
+      #the-list {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -164,7 +186,7 @@
         p2Name: 'Rollout Voting Kiosk',
         p2Fig: 'https://www.figma.com/design/edawbJZEy6320jFyQADdUd/ChristianGCG-Project-2---DES140?node-id=1-5&t=VMoijTr14qs6BzXf-1',
         p2Link: 'https://www.figma.com/proto/edawbJZEy6320jFyQADdUd/ChristianGCG-Project-2---DES140?node-id=203-3&t=BLsKFQKPdpncr5yF-1',
-        p2Thumb: '',
+        p2Thumb: 'christian-community-kiosk.png',
       },
       {
         name: 'Daru Shinya',
