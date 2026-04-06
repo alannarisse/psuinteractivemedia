@@ -1,81 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GSAP Demos</title>
   <style>
-  * {
-    box-sizing: border-box;
-  }
-  /* from CSS only Background patters: https://css-pattern.com/  */
-  html {
-  scroll-behavior: smooth;
-  --s: 84px; /* control the size*/
-  --c1: #f2f2f2;
-  --c2: #cdcbcc;
-  --c3: #999999;
-  
-  --_g: 0 120deg,#0000 0;
-  background:
-    conic-gradient(             at calc(250%/3) calc(100%/3),var(--c3) var(--_g)),
-    conic-gradient(from -120deg at calc( 50%/3) calc(100%/3),var(--c2) var(--_g)),
-    conic-gradient(from  120deg at calc(100%/3) calc(250%/3),var(--c1) var(--_g)),
-    conic-gradient(from  120deg at calc(200%/3) calc(250%/3),var(--c1) var(--_g)),
-    conic-gradient(from -180deg at calc(100%/3) 50%,var(--c2)  60deg,var(--c1) var(--_g)),
-    conic-gradient(from   60deg at calc(200%/3) 50%,var(--c1)  60deg,var(--c3) var(--_g)),
-    conic-gradient(from  -60deg at 50% calc(100%/3),var(--c1) 120deg,var(--c2) 0 240deg,var(--c3) 0);
-  background-size: calc(var(--s)*sqrt(3)) var(--s);
-}
-  body {    
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
+    * {
+      box-sizing: border-box;
+    }
+
+    /* from CSS only Background patters: https://css-pattern.com/  */
+    html {
+      scroll-behavior: smooth;
+      --s: 84px;
+      /* control the size*/
+      --c1: #f2f2f2;
+      --c2: #cdcbcc;
+      --c3: #999999;
+
+      --_g: 0 120deg, #0000 0;
+      background:
+        conic-gradient(at calc(250%/3) calc(100%/3), var(--c3) var(--_g)),
+        conic-gradient(from -120deg at calc(50%/3) calc(100%/3), var(--c2) var(--_g)),
+        conic-gradient(from 120deg at calc(100%/3) calc(250%/3), var(--c1) var(--_g)),
+        conic-gradient(from 120deg at calc(200%/3) calc(250%/3), var(--c1) var(--_g)),
+        conic-gradient(from -180deg at calc(100%/3) 50%, var(--c2) 60deg, var(--c1) var(--_g)),
+        conic-gradient(from 60deg at calc(200%/3) 50%, var(--c1) 60deg, var(--c3) var(--_g)),
+        conic-gradient(from -60deg at 50% calc(100%/3), var(--c1) 120deg, var(--c2) 0 240deg, var(--c3) 0);
+      background-size: calc(var(--s)*sqrt(3)) var(--s);
+    }
+
+    body {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
     main {
-      padding:80px;
-      width:80%;
-      background:white;
+      padding: 80px;
+      width: 80%;
+      background: white;
       margin: 80px auto;
       border: 12px solid #7db3e6;
-      border-radius:30px;
+      border-radius: 30px;
     }
+
     h1 {
-      margin-top:0;
-      padding-top:60px;
+      margin-top: 0;
+      padding-top: 60px;
     }
   </style>
 </head>
+
 <body>
   <main>
+    <div class="back"><a href="../index.html">
+        < Back to demos page</a>
+    </div>
     <article>
-    <h1 class="headertext">GSAP Demos</h1>
+      <h1 class="headertext">GSAP Demos</h1>
 
-    <h2>Basics, scroll triggering</h2>
-    <ul>
+      <h2>Basics, scroll triggering</h2>
+      <ul>
 
-      <li><a href="scroll1.html">Basic Scroll Trigger</a></li>
-      <li><a href="scroll-vert-and-horiz-plain.html">Scroll Trigger Vertical + Horizontal</a></li>
-      <li><a href="scroll-vert-and-horiz-plus.html">Scroll vertical and horizontal with animations</a></li>
-      <li><a href="scrub-video.html">Video Scrub</a></li>
-      <li><a href="card-flip.html">Sticky card flip</a></li>
-      <li><a href="pinned-panels.html">sticky panels using array</a></li>
-      <li><a href="pinned-vert-panels.html">pinned panels vertical using array</a></li>
-      <li><a href="pin.html">More pinned timeline triggers</a></li>
-      <li><a href="sticky-nav.html">sticky nav on scroll</a></li>
-      <li><a href="scroll-standalone.html">Standalone Scrolls</a></li>
-      <li><a href="text-scroll-w-lenis.html">Text Scroll color change with Lenis and Gsap using js datasets</a></li>
-      <li><a href="back-to-top.html">Back to Top</a> @ 75%</li>
-      <li><a href="back-to-top-fast-scroll.html">Back to Top - fast scroll</a></li>
-      <li><a href="for-loop-change-color-nav.html">Changing color nacv with for loop.</a></li>
-      <li><a href="prevent-overlap-and-fast-scroll.html">Prevent Overlap and Fast Scroll End</a> - if scroll is faster than 2500ms it forces it to complete.</li>
-      <li><a href="reading-progress.html">Reading Progress</a></li>
+        <li><a href="scroll1.html">Basic Scroll Trigger</a></li>
+        <li><a href="scroll-vert-and-horiz-plain.html">Scroll Trigger Vertical + Horizontal</a></li>
+        <li><a href="scroll-vert-and-horiz-plus.html">Scroll vertical and horizontal with animations</a></li>
+        <li><a href="scrub-video.html">Video Scrub</a></li>
+        <li><a href="card-flip.html">Sticky card flip</a></li>
+        <li><a href="pinned-panels.html">sticky panels using array</a></li>
+        <li><a href="pinned-vert-panels.html">pinned panels vertical using array</a></li>
+        <li><a href="pin.html">More pinned timeline triggers</a></li>
+        <li><a href="sticky-nav.html">sticky nav on scroll</a></li>
+        <li><a href="scroll-standalone.html">Standalone Scrolls</a></li>
+        <li><a href="text-scroll-w-lenis.html">Text Scroll color change with Lenis and Gsap using js datasets</a></li>
+        <li><a href="back-to-top.html">Back to Top</a> @ 75%</li>
+        <li><a href="back-to-top-fast-scroll.html">Back to Top - fast scroll</a></li>
+        <li><a href="for-loop-change-color-nav.html">Changing color nacv with for loop.</a></li>
+        <li><a href="prevent-overlap-and-fast-scroll.html">Prevent Overlap and Fast Scroll End</a> - if scroll is faster
+          than 2500ms it forces it to complete.</li>
+        <li><a href="reading-progress.html">Reading Progress</a></li>
       </ul>
       <h2>Timelines</h2>
-      <ul>     
+      <ul>
         <li><a href="timeline.html">timeline triggers</a></li>
         <li><a href="timeline-conveyor-belt.html">Slime conveyor belt</a></li>
         <li><a href="hole-jump.html">Creature jumping out of hole</a></li>
-        <li><a href="scrolltrigger-multi-section-for-loop.html">Multiple Sections for Loop scroll trigger + timeline (flowers)</a></li>
-        <li><a href="two-timelines-one-section-plus-more.html">Two timelines in one section, (one is diabled until first is done) plus scrolling more content after</a></li>
+        <li><a href="scrolltrigger-multi-section-for-loop.html">Multiple Sections for Loop scroll trigger + timeline
+            (flowers)</a></li>
+        <li><a href="two-timelines-one-section-plus-more.html">Two timelines in one section, (one is diabled until first
+            is done) plus scrolling more content after</a></li>
       </ul>
       <h2>Smooth Scrolling w external libraries</h2>
       <ul>
@@ -86,33 +99,34 @@
         <li><a href="from-to.html">GSAP Parallax fromTo mountains and ext change</a></li>
         <li><a href="parallax-car.html">Parallax car overhead</a></li>
       </ul>
-      
+
       <h2>SVG paths and Morphing</h2>
       <ul>
-      <li><a href="scramble-text.html">Scramble Text</a></li>
-      <li><a href="svg-path-burrito.html">SVG path with Burrito</a></li>
-      <li><a href="svg-path.html">SVG path generic</a></li>
-      <li><a href="morph.html">MorphSVG generic</a></li>
-      <li><a href="morph-cat.html">MorphSVGing cats!</a></li>
-      <li><a href="morph-burrito.html">MorphSVGing burrito with multiple paths in timeline!</a></li>
-    </ul>
-    <h2>Text Modification</h2>
-    <ul>
-      <li><a href="typewriter.html">Typewriter effect</a></li>
-      <li><a href="split-text.html">Split Text</a></li>
-      <li><a href="word-by-word.html">Word by word animation</a></li>
-      <li><a href="line-by-line.html">Line by line with perspective and Z rotate</a></li>
-    </ul>
-    <h2>Keyframes</h2>
-    <ul>
-      <li><a href="keyframes-percent.html">Keyframes percents sinlge jumping guy.</a></li>
-      <li><a href="keyframes-tween-rotate.html">header text scale and rotate in and out.</a></li>
-    </ul>
-    <h2>3D</h2>
-    <ul>
-      <li><a href="threed-rolling-headers.html">Rolling Headers</a></li>
-    </ul>
+        <li><a href="scramble-text.html">Scramble Text</a></li>
+        <li><a href="svg-path-burrito.html">SVG path with Burrito</a></li>
+        <li><a href="svg-path.html">SVG path generic</a></li>
+        <li><a href="morph.html">MorphSVG generic</a></li>
+        <li><a href="morph-cat.html">MorphSVGing cats!</a></li>
+        <li><a href="morph-burrito.html">MorphSVGing burrito with multiple paths in timeline!</a></li>
+      </ul>
+      <h2>Text Modification</h2>
+      <ul>
+        <li><a href="typewriter.html">Typewriter effect</a></li>
+        <li><a href="split-text.html">Split Text</a></li>
+        <li><a href="word-by-word.html">Word by word animation</a></li>
+        <li><a href="line-by-line.html">Line by line with perspective and Z rotate</a></li>
+      </ul>
+      <h2>Keyframes</h2>
+      <ul>
+        <li><a href="keyframes-percent.html">Keyframes percents sinlge jumping guy.</a></li>
+        <li><a href="keyframes-tween-rotate.html">header text scale and rotate in and out.</a></li>
+      </ul>
+      <h2>3D</h2>
+      <ul>
+        <li><a href="threed-rolling-headers.html">Rolling Headers</a></li>
+      </ul>
     </article>
   </main>
 </body>
+
 </html>

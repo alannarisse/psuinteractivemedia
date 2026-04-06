@@ -1,0 +1,98 @@
+body {
+  color: #333;
+}
+
+a {
+  color: #333;
+}
+
+.start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.care {
+  margin: 60px auto;
+  width: 80%;
+}
+
+#nameField {
+  margin-bottom: 20px;
+}
+
+.tama {
+  display: flex;
+  justify-content: center;
+}
+
+.tama img {
+  max-height: 200px;
+}
+
+.meters {}
+
+.meters>div {
+  border: 1px solid #666;
+  width: 100%;
+  margin: 10px 0;
+  padding: 6px;
+  border-radius: 20px;
+
+}
+
+.hide {
+  display: none;
+}
+
+.meterval {
+  width: 50%;
+  height: 12px;
+  border-radius: 20px;
+}
+
+.meter-green {
+  background-color: green;
+}
+
+.meter-yellow {
+  background-color: gold;
+}
+
+.meter-red {
+  background-color: red;
+}
+
+.buttons ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons a,
+.button {
+  background-color: pink;
+  padding: 10px 22px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.buttons a:hover,
+.button:hover {
+  background-color: #8000FF;
+  color: #fff;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 60px auto;
+}
+
+@media only screen and (max-width:768px) {
+
+  main,
+  footer {
+    width: 90%;
+  }
+}

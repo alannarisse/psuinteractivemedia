@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamagochi</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main id="start" class="start">
+    <h1>Meet your new Tamagochi!</h1>
+    <p>What would you like to name it?</p>
+    <input id="nameField" type="text">
+    <a href="#" class="button" id="setNameBtn">Name your Tama</a>
+  </main>
+
+  <main id="care" class="care hide">
+    <h1>Tamagochi: <span id="displayName"></span></h1>
+    <aside class="meters">
+      <div id="feedmeter">
+        <div class="meterval" id="feedval"></div>
+      </div>
+      <div id="sleepmeter">
+        <div class="meterval" id="sleepval"></div>
+      </div>
+      <div id="playmeter">
+        <div class="meterval" id="playval"></div>
+      </div>
+    </aside>
+    <section class="pet">
+      <div class="tama"><img id="tamaImg" src="images/sitting-dog.svg"></div>
+    </section>
+
+    <nav class="buttons">
+      <ul>
+        <li><a id="feedBtn" href="#">Feed</a></li>
+        <li><a id="sleepBtn" href="#">Sleep</a></li>
+        <li><a id="playBtn" href="#">Play</a></li>
+      </ul>
+    </nav>
+    <footer>
+      <a href="#" class="button" id="pauseBtn">Pause</a>
+    </footer>
+  </main>
+
+  <main id="startOver" class="startover hide">
+    <h1>Oh no!</h1>
+    <p>Your tamagochi has expired.</p>
+    <a href="#" id="restartBtn">Start Over</a>
+  </main>
+
+
+
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+    integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

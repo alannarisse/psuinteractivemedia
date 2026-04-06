@@ -1,0 +1,69 @@
+body {
+  color: #333;
+}
+
+a {
+  color: #333;
+}
+
+main#start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main#care {
+  margin: 60px auto;
+  width: 80%;
+}
+
+.tama {
+  display: flex;
+  justify-content: center;
+}
+
+.tama img {
+  max-height: 200px;
+}
+
+.meters {}
+
+.meters>div {
+  border: 1px solid #666;
+  width: 100%;
+  margin: 10px 0;
+  padding: 6px;
+  border-radius: 20px;
+
+}
+
+.meterval {
+  background-color: green;
+  width: 50%;
+  height: 12px;
+  border-radius: 20px;
+}
+
+.buttons ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons a {
+  background-color: pink;
+  padding: 10px 22px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.buttons a:hover {
+  background-color: #8000FF;
+  color: #fff;
+}
+
+@media only screen and (max-width:768px) {
+  main {
+    width: 90%;
+  }
+}
