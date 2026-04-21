@@ -1,0 +1,38 @@
+.globe {
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  height: 140px;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 140px;
+}
+.globe svg,
+.dots {
+  -webkit-animation: rotation 5s linear 0s 1;
+  animation: rotation 5s linear 0s 1;
+}
+.globe svg path {
+  stroke: #ccc;
+  fill: #ccc;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    transform: translateX(0);
+  }
+  from {
+    transform: translateX(-20%);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: translateX(0);
+  }
+  from {
+    transform: translateX(-20%);
+  }
+}

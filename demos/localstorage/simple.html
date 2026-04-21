@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Local Storage</title>
+    <style>
+      main {
+        width: 80%;
+        margin: 60px auto;
+        font-family:;
+      }
+
+      * {
+        box-sizing: border-box;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      input[text] {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1>Welcome <span class="my-name"></span></h1>
+      <div class="name-form">
+        <h1>Enter your name</h1>
+        <input type="text" class="name-save" name="fname" />
+
+        <button class="button">Save</button>
+      </div>
+      <h2>Hello <span class="name-display"></span></h2>
+      <button class="name-clear">Clear</button>
+    </main>
+
+    <script>
+      let myPet = localStorage.setItem("myPet", "maggie");
+
+      let myName = localStorage.getItem("my-name");
+      document.querySelector(".my-name").textContent = myName;
+
+      let storageInput = document.querySelector(".name-save"); //input field
+      let nameDisplay = document.querySelector(".name-display"); //span that shows name
+      let nameView = document.querySelector(".nameView");
+      let saveButton = document.querySelector(".button"); //the save button
+      let nameStore = localStorage.getItem("name"); // getting the name out of local storage
+      let nameForm = document.querySelector(".name-form"); //the name of the form
+      let clearName = document.querySelector(".name-clear");
+
+      //If storageInput exists, do some stuff
+      if (nameStore) {
+        nameDisplay.textContent = nameStore;
+        nameForm.style.display = "none";
+        clearName.style.display = "block";
+      }
+
+      storageInput.addEventListener("input", (letter) => {
+        nameDisplay.textContent = letter.target.value;
+      });
+
+      const saveToLocalStorage = () => {
+        localStorage.setItem("name", nameDisplay.textContent);
+        clearName.style.display = "block";
+        nameForm.style.display = "none";
+        if (nameStore) {
+          nameDisplay.textContent = nameStore;
+        }
+      };
+      const clearLocalStorage = () => {
+        localStorage.removeItem("name");
+        nameForm.style.display = "block";
+        clearName.style.display = "none";
+        nameDisplay.textContent = "";
+      };
+
+      saveButton.addEventListener("click", saveToLocalStorage);
+      clearName.addEventListener("click", clearLocalStorage);
+    </script>
+  </body>
+</html>
