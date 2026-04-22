@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 12px;
+  font-family: "Radio Canada", sans-serif;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+.topnav {
+  width: 100vw;
+}
+.topnav ul {
+  list-style: none;
+  background-color: rgb(255, 252, 245);
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+.topnav li {
+  text-align: center;
+  flex: 1;
+}
+.topnav li a {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 10px;
+  height: 40px;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 5% 20% 75%;
+}
+.wrapper nav,
+.wrapper div {
+  border: 1px solid black;
+}
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.icons {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: calc(100vh - 40px);
+  gap: 10px;
+}
