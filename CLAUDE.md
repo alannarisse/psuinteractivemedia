@@ -12,22 +12,44 @@ There is no build step, no package manager, and no framework. Everything is plai
 
 Use the VS Code **Live Server** extension (configured to port 5501 for the multi-root workspace, or 5502 for the single-root workspace). Open any `.html` file and click "Go Live". There is no `npm start` or equivalent.
 
-## Sass Compilation (sass-demo only)
+## Sass / SCSS
 
-The `sass-demo/` directory is the only place Sass is used. Compile it with either:
+### Main site styles
 
+The global stylesheet is authored in SCSS at `css/scss/style.scss` and compiled to `css/style.css`. The partials are:
+
+| Partial | Contents |
+|---|---|
+| `_variables.scss` | Colors (`$yellow`, `$orange`, `$red`, `$teal`, `$dark-teal`, `$body-text`, `$aside-bg`), font stacks (`$font-display`, `$font-body`, `$font-impact`), breakpoints (`$bp-tablet: 768px`, `$bp-desktop: 1024px`) |
+| `_base.scss` | Reset-adjacent globals, body, img, a, td, etc. Also holds the Typekit `@import url()` which Sass hoists to the top of the compiled output. |
+| `_typography.scss` | h1–h5 with responsive overrides |
+| `_layout.scss` | Containers, `.grid-2`, `.three-col`, flex helpers |
+| `_nav.scss` | Nav bar, logo, hamburger icon, `.menu-mobile`, `.menu-desktop` |
+| `_header.scss` | Header with background image, `header nav` overrides |
+| `_footer.scss` | Footer and `.ack` land acknowledgment block |
+| `_components.scss` | Buttons, cards, glossary tab, aside, utility classes |
+| `_pages.scss` | Page-specific styles: home, subpage, videos, glossary, student list, definition page |
+
+**Compile:**
 ```bash
-# VS Code task (build group)
-# Task: "Sass Compile" in .vscode/tasks.json
+npx sass css/scss/style.scss css/style.css --no-source-map
+```
 
-# Or via gulp (root gulpfile.js — compiles *.scss in the root, not sass-demo)
-npx gulp
+**Watch:**
+```bash
+npx sass --watch css/scss/style.scss css/style.css --no-source-map
+```
 
-# Or directly
+Both commands are also available as VS Code tasks (`Ctrl+Shift+B` runs "Sass Compile (main)" by default).
+
+### sass-demo (teaching example only)
+
+`sass-demo/` is a standalone teaching demo. Compile with:
+```bash
 sass sass-demo/scss/main.scss sass-demo/css/style.css
 ```
 
-The root `gulpfile.js` watches `*.scss` at the repo root, not inside `sass-demo/`. The VS Code task targets `sass-demo/` specifically.
+The root `gulpfile.js` watches `*.scss` at the repo root (not inside `sass-demo/` or `css/`). The VS Code task "Sass Compile (sass-demo)" targets `sass-demo/` specifically.
 
 ## Architecture
 

@@ -1,0 +1,211 @@
+@use 'variables' as *;
+
+.nav,
+.desktop {
+  display: block;
+  width: 100%;
+  z-index: 900;
+}
+
+nav {
+  border-bottom: 12px solid $yellow;
+  margin-bottom: 0;
+  min-height: 80px;
+  background: white;
+
+  // Merged from two separate nav ul declarations in original CSS;
+  // the second (display: flex) overrides the first (display: grid).
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    width: 100%;
+  }
+
+  li {
+    padding-right: 20px;
+    white-space: nowrap;
+    justify-content: flex-end;
+  }
+
+  a {
+    color: $red;
+
+    &:hover {
+      color: $teal;
+    }
+  }
+}
+
+.logo {
+  position: relative;
+
+  img {
+    border-radius: 50%;
+    width: 100px;
+    padding: 10px;
+  }
+
+  a h4 {
+    position: absolute;
+    top: 14px;
+    left: 30px;
+    color: black;
+  }
+}
+
+.icon {
+  position: fixed;
+  cursor: pointer;
+  top: 5%;
+  right: 0%;
+  width: 40px;
+  height: 45px;
+  transform: translate(-50%, -50%);
+  display: block;
+  z-index: 1000;
+
+  &.active .hamburger {
+    background: rgba(0, 0, 0, 0);
+
+    &:before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      top: 0;
+      transform: rotate(135deg);
+    }
+  }
+}
+
+.hamburger {
+  width: 40px;
+  height: 4px;
+  line-height: 70px;
+  background: #666;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background: #666;
+    border-radius: 5px;
+    transition: 0.5s;
+  }
+
+  &:before {
+    top: -10px;
+  }
+
+  &:after {
+    top: 10px;
+  }
+}
+
+.menu-desktop,
+.menu-mobile {
+  display: none;
+}
+
+.menu-mobile {
+  background-color: $yellow;
+  height: auto;
+  z-index: 999;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  font-family: 'Helvetica', sans-serif;
+  text-align: right;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-left: 50px;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.25);
+
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    clear: right;
+    text-decoration: none;
+    color: #333;
+    height: 70px;
+    line-height: 1.8rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: $font-body;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+  @media only screen and (max-width: $bp-tablet) {
+    padding-top: 50px;
+
+    a {
+      font-size: 1.2rem;
+      height: auto;
+      line-height: 1.6rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $bp-tablet) {
+  .desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    display: block;
+  }
+
+  .menu-desktop {
+    width: 100%;
+    display: block;
+    padding: 0;
+    line-height: 50px;
+    justify-content: space-evenly;
+    flex-direction: row;
+    height: 0;
+    text-align: right;
+    position: absolute;
+    top: 20px;
+    right: 0;
+
+    a {
+      display: inline-flex;
+      margin-right: 30px;
+      height: 0;
+      line-height: 50px;
+      text-decoration: none;
+      color: #333;
+      justify-content: space-evenly;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+
+  .menu-mobile {
+    display: none;
+    background-color: $yellow;
+    height: 100vh;
+    z-index: 999;
+    padding-top: 100px;
+    font-family: 'Helvetica', sans-serif;
+    text-align: right;
+  }
+}

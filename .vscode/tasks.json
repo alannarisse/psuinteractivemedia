@@ -5,7 +5,23 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Sass Compile",
+      "label": "Sass Compile (main)",
+      "type": "shell",
+      "command": "npx sass css/scss/style.scss css/style.css --no-source-map",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Sass Watch (main)",
+      "type": "shell",
+      "command": "npx sass --watch css/scss/style.scss css/style.css --no-source-map",
+      "group": "build",
+      "isBackground": true
+    },
+    {
+      "label": "Sass Compile (sass-demo)",
       "type": "shell",
       "command": "sass sass-demo/scss/main.scss sass-demo/css/style.css",
       "group": "build"

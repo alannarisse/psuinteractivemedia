@@ -1,0 +1,145 @@
+@use 'variables' as *;
+
+// Homepage
+.home {
+  nav {
+    margin-bottom: 0;
+  }
+
+  article ul {
+    list-style-type: square;
+    margin-left: 20px;
+  }
+}
+
+// Subpages
+.subpage {
+  h1,
+  h2 {
+    color: #333;
+  }
+}
+
+// Student work
+.student-work {
+  li {
+    margin-bottom: 14px;
+  }
+}
+
+h2.student-work {
+  color: #333;
+}
+
+// Videos page
+.videos-page {
+  .toc {
+    ul {
+      display: flex;
+    }
+
+    li {
+      margin-left: 2px;
+      margin-right: 30px;
+      min-width: 100px;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        height: 24px;
+        width: 24px;
+        background-image: url('/images/icons/link.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 6px;
+        margin-bottom: -4px;
+      }
+    }
+  }
+
+  h3 {
+    margin-top: 48px;
+    border-bottom: 1px solid $orange;
+  }
+}
+
+// Glossary page
+.glossary {
+  display: flex;
+  flex-direction: column;
+
+  article {
+    padding-right: 40px;
+
+    li {
+      padding-bottom: 14px;
+    }
+
+    ul {
+      padding-top: 40px;
+    }
+  }
+
+  @media only screen and (min-width: $bp-desktop) {
+    flex-direction: row;
+
+    article {
+      flex: 65%;
+      padding-right: 40px;
+    }
+
+    aside {
+      flex: 35%;
+    }
+  }
+}
+
+#glossary-list .link {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.glossimg {
+  max-height: 120px;
+  width: auto;
+  padding-top: 20px;
+  display: block;
+  margin: auto;
+}
+
+// Student roster list
+#the-list {
+  li {
+    margin-bottom: 20px;
+  }
+
+  em {
+    font-weight: bold;
+  }
+
+  img {
+    max-width: 75%;
+  }
+
+  @media only screen and (min-width: $bp-desktop) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Definition page
+.definition {
+  .left {
+    background-color: mediumpurple;
+  }
+
+  .center-content {
+    background-color: blanchedalmond;
+  }
+}
+
+// Definition page sidebar nav link colors
+.homelink       { background-color: burlywood; }
+.definitionlink { background-color: rgb(102, 25, 146); }
+.other1link     { background-color: rgb(56, 122, 30); }
+.other2link     { background-color: rgb(73, 44, 5); }
+.other3link     { background-color: rgb(88, 58, 143); }

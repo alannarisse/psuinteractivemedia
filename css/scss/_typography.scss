@@ -1,0 +1,45 @@
+@use 'variables' as *;
+
+h1 {
+  font-family: $font-display;
+  font-weight: 400;
+  font-size: 3.5rem;
+  line-height: 3.6rem;
+  color: #fff;
+
+  @media only screen and (max-width: $bp-tablet) {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+}
+
+h2 {
+  font-family: $font-impact;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: #fff;
+  margin-bottom: 18px;
+  margin-top: 1.4rem;
+
+  @media only screen and (max-width: $bp-tablet) {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+}
+
+h3 {
+  font-size: 1.8rem;
+  line-height: 1.8em;
+  margin-bottom: 18px;
+}
+
+h4 {
+  margin-top: 18px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+}
+
+h5 {
+  font-weight: bold;
+}

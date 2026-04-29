@@ -1,0 +1,43 @@
+@use 'variables' as *;
+
+footer {
+  margin-top: 50px;
+  padding: 60px;
+  border-top: 4px solid $orange;
+  background: $orange;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding-right: 20px;
+    color: #fff;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  @media only screen and (max-width: $bp-tablet) {
+    padding: 20px;
+
+    ul {
+      flex-direction: column;
+    }
+  }
+}
+
+.ack {
+  font-size: 0.9rem;
+
+  @media only screen and (min-width: $bp-desktop) {
+    width: 60%;
+    margin: 60px auto;
+  }
+
+  @media only screen and (max-width: $bp-tablet) {
+    width: 90%;
+    margin: auto;
+  }
+}

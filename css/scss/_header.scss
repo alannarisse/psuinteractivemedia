@@ -1,0 +1,54 @@
+@use 'variables' as *;
+
+header {
+  margin-bottom: 40px;
+  background-color: $dark-teal;
+
+  p {
+    font-size: 24px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: $font-display;
+    font-weight: 400;
+    color: #fff;
+    -webkit-text-stroke: 1px black;
+  }
+
+  nav {
+    border-bottom: none;
+    margin-bottom: 0;
+    min-height: 0;
+    background: none;
+
+    .logo h4 {
+      color: $orange;
+      font-size: 1.4rem;
+    }
+  }
+
+  @media only screen and (min-width: $bp-tablet) {
+    border-bottom: 16px solid $orange;
+    width: 100%;
+    padding: 60px;
+    background-image: url('/images/backgrounds/amps-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 80%;
+    min-height: 380px;
+
+    &.short {
+      height: 120px;
+    }
+  }
+}
+
+.classpage header,
+.subpage header {
+  @media only screen and (min-width: $bp-tablet) {
+    padding: 30px 60px;
+    min-height: 280px;
+  }
+}

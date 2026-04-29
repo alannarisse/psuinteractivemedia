@@ -1,0 +1,67 @@
+@use 'variables' as *;
+
+@import url('https://use.typekit.net/fqz1wha.css');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-body;
+  font-size: 20px;
+  line-height: 1.4em;
+  color: $body-text;
+  background-color: #fff;
+
+  @media only screen and (max-width: $bp-tablet) {
+    font-size: 1rem;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: $red;
+  text-decoration: none;
+
+  &:hover {
+    color: $teal;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+blockquote {
+  font-family: $font-body;
+  font-weight: 300;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+pre {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+hr {
+  margin-bottom: 60px;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+td {
+  padding-bottom: 12px;
+
+  &:nth-child(odd) {
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+}
