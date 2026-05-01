@@ -1,4 +1,4 @@
-// The Typekit @import url() is in _base.scss and gets hoisted to the top of
+// The Typekit @use url() is in _base.scss and gets hoisted to the top of
 // the compiled output by Sass automatically.
 @use 'base';
 @use 'typography';
@@ -8,3 +8,4 @@
 @use 'footer';
 @use 'components';
 @use 'pages';
+

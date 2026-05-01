@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DES342 Fall 2023 Students</title>
   <link rel="stylesheet" href="/css/meyer-reset.css" />
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/scss/style.css" />
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <!--  Essential META Tags -->
@@ -97,17 +97,17 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
   <script>
     let tl = gsap.timeline()
-  .from('header', {backgroundPosition:"50% 70%", duration:1})
-  //.from(headings, {y:200, stagger:0.1}, 0)
+      .from('header', { backgroundPosition: "50% 70%", duration: 1 })
+    //.from(headings, {y:200, stagger:0.1}, 0)
 
-ScrollTrigger.create({
-  trigger:'header',
-  start:"+=50top +=120",
-  toggleActions:"play none none reverse",
-  animation:tl
-})
-  
-</script>
+    ScrollTrigger.create({
+      trigger: 'header',
+      start: "+=50top +=120",
+      toggleActions: "play none none reverse",
+      animation: tl
+    })
+
+  </script>
 </body>
 
 </html>
