@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup fake</title>
+  <style>
+    *,
+    *::after,
+    *::before {
+      box-sizing: border-box;
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+      background: #72b3cc;
+      background: linear-gradient(90deg, rgba(114, 179, 204, 1) 0%, rgba(156, 214, 180, 1) 50%, rgba(219, 210, 123, 1) 100%);
+      position: relative;
+    }
+
+    .bg-dark {
+
+      /* background: #909090; */
+      background: linear-gradient(90deg, rgba(134, 135, 135, .6) 0%, rgba(97, 97, 97, .6) 50%, rgba(98, 98, 97, .6) 100%);
+
+    }
+
+    .popup {
+      padding: 80px;
+      width: 60vw;
+      height: 60vh;
+      overflow: scroll;
+      margin: 20vh 20vw;
+      background: #fff;
+      border: 2px solid black;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 25px;
+      z-index: -1;
+      will-change: transform;
+      visibility: hidden;
+    }
+
+    .closeBtn {
+      position: fixed;
+      right: 1vw;
+      top: 1vh;
+    }
+
+    .popup {
+      opacity: 0;
+    }
+
+    .openme {
+      animation-name: openSesame;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      opacity: 0;
+      visibility: visible;
+    }
+
+    @keyframes openSesame {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+        z-index: 1;
+      }
+    }
+
+    #open-popup {
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="content" id="popup-home">
+    <div>
+      <h1>Popup Fake</h1>
+      <p>I'm some content and that's neat.</p>
+      <a href="popup-home" id="open-popup">Open popup</a>
+    </div>
+  </section>
+  <div class="popup" draggable="true">
+    <a href="" id="close-popup" class="closeBtn">X</a>
+    <h2>I'm a popup with a bunch of content.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos optio voluptatibus voluptas maxime magni aut
+      fuga corrupti impedit, perspiciatis cumque cum perferendis quod magnam veritatis sunt dolores nobis eum. Maiores
+      nemo ad illo repellendus, voluptatum voluptates ex? Optio, est. Consectetur saepe magnam quod dicta exercitationem
+      illo aliquid facere doloribus est quaerat? Et iste deserunt itaque minima non possimus sit ex maiores, a ullam
+      nesciunt impedit perspiciatis repellendus. Iste, animi nam perspiciatis totam alias qui distinctio facilis
+      possimus accusamus numquam ex dolorem! Excepturi, ipsum et? Itaque incidunt odit numquam, doloremque fugit vitae
+      amet similique tempora ipsa rem quos deleniti ipsum maxime!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam totam veritatis quas vel, accusamus reiciendis
+      iste sint aspernatur magni numquam ut ab. Inventore in accusantium quod reiciendis. Nam nobis provident nihil
+      eaque voluptatem nemo. Consequatur accusantium commodi delectus ab ipsam vero corrupti, excepturi repellat vel
+      dolorum nam, expedita dolore labore eos eveniet alias numquam facilis hic tenetur quisquam vitae tempore ut neque
+      odit. Maxime dolor aut sunt? Quae quia qui libero non ipsam, reiciendis pariatur neque consequuntur, quas minus
+      sint voluptatibus totam. Doloremque in voluptatibus similique ipsa! Sunt, porro. Sequi quis illo quia magnam sed
+      aperiam doloribus animi sunt? Nostrum eveniet consectetur impedit voluptatibus officiis recusandae eos quasi at,
+      deserunt a sapiente labore? Sed et totam ipsam impedit maxime? Repudiandae, sequi assumenda, praesentium quibusdam
+      aperiam esse consequuntur sed quod tempora eos in libero incidunt quia! Impedit quaerat amet cupiditate quibusdam
+      nesciunt labore asperiores corporis? Tempora recusandae architecto itaque aspernatur vitae consequuntur blanditiis
+      id veritatis. Omnis, rem voluptatem eaque ab aspernatur tempora animi, quibusdam consectetur aliquid atque quasi
+      laborum voluptatibus delectus? Porro quae eius, deserunt quos voluptatem itaque ad repellat. Ex similique quod
+      amet veritatis deleniti magni voluptas cum cumque sequi ab, officia fuga! Perspiciatis nam quos facilis fugiat!
+      Cupiditate quisquam magni facilis, optio neque exercitationem hic quas tempora officia ex incidunt, commodi minus
+      harum nihil ratione id facere modi. Saepe quia adipisci similique facere dolore sint neque cum, enim doloribus!
+      Reprehenderit modi, iure laborum placeat nemo, perferendis soluta eos aut eveniet accusamus quod ratione aperiam
+      deserunt exercitationem debitis dolor voluptatem sapiente facilis consectetur eius veniam neque! Deserunt est,
+      dignissimos officiis magnam distinctio eos quibusdam nulla accusamus error dolore voluptatibus quasi nam at odit
+      dolor mollitia ipsum sint totam facere! Molestiae odio numquam eius eveniet nisi, atque tempora accusantium
+      doloribus ab nostrum deserunt corrupti nemo ut nulla optio. Quas, illum! Aliquam fugiat est doloremque blanditiis
+      nam reiciendis necessitatibus sapiente nesciunt delectus repellendus! Doloribus rem adipisci facilis nostrum enim,
+      dolor officia cum odit sint perferendis temporibus aliquam tempore quasi? Deserunt culpa accusamus natus nobis
+      corrupti, veritatis expedita officia voluptatibus ipsam provident beatae inventore debitis dolor in consequatur
+      sint, tempore cumque quae ut? Molestias incidunt nisi excepturi deleniti odio unde pariatur qui ullam optio ipsam
+      vel, similique ad nemo voluptatem fuga eaque modi corrupti! Ullam, quibusdam iste sit reprehenderit ab tenetur eos
+      dolor recusandae quasi esse, laudantium laboriosam saepe aspernatur mollitia ex dolore? Optio voluptate eius vero
+      soluta debitis in porro impedit, libero ipsam repellendus similique illo quis illum deserunt dicta natus itaque
+      dolorum! Est commodi quod iure expedita laudantium, recusandae impedit aliquam. Necessitatibus, consequuntur.
+      Magni ad a temporibus, excepturi eligendi voluptatibus quidem, facilis eum consequatur illum soluta, eos nemo?
+      Expedita, deleniti! Itaque assumenda vitae dolor nostrum ducimus minus rerum facere reprehenderit laboriosam!
+      Recusandae iure vel nostrum minus? Totam nihil minus dolore vero laudantium natus molestiae ratione, explicabo
+      mollitia! Pariatur ad corporis incidunt doloribus, nulla commodi consequuntur, veniam magnam et quidem error.
+      Ipsam voluptatem explicabo id accusamus, possimus laborum ullam, nulla dolor perferendis rerum provident dicta eum
+      reprehenderit veritatis aspernatur, accusantium fuga aliquam.</p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/Draggable.min.js"></script>
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+    integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+  <script>
+    $('#open-popup').click(function () {
+      $('.popup').addClass('openme');
+      $('.content').addClass('bg-dark')
+    })
+
+    //$('#close-popup').click(function () {
+    $('.popup').click(function () {
+      $('.popup').removeClass('openme');
+      $('.content').removeClass('bg-dark')
+    })
+  </script>
+  <script>
+    gsap.registerPlugin(Draggable)
+    Draggable.create('.popup', {
+      type: 'x, y',
+      dragResistance: 0,
+      edgeResistance: 0,
+      inertia: false,
+    });
+
+  </script>
+</body>
+
+</html>
