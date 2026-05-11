@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>magic scroll</title>
+  <style>
+    *,
+    *:after,
+    *:before {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    section {
+      width: 100vw;
+      height: 100vh;
+      background: #333;
+      color: white;
+      border-bottom: 1px solid white;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .scroll-reveal>* {
+      margin: 0;
+    }
+
+    .scroll-reveal {
+      padding-block: clamp(8rem, 25vh, 80vw);
+    }
+
+    .scroll-reveal p {
+      max-width: 55ch;
+      margin-inline: auto;
+    }
+
+    .scroll-reveal span {
+      color: hsl(0 0% 100% / .2);
+      background-clip: text;
+      background-repeat: no-repeat;
+      background-size: 0% 100%;
+
+      background-image: linear-gradient(90deg, red, blue);
+
+      animation: scroll-reveal linear forwards;
+      animation-timeline: view();
+    }
+
+    @keyframes scroll-reveal {
+      to {
+        background-size: 100% 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section>hi there</section>
+  <section class="scroll-reveal">
+    <span>
+      <h2>Meet Palma</h2>
+    </span>
+    <span>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ullam veniam neque, necessitatibus repudiandae sit
+        corporis.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi molestias dignissimos laudantium culpa porro
+        corporis, debitis adipisci fuga voluptate velit amet, vel earum recusandae quo non quae, dolorum explicabo.
+        Facere!</p>
+    </span>
+  </section>
+  <section>hi there</section>
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Practice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Nunito Sans", sans-serif;
+      font-optical-sizing: auto;
+      margin: 0;
+      font-size: .9rem;
+    }
+
+    header a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    a {
+      color: red;
+    }
+
+    h1,
+    h2,
+    p {
+      margin: 0;
+    }
+
+    header {
+      width: 100%;
+      border-bottom: 1px solid #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid red;
+    }
+
+    h1 {
+      margin-bottom: 0;
+    }
+
+    .logo {
+      padding: 1rem;
+      border: 1px solid red;
+
+    }
+
+    .logo img {
+      width: 3rem;
+    }
+
+    .account img {
+      width: 2.2rem;
+    }
+
+    .account {
+      padding: 1rem;
+      display: flex;
+      gap: 1rem;
+      border: 1px solid red;
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 1rem;
+      border: 1px solid red;
+
+    }
+
+    main {
+      width: 85%;
+      margin: auto;
+      border: 1px solid red;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      font-size: .8rem;
+    }
+
+    .card p {
+      margin: .1rem;
+    }
+
+    .card {
+      padding-bottom: 2rem;
+      max-width: 220px;
+    }
+
+    .intro {
+      /* border: 1px solid red; */
+      padding: 3rem 0;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      width: 100%;
+      padding: 2rem 3rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href=""><img src="images/logo.png"></a>
+    </div>
+    <div class="navlinks">
+      <a href="">Men</a>
+      <a href="">Women</a>
+      <a href="">Kids</a>
+      <a href="">Sale</a>
+    </div>
+    <div class="account">
+      <a href=""><img src="images/favorites.png"></a>
+      <a href=""><img src="images/profile.png"></a>
+      <a href=""><img src="images/cart.png"></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Shop Our Selection</h1>
+      <p>Choose from sustainably crafted clothing from free-trade, fair pay manufacturers. </p>
+    </section>
+    <section class="cards">
+      <article class="card">
+        <img src="https://picsum.photos/seed/picsum/200/200">
+        <div class="content">
+          <p>$34.66</p>
+          <p>Super Duper Shoe</p>
+          <p>Genuine leather upper show with supportive insole</p>
+          <p>7 colors</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/picsum/200/200">
+        <div class="content">
+          <p>$34.66</p>
+          <p>Super Duper Shoe</p>
+          <p>Genuine leather upper show with supportive insole</p>
+          <p>7 colors</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/picsum/200/200">
+        <div class="content">
+          <p>$34.66</p>
+          <p>Super Duper Shoe</p>
+          <p>Genuine leather upper show with supportive insole</p>
+          <p>7 colors</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/picsum/200/200">
+        <div class="content">
+          <p>$34.66</p>
+          <p>Super Duper Shoe</p>
+          <p>Genuine leather upper show with supportive insole</p>
+          <p>7 colors</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/picsum/200/200">
+        <div class="content">
+          <p>$34.66</p>
+          <p>Super Duper Shoe</p>
+          <p>Genuine leather upper show with supportive insole</p>
+          <p>7 colors</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/picsum/200/200">
+        <div class="content">
+          <p>$34.66</p>
+          <p>Super Duper Shoe</p>
+          <p>Genuine leather upper show with supportive insole</p>
+          <p>7 colors</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/picsum/200/200">
+        <div class="content">
+          <p>$34.66</p>
+          <p>Super Duper Shoe</p>
+          <p>Genuine leather upper show with supportive insole</p>
+          <p>7 colors</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/picsum/200/200">
+        <div class="content">
+          <p>$34.66</p>
+          <p>Super Duper Shoe</p>
+          <p>Genuine leather upper show with supportive insole</p>
+          <p>7 colors</p>
+        </div>
+      </article>
+
+    </section>
+
+
+
+  </main>
+  <footer>I'm the footer</footer>
+</body>
+
+</html>
