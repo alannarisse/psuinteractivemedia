@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background: blue;
+      color: white;
+    }
+
+    .pointercoarse,
+    max1280,
+    .hovernone {
+      display: none;
+    }
+
+    .nomedia {
+      display: block;
+    }
+
+    @media (max-width:1280px) {
+      body {
+        background: red;
+      }
+
+      .max1280 {
+        display: block;
+      }
+    }
+
+    @media (pointer:coarse) {
+      body {
+        background: purple;
+      }
+
+      .pointercoarse {
+        display: block;
+      }
+    }
+
+    @media (hover:none) {
+      body {
+        background: green;
+      }
+
+      .hovernone {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Hi everybody</h1>
+  <ul>
+    <li class="hovernone">green means hover:none</li>
+    <li class="max1280">red means max width 1280</li>
+    <li class="nomedia">blue means no media query</li>
+    <li class="pointercoarse">purple means pointer:coarse</li>
+  </ul>
+</body>
+
+</html>
