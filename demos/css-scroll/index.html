@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 60px;
+    }
+
+    @keyframes action {
+      from {
+        rotate: 45deg;
+      }
+
+      to {
+        rotate: 765deg;
+      }
+    }
+
+    .scroller {
+      width: 100vw;
+      height: 100vh;
+      overflow: scroll;
+    }
+
+    .container {
+      height: 200vh;
+      position: relative;
+      background-color: rgb(196, 193, 155);
+    }
+
+    .scroller1 {
+      scroll-timeline-name: --rotate;
+    }
+
+    .scroller2 {
+      scroll-timeline-name: --fade;
+    }
+
+    .item {
+      animation: action 1ms linear;
+      animation-timeline: --rotate;
+    }
+
+
+    div {
+      position: relative;
+    }
+
+    .scroller1 .item {
+      --size: 250px;
+      height: var(--size);
+      width: var(--size);
+      background-color: magenta;
+      border: 1px solid;
+      position: absolute;
+      left: calc(80% - (var(--size) / 2));
+      top: calc(50% - (var(--size) / 2));
+    }
+
+
+
+    .scroller1 h2 {
+      --size: 250px;
+      position: absolute;
+      left: calc(10% - (var(--size) / 2));
+      bottom: calc(50% - (var(--size) / 2));
+      animation: fade 1ms linear;
+      animation-timeline: --rotate;
+    }
+
+    .scroller2 h2 {
+      --size: 250px;
+      position: absolute;
+      right: calc(20% - (var(--size) / 2));
+      bottom: calc(50% - (var(--size) / 2));
+      animation: fade 2000ms linear;
+      animation-timeline: --fade;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="scroller scroller1">
+    <div class="container">
+      <h2>"You're gonna need a bigger boat."</h2>
+      <span class="item"></span>
+    </div>
+  </section>
+  <section class="scroller scroller2">
+    <div class="container">
+      <h2>"You're gonna need a bigger boat."</h2>
+      <span class="item"></span>
+    </div>
+  </section>
+</body>
+
+</html>
